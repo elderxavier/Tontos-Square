@@ -1,0 +1,24 @@
+<ion-view view-title="Pacientes"  ng-controller="pacientesCtrl">
+    <ion-nav-buttons side="left">               
+       <button class="button button-clear button-icon light ion-navicon-round" menu-toggle="left"></button>
+    </ion-nav-buttons>    
+    <ion-content class="padding">
+        <div class="view-top-bar">
+            <h2>Pacientes</h2>  
+        </div>
+        <div class="loading hidden">
+            <img src="img/loading.gif"/>
+        </div>
+        <ion-scroll delegate-handle="handleimg" zooming="true" direction="y" id="scoll-noticias">
+            <div class="page-content noticias" ng-repeat="itens in noticia">
+                <div class="page-content-sub">
+                    <div class="box-content">                        
+                        <h4>item.titulo</h4>
+                        <p>item.descricao</p>
+                        <p class="data">item.data</p>
+                    </div>
+                </div>                
+            </div>
+        </ion-scroll>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,227 @@
+@font-face {
+    font-family: OpenSans-Regular;
+    src: url(../fonts/OpenSans-Regular_1.ttf);
+}
+/*global*/
+body {font-family: OpenSans-Regular !important; color: #555}
+.bgcontainer { background: url(../img/background.png) 0 0 no-repeat; background-size: 100% 100%; position: fixed; top: 0 !important; left: 0}
+ion-header-bar { background: #e66c21 !important}
+ion-header-bar .row button{color: #fff!important}
+ion-header-bar .button span {font-size: 17px !important; padding-left: 10px;font-family: OpenSans-Regular }
+ion-header-bar .row button i:before {font-size: 30px !important}
+.page-content{transition: all 3s ease-in-out}
+.hidden{display: none; visibility: hidden}
+.scroll-content, .ionic-scroll {width: 100% !important; height: 100% !important}
+.img-content{width: 100%; height: auto; min-height: 15em; background-size: contain !important;background-repeat: no-repeat !important;background-position: center !important; transition: all 3s linear; border-radius: 5px; text-align: center}
+.list:last-child { margin-bottom: 50px}
+.title{font-weight: bold !important; text-transform: uppercase}
+.label-strong { font-weight: bold}
+
+/*Menu*/
+.menu-left {box-shadow: 3px 0px 5px 0px rgba(0,0,0,0.75) !important}
+.left-menu .bar-header {height: 10em; background: url(../img/background-menu.jpg) 0 0 no-repeat !important; background-size: cover !important}
+.left-menu .bar-header .foto{background: url(../img/app_icon.png) -2px -2px no-repeat; width: 5em; height: 5em; border-radius: 50%; background-size: 5.2em;margin: 1.5em auto }
+.left-menu .bar-header .right {margin-top: 1.5em}
+.left-menu .bar-header .right p {color: #fff; line-height: 20px; margin: 0; font-size: 12px}
+.left-menu .bar-header .right p.primeiro {font-size: 15px}
+.left-menu .bar-header .right p.terceiro{text-transform: uppercase}
+.menu-left ion-content {background: #fff !important}
+.menu-open .menu-left{z-index: 9.5 !important; transition: z-index 0.5s ease-in}
+.left-menu .title-menu{ font-family: OpenSans-Regular; font-size: 19px;text-transform: uppercase; padding: 2px 25% }
+.left-menu .list{margin-top: 8.5em}
+.left-menu .container-top {height: 12em; padding: 2px; border: 1px solid red}
+.left-menu .list .item {padding: 0 16px}
+.menu-left .item.active {background: #eeeeee; z-index: 2; border: 1px !important; left: 0px; border-style: outset !important}
+.menu-left .item button{font-size: 22px; color: #438eb9 !important}
+.menu-left .item button span{font-size: 13px;padding-left: 10px; position: relative;display: inline;top: -2px; color: #555; font-family:OpenSans-Regular }
+.menu-left .item i:before {color: #6ab344 !important}
+.menu-left .item i {color: #6ab344 !important}
+/*content*/
+ion-content {top: 19px !important; background: #e0e0e0}
+ion-content .view-top-bar{background: #5e5e5e; margin: 19px -1.5%;padding: 3px; max-height: 3.3em;overflow: hidden}
+ion-content .view-top-bar h2{color: #fff !important;font-family: OpenSans-Regular; font-size: 19px; margin: 0 10px }
+ion-content .box-content{ padding: 10px;margin-bottom: 1.3em; border-radius: 5px; background: #fff}
+ion-content h1,ion-content h2,ion-content h3,ion-content h4,ion-content h5,ion-content h6{font-family: OpenSans-Regular}
+.has-tabs{ bottom: 0 !important}
+.views-content .scroll {background: #fff;padding: 5px; border-radius: 5px}
+.views-content .img-content{margin-bottom: 1.3em; width: 100%; height: auto; border-radius: 5px}
+
+/*Home*/
+.scroll { height: 100%}
+#map {width: 100%; height: 100%; margin-top: 25px}
+#more-location {border: 1px;border-radius: 50%;width: 60px; height: 60px; position: fixed; z-index: 99999999; padding: 2px 0 0 1px;text-align: center;background-color: #e66c21;top: 80%; left: 5%; box-shadow: 2px 3px 2px 0.5px rgba(0,0,0,0.3)}
+#more-location button {padding: 7px}
+#more-location button:before{font-size: 45px !important}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.page-content.revistas h4, #view-revistas h3 {margin: 10px}
+#view-revistas .views-content .scroll{height: 95%}
+
+#content-preferencias .page-content.preferencias{background: #fff;border-radius: 5px;margin: 10px 5px}
+#content-preferencias .help-preferencias{padding: 15px 15px 0; font-weight: bold}
+#content-preferencias .help-preferencias button {margin-left: 15px}
+#content-preferencias .check-preferencias-container { padding: 20px; margin-bottom: 50px}
+#content-preferencias .check-preferencias-container p { font-size: 15px}
+#content-preferencias .check-preferencias-container input[type="checkbox"] { width: 23px !important; height: 23px !important; margin: 6px 15px}
+/*Modal img*/
+.modal-img {height: 1%;width: 1%}
+.modal-img.active { position: fixed; top: 0; left: 0; z-index: 5; width: 100%; height: 100%; display: block; visibility:visible}
+.modal-img .mask-modal{top: 0; left: 0; z-index: 5; width: 100%;height: 100%; background: #333;z-index: 1;opacity: 0.5}
+.modal-img .content-modal{position: fixed;top: 20%;left: 2%;right: 2%;z-index: 2;width: 97%;height: auto;border-radius: 5px}
+.modal-img .modal-img-close{display: none}
+.modal-img.active .modal-img-close{display:block;position: relative;float: right;margin: -32px 0; background: #fff;border-radius: 50%;padding: 5px 10px;font-weight: bold}
+.modal-img .content-modal img{ width: 100%; border-radius: 5px; height: auto}
+/*Agenda*/
+#agenda-page ion-item{ border-radius: 5px; margin: 10px 0}
+
+.custom_modal {width: 80%; height: 80%; top:10%; left: 10%}
+.custom_modal ion-header-bar {background:#fff !important; font-weight: bold; border-bottom: 1px solid #ddd }
+.custom_modal ion-header-bar h1{color: #004969 !important}
+.custom_modal ion-scroll {width: 100%; height: 115%; margin-top: 5%; margin-bottom: 5%; padding-bottom: 50px}
+.custom_modal ion-content {margin: 0 auto 35px; background: #fff; padding-bottom: 50px}
+.custom_modal ion-content input, .custom_modal ion-content select {border:1px solid #ddd; border-radius: 5px; padding: 10px}
+.custom_modal .input-label{margin-top: 20px}
+#view-filtro-agenda .bar-footer {bottom: 2%; border-top: 1px solid #ddd}
+#view-filtro-agenda .bar-footer button {font-weight: bold}
+/*Agenda Detalhes*/
+/*#view-agenda-datelhes .submenu button {width: 100%; background: #438eb9; border:1px solid #023059; border-bottom: 1px solid #E8E8F8; border-top-right-radius: 5px;border-top-left-radius: 5px;}*/
+#view-agenda-datelhes .submenu button {width: 100%; background: #438eb9}
+.tabs-views .submenu {text-align: center; background: #555}
+.tabs-views .submenu button i:before {font-size: 2em}
+.tabs-views ion-scroll {background: #fff; border-radius: 5px; padding: 10px}
+.tabs-views table {width: 100%; padding: 5px; color: #023059}
+.tabs-views table tr{padding: 5px}
+.tabs-views th {background-image: linear-gradient(to bottom,#f8f8f8 0,#ececec 100%); color: #707070; border: 1px solid #ddd; font-weight: 800}
+.tabs-views table td {border: 1px solid #ddd; background: #FFF}
+#tab-riscos .title-col .item {color: #707070;background: linear-gradient(to bottom,#f8f8f8 0,#ececec 100%); text-align: center}
+#tab-riscos .bottom-button{ margin: 25px 0}
+#tab-riscos .item p {word-break:normal; padding: 10px; font-size: 13px}
+
+/*forms-views*/
+.forms-views, .forms-views ion-content {background: #fff}
+.forms-views legend {border: none}
+#formulario-enfermagem ion-content {overflow: hidden; padding-bottom: 100px}
+#formulario-enfermagem .rigth {float: right; top:25%; position: relative}
+.chip {border-radius: 50px; padding: 7px 10px; background: #004969; color: #fff; white-space:normal; line-height: 45px}
+.chip i{font-weight: bold; position: relative; margin-left: 5px; color: #000}
+.ion-android-arrow-forward.rigth:before {font-size: 35px; color:#004969 !important }
+#modal-dados-acompanhamento ion-content { margin: 15% auto}
+#modal-dados-visita .input-label {width: 100%}
+#modal-antecedentes-pessoais .item {border: none; margin-left: 5% }
+#modal-antecedentes-pessoais .checkbox-icon:before {border-radius: 5px}
+#modal-antecedentes-pessoais input[type=text]{width: 100%} 
+#modal-demais-informacoes textArea {border: 1px solid #ddd; width: 100%; height: 80%; border-radius: 5px; padding: 5px}
+#modal-habitos-vida ion-item {border: 1px solid #ddd;}
+#modal-habitos-vida .content {border-bottom: 1px solid #ddd; padding: 10px}
+#modal-habitos-vida .scroll-view {padding: 5px}
+#modal-habitos-vida #hab_outros_lz {width: 100%}
+#modal-queixas textarea { width: 100%; height: 80%; min-height: 200px; border:1px solid #ddd; padding: 10px; margin-top: 15px; border-radius: 5px}
+#modal-nivel-consiencia #pcs_consciencia_obs {width: 100%}
+
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+} 
+
+.fadeOutUp {
+    -webkit-animation-name: fadeOutUp;
+    animation-name: fadeOutUp;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@-webkit-keyframes fadeOutUp {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+}
+@keyframes fadeOutUp {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+} 
+.slideInUp {    
+    animation-name: slideInUp;    
+    animation-duration: 0.3s;    
+    animation-fill-mode: both;
+}
+@-webkit-keyframes slideInUp {
+    0% {
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+        visibility: visible;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+@keyframes slideInUp {
+    0% {
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+        visibility: visible;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+} 
+
+@media (max-width: 480px) {
+    .custom_modal{width: 100%; height: auto;top: 0; left: 0}
+}
+
+

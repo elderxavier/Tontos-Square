@@ -1,0 +1,3254 @@
+<ion-view view-title="Protocolos" id="tab-protocolos" class="tabs-views">
+     <ion-nav-buttons side="left">               
+        <button class="button button-clear button-icon light ion-arrow-left-a" ui-sref="menu.agenda"></button>
+    </ion-nav-buttons>
+    <ion-content overflow-scroll="true" class="padding">
+        <div class="view-top-bar">
+            <div class="submenu">
+                <div class="row">
+                    <div class="col-20 left">                        
+                        <button class="button button-clear button-calm" ui-sref="menu.detalhes-outrasinformacoes"><i class="fa fa-address-card-o" ></i></button>
+                    </div>
+                    <div class="col-20 left">                        
+                        <button class="button button-clear button-calm active"><i class="fa fa-briefcase" ></i></button>
+                    </div>
+                    <div class="col-20 left">                        
+                        <button class="button button-clear button-calm" ui-sref="menu.detalhes-riscos"><i class="fa fa-info" ></i></button>
+                    </div>
+                    <div class="col-20 left">                        
+                        <button class="button button-clear button-calm" ui-sref="menu.detalhes-evolucao"><i class="fa fa-area-chart" ></i></button>
+                    </div>
+                    <div class="col-20 left">                        
+                        <button class="button button-clear button-calm" ui-sref="menu.detalhes-historico"><i class="fa fa-address-book-o" ></i></button>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        <ion-scroll delegate-handle="scroller-tab-protocolos" id="scroller-tab-protocolos" direction="xy" style="width: 100%; height: 110%">
+           
+           <div id="app1" align="center" style="display: block;">
+
+          <div align="left" id="div_avd">
+    <h5 class="header blue no-margin-top no-padding-bottom align-left">
+      <span style="position: relative; top: 3px; cursor: pointer;">AVD</span>
+              <i class="ace-icon fa fa-plus-circle bigger-100 green act-icon" name="botao_avd" id="botao_avd" onclick="javascript: pads_alterna_view('dados_avd');" onmouseover="javascript:showTooltip(this,'&nbsp;Preencher AVD&nbsp;');return false;"></i>
+          </h5>
+  	<div id="dados_avd" align="left" style="display: none">
+	    <form name="formAddAVD" id="formAddAVD" action="http://s2.desenvolvimento.grupobem.com.br/" method="post">
+        <input type="hidden" name="processar" value="1">
+        <input type="hidden" name="mod" value="acompanhamento">
+        <input type="hidden" name="sub" value="iniciarevolucao">
+				<input type="hidden" name="upd" value="1">
+				<input type="hidden" name="edt" value="1">
+				<input type="hidden" name="add" value="1">
+        <input type="hidden" name="avd" value="">
+        <input type="hidden" name="id_evolucao" value="">
+        <input type="hidden" name="id_avaliacao" value="310490">
+    	  <table cellpadding="0" cellspacing="2" border="0" width="100%" style="border:2px solid #dddddd">
+          <tbody><tr>
+            <td class="tableitem">
+  	          <div onclick="javascript:pads_alterna_view('avd_ab_1');" style="cursor:pointer">
+                <img id="avd_img_1" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                <span class="formlabell">Comer</span>
+              </div>
+              <div id="avd_ab_1" style="display:none;">
+            	  <label>
+              	  <input type="radio" onclick="javascript:pads_totalizaPontosAVD('1');" name="avd[1]" id="avd[1]" class="oinput" value="1" alt="10">
+                	<span>Totalmente independente.</span>
+	             </label>
+	             <br>
+            	  <label>
+              	  <input type="radio" onclick="javascript:pads_totalizaPontosAVD('1');" name="avd[1]" id="avd[1]" class="oinput" value="2" alt="5">
+                	<span>Necessita de ajuda para cortar carne, pão, etc.</span>
+	             </label>
+	             <br>
+            	  <label>
+              	  <input type="radio" onclick="javascript:pads_totalizaPontosAVD('1');" name="avd[1]" id="avd[1]" class="oinput" value="3" alt="0">
+                	<span>Dependente.</span>
+	             </label>
+	             <br>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableitem">
+  	          <div onclick="javascript:pads_alterna_view('avd_ab_2');" style="cursor:pointer">
+                <img id="avd_img_2" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                <span class="formlabell">Tomar banho</span>
+              </div>
+              <div id="avd_ab_2" style="display:none;">
+            	  <label>
+              	  <input type="radio" onclick="javascript:pads_totalizaPontosAVD('2');" name="avd[2]" id="avd[2]" class="oinput" value="4" alt="5">
+                	<span>Independente: entra e sai do banho sozinho.</span>
+	             </label>
+	             <br>
+            	  <label>
+              	  <input type="radio" onclick="javascript:pads_totalizaPontosAVD('2');" name="avd[2]" id="avd[2]" class="oinput" value="5" alt="0">
+                	<span>Dependente ou semi-dependente.</span>
+	             </label>
+	             <br>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableitem">
+  	          <div onclick="javascript:pads_alterna_view('avd_ab_3');" style="cursor:pointer">
+                <img id="avd_img_3" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                <span class="formlabell">Vestir-se</span>
+              </div>
+              <div id="avd_ab_3" style="display:none;">
+            	  <label>
+              	  <input type="radio" onclick="javascript:pads_totalizaPontosAVD('3');" name="avd[3]" id="avd[3]" class="oinput" value="6" alt="10">
+                	<span>Independente: capaz de vestir e tirar a roupa , abotoar-se, calçar e fechar os sapatos.</span>
+	             </label>
+	             <br>
+            	  <label>
+              	  <input type="radio" onclick="javascript:pads_totalizaPontosAVD('3');" name="avd[3]" id="avd[3]" class="oinput" value="7" alt="5">
+                	<span>Necessita de ajuda.</span>
+	             </label>
+	             <br>
+            	  <label>
+              	  <input type="radio" onclick="javascript:pads_totalizaPontosAVD('3');" name="avd[3]" id="avd[3]" class="oinput" value="8" alt="0">
+                	<span>Dependente.</span>
+	             </label>
+	             <br>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableitem">
+  	          <div onclick="javascript:pads_alterna_view('avd_ab_4');" style="cursor:pointer">
+                <img id="avd_img_4" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                <span class="formlabell">Arrumar-se</span>
+              </div>
+              <div id="avd_ab_4" style="display:none;">
+            	  <label>
+              	  <input type="radio" onclick="javascript:pads_totalizaPontosAVD('4');" name="avd[4]" id="avd[4]" class="oinput" value="9" alt="5">
+                	<span>Independente para lavar o rosto, as mãos, pentear-se, enfeitar-se, maquiar-se, etc.</span>
+	             </label>
+	             <br>
+            	  <label>
+              	  <input type="radio" onclick="javascript:pads_totalizaPontosAVD('4');" name="avd[4]" id="avd[4]" class="oinput" value="10" alt="0">
+                	<span>Dependente.</span>
+	             </label>
+	             <br>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableitem">
+  	          <div onclick="javascript:pads_alterna_view('avd_ab_5');" style="cursor:pointer">
+                <img id="avd_img_5" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                <span class="formlabell">Evacuações</span>
+              </div>
+              <div id="avd_ab_5" style="display:none;">
+            	  <label>
+              	  <input type="radio" onclick="javascript:pads_totalizaPontosAVD('5');" name="avd[5]" id="avd[5]" class="oinput" value="11" alt="10">
+                	<span>Controle normal do esfíncter.</span>
+	             </label>
+	             <br>
+            	  <label>
+              	  <input type="radio" onclick="javascript:pads_totalizaPontosAVD('5');" name="avd[5]" id="avd[5]" class="oinput" value="12" alt="5">
+                	<span>Ocasionalmente algum episódio de incontinência, ou necessidade de ajuda para administrar-se supositórios ou lavagens.</span>
+	             </label>
+	             <br>
+            	  <label>
+              	  <input type="radio" onclick="javascript:pads_totalizaPontosAVD('5');" name="avd[5]" id="avd[5]" class="oinput" value="13" alt="0">
+                	<span>Incontinência.</span>
+	             </label>
+	             <br>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableitem">
+  	          <div onclick="javascript:pads_alterna_view('avd_ab_6');" style="cursor:pointer">
+                <img id="avd_img_6" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                <span class="formlabell">Micções</span>
+              </div>
+              <div id="avd_ab_6" style="display:none;">
+            	  <label>
+              	  <input type="radio" onclick="javascript:pads_totalizaPontosAVD('6');" name="avd[6]" id="avd[6]" class="oinput" value="14" alt="10">
+                	<span>Controle normal de esfíncter ou é capaz de cuidar da sonda, se utilizar.</span>
+	             </label>
+	             <br>
+            	  <label>
+              	  <input type="radio" onclick="javascript:pads_totalizaPontosAVD('6');" name="avd[6]" id="avd[6]" class="oinput" value="15" alt="5">
+                	<span>Um episódio de incontinência por dia no máximo, ou necessita de ajuda para cuidar da sonda.</span>
+	             </label>
+	             <br>
+            	  <label>
+              	  <input type="radio" onclick="javascript:pads_totalizaPontosAVD('6');" name="avd[6]" id="avd[6]" class="oinput" value="16" alt="0">
+                	<span>Incontinência.</span>
+	             </label>
+	             <br>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableitem">
+  	          <div onclick="javascript:pads_alterna_view('avd_ab_7');" style="cursor:pointer">
+                <img id="avd_img_7" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                <span class="formlabell">Uso do sanitário</span>
+              </div>
+              <div id="avd_ab_7" style="display:none;">
+            	  <label>
+              	  <input type="radio" onclick="javascript:pads_totalizaPontosAVD('7');" name="avd[7]" id="avd[7]" class="oinput" value="17" alt="10">
+                	<span>Independente para ir ao sanitário, tirar e vestir a roupa.</span>
+	             </label>
+	             <br>
+            	  <label>
+              	  <input type="radio" onclick="javascript:pads_totalizaPontosAVD('7');" name="avd[7]" id="avd[7]" class="oinput" value="18" alt="5">
+                	<span>Necessita de ajuda para ir ao sanitário, mas se limpa sozinho.</span>
+	             </label>
+	             <br>
+            	  <label>
+              	  <input type="radio" onclick="javascript:pads_totalizaPontosAVD('7');" name="avd[7]" id="avd[7]" class="oinput" value="19" alt="0">
+                	<span>Dependente.</span>
+	             </label>
+	             <br>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableitem">
+  	          <div onclick="javascript:pads_alterna_view('avd_ab_8');" style="cursor:pointer">
+                <img id="avd_img_8" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                <span class="formlabell">Deslocamentos</span>
+              </div>
+              <div id="avd_ab_8" style="display:none;">
+            	  <label>
+              	  <input type="radio" onclick="javascript:pads_totalizaPontosAVD('8');" name="avd[8]" id="avd[8]" class="oinput" value="20" alt="15">
+                	<span>Independente para ir do sofá à cama.</span>
+	             </label>
+	             <br>
+            	  <label>
+              	  <input type="radio" onclick="javascript:pads_totalizaPontosAVD('8');" name="avd[8]" id="avd[8]" class="oinput" value="21" alt="10">
+                	<span>Mínima ajuda física ou supervisão para fazê-lo.</span>
+	             </label>
+	             <br>
+            	  <label>
+              	  <input type="radio" onclick="javascript:pads_totalizaPontosAVD('8');" name="avd[8]" id="avd[8]" class="oinput" value="22" alt="5">
+                	<span>Necessita de ajuda, mas é capaz de se manter sentado sozinho.</span>
+	             </label>
+	             <br>
+            	  <label>
+              	  <input type="radio" onclick="javascript:pads_totalizaPontosAVD('8');" name="avd[8]" id="avd[8]" class="oinput" value="23" alt="0">
+                	<span>Dependente.</span>
+	             </label>
+	             <br>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableitem">
+  	          <div onclick="javascript:pads_alterna_view('avd_ab_9');" style="cursor:pointer">
+                <img id="avd_img_9" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                <span class="formlabell">Deambulação</span>
+              </div>
+              <div id="avd_ab_9" style="display:none;">
+            	  <label>
+              	  <input type="radio" onclick="javascript:pads_totalizaPontosAVD('9');" name="avd[9]" id="avd[9]" class="oinput" value="24" alt="15">
+                	<span>Independente, caminha sozinho por 50 metros.</span>
+	             </label>
+	             <br>
+            	  <label>
+              	  <input type="radio" onclick="javascript:pads_totalizaPontosAVD('9');" name="avd[9]" id="avd[9]" class="oinput" value="25" alt="10">
+                	<span>Necessita de ajuda física ou supervisão para caminhar 50 metros.</span>
+	             </label>
+	             <br>
+            	  <label>
+              	  <input type="radio" onclick="javascript:pads_totalizaPontosAVD('9');" name="avd[9]" id="avd[9]" class="oinput" value="26" alt="5">
+                	<span>Independente em cadeira de rodas sem ajuda.</span>
+	             </label>
+	             <br>
+            	  <label>
+              	  <input type="radio" onclick="javascript:pads_totalizaPontosAVD('9');" name="avd[9]" id="avd[9]" class="oinput" value="27" alt="0">
+                	<span>Dependente.</span>
+	             </label>
+	             <br>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableitem">
+  	          <div onclick="javascript:pads_alterna_view('avd_ab_10');" style="cursor:pointer">
+                <img id="avd_img_10" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                <span class="formlabell">Escadas</span>
+              </div>
+              <div id="avd_ab_10" style="display:none;">
+            	  <label>
+              	  <input type="radio" onclick="javascript:pads_totalizaPontosAVD('10');" name="avd[10]" id="avd[10]" class="oinput" value="28" alt="10">
+                	<span>Independente para descer ou subir escadas.</span>
+	             </label>
+	             <br>
+            	  <label>
+              	  <input type="radio" onclick="javascript:pads_totalizaPontosAVD('10');" name="avd[10]" id="avd[10]" class="oinput" value="29" alt="5">
+                	<span>Necessita de ajuda física ou supervisão para fazê-lo.</span>
+	             </label>
+	             <br>
+            	  <label>
+              	  <input type="radio" onclick="javascript:pads_totalizaPontosAVD('10');" name="avd[10]" id="avd[10]" class="oinput" value="30" alt="0">
+                	<span>Dependente.</span>
+	             </label>
+	             <br>
+              </div>
+            </td>
+          </tr>
+  	      <tr>
+    	      <td colspan="4" align="absmiddle" style="text-align:left">
+              <span class="formlabell">Total de pontos:&nbsp;</span>
+      	      <input type="text" value="0" class="tablemsg" name="avd_pontuacao" id="avd_pontuacao" size="2" readonly="true" style="border:none">
+        	  </td>
+	        </tr>
+  	      <tr id="btn_avd">
+    	      <td colspan="4" align="absmiddle">
+      	      <input type="button" onclick="javascript:pads_addEvoAVD();" value="Salvar" class="button">
+        	  </td>
+	        </tr>
+  	    </tbody></table>
+    	</form>
+		</div>
+    <table class="table table-striped table-bordered table-hover" id="tab_avd">
+      <thead>
+        <tr>
+          <th class="center">DATA</th>
+          <th class="center">PROFISSIONAL</th>
+          <th class="center">PONTUAÇÃO</th>
+        </tr>
+      </thead>
+    <tbody>
+      <tr onclick="javscript:pads_alterna_view('tb_avd_99622')">
+        <td class="center">24/03/2016&nbsp;</td>
+        <td class="align-left">ELAINE FREIRE CRUZ</td>
+        <td class="align-right">100&nbsp;</td>
+      </tr>
+    </tbody>
+    <tbody id="tb_avd_99622" style="display:none;">
+<!--Opção para alterar o AVD -->
+
+
+
+      <tr>
+        <td>
+          <span class="formlabell">(10) Comer</span>
+        </td>
+        <td colspan="2">Totalmente independente.</td>
+      </tr>
+      <tr>
+        <td>
+          <span class="formlabell">(5) Tomar banho</span>
+        </td>
+        <td colspan="2">Independente: entra e sai do banho sozinho.</td>
+      </tr>
+      <tr>
+        <td>
+          <span class="formlabell">(10) Vestir-se</span>
+        </td>
+        <td colspan="2">Independente: capaz de vestir e tirar a roupa , abotoar-se, calçar e fechar os sapatos.</td>
+      </tr>
+      <tr>
+        <td>
+          <span class="formlabell">(5) Arrumar-se</span>
+        </td>
+        <td colspan="2">Independente para lavar o rosto, as mãos, pentear-se, enfeitar-se, maquiar-se, etc.</td>
+      </tr>
+      <tr>
+        <td>
+          <span class="formlabell">(10) Evacuações</span>
+        </td>
+        <td colspan="2">Controle normal do esfíncter.</td>
+      </tr>
+      <tr>
+        <td>
+          <span class="formlabell">(10) Micções</span>
+        </td>
+        <td colspan="2">Controle normal de esfíncter ou é capaz de cuidar da sonda, se utilizar.</td>
+      </tr>
+      <tr>
+        <td>
+          <span class="formlabell">(10) Uso do sanitário</span>
+        </td>
+        <td colspan="2">Independente para ir ao sanitário, tirar e vestir a roupa.</td>
+      </tr>
+      <tr>
+        <td>
+          <span class="formlabell">(15) Deslocamentos</span>
+        </td>
+        <td colspan="2">Independente para ir do sofá à cama.</td>
+      </tr>
+      <tr>
+        <td>
+          <span class="formlabell">(15) Deambulação</span>
+        </td>
+        <td colspan="2">Independente, caminha sozinho por 50 metros.</td>
+      </tr>
+      <tr>
+        <td>
+          <span class="formlabell">(10) Escadas</span>
+        </td>
+        <td colspan="2">Independente para descer ou subir escadas.</td>
+      </tr>
+      <tr>
+        <td colspan="3" class="tableitem">&nbsp;</td>
+      </tr>
+    </tbody>
+    </table>
+  </div>
+
+<h5 class="header blue no-margin-top no-padding-bottom align-left">
+  <span style="position: relative; top: 3px; cursor: pointer;" onclick="javascript:pads_alterna_view('div_casa_segura');">Casa Segura</span>
+      <i class="ace-icon fa fa-plus-circle bigger-100 green act-icon" name="botao_casa_segura" id="botao_casa_segura" onclick="javascript: pads_alterna_view('dados_casa_segura');" onmouseover="javascript:showTooltip(this,'&nbsp;Preencher Casa Segura&nbsp;');" style="cursor: pointer;"></i>
+  </h5>
+  <div align="left" id="div_casa_segura">
+  	<div id="dados_casa_segura" align="left" style="display: none">
+      <form name="formAddCasaSegura" id="formAddCasaSegura" action="http://s2.desenvolvimento.grupobem.com.br/" method="post">
+        <input type="hidden" name="processar" value="1">
+        <input type="hidden" name="mod" value="acompanhamento">
+        <input type="hidden" name="sub" value="iniciarevolucao">
+				<input type="hidden" name="upd" value="1">
+				<input type="hidden" name="edt" value="1">
+				<input type="hidden" name="add" value="1">
+        <input type="hidden" name="casa_segura" value="">
+        <input type="hidden" name="id_evolucao" value="">
+        <input type="hidden" name="id_avaliacao" value="310490">
+    	  <table cellpadding="0" cellspacing="2" border="0" width="100%" style="border:2px solid #dddddd">
+  	              <tbody><tr>
+            <td class="tableitem">
+              <input type="hidden" name="valida_casa_segura_1" id="valida_casa_segura_1" value="">
+  	          <div onclick="javascript:pads_alterna_view('cs_ab_1');" style="cursor:pointer">
+                <img id="cs_img_1" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                <span class="formlabell"><b>1</b> - Exterior</span>
+              </div>
+              <div id="cs_ab_1" style="display:none;">
+                            	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(1);" type="checkbox" name="casa_segura[1][]" id="casa_segura[1][]" class="input" value="1">
+                	<span>1 - Portas pesadas, de difícil manuseio</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(1);" type="checkbox" name="casa_segura[1][]" id="casa_segura[1][]" class="input" value="3">
+                	<span>2 - Espaço restrito para circulação</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(1);" type="checkbox" name="casa_segura[1][]" id="casa_segura[1][]" class="input" value="5">
+                	<span>3 - Má iluminação</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(1);" type="checkbox" name="casa_segura[1][]" id="casa_segura[1][]" class="input" value="7">
+                	<span>4 - Acesso difícil ou com barreiras (paredes, cercas, etc.)</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(1);" type="checkbox" name="casa_segura[1][]" id="casa_segura[1][]" class="input" value="9">
+                	<span>5 - Objetos que atrapalham a deambulação no local</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(1);" type="checkbox" name="casa_segura[1][]" id="casa_segura[1][]" class="input" value="2">
+                	<span>6 - Porta da frente de largura reduzida</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(1);" type="checkbox" name="casa_segura[1][]" id="casa_segura[1][]" class="input" value="4">
+                	<span>7 - Rampas acentuadas</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(1);" type="checkbox" name="casa_segura[1][]" id="casa_segura[1][]" class="input" value="6">
+                	<span>8 - Ausência de trincos de segurança</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(1);" type="checkbox" name="casa_segura[1][]" id="casa_segura[1][]" class="input" value="8">
+                	<span>9 - Itens pesados em locais altos ou não apropriados (vasos, caixas, equipamentos, etc.)</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(1);" type="checkbox" name="casa_segura[1][]" id="casa_segura[1][]" class="input" value="10">
+                	<span>10 - Piso externo liso, escorregadio sem marcações claras dos caminhos</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(1);" type="checkbox" name="casa_segura[1][]" id="casa_segura[1][]" class="input" value="11">
+                	<span>11 - Não se aplica</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(1);" type="checkbox" name="casa_segura[1][]" id="casa_segura[1][]" class="input" value="75">
+                	<span>12 - Não visualizado</span>
+	             </label>
+	             <br>
+	                           </div>
+            </td>
+          </tr>
+                    <tr>
+            <td class="tableitem">
+              <input type="hidden" name="valida_casa_segura_2" id="valida_casa_segura_2" value="">
+  	          <div onclick="javascript:pads_alterna_view('cs_ab_2');" style="cursor:pointer">
+                <img id="cs_img_2" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                <span class="formlabell"><b>2</b> - Jardins e jardineiras</span>
+              </div>
+              <div id="cs_ab_2" style="display:none;">
+                            	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(2);" type="checkbox" name="casa_segura[2][]" id="casa_segura[2][]" class="input" value="12">
+                	<span>1 - Piso liso, escorregadio ou com irregularidades</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(2);" type="checkbox" name="casa_segura[2][]" id="casa_segura[2][]" class="input" value="14">
+                	<span>2 - Má iluminação</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(2);" type="checkbox" name="casa_segura[2][]" id="casa_segura[2][]" class="input" value="16">
+                	<span>3 - Postura inadequada ao realizar jardinagem</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(2);" type="checkbox" name="casa_segura[2][]" id="casa_segura[2][]" class="input" value="13">
+                	<span>4 - Ausência de grades de proteção</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(2);" type="checkbox" name="casa_segura[2][]" id="casa_segura[2][]" class="input" value="15">
+                	<span>5 - Animal de estimação que "enrosca" nas pernas do assistido</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(2);" type="checkbox" name="casa_segura[2][]" id="casa_segura[2][]" class="input" value="17">
+                	<span>6 - Não se aplica</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(2);" type="checkbox" name="casa_segura[2][]" id="casa_segura[2][]" class="input" value="76">
+                	<span>7 - Não visualizado</span>
+	             </label>
+	             <br>
+	                           </div>
+            </td>
+          </tr>
+                    <tr>
+            <td class="tableitem">
+              <input type="hidden" name="valida_casa_segura_3" id="valida_casa_segura_3" value="">
+  	          <div onclick="javascript:pads_alterna_view('cs_ab_3');" style="cursor:pointer">
+                <img id="cs_img_3" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                <span class="formlabell"><b>3</b> - Sala de estar e jantar</span>
+              </div>
+              <div id="cs_ab_3" style="display:none;">
+                            	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(3);" type="checkbox" name="casa_segura[3][]" id="casa_segura[3][]" class="input" value="23">
+                	<span>1 - Fios elétricos e de telefone soltos</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(3);" type="checkbox" name="casa_segura[3][]" id="casa_segura[3][]" class="input" value="20">
+                	<span>2 - Cadeiras - sem braços de apoio lateral e ou espaldar alto</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(3);" type="checkbox" name="casa_segura[3][]" id="casa_segura[3][]" class="input" value="22">
+                	<span>3 - Estantes - com prateleiras, mal fixada ao piso ou à parede</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(3);" type="checkbox" name="casa_segura[3][]" id="casa_segura[3][]" class="input" value="24">
+                	<span>4 - Ausência de protetores de tomada</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(3);" type="checkbox" name="casa_segura[3][]" id="casa_segura[3][]" class="input" value="21">
+                	<span>5 - Tapetes soltos</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(3);" type="checkbox" name="casa_segura[3][]" id="casa_segura[3][]" class="input" value="18">
+                	<span>6 - Ambientes com muitos móveis baixos , obstáculos ou enfeites de vidro</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(3);" type="checkbox" name="casa_segura[3][]" id="casa_segura[3][]" class="input" value="19">
+                	<span>7 - Poltronas, sofás - sem braços, assentos macios que dificultam o levantar</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(3);" type="checkbox" name="casa_segura[3][]" id="casa_segura[3][]" class="input" value="25">
+                	<span>8 - Não se aplica</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(3);" type="checkbox" name="casa_segura[3][]" id="casa_segura[3][]" class="input" value="77">
+                	<span>9 - Não visualizado</span>
+	             </label>
+	             <br>
+	                           </div>
+            </td>
+          </tr>
+                    <tr>
+            <td class="tableitem">
+              <input type="hidden" name="valida_casa_segura_4" id="valida_casa_segura_4" value="">
+  	          <div onclick="javascript:pads_alterna_view('cs_ab_4');" style="cursor:pointer">
+                <img id="cs_img_4" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                <span class="formlabell"><b>4</b> - Escadas</span>
+              </div>
+              <div id="cs_ab_4" style="display:none;">
+                            	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(4);" type="checkbox" name="casa_segura[4][]" id="casa_segura[4][]" class="input" value="26">
+                	<span>1 - Ausência de corrimãos ao longo dos degraus</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(4);" type="checkbox" name="casa_segura[4][]" id="casa_segura[4][]" class="input" value="28">
+                	<span>2 - Ausência de fita antiderrapante nos degraus</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(4);" type="checkbox" name="casa_segura[4][]" id="casa_segura[4][]" class="input" value="31">
+                	<span>3 - Má iluminação nos degraus</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(4);" type="checkbox" name="casa_segura[4][]" id="casa_segura[4][]" class="input" value="27">
+                	<span>4 - Ausência de demarcação no início e ou no final da escada</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(4);" type="checkbox" name="casa_segura[4][]" id="casa_segura[4][]" class="input" value="29">
+                	<span>5 - Degraus irregulares na altura e ou largura</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(4);" type="checkbox" name="casa_segura[4][]" id="casa_segura[4][]" class="input" value="30">
+                	<span>6 - Objetos "guardados" inadequadamente entre os degraus</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(4);" type="checkbox" name="casa_segura[4][]" id="casa_segura[4][]" class="input" value="32">
+                	<span>7 - Não se aplica</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(4);" type="checkbox" name="casa_segura[4][]" id="casa_segura[4][]" class="input" value="78">
+                	<span>8 - Não visualizado</span>
+	             </label>
+	             <br>
+	                           </div>
+            </td>
+          </tr>
+                    <tr>
+            <td class="tableitem">
+              <input type="hidden" name="valida_casa_segura_5" id="valida_casa_segura_5" value="">
+  	          <div onclick="javascript:pads_alterna_view('cs_ab_5');" style="cursor:pointer">
+                <img id="cs_img_5" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                <span class="formlabell"><b>5</b> - Banheiros</span>
+              </div>
+              <div id="cs_ab_5" style="display:none;">
+                            	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(5);" type="checkbox" name="casa_segura[5][]" id="casa_segura[5][]" class="input" value="33">
+                	<span>1 - Ausência de barras de segurança fixadas</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(5);" type="checkbox" name="casa_segura[5][]" id="casa_segura[5][]" class="input" value="35">
+                	<span>2 - BOX - sem piso e ou proteção antiderrapante</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(5);" type="checkbox" name="casa_segura[5][]" id="casa_segura[5][]" class="input" value="37">
+                	<span>3 - Fechamento do box com material frágil</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(5);" type="checkbox" name="casa_segura[5][]" id="casa_segura[5][]" class="input" value="38">
+                	<span>4 - Itens pesados em locais altos ou não apropriados (água oxigenada, tinturas, cremes,etc)</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(5);" type="checkbox" name="casa_segura[5][]" id="casa_segura[5][]" class="input" value="41">
+                	<span>5 - Tomadas e interruptores próximos a contatos com a água</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(5);" type="checkbox" name="casa_segura[5][]" id="casa_segura[5][]" class="input" value="34">
+                	<span>6 - Espaço interno do banheiro ou box inadequado para circulação de duas pessoas</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(5);" type="checkbox" name="casa_segura[5][]" id="casa_segura[5][]" class="input" value="36">
+                	<span>7 - Tapete externo sem antiderrapante</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(5);" type="checkbox" name="casa_segura[5][]" id="casa_segura[5][]" class="input" value="40">
+                	<span>8 - Gavetas sem travas de segurança</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(5);" type="checkbox" name="casa_segura[5][]" id="casa_segura[5][]" class="input" value="39">
+                	<span>9 - Vaso sanitário não compatível com a idade (com redutor de tamanho para crianças e elevado para idosos)</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(5);" type="checkbox" name="casa_segura[5][]" id="casa_segura[5][]" class="input" value="42">
+                	<span>10 - Ausência de protetores de tomada</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(5);" type="checkbox" name="casa_segura[5][]" id="casa_segura[5][]" class="input" value="43">
+                	<span>11 - Não se aplica</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(5);" type="checkbox" name="casa_segura[5][]" id="casa_segura[5][]" class="input" value="79">
+                	<span>12 - Não visualizado</span>
+	             </label>
+	             <br>
+	                           </div>
+            </td>
+          </tr>
+                    <tr>
+            <td class="tableitem">
+              <input type="hidden" name="valida_casa_segura_6" id="valida_casa_segura_6" value="">
+  	          <div onclick="javascript:pads_alterna_view('cs_ab_6');" style="cursor:pointer">
+                <img id="cs_img_6" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                <span class="formlabell"><b>6</b> - Cozinha e área de serviço</span>
+              </div>
+              <div id="cs_ab_6" style="display:none;">
+                            	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(6);" type="checkbox" name="casa_segura[6][]" id="casa_segura[6][]" class="input" value="44">
+                	<span>1 - Ausência de barra de apoio</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(6);" type="checkbox" name="casa_segura[6][]" id="casa_segura[6][]" class="input" value="46">
+                	<span>2 - Tomadas e interruptores próximos a contatos</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(6);" type="checkbox" name="casa_segura[6][]" id="casa_segura[6][]" class="input" value="48">
+                	<span>3 - Piso liso, escorregadio ou com irregularidades</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(6);" type="checkbox" name="casa_segura[6][]" id="casa_segura[6][]" class="input" value="50">
+                	<span>4 - Produtos de limpeza, guardados em locais a altura da criança</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(6);" type="checkbox" name="casa_segura[6][]" id="casa_segura[6][]" class="input" value="52">
+                	<span>5 - Itens pesados em locais altos ou não apropriados</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(6);" type="checkbox" name="casa_segura[6][]" id="casa_segura[6][]" class="input" value="54">
+                	<span>6 - Gás de cozinha com botijão</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(6);" type="checkbox" name="casa_segura[6][]" id="casa_segura[6][]" class="input" value="45">
+                	<span>7 - Gavetas de fácil abertura, sem trava de segurança</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(6);" type="checkbox" name="casa_segura[6][]" id="casa_segura[6][]" class="input" value="47">
+                	<span>8 - Tapetes soltos</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(6);" type="checkbox" name="casa_segura[6][]" id="casa_segura[6][]" class="input" value="49">
+                	<span>9 - Armários com portas que atrapalham as áreas de circulação</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(6);" type="checkbox" name="casa_segura[6][]" id="casa_segura[6][]" class="input" value="51">
+                	<span>10 - Ausência de travas de segurança nos botões do fogão</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(6);" type="checkbox" name="casa_segura[6][]" id="casa_segura[6][]" class="input" value="53">
+                	<span>11 - Ausência de protetores de tomada</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(6);" type="checkbox" name="casa_segura[6][]" id="casa_segura[6][]" class="input" value="55">
+                	<span>12 - Fios elétricos e de telefone soltos</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(6);" type="checkbox" name="casa_segura[6][]" id="casa_segura[6][]" class="input" value="56">
+                	<span>13 - Não se aplica</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(6);" type="checkbox" name="casa_segura[6][]" id="casa_segura[6][]" class="input" value="80">
+                	<span>14 - Não visualizado</span>
+	             </label>
+	             <br>
+	                           </div>
+            </td>
+          </tr>
+                    <tr>
+            <td class="tableitem">
+              <input type="hidden" name="valida_casa_segura_7" id="valida_casa_segura_7" value="">
+  	          <div onclick="javascript:pads_alterna_view('cs_ab_7');" style="cursor:pointer">
+                <img id="cs_img_7" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                <span class="formlabell"><b>7</b> - Quarto de dormir</span>
+              </div>
+              <div id="cs_ab_7" style="display:none;">
+                            	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(7);" type="checkbox" name="casa_segura[7][]" id="casa_segura[7][]" class="input" value="57">
+                	<span>1 - Cama sem grades</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(7);" type="checkbox" name="casa_segura[7][]" id="casa_segura[7][]" class="input" value="59">
+                	<span>2 - Mesa de cabeceira com altura inadequada e ou sem bordas arredondadas, quinas dos móveis</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(7);" type="checkbox" name="casa_segura[7][]" id="casa_segura[7][]" class="input" value="61">
+                	<span>3 - Fechadura de difícil manuseio, presença da chave na porta</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(7);" type="checkbox" name="casa_segura[7][]" id="casa_segura[7][]" class="input" value="63">
+                	<span>4 - Tapetes soltos</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(7);" type="checkbox" name="casa_segura[7][]" id="casa_segura[7][]" class="input" value="65">
+                	<span>5 - Ausência de protetores de portas</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(7);" type="checkbox" name="casa_segura[7][]" id="casa_segura[7][]" class="input" value="67">
+                	<span>6 - Presença de excesso de umidade (bolor)</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(7);" type="checkbox" name="casa_segura[7][]" id="casa_segura[7][]" class="input" value="69">
+                	<span>7 - Ausência de protetores de tomada</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(7);" type="checkbox" name="casa_segura[7][]" id="casa_segura[7][]" class="input" value="60">
+                	<span>8 - Ausência de trincos de segurança</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(7);" type="checkbox" name="casa_segura[7][]" id="casa_segura[7][]" class="input" value="58">
+                	<span>9 - Cama com altura inadequada para a idade (menos de 30 cm para crianças e mais de 50 cm para idosos)</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(7);" type="checkbox" name="casa_segura[7][]" id="casa_segura[7][]" class="input" value="62">
+                	<span>10 - Ausência de cadeiras ou poltronas ou que as mesmas dificultem a locomoção</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(7);" type="checkbox" name="casa_segura[7][]" id="casa_segura[7][]" class="input" value="64">
+                	<span>11 - Fios elétricos e de telefone soltos</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(7);" type="checkbox" name="casa_segura[7][]" id="casa_segura[7][]" class="input" value="66">
+                	<span>12 - Janelas sem grades ou redes de proteção</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(7);" type="checkbox" name="casa_segura[7][]" id="casa_segura[7][]" class="input" value="68">
+                	<span>13 - Armário - portas quebradas ou sem sistema de segurança para crianças</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(7);" type="checkbox" name="casa_segura[7][]" id="casa_segura[7][]" class="input" value="70">
+                	<span>14 - Objetos pequenos soltos no quarto</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(7);" type="checkbox" name="casa_segura[7][]" id="casa_segura[7][]" class="input" value="71">
+                	<span>15 - Não se aplica</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(7);" type="checkbox" name="casa_segura[7][]" id="casa_segura[7][]" class="input" value="81">
+                	<span>16 - Não visualizado</span>
+	             </label>
+	             <br>
+	                           </div>
+            </td>
+          </tr>
+                    <tr>
+            <td class="tableitem">
+              <input type="hidden" name="valida_casa_segura_8" id="valida_casa_segura_8" value="">
+  	          <div onclick="javascript:pads_alterna_view('cs_ab_8');" style="cursor:pointer">
+                <img id="cs_img_8" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                <span class="formlabell"><b>8</b> - Norma geral</span>
+              </div>
+              <div id="cs_ab_8" style="display:none;">
+                            	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(8);" type="checkbox" name="casa_segura[8][]" id="casa_segura[8][]" class="input" value="72">
+                	<span>1 - Sapatos de solados lisos ou inadequados para a idade</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(8);" type="checkbox" name="casa_segura[8][]" id="casa_segura[8][]" class="input" value="73">
+                	<span>2 - Medicamentos guardados em locais inapropriados para a idade</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(8);" type="checkbox" name="casa_segura[8][]" id="casa_segura[8][]" class="input" value="74">
+                	<span>3 - Não se aplica</span>
+	             </label>
+	             <br>
+	                         	  <label>
+              	  <input onclick="javascript:pads_marcacaoCasaSegura(8);" type="checkbox" name="casa_segura[8][]" id="casa_segura[8][]" class="input" value="82">
+                	<span>4 - Não visualizado</span>
+	             </label>
+	             <br>
+	                           </div>
+            </td>
+          </tr>
+            	      <tr>
+    	      <td colspan="4" align="absmiddle">
+      	      <input id="btn_casa_segura" type="button" onclick="javascript:pads_addEvoCasaSegura();" value="Salvar" class="button">
+        	  </td>
+	        </tr>
+  	    </tbody></table>
+    	</form>
+		</div>
+    <table class="table table-striped table-bordered table-hover" id="casa_segura">
+      <thead>
+        <tr>
+          <th class="center">DATA</th>
+          <th class="center">PROFISSIONAL</th>
+        </tr>
+      </thead>
+    <tbody>
+      <tr id="tab_vazia" class="selectLine"> 
+        <td colspan="5" class="tablemsg">Não há nenhum item cadastrado!</td>
+      </tr>
+    </tbody>
+    </table>
+  </div>
+<h5 class="header blue no-margin-top no-padding-bottom align-left act-icon" onclick="javascript:pads_alterna_view('div_prot_fisio');">Fisioterapia</h5>  <div id="div_prot_fisio" align="left">    <table class="table table-striped table-bordered table-hover">      <thead>        <tr>          <th class="center">DATA</th>          <th class="center">PROFISSIONAL</th>          <th class="center">RESULTADO/PONTUAÇÃO</th>        </tr>      </thead>    <tbody>       <tr onclick="javscript:alterna_view_fisio('194410','3056360','55')">       <td class="center">01/08/2016</td>       <td class="align-left">RENATA CUNHA ALVES</td>       <td class="align-right">55</td>       </tr>    </tbody>    <tbody id="tb_cs_194410" style="display:none;"><tr><td><div id="div_cs_194410"></div></td></tr></tbody>    <tbody>       <tr onclick="javscript:alterna_view_fisio('182729','2981068','55')">       <td class="center">02/04/2016</td>       <td class="align-left">SIMONE GARCIA</td>       <td class="align-right">55</td>       </tr>    </tbody>    <tbody id="tb_cs_182729" style="display:none;"><tr><td><div id="div_cs_182729"></div></td></tr></tbody>   </table></div>  <h5 class="header blue no-margin-top no-padding-bottom align-left">
+    <span style="position: relative; top: 3px; cursor: pointer;" onclick="javascript:pads_alterna_view('div_disfagia');">Disfagia</span>
+          <i class="ace-icon fa fa-plus-circle bigger-100 green act-icon" name="add" onclick="javascript: pads_alterna_view('dados_disfagia');" onmouseover="javascript:showTooltip(this,'&nbsp;Preencher protocolo&nbsp;');return false;"></i>
+      </h5>
+  <div align="left" id="div_disfagia">
+  
+        <div id="dados_disfagia" align="left" style="display: none">
+        <form name="formAddDisfagia" id="formAddDisfagia" action="http://s2.desenvolvimento.grupobem.com.br/" method="post">
+          <input type="hidden" name="processar" value="1">
+          <input type="hidden" name="mod" value="acompanhamento">
+          <input type="hidden" name="sub" value="iniciarevolucao">
+          <input type="hidden" name="upd" value="1">
+          <input type="hidden" name="edt" value="1">
+          <input type="hidden" name="add" value="1">
+          <input type="hidden" name="tipo_protocolo" value="D">
+          <input type="hidden" name="protocolo_disfagia" value="">
+          <input type="hidden" name="id_evolucao" value="1">
+          <input type="hidden" name="id_avaliacao" value="310490">
+          <table class="table table-striped table-bordered table-hover">
+                        <tbody><tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('disfagia_ab_23');" style="cursor:pointer">
+                  <img id="protocolo_img_23" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Em caso de alimentação oral: Apresenta resto dos alimentos na boca após as refeições?</span>
+                </div>
+                <div id="disfagia_ab_23">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddDisfagia','23');" name="protocolo[23]" id="protocolo[23]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddDisfagia','23');" name="protocolo[23]" id="protocolo[23]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('disfagia_ab_24');" style="cursor:pointer">
+                  <img id="protocolo_img_24" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Demora para engolir a comida?</span>
+                </div>
+                <div id="disfagia_ab_24">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddDisfagia','24');" name="protocolo[24]" id="protocolo[24]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddDisfagia','24');" name="protocolo[24]" id="protocolo[24]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('disfagia_ab_25');" style="cursor:pointer">
+                  <img id="protocolo_img_25" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">apresenta acúmulo de saliva na boca?</span>
+                </div>
+                <div id="disfagia_ab_25">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddDisfagia','25');" name="protocolo[25]" id="protocolo[25]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddDisfagia','25');" name="protocolo[25]" id="protocolo[25]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('disfagia_ab_26');" style="cursor:pointer">
+                  <img id="protocolo_img_26" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Engole muito rápido?</span>
+                </div>
+                <div id="disfagia_ab_26">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddDisfagia','26');" name="protocolo[26]" id="protocolo[26]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddDisfagia','26');" name="protocolo[26]" id="protocolo[26]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('disfagia_ab_27');" style="cursor:pointer">
+                  <img id="protocolo_img_27" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Assistido apresenta tosse e ou engasgo quando se alimenta?</span>
+                </div>
+                <div id="disfagia_ab_27">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddDisfagia','27');" name="protocolo[27]" id="protocolo[27]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddDisfagia','27');" name="protocolo[27]" id="protocolo[27]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('disfagia_ab_28');" style="cursor:pointer">
+                  <img id="protocolo_img_28" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Observa-se tosse, pigarros e ou engasgo quando ingere líquidos?</span>
+                </div>
+                <div id="disfagia_ab_28">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddDisfagia','28');" name="protocolo[28]" id="protocolo[28]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddDisfagia','28');" name="protocolo[28]" id="protocolo[28]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('disfagia_ab_29');" style="cursor:pointer">
+                  <img id="protocolo_img_29" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Apresenta cansaço ou falta de ar quando se alimenta?</span>
+                </div>
+                <div id="disfagia_ab_29">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddDisfagia','29');" name="protocolo[29]" id="protocolo[29]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddDisfagia','29');" name="protocolo[29]" id="protocolo[29]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('disfagia_ab_30');" style="cursor:pointer">
+                  <img id="protocolo_img_30" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Tem histórico de pneumonia aspirativa?</span>
+                </div>
+                <div id="disfagia_ab_30">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddDisfagia','30');" name="protocolo[30]" id="protocolo[30]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddDisfagia','30');" name="protocolo[30]" id="protocolo[30]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('disfagia_ab_31');" style="cursor:pointer">
+                  <img id="protocolo_img_31" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Já apresentou quadro de desnutrição e ou desidratação?</span>
+                </div>
+                <div id="disfagia_ab_31">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddDisfagia','31');" name="protocolo[31]" id="protocolo[31]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddDisfagia','31');" name="protocolo[31]" id="protocolo[31]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('disfagia_ab_32');" style="cursor:pointer">
+                  <img id="protocolo_img_32" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Apresenta dificuldade ou recusa alguma consistência alimentar?</span>
+                </div>
+                <div id="disfagia_ab_32">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddDisfagia','32');" name="protocolo[32]" id="protocolo[32]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddDisfagia','32');" name="protocolo[32]" id="protocolo[32]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td colspan="4" align="absmiddle">
+                <input id="btn_disfagia" type="button" onclick="javascript:pads_addEvoProtocolo('formAddDisfagia','disfagia');" value="Salvar" class="button">
+              </td>
+            </tr>
+          </tbody></table>
+        </form>
+      </div>
+        <table class="table table-striped table-bordered table-hover">
+      <thead>
+        <tr>
+          <th class="center">DATA</th>
+          <th class="center">PROFISSIONAL</th>
+        </tr>
+      </thead>
+        <tbody>
+        <tr id="tab_vazia" class="selectLine"> 
+          <td colspan="5" class="tablemsg">Não há nenhum protocolo cadastrado!</td>
+        </tr>
+      </tbody>
+        </table>
+      </div>
+  <h5 class="header blue no-margin-top no-padding-bottom align-left">
+    <span style="position: relative; top: 3px; cursor: pointer;" onclick="javascript:pads_alterna_view('div_prot_fisio');">Fisioterapia(Antigo)</span>
+          <i class="ace-icon fa fa-plus-circle bigger-100 green act-icon" name="add" onclick="javascript: pads_alterna_view('dados_prot_fisio');" onmouseover="javascript:showTooltip(this,'&nbsp;Preencher protocolo&nbsp;');return false;"></i>
+      </h5>
+  <div align="left" id="div_prot_fisio">
+  
+        <div id="dados_prot_fisio" align="left" style="display: none">
+        <form name="formAddProtFisio" id="formAddProtFisio" action="http://s2.desenvolvimento.grupobem.com.br/" method="post">
+          <input type="hidden" name="processar" value="1">
+          <input type="hidden" name="mod" value="acompanhamento">
+          <input type="hidden" name="sub" value="iniciarevolucao">
+          <input type="hidden" name="upd" value="1">
+          <input type="hidden" name="edt" value="1">
+          <input type="hidden" name="add" value="1">
+          <input type="hidden" name="tipo_protocolo" value="F">
+          <input type="hidden" name="protocolo_prot_fisio" value="">
+          <input type="hidden" name="id_evolucao" value="1">
+          <input type="hidden" name="id_avaliacao" value="310490">
+          <table class="table table-striped table-bordered table-hover">
+                        <tbody><tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_fisio_ab_1');" style="cursor:pointer">
+                  <img id="protocolo_img_1" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Assistido é acamado? (temporário ou permanente)</span>
+                </div>
+                <div id="prot_fisio_ab_1">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisio','1');" name="protocolo[1]" id="protocolo[1]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisio','1');" name="protocolo[1]" id="protocolo[1]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_fisio_ab_2');" style="cursor:pointer">
+                  <img id="protocolo_img_2" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Sente falta de ar quando caminha pequeno percurso? (3m)</span>
+                </div>
+                <div id="prot_fisio_ab_2">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisio','2');" name="protocolo[2]" id="protocolo[2]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisio','2');" name="protocolo[2]" id="protocolo[2]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_fisio_ab_3');" style="cursor:pointer">
+                  <img id="protocolo_img_3" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Faz uso de oxigenoterapia? (intermitente ou contínuo)</span>
+                </div>
+                <div id="prot_fisio_ab_3">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisio','3');" name="protocolo[3]" id="protocolo[3]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisio','3');" name="protocolo[3]" id="protocolo[3]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_fisio_ab_4');" style="cursor:pointer">
+                  <img id="protocolo_img_4" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Possui alguma doença pulmonar?</span>
+                </div>
+                <div id="prot_fisio_ab_4">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisio','4');" name="protocolo[4]" id="protocolo[4]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisio','4');" name="protocolo[4]" id="protocolo[4]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_fisio_ab_5');" style="cursor:pointer">
+                  <img id="protocolo_img_5" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Tem histórico de infecções pulmonares recorrentes?</span>
+                </div>
+                <div id="prot_fisio_ab_5">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisio','5');" name="protocolo[5]" id="protocolo[5]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisio','5');" name="protocolo[5]" id="protocolo[5]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_fisio_ab_6');" style="cursor:pointer">
+                  <img id="protocolo_img_6" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Deambula com auxílio? (de cuidador, bengala ou andador)</span>
+                </div>
+                <div id="prot_fisio_ab_6">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisio','6');" name="protocolo[6]" id="protocolo[6]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisio','6');" name="protocolo[6]" id="protocolo[6]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_fisio_ab_7');" style="cursor:pointer">
+                  <img id="protocolo_img_7" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Realiza trocas posturais sem auxílio? (senta, deita e levanta)</span>
+                </div>
+                <div id="prot_fisio_ab_7">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisio','7');" name="protocolo[7]" id="protocolo[7]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisio','7');" name="protocolo[7]" id="protocolo[7]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_fisio_ab_8');" style="cursor:pointer">
+                  <img id="protocolo_img_8" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Relata dor articular (ombro, joelho, coluna) em situação estática ou dinâmica?</span>
+                </div>
+                <div id="prot_fisio_ab_8">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisio','8');" name="protocolo[8]" id="protocolo[8]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisio','8');" name="protocolo[8]" id="protocolo[8]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_fisio_ab_9');" style="cursor:pointer">
+                  <img id="protocolo_img_9" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Possui deformidade de membros superiores ou inferiores?</span>
+                </div>
+                <div id="prot_fisio_ab_9">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisio','9');" name="protocolo[9]" id="protocolo[9]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisio','9');" name="protocolo[9]" id="protocolo[9]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_fisio_ab_10');" style="cursor:pointer">
+                  <img id="protocolo_img_10" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Relata perdad e força muscular?</span>
+                </div>
+                <div id="prot_fisio_ab_10">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisio','10');" name="protocolo[10]" id="protocolo[10]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisio','10');" name="protocolo[10]" id="protocolo[10]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_fisio_ab_11');" style="cursor:pointer">
+                  <img id="protocolo_img_11" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Realizou intervenção cirúrgica? (ortopédica)</span>
+                </div>
+                <div id="prot_fisio_ab_11">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisio','11');" name="protocolo[11]" id="protocolo[11]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisio','11');" name="protocolo[11]" id="protocolo[11]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td colspan="4" align="absmiddle">
+                <input id="btn_prot_fisio" type="button" onclick="javascript:pads_addEvoProtocolo('formAddProtFisio','prot_fisio');" value="Salvar" class="button">
+              </td>
+            </tr>
+          </tbody></table>
+        </form>
+      </div>
+        <table class="table table-striped table-bordered table-hover">
+      <thead>
+        <tr>
+          <th class="center">DATA</th>
+          <th class="center">PROFISSIONAL</th>
+        </tr>
+      </thead>
+        <tbody>
+        <tr id="tab_vazia" class="selectLine"> 
+          <td colspan="5" class="tablemsg">Não há nenhum protocolo cadastrado!</td>
+        </tr>
+      </tbody>
+        </table>
+      </div>
+  <h5 class="header blue no-margin-top no-padding-bottom align-left">
+    <span style="position: relative; top: 3px; cursor: pointer;" onclick="javascript:pads_alterna_view('div_prot_nutri');">Nutrição</span>
+          <i class="ace-icon fa fa-plus-circle bigger-100 green act-icon" name="add" onclick="javascript: pads_alterna_view('dados_prot_nutri');" onmouseover="javascript:showTooltip(this,'&nbsp;Preencher protocolo&nbsp;');return false;"></i>
+      </h5>
+  <div align="left" id="div_prot_nutri">
+  
+        <div id="dados_prot_nutri" align="left" style="display: none">
+        <form name="formAddProtNutri" id="formAddProtNutri" action="http://s2.desenvolvimento.grupobem.com.br/" method="post">
+          <input type="hidden" name="processar" value="1">
+          <input type="hidden" name="mod" value="acompanhamento">
+          <input type="hidden" name="sub" value="iniciarevolucao">
+          <input type="hidden" name="upd" value="1">
+          <input type="hidden" name="edt" value="1">
+          <input type="hidden" name="add" value="1">
+          <input type="hidden" name="tipo_protocolo" value="N">
+          <input type="hidden" name="protocolo_prot_nutri" value="">
+          <input type="hidden" name="id_evolucao" value="1">
+          <input type="hidden" name="id_avaliacao" value="310490">
+          <table class="table table-striped table-bordered table-hover">
+                        <tbody><tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_nutri_ab_12');" style="cursor:pointer">
+                  <img id="protocolo_img_12" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Assistido está obeso para a idade?</span>
+                </div>
+                <div id="prot_nutri_ab_12">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtNutri','12');" name="protocolo[12]" id="protocolo[12]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtNutri','12');" name="protocolo[12]" id="protocolo[12]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_nutri_ab_13');" style="cursor:pointer">
+                  <img id="protocolo_img_13" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Assistido está baixo peso para a idade?</span>
+                </div>
+                <div id="prot_nutri_ab_13">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtNutri','13');" name="protocolo[13]" id="protocolo[13]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtNutri','13');" name="protocolo[13]" id="protocolo[13]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_nutri_ab_14');" style="cursor:pointer">
+                  <img id="protocolo_img_14" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Assistido possui alimentação enteral?</span>
+                </div>
+                <div id="prot_nutri_ab_14">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtNutri','14');" name="protocolo[14]" id="protocolo[14]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtNutri','14');" name="protocolo[14]" id="protocolo[14]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_nutri_ab_15');" style="cursor:pointer">
+                  <img id="protocolo_img_15" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Assistido está sobrepeso para a idade?</span>
+                </div>
+                <div id="prot_nutri_ab_15">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtNutri','15');" name="protocolo[15]" id="protocolo[15]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtNutri','15');" name="protocolo[15]" id="protocolo[15]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_nutri_ab_16');" style="cursor:pointer">
+                  <img id="protocolo_img_16" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Assistido possui IMC abaixo de 18,5Kg/m2</span>
+                </div>
+                <div id="prot_nutri_ab_16">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtNutri','16');" name="protocolo[16]" id="protocolo[16]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtNutri','16');" name="protocolo[16]" id="protocolo[16]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_nutri_ab_17');" style="cursor:pointer">
+                  <img id="protocolo_img_17" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Assistido é diabético, hipertenso, nefropata, hepatopata ou dislipidêmico?</span>
+                </div>
+                <div id="prot_nutri_ab_17">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtNutri','17');" name="protocolo[17]" id="protocolo[17]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtNutri','17');" name="protocolo[17]" id="protocolo[17]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_nutri_ab_18');" style="cursor:pointer">
+                  <img id="protocolo_img_18" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Apresenta problemas digestivos? (gastrite, refluxo, úlcera gástrica, obstipação intestinal ou diarréia)</span>
+                </div>
+                <div id="prot_nutri_ab_18">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtNutri','18');" name="protocolo[18]" id="protocolo[18]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtNutri','18');" name="protocolo[18]" id="protocolo[18]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_nutri_ab_19');" style="cursor:pointer">
+                  <img id="protocolo_img_19" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Assistido está com patologia descompensada?</span>
+                </div>
+                <div id="prot_nutri_ab_19">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtNutri','19');" name="protocolo[19]" id="protocolo[19]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtNutri','19');" name="protocolo[19]" id="protocolo[19]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_nutri_ab_20');" style="cursor:pointer">
+                  <img id="protocolo_img_20" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Vem apresentando ganho ou perda de peso excessivos nos últimos 3 meses?</span>
+                </div>
+                <div id="prot_nutri_ab_20">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtNutri','20');" name="protocolo[20]" id="protocolo[20]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtNutri','20');" name="protocolo[20]" id="protocolo[20]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_nutri_ab_21');" style="cursor:pointer">
+                  <img id="protocolo_img_21" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Apresenta disfagia?</span>
+                </div>
+                <div id="prot_nutri_ab_21">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtNutri','21');" name="protocolo[21]" id="protocolo[21]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtNutri','21');" name="protocolo[21]" id="protocolo[21]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_nutri_ab_22');" style="cursor:pointer">
+                  <img id="protocolo_img_22" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Assistido refere alimentação inadequada?</span>
+                </div>
+                <div id="prot_nutri_ab_22">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtNutri','22');" name="protocolo[22]" id="protocolo[22]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtNutri','22');" name="protocolo[22]" id="protocolo[22]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td colspan="4" align="absmiddle">
+                <input id="btn_prot_nutri" type="button" onclick="javascript:pads_addEvoProtocolo('formAddProtNutri','prot_nutri');" value="Salvar" class="button">
+              </td>
+            </tr>
+          </tbody></table>
+        </form>
+      </div>
+        <table class="table table-striped table-bordered table-hover">
+      <thead>
+        <tr>
+          <th class="center">DATA</th>
+          <th class="center">PROFISSIONAL</th>
+        </tr>
+      </thead>
+        <tbody>
+        <tr id="tab_vazia" class="selectLine"> 
+          <td colspan="5" class="tablemsg">Não há nenhum protocolo cadastrado!</td>
+        </tr>
+      </tbody>
+        </table>
+      </div>
+  <h5 class="header blue no-margin-top no-padding-bottom align-left">
+    <span style="position: relative; top: 3px; cursor: pointer;" onclick="javascript:pads_alterna_view('div_prot_fisico');">Educador Físico</span>
+          <i class="ace-icon fa fa-plus-circle bigger-100 green act-icon" name="add" onclick="javascript: pads_alterna_view('dados_prot_fisico');" onmouseover="javascript:showTooltip(this,'&nbsp;Preencher protocolo&nbsp;');return false;"></i>
+      </h5>
+  <div align="left" id="div_prot_fisico">
+  
+        <div id="dados_prot_fisico" align="left" style="display: none">
+        <form name="formAddProtFisico" id="formAddProtFisico" action="http://s2.desenvolvimento.grupobem.com.br/" method="post">
+          <input type="hidden" name="processar" value="1">
+          <input type="hidden" name="mod" value="acompanhamento">
+          <input type="hidden" name="sub" value="iniciarevolucao">
+          <input type="hidden" name="upd" value="1">
+          <input type="hidden" name="edt" value="1">
+          <input type="hidden" name="add" value="1">
+          <input type="hidden" name="tipo_protocolo" value="E">
+          <input type="hidden" name="protocolo_prot_fisico" value="">
+          <input type="hidden" name="id_evolucao" value="1">
+          <input type="hidden" name="id_avaliacao" value="310490">
+          <table class="table table-striped table-bordered table-hover">
+                        <tbody><tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_fisico_ab_49');" style="cursor:pointer">
+                  <img id="protocolo_img_49" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Assistido possui restrição médica para atividade fisica?</span>
+                </div>
+                <div id="prot_fisico_ab_49">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisico','49');" name="protocolo[49]" id="protocolo[49]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisico','49');" name="protocolo[49]" id="protocolo[49]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_fisico_ab_50');" style="cursor:pointer">
+                  <img id="protocolo_img_50" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Assistido é acamado?</span>
+                </div>
+                <div id="prot_fisico_ab_50">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisico','50');" name="protocolo[50]" id="protocolo[50]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisico','50');" name="protocolo[50]" id="protocolo[50]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_fisico_ab_51');" style="cursor:pointer">
+                  <img id="protocolo_img_51" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Assistido apresenta risco de queda?</span>
+                </div>
+                <div id="prot_fisico_ab_51">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisico','51');" name="protocolo[51]" id="protocolo[51]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisico','51');" name="protocolo[51]" id="protocolo[51]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_fisico_ab_52');" style="cursor:pointer">
+                  <img id="protocolo_img_52" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Assistido faz atividade fisica?</span>
+                </div>
+                <div id="prot_fisico_ab_52">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisico','52');" name="protocolo[52]" id="protocolo[52]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisico','52');" name="protocolo[52]" id="protocolo[52]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_fisico_ab_53');" style="cursor:pointer">
+                  <img id="protocolo_img_53" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Assistido é resistente a iniciar atividade fisica?</span>
+                </div>
+                <div id="prot_fisico_ab_53">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisico','53');" name="protocolo[53]" id="protocolo[53]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisico','53');" name="protocolo[53]" id="protocolo[53]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_fisico_ab_54');" style="cursor:pointer">
+                  <img id="protocolo_img_54" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Assistido apresenta patologia descompensada?</span>
+                </div>
+                <div id="prot_fisico_ab_54">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisico','54');" name="protocolo[54]" id="protocolo[54]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisico','54');" name="protocolo[54]" id="protocolo[54]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_fisico_ab_55');" style="cursor:pointer">
+                  <img id="protocolo_img_55" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Assistido apresenta restrição pelo AVD?</span>
+                </div>
+                <div id="prot_fisico_ab_55">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisico','55');" name="protocolo[55]" id="protocolo[55]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisico','55');" name="protocolo[55]" id="protocolo[55]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_fisico_ab_56');" style="cursor:pointer">
+                  <img id="protocolo_img_56" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Assistido possui deformidade de membros superiores ou inferiores?</span>
+                </div>
+                <div id="prot_fisico_ab_56">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisico','56');" name="protocolo[56]" id="protocolo[56]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisico','56');" name="protocolo[56]" id="protocolo[56]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_fisico_ab_57');" style="cursor:pointer">
+                  <img id="protocolo_img_57" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Assistido relata perda de força muscular?</span>
+                </div>
+                <div id="prot_fisico_ab_57">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisico','57');" name="protocolo[57]" id="protocolo[57]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisico','57');" name="protocolo[57]" id="protocolo[57]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_fisico_ab_58');" style="cursor:pointer">
+                  <img id="protocolo_img_58" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Assistido apresenta ganho ou perda importante do peso?</span>
+                </div>
+                <div id="prot_fisico_ab_58">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisico','58');" name="protocolo[58]" id="protocolo[58]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtFisico','58');" name="protocolo[58]" id="protocolo[58]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td colspan="4" align="absmiddle">
+                <input id="btn_prot_fisico" type="button" onclick="javascript:pads_addEvoProtocolo('formAddProtFisico','prot_fisico');" value="Salvar" class="button">
+              </td>
+            </tr>
+          </tbody></table>
+        </form>
+      </div>
+        <table class="table table-striped table-bordered table-hover">
+      <thead>
+        <tr>
+          <th class="center">DATA</th>
+          <th class="center">PROFISSIONAL</th>
+        </tr>
+      </thead>
+        <tbody>
+        <tr id="tab_vazia" class="selectLine"> 
+          <td colspan="5" class="tablemsg">Não há nenhum protocolo cadastrado!</td>
+        </tr>
+      </tbody>
+        </table>
+      </div>
+  <h5 class="header blue no-margin-top no-padding-bottom align-left">
+    <span style="position: relative; top: 3px; cursor: pointer;" onclick="javascript:pads_alterna_view('div_prot_social');">Serviço Social</span>
+          <i class="ace-icon fa fa-plus-circle bigger-100 green act-icon" name="add" onclick="javascript: pads_alterna_view('dados_prot_social');" onmouseover="javascript:showTooltip(this,'&nbsp;Preencher protocolo&nbsp;');return false;"></i>
+      </h5>
+  <div align="left" id="div_prot_social">
+  
+        <div id="dados_prot_social" align="left" style="display: none">
+        <form name="formAddProtSocial" id="formAddProtSocial" action="http://s2.desenvolvimento.grupobem.com.br/" method="post">
+          <input type="hidden" name="processar" value="1">
+          <input type="hidden" name="mod" value="acompanhamento">
+          <input type="hidden" name="sub" value="iniciarevolucao">
+          <input type="hidden" name="upd" value="1">
+          <input type="hidden" name="edt" value="1">
+          <input type="hidden" name="add" value="1">
+          <input type="hidden" name="tipo_protocolo" value="S">
+          <input type="hidden" name="protocolo_prot_social" value="">
+          <input type="hidden" name="id_evolucao" value="1">
+          <input type="hidden" name="id_avaliacao" value="310490">
+          <table class="table table-striped table-bordered table-hover">
+            <tbody style="border: 1px solid #35658C; margin: 2px;">
+  <tr>
+    <td class="formlabell">Bloco I - Abandono</td>
+  </tr><tr>
+            </tr><tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_social_ab_33');" style="cursor:pointer">
+                  <img id="protocolo_img_33" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Faz as refeições com amigos e familiares e se sente bem quando está com eles?</span>
+                </div>
+                <div id="prot_social_ab_33">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtSocial','33');" name="protocolo[33]" id="protocolo[33]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtSocial','33');" name="protocolo[33]" id="protocolo[33]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_social_ab_34');" style="cursor:pointer">
+                  <img id="protocolo_img_34" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Recebe visitas de amigos e familiares e se sente bem quando está com eles?</span>
+                </div>
+                <div id="prot_social_ab_34">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtSocial','34');" name="protocolo[34]" id="protocolo[34]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtSocial','34');" name="protocolo[34]" id="protocolo[34]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_social_ab_35');" style="cursor:pointer">
+                  <img id="protocolo_img_35" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">A localização da residência facilita o acesso à eventos, lazer, etc. oferecida pela comunidade.</span>
+                </div>
+                <div id="prot_social_ab_35">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtSocial','35');" name="protocolo[35]" id="protocolo[35]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtSocial','35');" name="protocolo[35]" id="protocolo[35]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_social_ab_36');" style="cursor:pointer">
+                  <img id="protocolo_img_36" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Apresenta problemas físicos e/ou emocionais que o impedem de utilizar os recursos da comunidade.</span>
+                </div>
+                <div id="prot_social_ab_36">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtSocial','36');" name="protocolo[36]" id="protocolo[36]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtSocial','36');" name="protocolo[36]" id="protocolo[36]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+            </tbody>
+<tbody style="border: 1px solid #35658C; margin: 2px;">
+  <tr>
+    <td class="formlabell">Bloco II - Recursos Financeiros</td>
+  </tr><tr>
+            </tr><tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_social_ab_37');" style="cursor:pointer">
+                  <img id="protocolo_img_37" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">A renda financeira do assistido é suficiente para suprir suas necessidades básicas + a compra de medicação.</span>
+                </div>
+                <div id="prot_social_ab_37">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtSocial','37');" name="protocolo[37]" id="protocolo[37]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtSocial','37');" name="protocolo[37]" id="protocolo[37]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_social_ab_38');" style="cursor:pointer">
+                  <img id="protocolo_img_38" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Assistido pode contar com o apoio de familiar para a aquisição dos medicamentos.</span>
+                </div>
+                <div id="prot_social_ab_38">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtSocial','38');" name="protocolo[38]" id="protocolo[38]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtSocial','38');" name="protocolo[38]" id="protocolo[38]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+            </tbody>
+<tbody style="border: 1px solid #35658C; margin: 2px;">
+  <tr>
+    <td class="formlabell">Bloco III - Conflitos Familiares</td>
+  </tr><tr>
+            </tr><tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_social_ab_39');" style="cursor:pointer">
+                  <img id="protocolo_img_39" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">O assistido tem um bom relacionamento com seus familiares.</span>
+                </div>
+                <div id="prot_social_ab_39">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtSocial','39');" name="protocolo[39]" id="protocolo[39]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtSocial','39');" name="protocolo[39]" id="protocolo[39]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_social_ab_40');" style="cursor:pointer">
+                  <img id="protocolo_img_40" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">O assistido aceita que familiares opinem na sua vida.</span>
+                </div>
+                <div id="prot_social_ab_40">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtSocial','40');" name="protocolo[40]" id="protocolo[40]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtSocial','40');" name="protocolo[40]" id="protocolo[40]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+                        <tr>
+              <td>
+                <div onclick="javascript:pads_alterna_view('prot_social_ab_41');" style="cursor:pointer">
+                  <img id="protocolo_img_41" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+                  <span class="formlabell">Há respeito da opnião do assistido pelos familiares.</span>
+                </div>
+                <div id="prot_social_ab_41">
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtSocial','41');" name="protocolo[41]" id="protocolo[41]" class="oinput" value="S">
+                    <span>Sim</span>
+                  </label>
+                  <label>
+                    <input type="radio" onclick="javascript:pads_marcacaoProtocolo('formAddProtSocial','41');" name="protocolo[41]" id="protocolo[41]" class="oinput" value="N">
+                    <span>Não</span>
+                  </label>
+                  <br>
+                </div>
+              </td>
+            </tr>
+            </tbody>
+            <tbody><tr>
+              <td colspan="4" align="absmiddle">
+                <input id="btn_prot_social" type="button" onclick="javascript:pads_addEvoProtocolo('formAddProtSocial','prot_social');" value="Salvar" class="button">
+              </td>
+            </tr>
+          </tbody></table>
+        </form>
+      </div>
+        <table class="table table-striped table-bordered table-hover">
+      <thead>
+        <tr>
+          <th class="center">DATA</th>
+          <th class="center">PROFISSIONAL</th>
+        </tr>
+      </thead>
+        <tbody>
+        <tr id="tab_vazia" class="selectLine"> 
+          <td colspan="5" class="tablemsg">Não há nenhum protocolo cadastrado!</td>
+        </tr>
+      </tbody>
+        </table>
+      </div>
+<h5 class="header blue no-margin-top no-padding-bottom align-left">
+  <span style="position: relative; top: 3px; cursor: pointer;" onclick="javascript:pads_alterna_view('div_pe_diabetico');">Pé diabético</span>
+        <i class="ace-icon fa fa-plus-circle bigger-100 green act-icon" name="add" onclick="javascript: pads_alterna_view('dados_pe_diabetico');" onmouseover="javascript:showTooltip(this,'&nbsp;Preencher Pé Diabético&nbsp;');return false;"></i>
+  </h5>
+<div align="left" id="div_pe_diabetico">
+  	<div id="dados_pe_diabetico" style="border: 2px solid rgb(221, 221, 221);">
+	    <form name="formAddPeDiabetico" id="formAddPeDiabetico" action="http://s2.desenvolvimento.grupobem.com.br/" method="post">
+        <input type="hidden" name="processar" value="1">
+        <input type="hidden" name="mod" value="acompanhamento">
+        <input type="hidden" name="sub" value="iniciarevolucao">
+        <input type="hidden" name="upd" value="1">
+        <input type="hidden" name="edt" value="1">
+        <input type="hidden" name="add" value="1">
+        <input type="hidden" name="pe_diabetico" value="">
+        <input type="hidden" name="id_evolucao" value="">
+        <input type="hidden" name="id_avaliacao" value="310490">
+        <br>
+          <h5 class="header blue no-margin-top no-padding-bottom align-left">Localização (Teste de sensibilidade)</h5>
+          <table cellpadding="0" cellspacing="2" border="0" width="100%" style="border:2px solid #dddddd">
+            <tbody><tr>
+              <td colspan="6" class="tableitem" style="text-align:center">
+                <object data="./[NEXT] - Grupo BEM_files/index.php" type="image/svg+xml" align="center">
+                  <embed src="index.php?mode=ajax&amp;app=pads&amp;mod=comum&amp;sub=operacionais&amp;pag=pe_diabetico_svg" type="image/svg+xml" align="center" pluginspage="http://www.adobe.com/svg/viewer/install/">
+                </object>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" class="tabletitle" align="center">Região Dorsal</td>
+              <td colspan="4" class="tabletitle" align="center">Região Plantar</td>
+            </tr>
+            <tr>
+              <td class="tableitem" style="text-align:center; font-weight:bold;">Pé esquerdo</td>
+              <td class="tableitem" style="text-align:center; font-weight:bold;">Pé direito</td>
+              <td colspan="2" class="tableitem" style="text-align:center; font-weight:bold;">Pé esquerdo</td>
+              <td colspan="2" class="tableitem" style="text-align:center; font-weight:bold;">Pé direito</td>
+            </tr>
+            <tr>
+              <td class="tableitem" style="vertical-align: top;">
+                <label>
+                  <span>1: </span>
+                  <input type="radio" name="ponto[D][E][1]" id="ponto[D][E][1]" value="S" class="oinput" style="display:none;margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[D][E][1]" id="ponto[D][E][1]" value="N" class="oinput" style="display:none;margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[D][E][1]" id="ponto[D][E][1]" value="V" class="oinput" style="display:none;margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[D][E][1]" id="ponto[D][E][1]" value="A" class="oinput" style="display:none;margin-top: 1px; margin-bottom: 1px;">
+                  <img src="./[NEXT] - Grupo BEM_files/radio_inativo.png" id="img_D_E_1" style="margin:0px; padding: 0px; vertical-align: bottom">
+                </label>
+              </td>
+              <td class="tableitem" style="vertical-align: top;">
+                <label>
+                  <span>1: </span>
+                  <input type="radio" name="ponto[D][D][1]" id="ponto[D][D][1]" value="S" class="oinput" style="display:none;margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[D][D][1]" id="ponto[D][D][1]" value="N" class="oinput" style="display:none;margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[D][D][1]" id="ponto[D][D][1]" value="V" class="oinput" style="display:none;margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[D][D][1]" id="ponto[D][D][1]" value="A" class="oinput" style="display:none;margin-top: 1px; margin-bottom: 1px;">
+                  <img src="./[NEXT] - Grupo BEM_files/stop.png" id="img_D_D_1" style="margin:0px; padding: 0px; vertical-align: bottom">
+                </label>
+              </td>
+                            <td class="tableitem" style="vertical-align: top;">
+                                <label>
+                  <span>1: </span>
+                  <input type="radio" name="ponto[P][E][1]" id="ponto[P][E][1]" value="S" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][E][1]" id="ponto[P][E][1]" value="N" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][E][1]" id="ponto[P][E][1]" value="V" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][E][1]" id="ponto[P][E][1]" value="A" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <img src="./[NEXT] - Grupo BEM_files/error_roxo.png" id="img_P_E_1" style="margin:0px; padding: 0px; vertical-align: bottom">
+                </label>
+                <br>
+                                              <label>
+                  <span>2: </span>
+                  <input type="radio" name="ponto[P][E][2]" id="ponto[P][E][2]" value="S" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][E][2]" id="ponto[P][E][2]" value="N" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][E][2]" id="ponto[P][E][2]" value="V" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][E][2]" id="ponto[P][E][2]" value="A" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <img src="./[NEXT] - Grupo BEM_files/error_roxo.png" id="img_P_E_2" style="margin:0px; padding: 0px; vertical-align: bottom">
+                </label>
+                <br>
+                                              <label>
+                  <span>3: </span>
+                  <input type="radio" name="ponto[P][E][3]" id="ponto[P][E][3]" value="S" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][E][3]" id="ponto[P][E][3]" value="N" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][E][3]" id="ponto[P][E][3]" value="V" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][E][3]" id="ponto[P][E][3]" value="A" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <img src="./[NEXT] - Grupo BEM_files/error_roxo.png" id="img_P_E_3" style="margin:0px; padding: 0px; vertical-align: bottom">
+                </label>
+                <br>
+                                              <label>
+                  <span>4: </span>
+                  <input type="radio" name="ponto[P][E][4]" id="ponto[P][E][4]" value="S" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][E][4]" id="ponto[P][E][4]" value="N" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][E][4]" id="ponto[P][E][4]" value="V" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][E][4]" id="ponto[P][E][4]" value="A" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <img src="./[NEXT] - Grupo BEM_files/error_roxo.png" id="img_P_E_4" style="margin:0px; padding: 0px; vertical-align: bottom">
+                </label>
+                <br>
+                                              <label>
+                  <span>5: </span>
+                  <input type="radio" name="ponto[P][E][5]" id="ponto[P][E][5]" value="S" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][E][5]" id="ponto[P][E][5]" value="N" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][E][5]" id="ponto[P][E][5]" value="V" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][E][5]" id="ponto[P][E][5]" value="A" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <img src="./[NEXT] - Grupo BEM_files/error_roxo.png" id="img_P_E_5" style="margin:0px; padding: 0px; vertical-align: bottom">
+                </label>
+                <br>
+                            </td>
+              <td class="tableitem" style="vertical-align: top;">
+                                                <label>
+                  <span>6: </span>
+                  <input type="radio" name="ponto[P][E][6]" id="ponto[P][E][6]" value="S" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][E][6]" id="ponto[P][E][6]" value="N" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][E][6]" id="ponto[P][E][6]" value="V" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][E][6]" id="ponto[P][E][6]" value="A" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <img src="./[NEXT] - Grupo BEM_files/error_roxo.png" id="img_P_E_6" style="margin:0px; padding: 0px; vertical-align: bottom">
+                </label>
+                <br>
+                                              <label>
+                  <span>7: </span>
+                  <input type="radio" name="ponto[P][E][7]" id="ponto[P][E][7]" value="S" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][E][7]" id="ponto[P][E][7]" value="N" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][E][7]" id="ponto[P][E][7]" value="V" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][E][7]" id="ponto[P][E][7]" value="A" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <img src="./[NEXT] - Grupo BEM_files/error_roxo.png" id="img_P_E_7" style="margin:0px; padding: 0px; vertical-align: bottom">
+                </label>
+                <br>
+                                              <label>
+                  <span>8: </span>
+                  <input type="radio" name="ponto[P][E][8]" id="ponto[P][E][8]" value="S" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][E][8]" id="ponto[P][E][8]" value="N" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][E][8]" id="ponto[P][E][8]" value="V" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][E][8]" id="ponto[P][E][8]" value="A" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <img src="./[NEXT] - Grupo BEM_files/error_roxo.png" id="img_P_E_8" style="margin:0px; padding: 0px; vertical-align: bottom">
+                </label>
+                <br>
+                                              <label>
+                  <span>9: </span>
+                  <input type="radio" name="ponto[P][E][9]" id="ponto[P][E][9]" value="S" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][E][9]" id="ponto[P][E][9]" value="N" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][E][9]" id="ponto[P][E][9]" value="V" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][E][9]" id="ponto[P][E][9]" value="A" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <img src="./[NEXT] - Grupo BEM_files/error_roxo.png" id="img_P_E_9" style="margin:0px; padding: 0px; vertical-align: bottom">
+                </label>
+                <br>
+                                            </td>
+                            <td class="tableitem" style="vertical-align: top;">
+                                <label>
+                  <span>1: </span>
+                  <input type="radio" name="ponto[P][D][1]" id="ponto[P][D][1]" value="S" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][D][1]" id="ponto[P][D][1]" value="N" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][D][1]" id="ponto[P][D][1]" value="V" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][D][1]" id="ponto[P][D][1]" value="A" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <img src="./[NEXT] - Grupo BEM_files/stop.png" id="img_P_D_1" style="margin:0px; padding: 0px; vertical-align: bottom">
+                </label>
+                <br>
+                                              <label>
+                  <span>2: </span>
+                  <input type="radio" name="ponto[P][D][2]" id="ponto[P][D][2]" value="S" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][D][2]" id="ponto[P][D][2]" value="N" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][D][2]" id="ponto[P][D][2]" value="V" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][D][2]" id="ponto[P][D][2]" value="A" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <img src="./[NEXT] - Grupo BEM_files/stop.png" id="img_P_D_2" style="margin:0px; padding: 0px; vertical-align: bottom">
+                </label>
+                <br>
+                                              <label>
+                  <span>3: </span>
+                  <input type="radio" name="ponto[P][D][3]" id="ponto[P][D][3]" value="S" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][D][3]" id="ponto[P][D][3]" value="N" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][D][3]" id="ponto[P][D][3]" value="V" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][D][3]" id="ponto[P][D][3]" value="A" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <img src="./[NEXT] - Grupo BEM_files/stop.png" id="img_P_D_3" style="margin:0px; padding: 0px; vertical-align: bottom">
+                </label>
+                <br>
+                                              <label>
+                  <span>4: </span>
+                  <input type="radio" name="ponto[P][D][4]" id="ponto[P][D][4]" value="S" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][D][4]" id="ponto[P][D][4]" value="N" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][D][4]" id="ponto[P][D][4]" value="V" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][D][4]" id="ponto[P][D][4]" value="A" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <img src="./[NEXT] - Grupo BEM_files/stop.png" id="img_P_D_4" style="margin:0px; padding: 0px; vertical-align: bottom">
+                </label>
+                <br>
+                                              <label>
+                  <span>5: </span>
+                  <input type="radio" name="ponto[P][D][5]" id="ponto[P][D][5]" value="S" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][D][5]" id="ponto[P][D][5]" value="N" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][D][5]" id="ponto[P][D][5]" value="V" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][D][5]" id="ponto[P][D][5]" value="A" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <img src="./[NEXT] - Grupo BEM_files/stop.png" id="img_P_D_5" style="margin:0px; padding: 0px; vertical-align: bottom">
+                </label>
+                <br>
+                            </td>
+              <td class="tableitem" style="vertical-align: top;">
+                                                <label>
+                  <span>6: </span>
+                  <input type="radio" name="ponto[P][D][6]" id="ponto[P][D][6]" value="S" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][D][6]" id="ponto[P][D][6]" value="N" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][D][6]" id="ponto[P][D][6]" value="V" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][D][6]" id="ponto[P][D][6]" value="A" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <img src="./[NEXT] - Grupo BEM_files/stop.png" id="img_P_D_6" style="margin:0px; padding: 0px; vertical-align: bottom">
+                </label>
+                <br>
+                                              <label>
+                  <span>7: </span>
+                  <input type="radio" name="ponto[P][D][7]" id="ponto[P][D][7]" value="S" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][D][7]" id="ponto[P][D][7]" value="N" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][D][7]" id="ponto[P][D][7]" value="V" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][D][7]" id="ponto[P][D][7]" value="A" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <img src="./[NEXT] - Grupo BEM_files/error_roxo.png" id="img_P_D_7" style="margin:0px; padding: 0px; vertical-align: bottom">
+                </label>
+                <br>
+                                              <label>
+                  <span>8: </span>
+                  <input type="radio" name="ponto[P][D][8]" id="ponto[P][D][8]" value="S" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][D][8]" id="ponto[P][D][8]" value="N" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][D][8]" id="ponto[P][D][8]" value="V" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][D][8]" id="ponto[P][D][8]" value="A" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <img src="./[NEXT] - Grupo BEM_files/error_roxo.png" id="img_P_D_8" style="margin:0px; padding: 0px; vertical-align: bottom">
+                </label>
+                <br>
+                                              <label>
+                  <span>9: </span>
+                  <input type="radio" name="ponto[P][D][9]" id="ponto[P][D][9]" value="S" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][D][9]" id="ponto[P][D][9]" value="N" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][D][9]" id="ponto[P][D][9]" value="V" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <input type="radio" name="ponto[P][D][9]" id="ponto[P][D][9]" value="A" class="oinput" style="display:none; margin-top: 1px; margin-bottom: 1px;">
+                  <img src="./[NEXT] - Grupo BEM_files/error_roxo.png" id="img_P_D_9" style="margin:0px; padding: 0px; vertical-align: bottom">
+                </label>
+                <br>
+                                            </td>
+                          </tr>
+            <tr>
+              <td class="formlabell">
+                Legenda:
+              </td>
+            </tr>
+                          <tr>	
+              	<td>
+              	</td>
+              	<td>
+              		<img src="./[NEXT] - Grupo BEM_files/mais.png">&nbsp;Sensibilidade Preservada              	</td>
+              </tr>
+                          <tr>	
+              	<td>
+              	</td>
+              	<td>
+              		<img src="./[NEXT] - Grupo BEM_files/menos.png">&nbsp;Ausência de Sensibilidade              	</td>
+              </tr>
+                          <tr>	
+              	<td>
+              	</td>
+              	<td>
+              		<img src="./[NEXT] - Grupo BEM_files/radio_inativo.png">&nbsp;Não Visualizado              	</td>
+              </tr>
+                          <tr>	
+              	<td>
+              	</td>
+              	<td>
+              		<img src="./[NEXT] - Grupo BEM_files/error_roxo.png">&nbsp;Amputação              	</td>
+              </tr>
+                        <tr>
+              <td></td>
+            </tr>
+          </tbody></table>
+        <br>
+        <h5 class="header blue no-margin-top no-padding-bottom align-left">Classificação</h5>
+                    <br>
+          <label>
+            <input type="checkbox" name="classificacao[]" id="classificacao[]" value="1" class="finput">
+            <span class="formlabell">Sensitivas - Lesões</span>
+          </label>
+                    <br>
+          <label>
+            <input type="checkbox" name="classificacao[]" id="classificacao[]" value="2" class="finput">
+            <span class="formlabell">Motores - perda da função dos músculos, deformidades progressivas</span>
+          </label>
+                    <br>
+          <label>
+            <input type="checkbox" name="classificacao[]" id="classificacao[]" value="3" class="finput">
+            <span class="formlabell">Autonômicos - perda do tônus vascular</span>
+          </label>
+                  <br>
+        <h5 class="header blue no-margin-top no-padding-bottom align-left">Pulsos (Pediosos, Tibial posterior e Poplíteo)</h5>
+                    <div onclick="javascript:pads_alterna_view('pd_ab_pedioso_direito');" style="cursor:pointer">
+            <img id="pd_img_pedioso_direito" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+            <span class="formlabell">Pedioso Direito</span>
+          </div>
+          <div id="pd_ab_pedioso_direito" style="display:none;">
+                      <label>
+              <input onclick="javascript:document.getElementById('pd_img_pedioso_direito').src = 'imagens/bullet_green.png';" type="radio" name="pedioso_direito" id="pedioso_direito" value="1" class="finput">
+              <span>Presentes</span>
+           </label>
+           &nbsp;
+                      <label>
+              <input onclick="javascript:document.getElementById('pd_img_pedioso_direito').src = 'imagens/bullet_green.png';" type="radio" name="pedioso_direito" id="pedioso_direito" value="2" class="finput">
+              <span>Ausentes</span>
+           </label>
+           &nbsp;
+                      <label>
+              <input onclick="javascript:document.getElementById('pd_img_pedioso_direito').src = 'imagens/bullet_green.png';" type="radio" name="pedioso_direito" id="pedioso_direito" value="3" class="finput">
+              <span>Diminuídos</span>
+           </label>
+           &nbsp;
+                      <label>
+              <input onclick="javascript:document.getElementById('pd_img_pedioso_direito').src = 'imagens/bullet_green.png';" type="radio" name="pedioso_direito" id="pedioso_direito" value="4" class="finput">
+              <span>Não Visualizado</span>
+           </label>
+           &nbsp;
+                    </div>
+                    <div onclick="javascript:pads_alterna_view('pd_ab_pedioso_esquerdo');" style="cursor:pointer">
+            <img id="pd_img_pedioso_esquerdo" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+            <span class="formlabell">Pedioso Esquerdo</span>
+          </div>
+          <div id="pd_ab_pedioso_esquerdo" style="display:none;">
+                      <label>
+              <input onclick="javascript:document.getElementById('pd_img_pedioso_esquerdo').src = 'imagens/bullet_green.png';" type="radio" name="pedioso_esquerdo" id="pedioso_esquerdo" value="1" class="finput">
+              <span>Presentes</span>
+           </label>
+           &nbsp;
+                      <label>
+              <input onclick="javascript:document.getElementById('pd_img_pedioso_esquerdo').src = 'imagens/bullet_green.png';" type="radio" name="pedioso_esquerdo" id="pedioso_esquerdo" value="2" class="finput">
+              <span>Ausentes</span>
+           </label>
+           &nbsp;
+                      <label>
+              <input onclick="javascript:document.getElementById('pd_img_pedioso_esquerdo').src = 'imagens/bullet_green.png';" type="radio" name="pedioso_esquerdo" id="pedioso_esquerdo" value="3" class="finput">
+              <span>Diminuídos</span>
+           </label>
+           &nbsp;
+                      <label>
+              <input onclick="javascript:document.getElementById('pd_img_pedioso_esquerdo').src = 'imagens/bullet_green.png';" type="radio" name="pedioso_esquerdo" id="pedioso_esquerdo" value="4" class="finput">
+              <span>Não Visualizado</span>
+           </label>
+           &nbsp;
+                    </div>
+                    <div onclick="javascript:pads_alterna_view('pd_ab_tibial_direito');" style="cursor:pointer">
+            <img id="pd_img_tibial_direito" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+            <span class="formlabell">Tibial Posterior Direito</span>
+          </div>
+          <div id="pd_ab_tibial_direito" style="display:none;">
+                      <label>
+              <input onclick="javascript:document.getElementById('pd_img_tibial_direito').src = 'imagens/bullet_green.png';" type="radio" name="tibial_direito" id="tibial_direito" value="1" class="finput">
+              <span>Presentes</span>
+           </label>
+           &nbsp;
+                      <label>
+              <input onclick="javascript:document.getElementById('pd_img_tibial_direito').src = 'imagens/bullet_green.png';" type="radio" name="tibial_direito" id="tibial_direito" value="2" class="finput">
+              <span>Ausentes</span>
+           </label>
+           &nbsp;
+                      <label>
+              <input onclick="javascript:document.getElementById('pd_img_tibial_direito').src = 'imagens/bullet_green.png';" type="radio" name="tibial_direito" id="tibial_direito" value="3" class="finput">
+              <span>Diminuídos</span>
+           </label>
+           &nbsp;
+                      <label>
+              <input onclick="javascript:document.getElementById('pd_img_tibial_direito').src = 'imagens/bullet_green.png';" type="radio" name="tibial_direito" id="tibial_direito" value="4" class="finput">
+              <span>Não Visualizado</span>
+           </label>
+           &nbsp;
+                    </div>
+                    <div onclick="javascript:pads_alterna_view('pd_ab_tibial_esquerdo');" style="cursor:pointer">
+            <img id="pd_img_tibial_esquerdo" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+            <span class="formlabell">Tibial Posterior Esquerdo</span>
+          </div>
+          <div id="pd_ab_tibial_esquerdo" style="display:none;">
+                      <label>
+              <input onclick="javascript:document.getElementById('pd_img_tibial_esquerdo').src = 'imagens/bullet_green.png';" type="radio" name="tibial_esquerdo" id="tibial_esquerdo" value="1" class="finput">
+              <span>Presentes</span>
+           </label>
+           &nbsp;
+                      <label>
+              <input onclick="javascript:document.getElementById('pd_img_tibial_esquerdo').src = 'imagens/bullet_green.png';" type="radio" name="tibial_esquerdo" id="tibial_esquerdo" value="2" class="finput">
+              <span>Ausentes</span>
+           </label>
+           &nbsp;
+                      <label>
+              <input onclick="javascript:document.getElementById('pd_img_tibial_esquerdo').src = 'imagens/bullet_green.png';" type="radio" name="tibial_esquerdo" id="tibial_esquerdo" value="3" class="finput">
+              <span>Diminuídos</span>
+           </label>
+           &nbsp;
+                      <label>
+              <input onclick="javascript:document.getElementById('pd_img_tibial_esquerdo').src = 'imagens/bullet_green.png';" type="radio" name="tibial_esquerdo" id="tibial_esquerdo" value="4" class="finput">
+              <span>Não Visualizado</span>
+           </label>
+           &nbsp;
+                    </div>
+                    <div onclick="javascript:pads_alterna_view('pd_ab_popliteo_direito');" style="cursor:pointer">
+            <img id="pd_img_popliteo_direito" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+            <span class="formlabell">Poplíteo Direito</span>
+          </div>
+          <div id="pd_ab_popliteo_direito" style="display:none;">
+                      <label>
+              <input onclick="javascript:document.getElementById('pd_img_popliteo_direito').src = 'imagens/bullet_green.png';" type="radio" name="popliteo_direito" id="popliteo_direito" value="1" class="finput">
+              <span>Presentes</span>
+           </label>
+           &nbsp;
+                      <label>
+              <input onclick="javascript:document.getElementById('pd_img_popliteo_direito').src = 'imagens/bullet_green.png';" type="radio" name="popliteo_direito" id="popliteo_direito" value="2" class="finput">
+              <span>Ausentes</span>
+           </label>
+           &nbsp;
+                      <label>
+              <input onclick="javascript:document.getElementById('pd_img_popliteo_direito').src = 'imagens/bullet_green.png';" type="radio" name="popliteo_direito" id="popliteo_direito" value="3" class="finput">
+              <span>Diminuídos</span>
+           </label>
+           &nbsp;
+                      <label>
+              <input onclick="javascript:document.getElementById('pd_img_popliteo_direito').src = 'imagens/bullet_green.png';" type="radio" name="popliteo_direito" id="popliteo_direito" value="4" class="finput">
+              <span>Não Visualizado</span>
+           </label>
+           &nbsp;
+                    </div>
+                    <div onclick="javascript:pads_alterna_view('pd_ab_popliteo_esquerdo');" style="cursor:pointer">
+            <img id="pd_img_popliteo_esquerdo" src="./[NEXT] - Grupo BEM_files/bullet_red.png">
+            <span class="formlabell">Poplíteo Esquerdo</span>
+          </div>
+          <div id="pd_ab_popliteo_esquerdo" style="display:none;">
+                      <label>
+              <input onclick="javascript:document.getElementById('pd_img_popliteo_esquerdo').src = 'imagens/bullet_green.png';" type="radio" name="popliteo_esquerdo" id="popliteo_esquerdo" value="1" class="finput">
+              <span>Presentes</span>
+           </label>
+           &nbsp;
+                      <label>
+              <input onclick="javascript:document.getElementById('pd_img_popliteo_esquerdo').src = 'imagens/bullet_green.png';" type="radio" name="popliteo_esquerdo" id="popliteo_esquerdo" value="2" class="finput">
+              <span>Ausentes</span>
+           </label>
+           &nbsp;
+                      <label>
+              <input onclick="javascript:document.getElementById('pd_img_popliteo_esquerdo').src = 'imagens/bullet_green.png';" type="radio" name="popliteo_esquerdo" id="popliteo_esquerdo" value="3" class="finput">
+              <span>Diminuídos</span>
+           </label>
+           &nbsp;
+                      <label>
+              <input onclick="javascript:document.getElementById('pd_img_popliteo_esquerdo').src = 'imagens/bullet_green.png';" type="radio" name="popliteo_esquerdo" id="popliteo_esquerdo" value="4" class="finput">
+              <span>Não Visualizado</span>
+           </label>
+           &nbsp;
+                    </div>
+                  <br>
+        <h5 class="header blue no-margin-top no-padding-bottom align-left">Marcar com um X se apresentar</h5>
+          <table cellpadding="0" cellspacing="2" border="0" width="100%" style="border:2px solid #dddddd">
+            <tbody><tr>
+              <td>
+                                  <label>
+                    <input type="checkbox" name="sintomas[]" id="sintomas[]" value="1" class="finput">
+                    <span>Dor</span>
+                  </label>
+                 <br>
+                                  <label>
+                    <input type="checkbox" name="sintomas[]" id="sintomas[]" value="2" class="finput">
+                    <span>Palidez</span>
+                  </label>
+                 <br>
+                                  <label>
+                    <input type="checkbox" name="sintomas[]" id="sintomas[]" value="3" class="finput">
+                    <span>Hiperemia</span>
+                  </label>
+                 <br>
+                                  <label>
+                    <input type="checkbox" name="sintomas[]" id="sintomas[]" value="4" class="finput">
+                    <span>Hipotermia</span>
+                  </label>
+                 <br>
+                                  <label>
+                    <input type="checkbox" name="sintomas[]" id="sintomas[]" value="5" class="finput">
+                    <span>Hipertermia</span>
+                  </label>
+                 <br>
+                                  <label>
+                    <input type="checkbox" name="sintomas[]" id="sintomas[]" value="6" class="finput">
+                    <span>Alterações de pêlos e unhas</span>
+                  </label>
+                 <br>
+                                  <label>
+                    <input type="checkbox" name="sintomas[]" id="sintomas[]" value="7" class="finput">
+                    <span>Ressecamento de pele</span>
+                  </label>
+                 <br>
+                                  <label>
+                    <input type="checkbox" name="sintomas[]" id="sintomas[]" value="8" class="finput">
+                    <span>Diminuição ou ausência de pulsos à palpação</span>
+                  </label>
+                 <br>
+                                  <label>
+                    <input type="checkbox" name="sintomas[]" id="sintomas[]" value="9" class="finput">
+                    <span>Edema</span>
+                  </label>
+                 <br>
+                                  <label>
+                    <input type="checkbox" name="sintomas[]" id="sintomas[]" value="10" class="finput">
+                    <span>Bolhas</span>
+                  </label>
+                 <br>
+                                  <label>
+                    <input type="checkbox" name="sintomas[]" id="sintomas[]" value="11" class="finput">
+                    <span>Úlcera isquêmica</span>
+                  </label>
+                 <br>
+                                  <label>
+                    <input type="checkbox" name="sintomas[]" id="sintomas[]" value="12" class="finput">
+                    <span>Lesões secas</span>
+                  </label>
+                 <br>
+                                  <label>
+                    <input type="checkbox" name="sintomas[]" id="sintomas[]" value="13" class="finput">
+                    <span>Lesões com secreção</span>
+                  </label>
+                 <br>
+                                  <label>
+                    <input type="checkbox" name="sintomas[]" id="sintomas[]" value="14" class="finput">
+                    <span>Deformidades ósteo-articulares</span>
+                  </label>
+                 <br>
+                                  <label>
+                    <input onchange="javascript:pads_enable('detalhes_sintomas[]',!this.checked);" type="checkbox" name="sintomas[]" id="sintomas[]" value="15" class="finput">
+                    <span>Verruga plantar</span>
+                  </label>
+                 <br>
+                                  <label>
+                    <input type="checkbox" name="sintomas[]" id="sintomas[]" value="16" class="finput">
+                    <span>Cianose</span>
+                  </label>
+                 <br>
+                              </td>
+              <td style="vertical-align:top">
+                                  <label>
+                    <input type="checkbox" name="detalhes_sintomas[]" id="detalhes_sintomas[]" value="1" class="oinput" disabled="true">
+                    <span>Dedos Direito</span>
+                  </label>
+                 <br>
+                                  <label>
+                    <input type="checkbox" name="detalhes_sintomas[]" id="detalhes_sintomas[]" value="2" class="oinput" disabled="true">
+                    <span>Dedos Esquerdo</span>
+                  </label>
+                 <br>
+                                  <label>
+                    <input type="checkbox" name="detalhes_sintomas[]" id="detalhes_sintomas[]" value="3" class="oinput" disabled="true">
+                    <span>Plantar Direita</span>
+                  </label>
+                 <br>
+                                  <label>
+                    <input type="checkbox" name="detalhes_sintomas[]" id="detalhes_sintomas[]" value="4" class="oinput" disabled="true">
+                    <span>Plantar Esquerda</span>
+                  </label>
+                 <br>
+                                  <label>
+                    <input type="checkbox" name="detalhes_sintomas[]" id="detalhes_sintomas[]" value="5" class="oinput" disabled="true">
+                    <span>Calcanhar Direito</span>
+                  </label>
+                 <br>
+                                  <label>
+                    <input type="checkbox" name="detalhes_sintomas[]" id="detalhes_sintomas[]" value="6" class="oinput" disabled="true">
+                    <span>Calcanhar Esquerdo</span>
+                  </label>
+                 <br>
+                              </td>
+            </tr>
+          </tbody></table>
+        <br>
+        <h5 class="header blue no-margin-top no-padding-bottom align-left">Acompanhamento médico</h5>
+                      <label>
+              <input type="checkbox" name="acompanhamento_medico[]" id="acompanhamento_medico[]" value="1" class="finput">
+              <span>Vascular</span>
+            </label>
+            &nbsp;
+                      <label>
+              <input type="checkbox" name="acompanhamento_medico[]" id="acompanhamento_medico[]" value="2" class="finput">
+              <span>Endócrino</span>
+            </label>
+            &nbsp;
+                      <label>
+              <input type="checkbox" name="acompanhamento_medico[]" id="acompanhamento_medico[]" value="3" class="finput">
+              <span>Ortopedista</span>
+            </label>
+            &nbsp;
+                      <label>
+              <input type="checkbox" name="acompanhamento_medico[]" id="acompanhamento_medico[]" value="4" class="finput">
+              <span>Clínico Geral</span>
+            </label>
+            &nbsp;
+                  <br>
+        <h5 class="header blue no-margin-top no-padding-bottom align-left">Amputação anterior</h5>
+          <table width="100%">
+            <tbody><tr>
+              <td colspan="2">
+                <label>
+                  <input type="radio" onclick="javascript:pads_habilita_amputacao(false);" name="amputacao_anterior_sn" id="amputacao_anterior_sn" value="S" class="oinput">
+                  <span>Sim</span>
+                </label>
+                &nbsp;&nbsp;
+                <label>
+                  <input type="radio" onclick="javascript:pads_habilita_amputacao(true);" name="amputacao_anterior_sn" id="amputacao_anterior_sn" value="N" class="oinput">
+                  <span>Não</span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <fieldset>
+                  <div>
+                    <label>
+                      <input type="checkbox" onclick="javascript:pads_habilita_amputacao_membros(this.value, !this.checked);" name="lado_membro[]" id="lado_membro[]" value="E" class="oinput" disabled="disabled">
+                      <span class="formlabell">Membro esquerdo</span>
+                    </label>
+                  </div>
+                  <div>
+                    <span class="formlabell">Altura:</span>
+                    <br>
+                                          <label>
+                        <input type="radio" onclick="javascript:pads_status_pe('E',this.value, true);" name="tipo_amputacao[E]" id="tipo_amputacao[E]" value="1" class="oinput" disabled="disabled">
+                        <span>Dedo</span>
+                      </label>
+                      &nbsp;
+                                          <label>
+                        <input type="radio" onclick="javascript:pads_status_pe('E',this.value, true);" name="tipo_amputacao[E]" id="tipo_amputacao[E]" value="2" class="oinput" disabled="disabled">
+                        <span>Tornozelo</span>
+                      </label>
+                      &nbsp;
+                                          <label>
+                        <input type="radio" onclick="javascript:pads_status_pe('E',this.value, true);" name="tipo_amputacao[E]" id="tipo_amputacao[E]" value="3" class="oinput" disabled="disabled">
+                        <span>Tibial</span>
+                      </label>
+                      &nbsp;
+                                          <label>
+                        <input type="radio" onclick="javascript:pads_status_pe('E',this.value, true);" name="tipo_amputacao[E]" id="tipo_amputacao[E]" value="4" class="oinput" disabled="disabled">
+                        <span>Joelho</span>
+                      </label>
+                      &nbsp;
+                                          <label>
+                        <input type="radio" onclick="javascript:pads_status_pe('E',this.value, true);" name="tipo_amputacao[E]" id="tipo_amputacao[E]" value="5" class="oinput" disabled="disabled">
+                        <span>Coxo femoral</span>
+                      </label>
+                      &nbsp;
+                                      </div>
+                  <div>
+                    <span class="formlabell">Quanto tempo?</span>
+                    <br>
+                                        <label>
+                      <input type="radio" name="tempo_amputacao[E]" id="tempo_amputacao[E]" value="1" class="oinput" disabled="disabled">
+                      <span>1 a 3 anos</span>
+                    </label>
+                    &nbsp;
+                                        <label>
+                      <input type="radio" name="tempo_amputacao[E]" id="tempo_amputacao[E]" value="2" class="oinput" disabled="disabled">
+                      <span>4 a 5 anos</span>
+                    </label>
+                    &nbsp;
+                                        <label>
+                      <input type="radio" name="tempo_amputacao[E]" id="tempo_amputacao[E]" value="3" class="oinput" disabled="disabled">
+                      <span>5 anos ou mais</span>
+                    </label>
+                    &nbsp;
+                                      </div>
+                </fieldset>
+              </td>
+              <td>
+                <fieldset>
+                  <div>
+                    <label>
+                      <input type="checkbox" onclick="javascript:pads_habilita_amputacao_membros(this.value, !this.checked);" name="lado_membro[]" id="lado_membro[]" value="D" class="oinput" disabled="disabled">
+                      <span class="formlabell">Membro direito</span>
+                    </label>
+                  </div>
+                  <div>
+                    <span class="formlabell">Altura:</span>
+                    <br>
+                                          <label>
+                        <input type="radio" onclick="javascript:pads_status_pe('D',this.value, true);" name="tipo_amputacao[D]" id="tipo_amputacao[D]" value="1" class="oinput" disabled="disabled">
+                        <span>Dedo</span>
+                      </label>
+                      &nbsp;
+                                          <label>
+                        <input type="radio" onclick="javascript:pads_status_pe('D',this.value, true);" name="tipo_amputacao[D]" id="tipo_amputacao[D]" value="2" class="oinput" disabled="disabled">
+                        <span>Tornozelo</span>
+                      </label>
+                      &nbsp;
+                                          <label>
+                        <input type="radio" onclick="javascript:pads_status_pe('D',this.value, true);" name="tipo_amputacao[D]" id="tipo_amputacao[D]" value="3" class="oinput" disabled="disabled">
+                        <span>Tibial</span>
+                      </label>
+                      &nbsp;
+                                          <label>
+                        <input type="radio" onclick="javascript:pads_status_pe('D',this.value, true);" name="tipo_amputacao[D]" id="tipo_amputacao[D]" value="4" class="oinput" disabled="disabled">
+                        <span>Joelho</span>
+                      </label>
+                      &nbsp;
+                                          <label>
+                        <input type="radio" onclick="javascript:pads_status_pe('D',this.value, true);" name="tipo_amputacao[D]" id="tipo_amputacao[D]" value="5" class="oinput" disabled="disabled">
+                        <span>Coxo femoral</span>
+                      </label>
+                      &nbsp;
+                                      </div>
+                  <div>
+                    <span class="formlabell">Quanto tempo?</span>
+                    <br>
+                                        <label>
+                      <input type="radio" name="tempo_amputacao[D]" id="tempo_amputacao[D]" value="1" class="oinput" disabled="disabled">
+                      <span>1 a 3 anos</span>
+                    </label>
+                    &nbsp;
+                                        <label>
+                      <input type="radio" name="tempo_amputacao[D]" id="tempo_amputacao[D]" value="2" class="oinput" disabled="disabled">
+                      <span>4 a 5 anos</span>
+                    </label>
+                    &nbsp;
+                                        <label>
+                      <input type="radio" name="tempo_amputacao[D]" id="tempo_amputacao[D]" value="3" class="oinput" disabled="disabled">
+                      <span>5 anos ou mais</span>
+                    </label>
+                    &nbsp;
+                                      </div>
+                </fieldset>
+              </td>
+            </tr>
+          </tbody></table>
+        <br>
+        <h5 class="header blue no-margin-top no-padding-bottom align-left">Orientações</h5>
+          <textarea name="orientacao_pe_diabetico" id="orientacao_pe_diabetico" onblur="javascript:contador_caracteres();" onfocus="javascript:contador_caracteres(true,this,500);" onkeyup="javascript:contador_caracteres(true,this,500);" style="width:100%"></textarea>
+    	</form>
+      <div>
+        <input id="btn_pe_diabetico" type="button" onclick="javascript:pads_addEvoPeDiabetico();" value="Salvar" class="button">
+      </div>
+		</div>
+    <table class="table table-striped table-bordered table-hover">
+      <thead>
+        <tr>
+          <th class="center">DATA</th>
+          <th class="center">PROFISSIONAL</th>
+        </tr>
+      </thead>
+        <tbody>
+      <tr id="tab_vazia" class="selectLine"> 
+        <td colspan="5" class="tablemsg">Não há nenhum item cadastrado!</td>
+      </tr>
+    </tbody>
+        </table>
+  </div>
+<h5 class="header blue no-margin-top no-padding-bottom align-left">
+  <span style="position: relative; top: 3px; cursor: pointer;" onclick="javascript:pads_alterna_view('div_queda');">Queda</span>
+        <i class="ace-icon fa fa-plus-circle bigger-100 green act-icon" name="add" id="botao_queda" onclick="javascript: pads_alterna_view('dados_queda');" onmouseover="javascript:showTooltip(this,'&nbsp;Preencher Queda&nbsp;');return false;"></i>
+  </h5>
+<div align="left" id="div_queda">
+  	<div id="dados_queda" style="display:none; border:2px solid #dddddd;">
+	    <form name="formAddQueda" id="formAddQueda" action="http://s2.desenvolvimento.grupobem.com.br/" method="post">
+        <input type="hidden" name="processar" value="1">
+        <input type="hidden" name="mod" value="acompanhamento">
+        <input type="hidden" name="sub" value="iniciarevolucao">
+				<input type="hidden" name="upd" value="1">
+				<input type="hidden" name="edt" value="1">
+				<input type="hidden" name="add" value="1">
+        <input type="hidden" name="queda" value="">
+        <input type="hidden" name="id_evolucao" value="">
+        <input type="hidden" name="id_avaliacao" value="310490">
+        <table cellpadding="0" cellspacing="2" border="0" width="100%" style="border:2px solid #dddddd">
+          <tbody><tr>
+             <td>
+            <span class="cemTitulos">Dt. da Queda:</span><br>
+            <input type="text" name="data_queda" class="finput" id="data_queda" value="" size="10" maxlength="10" readonly="">
+            <img src="./[NEXT] - Grupo BEM_files/calendario.png" align="absmiddle" name="cal1_trigger" id="cal1_trigger" border="0" onmouseover="javascript: calendar_param('data_queda', 'cal1_trigger', isPosterior);" style="cursor: pointer;">
+            </td>
+          </tr>
+          <tr>
+            <td class="tableitem">
+              <span class="formlabell">Ambiente:</span><br>
+                            <label>
+                <input type="radio" name="id_ambiente" id="id_ambiente" value="1" class="oinput">
+                <span>Domiciliar (somente dentro do domicílio)</span>
+              </label>
+              &nbsp;&nbsp;
+                            <label>
+                <input type="radio" name="id_ambiente" id="id_ambiente" value="2" class="oinput">
+                <span>Externo</span>
+              </label>
+              &nbsp;&nbsp;
+                          </td>
+          </tr>
+          <tr>
+            <td class="tableitem">
+              <span class="formlabell">1 - De que altura:</span><br>
+                                            <label>
+              <input type="radio" name="id_altura" id="id_altura" value="1" class="oinput">
+                <span>Do próprio corpo</span>
+              </label>
+                              <br>              <label>
+              <input type="radio" name="id_altura" id="id_altura" value="2" class="oinput">
+                <span>Da escada</span>
+              </label>
+                              <br>              <label>
+              <input type="radio" name="id_altura" id="id_altura" value="3" class="oinput">
+                <span>Do Sofá/ Cadeira / Cama</span>
+              </label>
+                              <br>              <label>
+              <input type="radio" name="id_altura" id="id_altura" value="4" class="oinput">
+                <span>Até 1 m</span>
+              </label>
+                              <br>              <label>
+              <input type="radio" name="id_altura" id="id_altura" value="5" class="oinput">
+                <span>De 1 a 1,5 m</span>
+              </label>
+                              <br>              <label>
+              <input type="radio" name="id_altura" id="id_altura" value="6" class="oinput">
+                <span>Acima de 1,5 m</span>
+              </label>
+                          </td>
+          </tr>
+          <tr>
+            <td class="tableitem">
+              <span class="formlabell">2 - Bateu:</span><br>
+                                            <label>
+              <input type="checkbox" name="id_choque[]" id="id_choque[]" value="1" class="finput">
+                <span>Cabeça</span>
+              </label>
+                              &nbsp;&nbsp;              <label>
+              <input type="checkbox" name="id_choque[]" id="id_choque[]" value="2" class="finput">
+                <span>Coluna</span>
+              </label>
+                              &nbsp;&nbsp;              <label>
+              <input type="checkbox" name="id_choque[]" id="id_choque[]" value="3" class="finput">
+                <span>Membro inferior</span>
+              </label>
+                              &nbsp;&nbsp;              <label>
+              <input type="checkbox" name="id_choque[]" id="id_choque[]" value="4" class="finput">
+                <span>Membro superior</span>
+              </label>
+                              &nbsp;&nbsp;              <label>
+              <input type="checkbox" name="id_choque[]" id="id_choque[]" value="5" class="finput">
+                <span>NDA</span>
+              </label>
+                          </td>
+          </tr>
+          <tr>
+            <td class="tableitem">
+              <span class="formlabell">3 - O que foi feito:</span><br>
+                                            <label>
+              <input type="checkbox" name="id_acao[]" id="id_acao[]" value="1" class="finput">
+                <span>Chamou a CEM</span>
+              </label>
+                              &nbsp;&nbsp;              <label>
+              <input type="checkbox" name="id_acao[]" id="id_acao[]" value="2" class="finput">
+                <span>Hospitalização</span>
+              </label>
+                              &nbsp;&nbsp;              <label>
+              <input type="checkbox" name="id_acao[]" id="id_acao[]" value="3" class="finput">
+                <span>Levou ao P.S.</span>
+              </label>
+                              &nbsp;&nbsp;              <label>
+              <input type="checkbox" name="id_acao[]" id="id_acao[]" value="4" class="finput">
+                <span>Consulta Médica</span>
+              </label>
+                              &nbsp;&nbsp;              <label>
+              <input type="checkbox" name="id_acao[]" id="id_acao[]" value="5" class="finput">
+                <span>NDA</span>
+              </label>
+                          </td>
+          </tr>
+          <tr>
+            <td class="tableitem">
+              <span class="formlabell">4 - Por que caiu:</span><br>
+                                            <label>
+              <input type="checkbox" name="id_motivo_queda[]" id="id_motivo_queda[]" value="1" class="finput">
+                <span>Tropeçou / escorregou</span>
+              </label>
+                              <br>              <label>
+              <input type="checkbox" name="id_motivo_queda[]" id="id_motivo_queda[]" value="2" class="finput">
+                <span>Sentiu tonturas / escurecimento da visão</span>
+              </label>
+                              <br>              <label>
+              <input type="checkbox" name="id_motivo_queda[]" id="id_motivo_queda[]" value="3" class="finput">
+                <span>Não sabe / não percebeu que ia cair</span>
+              </label>
+                              <br>              <label>
+              <input type="checkbox" name="id_motivo_queda[]" id="id_motivo_queda[]" value="4" class="finput">
+                <span>Desmaio</span>
+              </label>
+                              <br>              <label>
+              <input type="checkbox" name="id_motivo_queda[]" id="id_motivo_queda[]" value="5" class="finput">
+                <span>Fraqueza de MMII</span>
+              </label>
+                          </td>
+          </tr>
+          <tr>
+            <td class="tableitem">
+              <span class="formlabell">5 - Fez uso de algum desses medicamentos nas ultimas 48 horas:</span><br>
+                                            <label>
+              <input type="checkbox" name="id_medicamento_queda[]" id="id_medicamento_queda[]" value="1" class="finput">
+                <span>Calmantes / Remédios para dormir</span>
+              </label>
+                                            <br>              <label>
+              <input type="checkbox" name="id_medicamento_queda[]" id="id_medicamento_queda[]" value="2" class="finput">
+                <span>Anti-depressivos / Neurológicos</span>
+              </label>
+                                            <br>              <label>
+              <input type="checkbox" name="id_medicamento_queda[]" id="id_medicamento_queda[]" value="3" class="finput">
+                <span>Remédio para pressão alta /Para o coração</span>
+              </label>
+                                            <br>              <label>
+              <input type="checkbox" name="id_medicamento_queda[]" id="id_medicamento_queda[]" value="4" class="finput">
+                <span>Remédio para diabetes</span>
+              </label>
+                                            <br>              <label>
+              <input type="checkbox" name="id_medicamento_queda[]" id="id_medicamento_queda[]" value="5" class="finput">
+                <span>Polifarmácia</span>
+              </label>
+                                            <br>              <label>
+              <input type="checkbox" onclick="javascript:pads_enable('descricao_medicamento',!this.checked);" name="id_medicamento_queda[]" id="id_medicamento_queda[]" value="6" class="finput">
+                <span>Outros</span>
+              </label>
+              &nbsp;&nbsp;<input type="text" id="descricao_medicamento" name="descricao_medicamento" class="oinput" size="25" maxlength="60" disabled="true">                           </td>
+          </tr>
+          <tr>
+            <td class="tableitem">
+              <span class="formlabell">6 - Ingeriu alguma bebida que continha álcool horas antes da queda:</span><br>
+              <label>
+                <input type="radio" name="bebida_alcoolica_sn" id="bebida_alcoolica_sn" value="N" class="oinput">
+                <span>Não</span>
+              </label>
+              <label>
+                <input type="radio" name="bebida_alcoolica_sn" id="bebida_alcoolica_sn" value="S" class="oinput">
+                <span>Sim</span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableitem">
+              <span class="formlabell">7 - Está com algum membro adormecido:</span><br>
+              <label>
+                <input type="radio" name="membro_adormecido_sn" id="membro_adormecido_sn" value="N" class="oinput">
+                <span>Não</span>
+              </label>
+              <label>
+                <input type="radio" name="membro_adormecido_sn" id="membro_adormecido_sn" value="S" class="oinput">
+                <span>Sim</span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableitem">
+              <span class="formlabell">8 - Está com alguma dor que impeça movimentos ativos ou passivos:</span><br>
+              <label>
+                <input type="radio" onclick="javascript:pads_enable('id_membro_dor[]',true);" name="dor_movimento_sn" id="dor_movimento_sn" value="N" class="oinput">
+                <span>Não</span>
+              </label>
+              <label>
+                <input type="radio" onclick="javascript:pads_enable('id_membro_dor[]',false);" name="dor_movimento_sn" id="dor_movimento_sn" value="S" class="oinput">
+                <span>Sim</span>
+              </label>
+              <table cellpadding="0" cellspacing="2" border="0" width="100%">
+                <tbody><tr>
+                                                    <td>
+                    <label>
+                      <input type="checkbox" name="id_membro_dor[]" id="id_membro_dor[]" value="1" class="oinput" disabled="true">
+                      <span>Cabeça</span>
+                    </label>
+                  </td>
+                                                    <td>
+                    <label>
+                      <input type="checkbox" name="id_membro_dor[]" id="id_membro_dor[]" value="2" class="oinput" disabled="true">
+                      <span>Pescoço</span>
+                    </label>
+                  </td>
+                                                    <td>
+                    <label>
+                      <input type="checkbox" name="id_membro_dor[]" id="id_membro_dor[]" value="3" class="oinput" disabled="true">
+                      <span>Região Cervical</span>
+                    </label>
+                  </td>
+                                                    <td>
+                    <label>
+                      <input type="checkbox" name="id_membro_dor[]" id="id_membro_dor[]" value="4" class="oinput" disabled="true">
+                      <span>Região Torácica</span>
+                    </label>
+                  </td>
+                                  </tr><tr>                  <td>
+                    <label>
+                      <input type="checkbox" name="id_membro_dor[]" id="id_membro_dor[]" value="5" class="oinput" disabled="true">
+                      <span>Região Lombar</span>
+                    </label>
+                  </td>
+                                                    <td>
+                    <label>
+                      <input type="checkbox" name="id_membro_dor[]" id="id_membro_dor[]" value="6" class="oinput" disabled="true">
+                      <span>Região Sacral</span>
+                    </label>
+                  </td>
+                                                    <td>
+                    <label>
+                      <input type="checkbox" name="id_membro_dor[]" id="id_membro_dor[]" value="7" class="oinput" disabled="true">
+                      <span>Região Anterior do Tórax</span>
+                    </label>
+                  </td>
+                                                    <td>
+                    <label>
+                      <input type="checkbox" name="id_membro_dor[]" id="id_membro_dor[]" value="8" class="oinput" disabled="true">
+                      <span>Quadril Anterior Lado D</span>
+                    </label>
+                  </td>
+                                  </tr><tr>                  <td>
+                    <label>
+                      <input type="checkbox" name="id_membro_dor[]" id="id_membro_dor[]" value="9" class="oinput" disabled="true">
+                      <span>Quadril Anterior Lado E</span>
+                    </label>
+                  </td>
+                                                    <td>
+                    <label>
+                      <input type="checkbox" name="id_membro_dor[]" id="id_membro_dor[]" value="10" class="oinput" disabled="true">
+                      <span>Quadril Posterior Lado D</span>
+                    </label>
+                  </td>
+                                                    <td>
+                    <label>
+                      <input type="checkbox" name="id_membro_dor[]" id="id_membro_dor[]" value="11" class="oinput" disabled="true">
+                      <span>Quadril Posterior Lado E</span>
+                    </label>
+                  </td>
+                                                    <td>
+                    <label>
+                      <input type="checkbox" name="id_membro_dor[]" id="id_membro_dor[]" value="12" class="oinput" disabled="true">
+                      <span>MSE</span>
+                    </label>
+                  </td>
+                                  </tr><tr>                  <td>
+                    <label>
+                      <input type="checkbox" name="id_membro_dor[]" id="id_membro_dor[]" value="13" class="oinput" disabled="true">
+                      <span>MSD</span>
+                    </label>
+                  </td>
+                                                    <td>
+                    <label>
+                      <input type="checkbox" name="id_membro_dor[]" id="id_membro_dor[]" value="14" class="oinput" disabled="true">
+                      <span>MID</span>
+                    </label>
+                  </td>
+                                                    <td>
+                    <label>
+                      <input type="checkbox" name="id_membro_dor[]" id="id_membro_dor[]" value="15" class="oinput" disabled="true">
+                      <span>MIE</span>
+                    </label>
+                  </td>
+                                                    <td>
+                    <label>
+                      <input type="checkbox" name="id_membro_dor[]" id="id_membro_dor[]" value="16" class="oinput" disabled="true">
+                      <span>Mão D</span>
+                    </label>
+                  </td>
+                                  </tr><tr>                  <td>
+                    <label>
+                      <input type="checkbox" name="id_membro_dor[]" id="id_membro_dor[]" value="17" class="oinput" disabled="true">
+                      <span>Mão E</span>
+                    </label>
+                  </td>
+                                                    <td>
+                    <label>
+                      <input type="checkbox" name="id_membro_dor[]" id="id_membro_dor[]" value="18" class="oinput" disabled="true">
+                      <span>Pé D</span>
+                    </label>
+                  </td>
+                                                    <td>
+                    <label>
+                      <input type="checkbox" name="id_membro_dor[]" id="id_membro_dor[]" value="19" class="oinput" disabled="true">
+                      <span>Pé E</span>
+                    </label>
+                  </td>
+                                </tr>
+              </tbody></table>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableitem">
+              <span class="formlabell">9 - Após a queda, quanto tempo permaneceu no chão:</span><br>
+              <label>
+                <input type="radio" name="chao_menos_10min_sn" id="chao_menos_10min_sn" value="S" class="finput">
+                <span>Menos de 10 minutos</span>
+              </label>
+              <label>
+                <input type="radio" name="chao_menos_10min_sn" id="chao_menos_10min_sn" value="N" class="finput">
+                <span>Mais de 10 minutos</span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td class="tableitem">
+              <span class="formlabell">10 - O que resultou após queda:</span><br>
+                                            <label>
+                <input type="checkbox" name="id_resultado[]" id="id_resultado[]" value="1" class="finput">
+                <span>Fratura</span>
+              </label>
+                                            &nbsp;&nbsp;              <label>
+                <input type="checkbox" name="id_resultado[]" id="id_resultado[]" value="2" class="finput">
+                <span>Hematomas</span>
+              </label>
+                                            &nbsp;&nbsp;              <label>
+                <input type="checkbox" name="id_resultado[]" id="id_resultado[]" value="3" class="finput">
+                <span>Lesões</span>
+              </label>
+                                            &nbsp;&nbsp;              <label>
+                <input type="checkbox" onclick="javascript:pads_enable('descricao_resultado',!this.checked);" name="id_resultado[]" id="id_resultado[]" value="4" class="finput">
+                <span>Outras</span>
+              </label>
+              &nbsp;&nbsp;<input type="text" id="descricao_resultado" name="descricao_resultado" class="oinput" size="25" maxlength="60" disabled="true">                           </td>
+          </tr>
+          <tr>
+            <td class="tableitem">
+              <span class="formlabell">Observações:&nbsp;</span><br>
+              <textarea class="txtarea" name="obs_queda" id="obs_queda" rows="1" onblur="javascript:contador_caracteres();" onfocus="javascript:contador_caracteres(true,this,250);" onkeyup="javascript:contador_caracteres(true,this,250);" style="width:100%"></textarea>
+            </td>
+          </tr>
+        </tbody></table>
+    	</form>
+      <div>
+        <input id="btn_queda" type="button" onclick="javascript:pads_addEvoQueda();" value="Salvar" class="button">
+      </div>
+		</div>
+    <table class="table table-striped table-bordered table-hover">
+      <thead>
+        <tr>
+          <th class="center">DATA</th>
+          <th class="center">PROFISSIONAL</th>
+        </tr>
+      </thead>
+          <tbody>
+      <tr id="tab_vazia" class="selectLine"> 
+        <td colspan="5" class="tablemsg">Não há nenhum item cadastrado!</td>
+      </tr>
+    </tbody>
+        </table>
+  </div>
+      </div>
+
+        
+        </ion-scroll>    	
+    </ion-content>
+</ion-view>

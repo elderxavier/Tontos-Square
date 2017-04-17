@@ -1,0 +1,29 @@
+<ion-modal-view class="custom_modal" id="modal-dados-visita">
+    <ion-header-bar class="bar bar-header bar-light">
+        <h1 class="title title-left">Dados de Visita</h1>       
+    </ion-header-bar>
+    <ion-content class="padding">
+        <ion-scroll delegate-handle="scroller-modal-dados-visita" direction="y" style="width: 100%; height: 110%">
+            <ion-radio ng-repeat="item in conjugada_sn"
+                       ng-value="item.value"
+                       ng-model="data.conjugada_sn" 
+                       ng-change="updateGrossOptions(item)"                       
+                       name="conjugada_sn">
+                {{ item.text }}
+            </ion-radio>  
+            <div class="row">
+                <div class="col col-50">
+                    <span class="input-label">Hora da Chegada: </span> <input type="time" ng-model="dvhorachegada" id="dvhorachegada">
+                </div> 
+                <div class="col col-50">
+                    <span class="input-label">Hora da Saída: </span> <input type="time" ng-model="dvhorasaida" id="dvhorasaida">
+                </div>
+            </div>            
+            <span class="input-label">Km: </span> <input type="text" ng-model="dvkm" id="dvkm"> 
+        </ion-scroll>
+    </ion-content>
+    <div class="bar bar-footer row">
+        <button class="button button-clear button-stable col col-50" ng-click="modalDadosVisita.hide()">Cancelar</button>
+        <button class="button icon-right ion-checkmark button-clear button-balanced col col-50 confirm" ng-click="modalDadosVisita.hide()">Confirmar</button>
+    </div>
+</ion-modal-view>

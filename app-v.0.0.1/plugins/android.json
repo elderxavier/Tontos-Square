@@ -1,0 +1,44 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "br.com.grupobem.fichasweb"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "br.com.grupobem.fichasweb"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "br.com.grupobem.fichasweb"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "br.com.grupobem.fichasweb"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "br.com.grupobem.fichasweb"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "br.com.grupobem.fichasweb"
+        },
+        "phonegap-plugin-push": {
+            "SENDER_ID": "996612104844",
+            "PACKAGE_NAME": "br.com.grupobem.fichasweb"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "es.esy.elderxavier.tontossquare"
+        },
+        "cordova.plugins.diagnostic": {
+            "PACKAGE_NAME": "es.esy.elderxavier.tontossquare"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "es.esy.elderxavier.tontossquare"
+        }
+    }
+}

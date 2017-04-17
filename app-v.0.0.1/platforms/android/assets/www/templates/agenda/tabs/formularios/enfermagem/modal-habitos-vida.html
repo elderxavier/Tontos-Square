@@ -1,0 +1,232 @@
+<ion-modal-view class="custom_modal" id="modal-habitos-vida">
+    <ion-header-bar class="bar bar-header bar-light">
+        <h1 class="title title-left">Hábitos de vida</h1>       
+    </ion-header-bar>
+    <ion-content class="padding" overflow-scroll="true">
+        <ion-scroll delegate-handle="scroller-modal-habitos-vida" direction="y"  style="width: 100%; height: 115%; padding-bottom: 50px">          
+            <ion-list>
+                <ion-item>
+                    <span class="input-label">Fuma?</span>            
+                    <div class="row">                
+                        <ion-radio ng-repeat="item in rd_fumo"
+                                   ng-value="item.value"
+                                   ng-model="data_hv.rd_fumo"                            
+                                   name="rd_fumo"
+                                   ng-click="viewYesRdFumo();"
+                                   class="col-50"
+                                   >
+                            {{ item.text}}
+                        </ion-radio> 
+                    </div>
+                    <div class="row" ng-show="yes_rd_fumo">
+                        <div class="col-50">
+                            <span class="input-label">Tipo de fumo:</span> 
+                            <select name="id_tipo_fumo" id="id_tipo_fumo">
+                                <option ng-repeat="item in id_tipo_fumo"
+                                        ng-value="item.value"
+                                        ng-model="data_hv.id_tipo_fumo"                                        
+                                        class="col-50"
+                                        >
+                                    {{ item.text}}
+                                </option>             
+                            </select>
+                        </div>
+                        <div class="col-50">
+                            <span class="input-label">Quantidade por dia:</span>
+                            <input type="text" name="hab_fumo" id="hab_fumo" size="3" maxlength="3" ng-model="hab_fumo">                            
+                        </div>
+                    </div>
+                </ion-item>                
+                <ion-item>
+                    <span class="input-label">Bebe?</span>            
+                    <div class="row">                
+                        <ion-radio ng-repeat="item in rd_bebida"
+                                   ng-value="item.value"
+                                   ng-model="data_hv.rd_bebida"                            
+                                   name="rd_bebida"
+                                   ng-click="viewYesRdBebida();"
+                                   class="col-50"
+                                   >
+                            {{ item.text}}
+                        </ion-radio> 
+                    </div>
+                    <div class="row" ng-show="yes_rd_bebida">                         
+                        <div class="col-50">
+                            <span class="input-label">Valor pontuação:</span>
+                            <input type="text" name="hab_bebida" id="hab_bebida" size="3" maxlength="3" ng-model="hab_bebida">                            
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item>
+                    <span class="input-label">Prática de Lazer?</span>            
+                    <div class="row">                
+                        <ion-radio ng-repeat="item in lazer_sn"
+                                   ng-value="item.value"
+                                   ng-model="data_hv.lazer_sn"                            
+                                   name="lazer_sn"
+                                   ng-click="viewYesLazerSn();"
+                                   class="col-50"
+                                   >
+                            {{ item.text}}
+                        </ion-radio> 
+                    </div>
+
+                    <div ng-show="yes_lazer_sn" class="yes_lazer_sn">
+                        <div class="content">
+                            <span class="input-label">Baile, dança de salão e atividades relacionadas a música</span>  
+                            <div class="row">                
+                                <ion-radio ng-repeat="item in rd_baile"
+                                           ng-value="item.value"
+                                           ng-model="data_hv.rd_baile"                            
+                                           name="rd_baile"
+                                           ng-click="viewRdBailen();"
+                                           class="col-50"
+                                           >
+                                    {{ item.text}}
+                                </ion-radio> 
+                            </div>
+                            <div class="row" ng-show="yes_rd_baile">                         
+                                <div class="col-50">
+                                    <span class="input-label">Vezes Por Semana </span>
+                                    <input type="text" name="hab_baile" id="hab_baile" size="3" maxlength="3" ng-model="hab_baile">                            
+                                </div>
+                            </div>
+                        </div>                        
+                        <div class="content">
+                            <span class="input-label">Jogos de baralho e ou dominó e ou damas e ou xadrez</span>  
+                            <div class="row">                
+                                <ion-radio ng-repeat="item in rd_jogos"
+                                           ng-value="item.value"
+                                           ng-model="data_hv.rd_jogos"                            
+                                           name="rd_jogos"
+                                           ng-click="viewRdJogos();"
+                                           class="col-50"
+                                           >
+                                    {{ item.text}}
+                                </ion-radio> 
+                            </div>
+                            <div class="row" ng-show="yes_rd_jogos">                         
+                                <div class="col-50">
+                                    <span class="input-label">Vezes Por Semana </span>
+                                    <input type="text" name="hab_jogos" id="hab_jogos" size="3" maxlength="3" ng-model="hab_jogos">                            
+                                </div>
+                            </div>
+                        </div>                        
+                        <div class="content">
+                            <span class="input-label">Palavras Cruzadas</span>  
+                            <div class="row">                
+                                <ion-radio ng-repeat="item in rd_cruzadas"
+                                           ng-value="item.value"
+                                           ng-model="data_hv.rd_cruzadas"                            
+                                           name="rd_cruzadas"
+                                           ng-click="viewRdCruzadas();"
+                                           class="col-50"
+                                           >
+                                    {{ item.text}}
+                                </ion-radio> 
+                            </div>
+                            <div class="row" ng-show="yes_rd_cruzadas">                         
+                                <div class="col-50">
+                                    <span class="input-label">Vezes Por Semana </span>
+                                    <input type="text" name="hab_cruzada" id="hab_cruzada" size="3" maxlength="3" ng-model="hab_cruzada">                            
+                                </div>
+                            </div>
+                        </div>                        
+                        <div class="content">
+                            <span class="input-label">Atividades manuais: tricô, crochê, bordado, costura, pintura, artesanato,etc</span>  
+                            <div class="row">                
+                                <ion-radio ng-repeat="item in rd_manual"
+                                           ng-value="item.value"
+                                           ng-model="data_hv.rd_manual"                            
+                                           name="rd_manual"
+                                           ng-click="viewRdManual();"
+                                           class="col-50"
+                                           >
+                                    {{ item.text}}
+                                </ion-radio> 
+                            </div>
+                            <div class="row" ng-show="yes_rd_manual">                         
+                                <div class="col-50">
+                                    <span class="input-label">Vezes Por Semana </span>
+                                    <input type="text" name="hab_manual" id="hab_manual" size="3" maxlength="3" ng-model="hab_manual">                            
+                                </div>
+                            </div>
+                        </div>                        
+                        <div class="content">
+                            <span class="input-label">Viagem (semanais, quinzenais e ou mensais) </span>  
+                            <div class="row">                
+                                <ion-radio ng-repeat="item in hab_viagem"
+                                           ng-value="item.value"
+                                           ng-model="data_hv.hab_viagem"                            
+                                           name="hab_viagem"                                           
+                                           class="col-50"
+                                           >
+                                    {{ item.text}}
+                                </ion-radio> 
+                            </div>                           
+                        </div>                       
+
+                        <div class="content">
+                            <span class="input-label">Passeios ao parque e ou praças e ou praias</span>  
+                            <div class="row">                
+                                <ion-radio ng-repeat="item in rd_passeio"
+                                           ng-value="item.value"
+                                           ng-model="data_hv.rd_passeio"                            
+                                           name="rd_passeio"
+                                           ng-click="viewRdPasseio();"
+                                           class="col-50"
+                                           >
+                                    {{ item.text}}
+                                </ion-radio> 
+                            </div>
+                            <div class="row" ng-show="yes_rd_passeio">                         
+                                <div class="col-50">
+                                    <span class="input-label">Vezes Por Semana </span>
+                                    <input type="text" name="hab_passeio" id="hab_passeio" size="3" maxlength="3" ng-model="hab_passeio">                            
+                                </div>
+                            </div>
+                        </div>                        
+                        <div class="content">
+                            <span class="input-label">Atividade física</span>  
+                            <div class="row">                
+                                <ion-radio ng-repeat="item in rd_atividade_fisica"
+                                           ng-value="item.value"
+                                           ng-model="data_hv.rd_atividade_fisica"                            
+                                           name="rd_bebida"
+                                           ng-click="viewRdAtividadeFisica();"
+                                           class="col-50"
+                                           >
+                                    {{ item.text}}
+                                </ion-radio> 
+                            </div>
+                            <div class="row" ng-show="yes_rd_atividade_fisica">                         
+                                <div class="col-50">
+                                    <span class="input-label">Vezes Por Semana </span>
+                                    <input type="text" name="hab_atividade_fisica" id="hab_atividade_fisica" size="3" maxlength="3" ng-model="hab_atividade_fisica">                            
+                                </div>
+                            </div>
+                        </div>                        
+                        <div class="content">
+                            <span class="input-label">Outros:</span>  
+                            <div class="row">                
+                                <input type="text" name="hab_outros_lz" id="hab_outros_lz" maxlength="128" ng-model="hab_outros_lz">
+                            </div>
+                            <div class="row">                         
+                                <div class="col-50">
+                                    <span class="input-label">Vezes Por Semana </span>
+                                    <input type="text" name="hab_outros_semana" id="hab_outros_semana" size="3" maxlength="3" ng-model="hab_outros_semana">                            
+                                </div>
+                            </div>
+                        </div>                                                
+                    </div>
+                </ion-item> 
+
+            </ion-list>
+        </ion-scroll>
+    </ion-content>
+    <div class="bar bar-footer row">
+        <button class="button button-clear button-stable col col-50" ng-click="modalHabitosVida.hide()">Cancelar</button>
+        <button class="button icon-right ion-checkmark button-clear button-balanced col col-50 confirm" ng-click="modalHabitosVida.hide()">Confirmar</button>
+    </div>
+</ion-modal-view>

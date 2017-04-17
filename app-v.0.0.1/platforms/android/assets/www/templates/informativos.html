@@ -1,0 +1,23 @@
+<ion-view view-title="Informativos"  ng-controller="informativosCtrl"> 
+    <ion-nav-buttons side="left">               
+       <button class="button button-clear button-icon light ion-navicon-round" menu-toggle="left"></button>
+    </ion-nav-buttons>
+    <ion-content class="padding">
+        <div class="view-top-bar">
+            <h2>Informativos</h2>  
+        </div>
+        <div class="loading hidden">
+            <img src="img/loading.gif"/>
+        </div>        
+        <ion-scroll delegate-handle="handleimg" zooming="true" direction="y" id="scoll-informativos" class="scroll-content">
+            <div class="page-content informativos" ng-repeat="item in pageitens">                
+                <div class="page-content-sub" ng-repeat="subitem in item" ng-if="subitem.id">                    
+                    <div class="box-content" ng-click="goView(subitem)">                                                
+                        <h4>{{subitem.assunto}}</h4>                        
+                        <p>{{subitem.resumo}}</p>
+                    </div>
+                </div>                
+            </div>
+        </ion-scroll>        
+    </ion-content>
+</ion-view>

@@ -1,0 +1,295 @@
+<ion-view view-title="Histórico" id="tab-historico" class="tabs-views">
+     <ion-nav-buttons side="left">               
+        <button class="button button-clear button-icon light ion-arrow-left-a" ui-sref="menu.agenda"></button>
+    </ion-nav-buttons>
+    <ion-content overflow-scroll="true" class="padding">
+        <div class="view-top-bar">
+            <div class="submenu">
+                <div class="row">
+                    <div class="col-20 left">                        
+                        <button class="button button-clear button-calm" ui-sref="menu.detalhes-outrasinformacoes"><i class="fa fa-address-card-o" ></i></button>
+                    </div>
+                    <div class="col-20 left">                        
+                        <button class="button button-clear button-calm" ui-sref="menu.detalhes-protocolos"><i class="fa fa-briefcase" ></i></button>
+                    </div>
+                    <div class="col-20 left">                        
+                        <button class="button button-clear button-calm" ui-sref="menu.detalhes-riscos"><i class="fa fa-info" ></i></button>
+                    </div>
+                    <div class="col-20 left">                        
+                        <button class="button button-clear button-calm" ui-sref="menu.detalhes-evolucao"><i class="fa fa-area-chart" ></i></button>
+                    </div>
+                    <div class="col-20 left">                        
+                        <button class="button button-clear button-calm active"><i class="fa fa-address-book-o" ></i></button>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        <ion-scroll delegate-handle="scroller-tab-historico" id="scroller-tab-historico" direction="y" style="width: 100%; height: 100%">
+            <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+        <th class="center">DATA</th>
+        <th class="center">HISTÓRICO</th>
+        <th class="center">OPERADOR</th>
+        <th class="center">ORIGEM</th>
+                <th class="center">RECORRENTE</th>
+        <th class="center">VISÍVEL</th>
+              </tr>
+    </thead>
+    <tbody id="tab_historico">
+        <tr> 
+      <td class="center" title="Jul 29 2016 12:23PM-2453991" nowrap="true">29/07/2016 12:23:00&nbsp;</td>
+      <td class="align-left">
+                  <span title="CIENTE DA CAMPANHA DO AGASALHO." class="dinput" ondblclick="javascript: pads_edita_campo(this.id,'textarea','avaliacao_historico','historico','id_historico','2453991','1000', '' , 'edit_historico')" id="historico_crono_2453991">CIENTE DA CAMPANHA DO AGASALHO.&nbsp;</span>
+              </td>
+      <td nowrap="nowrap" class="align-left">bianca.prudencio&nbsp;</td>
+      <td nowrap="nowrap" class="align-left">Histórico&nbsp;</td>
+
+            <td align="center" id="destaque_crono_2453991" title="N" onclick="javascript:pads_alteraHistoricoAssistido(this,'destaque',2453991,false)" nowrap="nowrap"><i class="ace-icon fa fa-check green bigger-160 act-icon" name="habilitar"></i>      &nbsp;</td>
+      <td align="center" id="publico_crono_2453991" title="S" onclick="javascript:pads_alteraHistoricoAssistido(this,'publico',2453991,false)" nowrap="nowrap"><i class="ace-icon fa fa-times red bigger-160 act-icon" name="excluir"></i>&nbsp;</td>
+          </tr>
+        <tr> 
+      <td class="center" title="Feb 08 2017 03:45PM-759575" nowrap="true">08/02/2017 15:45:00&nbsp;</td>
+      <td class="align-left">
+                <span title="EVENTO , AGENDADO PARA , FOI REAGENDADO PARA Feb 08 2017 03:45PM">EVENTO , AGENDADO PARA , FOI REAGENDADO PARA Feb 08 2017 03:45PM</span>&nbsp;
+              </td>
+      <td nowrap="nowrap" class="align-left">N/D&nbsp;</td>
+      <td nowrap="nowrap" class="align-left">Agenda&nbsp;</td>
+
+            <td align="center" id="destaque_crono_" title="S" onclick="javascript:pads_alteraHistoricoAssistido(this,'destaque',,false)" nowrap="nowrap"><i class="ace-icon fa fa-times grey bigger-160 act-icon" name="excluir_block"></i>      &nbsp;</td>
+      <td align="center" id="publico_crono_" title="S" onclick="javascript:pads_alteraHistoricoAssistido(this,'publico',,false)" nowrap="nowrap"><i class="ace-icon fa fa-times grey bigger-160 act-icon" name="excluir_block"></i>&nbsp;</td>
+          </tr>
+        <tr> 
+      <td class="center" title="Feb 07 2017 04:38PM-2703029" nowrap="true">07/02/2017 16:38:00&nbsp;</td>
+      <td class="align-left">
+                  <span title="VISITA DE ENFERMAGEM AGENDADA PARA O DIA 08/02/2017 AS 15H45. CONFIRMADO COM O ASSISTIDO." class="dinput" ondblclick="javascript: pads_edita_campo(this.id,'textarea','avaliacao_historico','historico','id_historico','2703029','1000', '' , 'edit_historico')" id="historico_crono_2703029">VISITA DE ENFERMAGEM AGENDADA PARA O DIA 08/02/2017 AS 15H45. CONFIRMADO COM O ASSISTIDO.&nbsp;</span>
+              </td>
+      <td nowrap="nowrap" class="align-left">bianca.prudencio&nbsp;</td>
+      <td nowrap="nowrap" class="align-left">Histórico&nbsp;</td>
+
+            <td align="center" id="destaque_crono_2703029" title="S" onclick="javascript:pads_alteraHistoricoAssistido(this,'destaque',2703029,false)" nowrap="nowrap"><i class="ace-icon fa fa-times red bigger-160 act-icon" name="excluir"></i>      &nbsp;</td>
+      <td align="center" id="publico_crono_2703029" title="N" onclick="javascript:pads_alteraHistoricoAssistido(this,'publico',2703029,false)" nowrap="nowrap"><i class="ace-icon fa fa-check green bigger-160 act-icon" name="habilitar"></i>&nbsp;</td>
+          </tr>
+        <tr> 
+      <td class="center" title="Jan 17 2017 02:24PM-2676529" nowrap="true">17/01/2017 14:24:00&nbsp;</td>
+      <td class="align-left">
+                  <span title="**QTA** ENFERMEIRA CHEGOU NO LOCAL DA VISITA E FOI INFORMADA PELA ESPOSA DO ASSISTIDO QUE O MESMO FOI VISITAR SUA MÃE NO HOSPITAL. ENTRO EM CONTATO COM O ASSISTIDO, O MESMO CONFIRMA A INFORMAÇÃO. CONFIRMO QTA POR ASSISTIDO AUSENTE. " class="dinput" ondblclick="javascript: pads_edita_campo(this.id,'textarea','avaliacao_historico','historico','id_historico','2676529','1000', '' , 'edit_historico')" id="historico_crono_2676529">**QTA** ENFERMEIRA CHEGOU NO LOCAL DA VISITA E FOI INFORMADA PELA ESPOSA DO ASSISTIDO QUE O MESMO FOI VISITAR SUA MÃE NO HOSPITAL. ENTRO EM CONTATO COM O ASSISTIDO, O MESMO CONFIRMA A INFORMAÇÃO. CONFIRMO QTA POR ASSISTIDO AUSENTE. &nbsp;</span>
+              </td>
+      <td nowrap="nowrap" class="align-left">renato.camargo&nbsp;</td>
+      <td nowrap="nowrap" class="align-left">Histórico&nbsp;</td>
+
+            <td align="center" id="destaque_crono_2676529" title="S" onclick="javascript:pads_alteraHistoricoAssistido(this,'destaque',2676529,false)" nowrap="nowrap"><i class="ace-icon fa fa-times red bigger-160 act-icon" name="excluir"></i>      &nbsp;</td>
+      <td align="center" id="publico_crono_2676529" title="N" onclick="javascript:pads_alteraHistoricoAssistido(this,'publico',2676529,false)" nowrap="nowrap"><i class="ace-icon fa fa-check green bigger-160 act-icon" name="habilitar"></i>&nbsp;</td>
+          </tr>
+        <tr> 
+      <td class="center" title="Jan 17 2017 02:15PM-755454" nowrap="true">17/01/2017 14:15:00&nbsp;</td>
+      <td class="align-left">
+                <span title="EVENTO , AGENDADO PARA 00/00/0000 17:00:00, FOI CANCELADO.">EVENTO , AGENDADO PARA 00/00/0000 17:00:00, FOI CANCELADO.</span>&nbsp;
+              </td>
+      <td nowrap="nowrap" class="align-left">fagner.feitoza&nbsp;</td>
+      <td nowrap="nowrap" class="align-left">Agenda&nbsp;</td>
+
+            <td align="center" id="destaque_crono_" title="S" onclick="javascript:pads_alteraHistoricoAssistido(this,'destaque',,false)" nowrap="nowrap"><i class="ace-icon fa fa-times grey bigger-160 act-icon" name="excluir_block"></i>      &nbsp;</td>
+      <td align="center" id="publico_crono_" title="S" onclick="javascript:pads_alteraHistoricoAssistido(this,'publico',,false)" nowrap="nowrap"><i class="ace-icon fa fa-times grey bigger-160 act-icon" name="excluir_block"></i>&nbsp;</td>
+          </tr>
+        <tr> 
+      <td class="center" title="Jan 16 2017 11:18AM-2674305" nowrap="true">16/01/2017 11:18:00&nbsp;</td>
+      <td class="align-left">
+                  <span title="VISITA DE ENFERMAGEM AGENDADA PARA O DIA 17/01/2017 AS 14:15. CONFIRMADA COM O ASSISTIDO. " class="dinput" ondblclick="javascript: pads_edita_campo(this.id,'textarea','avaliacao_historico','historico','id_historico','2674305','1000', '' , 'edit_historico')" id="historico_crono_2674305">VISITA DE ENFERMAGEM AGENDADA PARA O DIA 17/01/2017 AS 14:15. CONFIRMADA COM O ASSISTIDO. &nbsp;</span>
+              </td>
+      <td nowrap="nowrap" class="align-left">renato.camargo&nbsp;</td>
+      <td nowrap="nowrap" class="align-left">Histórico&nbsp;</td>
+
+            <td align="center" id="destaque_crono_2674305" title="S" onclick="javascript:pads_alteraHistoricoAssistido(this,'destaque',2674305,false)" nowrap="nowrap"><i class="ace-icon fa fa-times red bigger-160 act-icon" name="excluir"></i>      &nbsp;</td>
+      <td align="center" id="publico_crono_2674305" title="N" onclick="javascript:pads_alteraHistoricoAssistido(this,'publico',2674305,false)" nowrap="nowrap"><i class="ace-icon fa fa-check green bigger-160 act-icon" name="habilitar"></i>&nbsp;</td>
+          </tr>
+        <tr> 
+      <td class="center" title="Jan 10 2017 01:56PM-3147997" nowrap="true">10/01/2017 13:56:00&nbsp;</td>
+      <td class="align-left">
+                <span title="ASSISTIDO SIMPATICO. RELATA CONSULTA COM CARDIO DIA 09/01, AVALIADO EXAMES, CITA ECODOPPLER, CINTILOGRAFIA PARA RETORNO APOS 4 MESES. QUESTIONO SE POSSUI ALGO NA SAUDE QUE DESEJA MELHORAR OU ADERIR, INFORMA ESTAR SATISFEITO, MANTEM EXERCICIOS FISICOS REGULARMENTE, CONSEGUIU AUMENTAR A INGESTA HIDRICA. REFORÇO MANTER CUIDADOS COM A SAUDE. REFORÇO REALIZAR ALONGAMENTO ANTES DOS EXERCÍCIOS PARA PREPARAR O CORPO.">ASSISTIDO SIMPATICO. RELATA CONSULTA COM CARDIO DIA 09/01, AVALIADO EXAMES, CITA ECODOPPLER, CINTILOGRAFIA PARA RETORNO APOS 4 MESES. QUESTIONO SE POSSUI ALGO NA SAUDE QUE DESEJA MELHORAR OU ADERIR, INFORMA ESTAR SATISFEITO, MANTEM EXERCICIOS FISICOS REGULARMENTE, CONSEGUIU AUMENTAR A INGESTA HIDRICA. REFORÇO MANTER CUIDADOS COM A SAUDE. REFORÇO REALIZAR ALONGAMENTO ANTES DOS EXERCÍCIOS PARA PREPARAR O CORPO.</span>&nbsp;
+              </td>
+      <td nowrap="nowrap" class="align-left">karla.pires&nbsp;</td>
+      <td nowrap="nowrap" class="align-left">Evolução&nbsp;</td>
+
+            <td align="center" id="destaque_crono_" title="S" onclick="javascript:pads_alteraHistoricoAssistido(this,'destaque',,false)" nowrap="nowrap"><i class="ace-icon fa fa-times grey bigger-160 act-icon" name="excluir_block"></i>      &nbsp;</td>
+      <td align="center" id="publico_crono_" title="N" onclick="javascript:pads_alteraHistoricoAssistido(this,'publico',,false)" nowrap="nowrap"><i class="ace-icon fa fa-check grey bigger-160 act-icon" name="habilitar"></i>&nbsp;</td>
+          </tr>
+        <tr> 
+      <td class="center" title="Jan 01 2017 04:00AM-738968" nowrap="true">01/01/2017 04:00:00&nbsp;</td>
+      <td class="align-left">
+                <span title="EVENTO , AGENDADO PARA 00/00/0000 01:00:00, FOI CANCELADO.">EVENTO , AGENDADO PARA 00/00/0000 01:00:00, FOI CANCELADO.</span>&nbsp;
+              </td>
+      <td nowrap="nowrap" class="align-left">N/D&nbsp;</td>
+      <td nowrap="nowrap" class="align-left">Agenda&nbsp;</td>
+
+            <td align="center" id="destaque_crono_" title="S" onclick="javascript:pads_alteraHistoricoAssistido(this,'destaque',,false)" nowrap="nowrap"><i class="ace-icon fa fa-times grey bigger-160 act-icon" name="excluir_block"></i>      &nbsp;</td>
+      <td align="center" id="publico_crono_" title="S" onclick="javascript:pads_alteraHistoricoAssistido(this,'publico',,false)" nowrap="nowrap"><i class="ace-icon fa fa-times grey bigger-160 act-icon" name="excluir_block"></i>&nbsp;</td>
+          </tr>
+        <tr> 
+      <td class="center" title="Dec 22 2016 11:59AM-3138325" nowrap="true">22/12/2016 11:59:00&nbsp;</td>
+      <td class="align-left">
+                <span title="PASSARÁ COM CARDIO DIA 09/1 E PRETENDE ATUALIZAR O URO EM 2017. DIZ QUE PRECISAVA AUMENTAR INGESTA HÍDRICA, POIS INGERE APROXIMADAMENTE 1L/ DIA. FALO SOBRE USO DE FPS E AUMENTO DO CONSUMO DE ÁGUA, SUCOS. CEM E CA.">PASSARÁ COM CARDIO DIA 09/1 E PRETENDE ATUALIZAR O URO EM 2017. DIZ QUE PRECISAVA AUMENTAR INGESTA HÍDRICA, POIS INGERE APROXIMADAMENTE 1L/ DIA. FALO SOBRE USO DE FPS E AUMENTO DO CONSUMO DE ÁGUA, SUCOS. CEM E CA.</span>&nbsp;
+              </td>
+      <td nowrap="nowrap" class="align-left">cassia.visini&nbsp;</td>
+      <td nowrap="nowrap" class="align-left">Evolução&nbsp;</td>
+
+            <td align="center" id="destaque_crono_" title="S" onclick="javascript:pads_alteraHistoricoAssistido(this,'destaque',,false)" nowrap="nowrap"><i class="ace-icon fa fa-times grey bigger-160 act-icon" name="excluir_block"></i>      &nbsp;</td>
+      <td align="center" id="publico_crono_" title="N" onclick="javascript:pads_alteraHistoricoAssistido(this,'publico',,false)" nowrap="nowrap"><i class="ace-icon fa fa-check grey bigger-160 act-icon" name="habilitar"></i>&nbsp;</td>
+          </tr>
+        <tr> 
+      <td class="center" title="Dec 13 2016 11:06AM-3481838" nowrap="true">13/12/2016 11:06:00&nbsp;</td>
+      <td class="align-left">
+                  <span title="TENTATIVA SEM SUCESSO" class="dinput" ondblclick="javascript: pads_edita_campo(this.id,'textarea','historico_contatos','historico','id_historico_contato','3481838','1000', '' , 'edit_historico')" id="historico_Dec 13 2016 11:06AM-3481838">TENTATIVA SEM SUCESSO<br>
+<br>
+ NÃO COMPLETADA: TELEFONE FORA DE SERVIÇO</span>&nbsp;
+              </td>
+      <td nowrap="nowrap" class="align-left">gisele.goes&nbsp;</td>
+      <td nowrap="nowrap" class="align-left">Hist. contato&nbsp;</td>
+
+            <td align="center" id="destaque_crono_3481838" title="S" onclick="javascript:pads_alteraHistoricoAssistido(this,'destaque',3481838,true)" nowrap="nowrap"><i class="ace-icon fa fa-times red bigger-160 act-icon" name="excluir"></i>      &nbsp;</td>
+      <td align="center" id="publico_crono_3481838" title="N" onclick="javascript:pads_alteraHistoricoAssistido(this,'publico',3481838,true)" nowrap="nowrap"><i class="ace-icon fa fa-check green bigger-160 act-icon" name="habilitar"></i>&nbsp;</td>
+          </tr>
+        <tr> 
+      <td class="center" title="Nov 14 2016 01:33PM-3116616" nowrap="true">14/11/2016 13:33:00&nbsp;</td>
+      <td class="align-left">
+                <span title="LIVRE DE QUEIXAS. NEGA CONSULTAS RECENTES. QUESTIONO SE POSSUI O HABITO DE CONSULTAR-SE COM UROLOGISTA, AFIRMA QUE ESTE ANO ESTA EM ATRASO. MENCIONA BONS HÁBITOS ALIMENTARES. NEGA ATIVIDADE FISICA. AO QUESTIONAR QUAL NOTA DARIA A SUA SAÚDE, SENDO ESTA DE 0 A 70, PONTUA EM 7, DEVIDO A LIMITAÇÃO A ATIVIDADE FISICA PELA PROTESE DE VÁLVULA CARDIACA. INCENTIVO MARCAR CONSULTA COM UROLOGISTA. CEM/CA">LIVRE DE QUEIXAS. NEGA CONSULTAS RECENTES. QUESTIONO SE POSSUI O HABITO DE CONSULTAR-SE COM UROLOGISTA, AFIRMA QUE ESTE ANO ESTA EM ATRASO. MENCIONA BONS HÁBITOS ALIMENTARES. NEGA ATIVIDADE FISICA. AO QUESTIONAR QUAL NOTA DARIA A SUA SAÚDE, SENDO ESTA DE 0 A 70, PONTUA EM 7, DEVIDO A LIMITAÇÃO A ATIVIDADE FISICA PELA PROTESE DE VÁLVULA CARDIACA. INCENTIVO MARCAR CONSULTA COM UROLOGISTA. CEM/CA</span>&nbsp;
+              </td>
+      <td nowrap="nowrap" class="align-left">barbara.oliveira&nbsp;</td>
+      <td nowrap="nowrap" class="align-left">Evolução&nbsp;</td>
+
+            <td align="center" id="destaque_crono_" title="S" onclick="javascript:pads_alteraHistoricoAssistido(this,'destaque',,false)" nowrap="nowrap"><i class="ace-icon fa fa-times grey bigger-160 act-icon" name="excluir_block"></i>      &nbsp;</td>
+      <td align="center" id="publico_crono_" title="N" onclick="javascript:pads_alteraHistoricoAssistido(this,'publico',,false)" nowrap="nowrap"><i class="ace-icon fa fa-check grey bigger-160 act-icon" name="habilitar"></i>&nbsp;</td>
+          </tr>
+        <tr> 
+      <td class="center" title="Nov 01 2016 10:57AM-3416930" nowrap="true">01/11/2016 10:57:00&nbsp;</td>
+      <td class="align-left">
+                  <span title="SEM SUCESSO PARA MONITORAMENTO." class="dinput" ondblclick="javascript: pads_edita_campo(this.id,'textarea','historico_contatos','historico','id_historico_contato','3416930','1000', '' , 'edit_historico')" id="historico_Nov 01 2016 10:57AM-3416930">SEM SUCESSO PARA MONITORAMENTO.<br>
+<br>
+ NÃO COMPLETADA: TELEFONE FORA DE SERVIÇO</span>&nbsp;
+              </td>
+      <td nowrap="nowrap" class="align-left">natali.alencar&nbsp;</td>
+      <td nowrap="nowrap" class="align-left">Hist. contato&nbsp;</td>
+
+            <td align="center" id="destaque_crono_3416930" title="S" onclick="javascript:pads_alteraHistoricoAssistido(this,'destaque',3416930,true)" nowrap="nowrap"><i class="ace-icon fa fa-times red bigger-160 act-icon" name="excluir"></i>      &nbsp;</td>
+      <td align="center" id="publico_crono_3416930" title="N" onclick="javascript:pads_alteraHistoricoAssistido(this,'publico',3416930,true)" nowrap="nowrap"><i class="ace-icon fa fa-check green bigger-160 act-icon" name="habilitar"></i>&nbsp;</td>
+          </tr>
+        <tr> 
+      <td class="center" title="Oct 07 2016 11:40AM-3095909" nowrap="true">07/10/2016 11:40:00&nbsp;</td>
+      <td class="align-left">
+                <span title="ASSISTIDO RECEPTIVO, MAS BREVE NO CONTATO E DISPERSO. NEGA QUEIXAS E DUVIDAS EM SAÚDE. PASSOU EM CONSULTA DE ROTINA COM CARDIO NO INICIO DE SETEMBR,. RETORNO EM 4 MESES. ACREDITA QUE MANTEM SUA SAÚDE ADEQUADA. PARABENIZO PELOS CUIDADOS E IMPORTÂNCIA DO ACOMPANHAMENTO MÉDICO E REALIZAÇÃO DE EXAMES. DISPONIBILIZO CEM E CA.">ASSISTIDO RECEPTIVO, MAS BREVE NO CONTATO E DISPERSO. NEGA QUEIXAS E DUVIDAS EM SAÚDE. PASSOU EM CONSULTA DE ROTINA COM CARDIO NO INICIO DE SETEMBR,. RETORNO EM 4 MESES. ACREDITA QUE MANTEM SUA SAÚDE ADEQUADA. PARABENIZO PELOS CUIDADOS E IMPORTÂNCIA DO ACOMPANHAMENTO MÉDICO E REALIZAÇÃO DE EXAMES. DISPONIBILIZO CEM E CA.</span>&nbsp;
+              </td>
+      <td nowrap="nowrap" class="align-left">maria.silva&nbsp;</td>
+      <td nowrap="nowrap" class="align-left">Evolução&nbsp;</td>
+
+            <td align="center" id="destaque_crono_" title="S" onclick="javascript:pads_alteraHistoricoAssistido(this,'destaque',,false)" nowrap="nowrap"><i class="ace-icon fa fa-times grey bigger-160 act-icon" name="excluir_block"></i>      &nbsp;</td>
+      <td align="center" id="publico_crono_" title="N" onclick="javascript:pads_alteraHistoricoAssistido(this,'publico',,false)" nowrap="nowrap"><i class="ace-icon fa fa-check grey bigger-160 act-icon" name="habilitar"></i>&nbsp;</td>
+          </tr>
+        <tr> 
+      <td class="center" title="Oct 07 2016 11:04AM-3375672" nowrap="true">07/10/2016 11:04:00&nbsp;</td>
+      <td class="align-left">
+                  <span title="(MANHã) SEM SUCESSO PARA T.O. ASSISTIDO ESTAVA DIRIGINDO; SOLICITA RETORNO DAQUI 30 MIN. AGENDO." class="dinput" ondblclick="javascript: pads_edita_campo(this.id,'textarea','historico_contatos','historico','id_historico_contato','3375672','1000', '' , 'edit_historico')" id="historico_Oct 07 2016 11:04AM-3375672">(MANHã) SEM SUCESSO PARA T.O. ASSISTIDO ESTAVA DIRIGINDO; SOLICITA RETORNO DAQUI 30 MIN. AGENDO.<br>
+<br>
+ NÃO EFETIVA: PEDIU PARA LIGAR OUTRO DIA/HORA</span>&nbsp;
+              </td>
+      <td nowrap="nowrap" class="align-left">kelly.gama&nbsp;</td>
+      <td nowrap="nowrap" class="align-left">Hist. contato&nbsp;</td>
+
+            <td align="center" id="destaque_crono_3375672" title="S" onclick="javascript:pads_alteraHistoricoAssistido(this,'destaque',3375672,true)" nowrap="nowrap"><i class="ace-icon fa fa-times red bigger-160 act-icon" name="excluir"></i>      &nbsp;</td>
+      <td align="center" id="publico_crono_3375672" title="N" onclick="javascript:pads_alteraHistoricoAssistido(this,'publico',3375672,true)" nowrap="nowrap"><i class="ace-icon fa fa-check green bigger-160 act-icon" name="habilitar"></i>&nbsp;</td>
+          </tr>
+        <tr> 
+      <td class="center" title="Oct 07 2016 11:04AM-2545008" nowrap="true">07/10/2016 11:04:00&nbsp;</td>
+      <td class="align-left">
+                  <span title="AGENDAMENTO DE CONTATO FEITO POR: KELLY.GAMA PARA 07/10/2016 ÀS 11:40" class="dinput" ondblclick="javascript: pads_edita_campo(this.id,'textarea','avaliacao_historico','historico','id_historico','2545008','1000', '' , 'edit_historico')" id="historico_crono_2545008">AGENDAMENTO DE CONTATO FEITO POR: KELLY.GAMA PARA 07/10/2016 ÀS 11:40&nbsp;</span>
+              </td>
+      <td nowrap="nowrap" class="align-left">N/D&nbsp;</td>
+      <td nowrap="nowrap" class="align-left">Histórico&nbsp;</td>
+
+            <td align="center" id="destaque_crono_2545008" title="S" onclick="javascript:pads_alteraHistoricoAssistido(this,'destaque',2545008,false)" nowrap="nowrap"><i class="ace-icon fa fa-times red bigger-160 act-icon" name="excluir"></i>      &nbsp;</td>
+      <td align="center" id="publico_crono_2545008" title="S" onclick="javascript:pads_alteraHistoricoAssistido(this,'publico',2545008,false)" nowrap="nowrap"><i class="ace-icon fa fa-times red bigger-160 act-icon" name="excluir"></i>&nbsp;</td>
+          </tr>
+        <tr> 
+      <td class="center" title="Sep 29 2016 05:50PM-3361955" nowrap="true">29/09/2016 17:50:00&nbsp;</td>
+      <td class="align-left">
+                  <span title="SEM SUCESSO PARA O MONITORAMENTO NO TELEFONE DISPONIVEL. " class="dinput" ondblclick="javascript: pads_edita_campo(this.id,'textarea','historico_contatos','historico','id_historico_contato','3361955','1000', '' , 'edit_historico')" id="historico_Sep 29 2016 05:50PM-3361955">SEM SUCESSO PARA O MONITORAMENTO NO TELEFONE DISPONIVEL. <br>
+<br>
+ NÃO COMPLETADA: NÃO ATENDE</span>&nbsp;
+              </td>
+      <td nowrap="nowrap" class="align-left">ketry.ribeiro&nbsp;</td>
+      <td nowrap="nowrap" class="align-left">Hist. contato&nbsp;</td>
+
+            <td align="center" id="destaque_crono_3361955" title="S" onclick="javascript:pads_alteraHistoricoAssistido(this,'destaque',3361955,true)" nowrap="nowrap"><i class="ace-icon fa fa-times red bigger-160 act-icon" name="excluir"></i>      &nbsp;</td>
+      <td align="center" id="publico_crono_3361955" title="N" onclick="javascript:pads_alteraHistoricoAssistido(this,'publico',3361955,true)" nowrap="nowrap"><i class="ace-icon fa fa-check green bigger-160 act-icon" name="habilitar"></i>&nbsp;</td>
+          </tr>
+        <tr> 
+      <td class="center" title="Sep 19 2016 02:31PM-3340301" nowrap="true">19/09/2016 14:31:00&nbsp;</td>
+      <td class="align-left">
+                  <span title="SEM SUCESSO PARA MONITORAMENTO.	TELEFONES NÃO ATENDEM<br />
+" class="dinput" ondblclick="javascript: pads_edita_campo(this.id,'textarea','historico_contatos','historico','id_historico_contato','3340301','1000', '' , 'edit_historico')" id="historico_Sep 19 2016 02:31PM-3340301">SEM SUCESSO PARA MONITORAMENTO.	TELEFONES NÃO ATENDEM<br>
+<br>
+<br>
+ NÃO COMPLETADA: NÃO ATENDE</span>&nbsp;
+              </td>
+      <td nowrap="nowrap" class="align-left">evelyn.santos&nbsp;</td>
+      <td nowrap="nowrap" class="align-left">Hist. contato&nbsp;</td>
+
+            <td align="center" id="destaque_crono_3340301" title="S" onclick="javascript:pads_alteraHistoricoAssistido(this,'destaque',3340301,true)" nowrap="nowrap"><i class="ace-icon fa fa-times red bigger-160 act-icon" name="excluir"></i>      &nbsp;</td>
+      <td align="center" id="publico_crono_3340301" title="N" onclick="javascript:pads_alteraHistoricoAssistido(this,'publico',3340301,true)" nowrap="nowrap"><i class="ace-icon fa fa-check green bigger-160 act-icon" name="habilitar"></i>&nbsp;</td>
+          </tr>
+        <tr> 
+      <td class="center" title="Sep 13 2016 12:29PM-3328697" nowrap="true">13/09/2016 12:29:00&nbsp;</td>
+      <td class="align-left">
+                  <span title="SEM SUCESSO PARA MONITORAMENTO.	SOLICITA CONTATO POSTERIOR, MAS NAO ESPECIFICA MELHOR HORARIO<br />
+" class="dinput" ondblclick="javascript: pads_edita_campo(this.id,'textarea','historico_contatos','historico','id_historico_contato','3328697','1000', '' , 'edit_historico')" id="historico_Sep 13 2016 12:29PM-3328697">SEM SUCESSO PARA MONITORAMENTO.	SOLICITA CONTATO POSTERIOR, MAS NAO ESPECIFICA MELHOR HORARIO<br>
+<br>
+<br>
+ NÃO EFETIVA: PEDIU PARA LIGAR OUTRO DIA/HORA</span>&nbsp;
+              </td>
+      <td nowrap="nowrap" class="align-left">evelyn.santos&nbsp;</td>
+      <td nowrap="nowrap" class="align-left">Hist. contato&nbsp;</td>
+
+            <td align="center" id="destaque_crono_3328697" title="S" onclick="javascript:pads_alteraHistoricoAssistido(this,'destaque',3328697,true)" nowrap="nowrap"><i class="ace-icon fa fa-times red bigger-160 act-icon" name="excluir"></i>      &nbsp;</td>
+      <td align="center" id="publico_crono_3328697" title="N" onclick="javascript:pads_alteraHistoricoAssistido(this,'publico',3328697,true)" nowrap="nowrap"><i class="ace-icon fa fa-check green bigger-160 act-icon" name="habilitar"></i>&nbsp;</td>
+          </tr>
+        <tr> 
+      <td class="center" title="Aug 26 2016 11:22AM-3071301" nowrap="true">26/08/2016 11:22:00&nbsp;</td>
+      <td class="align-left">
+                <span title="RECEPTIVO E CIENTE DO CUIDADOS COM A SAUDE. NEGA INTERCORRÊNCIAS APOS A VISITA DE ENFERMAGEM. REFERE QUE AUMENTOU A INGESTA HIDRICA. MANTÉM PRATICA DE ATIVIDADE FÍSICA 7X/SEMANA. ORIENTO AUMENTAR O CONSUMO DE LÍQUIDOS, BENEFICIOS DA PRATICA DE ATIVIDADE FÍSICA. REFORÇO CEM E CA,">RECEPTIVO E CIENTE DO CUIDADOS COM A SAUDE. NEGA INTERCORRÊNCIAS APOS A VISITA DE ENFERMAGEM. REFERE QUE AUMENTOU A INGESTA HIDRICA. MANTÉM PRATICA DE ATIVIDADE FÍSICA 7X/SEMANA. ORIENTO AUMENTAR O CONSUMO DE LÍQUIDOS, BENEFICIOS DA PRATICA DE ATIVIDADE FÍSICA. REFORÇO CEM E CA,</span>&nbsp;
+              </td>
+      <td nowrap="nowrap" class="align-left">michele.ono&nbsp;</td>
+      <td nowrap="nowrap" class="align-left">Evolução&nbsp;</td>
+
+            <td align="center" id="destaque_crono_" title="S" onclick="javascript:pads_alteraHistoricoAssistido(this,'destaque',,false)" nowrap="nowrap"><i class="ace-icon fa fa-times grey bigger-160 act-icon" name="excluir_block"></i>      &nbsp;</td>
+      <td align="center" id="publico_crono_" title="N" onclick="javascript:pads_alteraHistoricoAssistido(this,'publico',,false)" nowrap="nowrap"><i class="ace-icon fa fa-check grey bigger-160 act-icon" name="habilitar"></i>&nbsp;</td>
+          </tr>
+        <tr> 
+      <td class="center" title="Aug 23 2016 05:16PM-3293572" nowrap="true">23/08/2016 17:16:00&nbsp;</td>
+      <td class="align-left">
+                  <span title=" TARDE. SEM SUCESSO PARA MONITORAMENTO EM TELS DISPONIVEIS." class="dinput" ondblclick="javascript: pads_edita_campo(this.id,'textarea','historico_contatos','historico','id_historico_contato','3293572','1000', '' , 'edit_historico')" id="historico_Aug 23 2016 05:16PM-3293572"> TARDE. SEM SUCESSO PARA MONITORAMENTO EM TELS DISPONIVEIS.<br>
+<br>
+ NÃO COMPLETADA: NÃO ATENDE</span>&nbsp;
+              </td>
+      <td nowrap="nowrap" class="align-left">livia.rocha&nbsp;</td>
+      <td nowrap="nowrap" class="align-left">Hist. contato&nbsp;</td>
+
+            <td align="center" id="destaque_crono_3293572" title="S" onclick="javascript:pads_alteraHistoricoAssistido(this,'destaque',3293572,true)" nowrap="nowrap"><i class="ace-icon fa fa-times red bigger-160 act-icon" name="excluir"></i>      &nbsp;</td>
+      <td align="center" id="publico_crono_3293572" title="N" onclick="javascript:pads_alteraHistoricoAssistido(this,'publico',3293572,true)" nowrap="nowrap"><i class="ace-icon fa fa-check green bigger-160 act-icon" name="habilitar"></i>&nbsp;</td>
+          </tr>
+      <tr>
+    <td colspan="10">
+      <span><p></p><div style="float: left"><span></span>« <b style="font-size: 12px;">1</b> 
+ <span onclick="document.getElementById('formPagHistorico').paginacao.value='20'; ajax_post('?mode=ajax&amp;app=pads&amp;mod=comum&amp;sub=operacionais&amp;pag=historico', 'dvHistorico', 'formPagHistorico');" style="cursor: pointer">2</span> 
+ <span onclick="document.getElementById('formPagHistorico').paginacao.value='40'; ajax_post('?mode=ajax&amp;app=pads&amp;mod=comum&amp;sub=operacionais&amp;pag=historico', 'dvHistorico', 'formPagHistorico');" style="cursor: pointer">3</span>
+ 
+<span onclick="document.getElementById('formPagHistorico').paginacao.value='20'; ajax_post('?mode=ajax&amp;app=pads&amp;mod=comum&amp;sub=operacionais&amp;pag=historico', 'dvHistorico', 'formPagHistorico');" style="cursor: pointer" onmouseover="javascript:showTooltip(this,'<b>Avançar</b>'); return false;"> »</span>
+</div><div style="float: right">
+<span><b>Total de Registros: 43 &nbsp;</b></span></div>
+<p></p></span>
+    </td>
+  </tr>
+        
+        </tbody>        
+      </table>
+        </ion-scroll>    	
+    </ion-content>
+</ion-view>

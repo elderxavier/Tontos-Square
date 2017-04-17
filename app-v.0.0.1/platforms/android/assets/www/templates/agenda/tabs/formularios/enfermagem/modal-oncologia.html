@@ -1,0 +1,35 @@
+<ion-modal-view class="custom_modal" id="modal-oncologia">
+    <ion-header-bar class="bar bar-header bar-light">
+        <h1 class="title title-left">Oncologia</h1>       
+    </ion-header-bar>
+    <ion-content class="padding" overflow-scroll="true">
+        <ion-scroll delegate-handle="scroller-modal-oncologia" direction="y"  style="width: 100%; height: 115%; padding-bottom: 50px">          
+            <span class="input-label">Possui diagnóstico?</span>            
+            <div class="row">                
+                <ion-radio ng-repeat="item in oncologia_sn"
+                           ng-value="item.value"
+                           ng-model="data_o.oncologia_sn"                            
+                           name="oncologia_sn"
+                           class="col-50"
+                           >
+                    {{ item.text }}
+                </ion-radio> 
+            </div>
+            <span class="input-label">Já possuiu?</span>            
+            <div class="row">                
+                <ion-radio ng-repeat="item in oncologia_anterior_sn" 
+                           ng-value="item.value"
+                           ng-model="data_o.oncologia_anterior_sn"                            
+                           name="oncologia_anterior_sn"
+                           class="col-50"
+                           >
+                    {{ item.text }}
+                </ion-radio> 
+            </div>
+        </ion-scroll>
+    </ion-content>
+    <div class="bar bar-footer row">
+        <button class="button button-clear button-stable col col-50" ng-click="modalOncologia.hide()">Cancelar</button>
+        <button class="button icon-right ion-checkmark button-clear button-balanced col col-50 confirm" ng-click="modalOncologia.hide()">Confirmar</button>
+    </div>
+</ion-modal-view>

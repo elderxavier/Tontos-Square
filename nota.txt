@@ -1,0 +1,126 @@
+10-03-2017
+
+Comando android para windows
+
+C:\Users\t_elder.xavier\AppData\Roaming\npm\ionic serve
+
+
+C:\Users\t_elder.xavier\AppData\Roaming\Android\android-sdk\tools\android adb
+
+
+adb install C:\Users\Name\MyProject\build\Jorgesys.apk
+
+C:\Users\t_elder.xavier\AppData\Roaming\Android\android-sdk\tools\emulator -avd Nexus_7_API_25
+
+
+
+C:\Users\t_elder.xavier\AppData\Roaming\Android\android-sdk\tools\android adb install C:\elder\apps\informar_fw_v0.0.0.1\app\platforms\android\build\outputs\apk\android-debug.apk
+
+
+
+C:\Program Files (x86)\Git\cmd git 
+
+
+cd C:\elder\apps\informar_fw_v0.0.0.1\app
+
+
+
+"C:\Program Files (x86)\Git\cmd\git.exe" add -f *.*  
+
+
+"C:\Program Files (x86)\Git\cmd\git.exe" commit -m"Inclisos na Bem"
+
+
+ git config --global user.name "Your Name"
+ git config --global user.email you@example.com
+
+
+ "C:\Program Files (x86)\Git\cmd\git.exe"  config --global user.name "ElderXavier"
+ "C:\Program Files (x86)\Git\cmd\git.exe"  config --global user.email eldersxavier@gmail.com
+
+
+ "C:\Program Files (x86)\Git\cmd\git.exe" add -f layout/pes.JPG
+
+
+"C:\Program Files (x86)\Git\cmd\git.exe" add C:\elder\apps\informar_fw_v0.0.0.1\layout\pes.JPG
+
+
+"C:\Program Files (x86)\Git\cmd\git.exe" add C:\elder\apps\informar_fw_v0.0.0.1\nota.txt
+
+
+"C:\Program Files (x86)\Git\cmd\git.exe" push origin dev
+
+
+
+
+13-03-2017
+arquivos adcionados
+ classes/webservice/ClassFichasWebApi.php
+ htdocs/webservice/v1/api.php
+
+
+?usuario=t_elder.xavier&senha=bem@12345!
+
+
+http://s2.desenvolvimento.grupobem.com.br/~tielder/s2-dev/htdocs/webservice/v1/api.php?funcao=getAgendaAssisitos&data_inicio=20160101&data_final=20170320&id_profissional=204988&pagina=1&token=AE3998A5B3F84DD16E872ED37BCFE
+
+http://s2.desenvolvimento.grupobem.com.br/~tielder/s2-dev/htdocs/webservice/v1/api.php?funcao=getAgendaAssisitos&data_inicio=20160101&data_final=20170320&id_profissional=204988&token=AE3998A5B3F84DD16E872ED37BCFE
+
+
+
+
+Your Account Details
+
+Your account is now active.
+Main Hosting Details
+Control panel username
+fhste_19820137
+Control panel password	**********
+Control panel URL
+cpanel.free-hoster.net
+MySQL username
+fhste_19820137
+MySQL password
+**********
+MySQL hostname
+sql310.free-hoster.net
+FTP username
+fhste_19820137
+FTP password
+**********
+FTP host name	ftp.free-hoster.net
+
+
+Your Website URL's
+Home page
+http://eldersxavier.free-hoster.net
+
+
+
+
+
+
+Cpanel Username: fhste_19820137
+Cpanel Password: hoster32
+Your URL: http://eldersxavier.free-hoster.net or http://www.eldersxavier.free-hoster.net
+FTP Server : ftp.free-hoster.net
+FTP Login : fhste_19820137
+FTP Password : hoster32
+MySQL Database Name: MUST CREATE IN CPANEL
+MySQL Username : fhste_19820137
+MySQL Password : hoster32
+MySQL Server: SEE THE CPANEL
+
+
+Cpanel URL: http://cpanel.free-hoster.net/
+
+
+____________________________________________________
+
+16-03-2017
+
+Inicaodn api fichar
+
+
+
+http://s2.desenvolvimento.grupobem.com.br/~tielder/s2-dev/htdocs/webservice/v1/api.php?token=AE3998A5B3F84DD16E872ED37BCFE&funcao=getProfissionais&grupos[0]=0&grupos[1]=1

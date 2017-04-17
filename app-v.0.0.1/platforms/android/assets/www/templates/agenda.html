@@ -1,0 +1,36 @@
+<ion-view view-title="agenda" ng-controller="agendaCtrl" id="agenda-page">    
+        <ion-nav-buttons side="left">               
+            <button class="button button-clear button-icon light ion-navicon-round" menu-toggle="left"></button>
+        </ion-nav-buttons>    
+    <ion-content class="padding" delegate-handle="scroller-agenda"  id="scroller-agenda" direction="y" style="width: 100%; height: 100%">
+        <div class="view-top-bar">
+            <h2>Agenda</h2>  
+        </div>          
+            <ion-list can-swipe="true">
+                <ion-item  ng-repeat="item in itens">
+                    <div ui-sref="menu.detalhes-outrasinformacoes" ng-click="setPropag(item)">
+                        <span class="flag-circle">{{$index + 1}}</span>
+                        <div class="row">                         
+                            <div class="col col-30 label-strong">NOME DO PACIENTE:</div>
+                            <div class="col col-70">{{item.nome}}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col col-30 label-strong">DATA / HORA:</div>
+                            <div class="col col-70">{{item.data_agenda}}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col col-30 label-strong">ENDEREÇO:</div>
+                            <div class="col col-70">
+                                {{item.logradouro}} , {{item.numero}} <br>
+                                {{item.bairro}} , {{item.cidade}}
+                            </div>
+                        </div>
+                        <ion-option-button class="button-assertive button-info" ng-click="">Editar</ion-option-button>
+                    </div>
+                </ion-item>               
+            </ion-list>        
+    </ion-content>    
+    <div id="agenda-filter" ng-click="">
+        <button class="button button-icon button-clear icon ion-android-time button-light" ng-click="openModalFilterAgenda()"></button>
+    </div>
+</ion-view>

@@ -117,10 +117,194 @@ Cpanel URL: http://cpanel.free-hoster.net/
 
 ____________________________________________________
 
+
+https://console.developers.google.com/apis/dashboard?project=sublime-flux-166102&duration=PT1H
 16-03-2017
 
 Inicaodn api fichar
 
 
 
+keytool -list -v -keystore mystore.keystore -keypass android
+
 http://s2.desenvolvimento.grupobem.com.br/~tielder/s2-dev/htdocs/webservice/v1/api.php?token=AE3998A5B3F84DD16E872ED37BCFE&funcao=getProfissionais&grupos[0]=0&grupos[1]=1
+
+
+
+
+eystore type: JKS
+Keystore provider: SUN
+
+Your keystore contains 1 entry
+
+Alias name: mystore.keystore
+Creation date: 1/mai/2017
+Entry type: PrivateKeyEntry
+Certificate chain length: 1
+Certificate[1]:
+Owner: CN=Elder, OU=Ex Tecnologia, O=Ex Tecnologia, L=Unknown, ST=Unknown, C=Unknown
+Issuer: CN=Elder, OU=Ex Tecnologia, O=Ex Tecnologia, L=Unknown, ST=Unknown, C=Unknown
+Serial number: 6a792b9b
+Valid from: Mon May 01 18:13:15 BRT 2017 until: Fri Sep 16 18:13:15 BRT 2044
+Certificate fingerprints:
+	 MD5:  5D:AD:34:FE:FF:04:46:03:8E:9C:46:01:77:BC:8B:33
+	 SHA1: 8E:88:9F:D4:D8:D2:CF:DF:7C:E6:AD:3C:A2:5A:8D:DC:61:04:D7:E5
+	 SHA256: 7F:DF:45:C6:E6:9B:1D:2B:1D:CC:55:AE:88:E1:F5:D1:07:AB:F6:25:4D:1E:1E:70:65:4F:27:1E:3A:F2:E1:50
+	 Signature algorithm name: SHA256withRSA
+	 Version: 3
+
+Extensions: 
+
+#1: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: 4F 4A B1 0B 01 A4 38 65   41 FF FF AF B0 91 55 6D  OJ....8eA.....Um
+0010: 81 28 DB 35                                        .(.5
+]
+]
+
+
+
+*******************************************
+*******************************************
+
+
+
+
+keytool -genkey -v -keystore my-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
+
+
+android
+
+keytool -list -v -keystore my-release-key.keystore -keypass android
+
+
+Keystore type: JKS
+Keystore provider: SUN
+
+Your keystore contains 1 entry
+
+Alias name: alias_name
+Creation date: 1/mai/2017
+Entry type: PrivateKeyEntry
+Certificate chain length: 1
+Certificate[1]:
+Owner: CN=Elder, OU=Xavier, O=Unknown, L=Unknown, ST=Unknown, C=Unknown
+Issuer: CN=Elder, OU=Xavier, O=Unknown, L=Unknown, ST=Unknown, C=Unknown
+Serial number: 61ae5d81
+Valid from: Mon May 01 18:37:16 BRT 2017 until: Fri Sep 16 18:37:16 BRT 2044
+Certificate fingerprints:
+	 MD5:  5C:36:96:F8:7E:40:B0:52:1F:5F:3E:8C:7F:FC:13:ED
+	 SHA1: 59:46:C5:CE:31:2D:CF:5A:B8:0C:A1:6C:6F:0C:F2:3B:04:32:33:C4
+	 SHA256: 9E:BA:60:0C:17:7D:A4:07:18:3A:76:DA:53:92:9A:54:30:1C:83:D6:3C:D2:D1:30:98:3C:45:FD:4C:D1:6E:A3
+	 Signature algorithm name: SHA256withRSA
+	 Version: 3
+
+Extensions: 
+
+#1: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: 02 C3 D0 2F 0C 56 27 18   FE BB A1 86 07 A4 C9 08  .../.V'.........
+0010: 94 EA 2D B5                                        ..-.
+]
+]
+
+
+
+*******************************************
+*******************************************
+
+es.esy.elderxavier.mapa
+
+
+sudo update-rc.d tomcat disable
+
+sudo service apache-htcacheclean stop && update-rc.d apache-htcacheclean disable
+
+sudo service apache2 stop && update-rc.d apache2 disable
+
+sudo service openvas-gsa stop && update-rc.d openvas-gsa disable
+
+sudo service openvas-manager stop && update-rc.d openvas-manager disable
+
+sudo service openvas-manager stop && update-rc.d openvas-manager disable
+
+
+sudo service openvas-scanner stop && update-rc.d openvas-scanner disable
+
+sudo service vmware stop && update-rc.d vmware disable
+
+sudo service vmware-USBArbitrator stop && update-rc.d vmware-USBArbitrator disable
+
+
+
+
+Error:Execution failed for task ':app:validateSigningRelease'.
+> Keystore file /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/Mapa/map2.keystore not found for signing config 'externalOverride'.
+
+
+/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/Mapa/
+
+
+keytool -genkey -v -keystore mapa.keystore -alias mapa.keystore -keyalg RSA -keysize 2048 -validity 10000
+
+
+keytool -list -v -keystore mapa.keystore -keypass android
+
+
+Alias name: mapa.keystore
+Creation date: 1/mai/2017
+Entry type: PrivateKeyEntry
+Certificate chain length: 1
+Certificate[1]:
+Owner: CN=Elder Xavier, OU=Unknown, O=Unknown, L=Unknown, ST=Unknown, C=Unknown
+Issuer: CN=Elder Xavier, OU=Unknown, O=Unknown, L=Unknown, ST=Unknown, C=Unknown
+Serial number: 68a477df
+Valid from: Mon May 01 22:16:43 BRT 2017 until: Fri Sep 16 22:16:43 BRT 2044
+Certificate fingerprints:
+	 MD5:  F0:54:7A:12:21:27:78:74:9A:CD:01:9B:3E:9F:1E:E7
+	 SHA1: 14:87:78:DB:C7:1A:17:4E:BF:B6:B7:18:3C:63:6F:58:11:91:EC:7C
+	 SHA256: 1F:78:7D:58:62:97:6A:7F:F0:DE:26:AC:7B:9D:CC:80:67:FD:F8:8E:54:DA:FB:8B:5E:DE:AD:96:A4:0A:34:C7
+	 Signature algorithm name: SHA256withRSA
+	 Version: 3
+
+Extensions: 
+
+#1: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: EF 02 A2 66 C8 AF E4 95   90 A4 AE 43 4A 8D 1E B7  ...f.......CJ...
+0010: E5 26 DB F8                                        .&..
+]
+]
+
+
+
+*******************************************
+*******************************************
+
+
+cordova plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyCstV6gf1aB4OzhNkkgk3iURX1M8G6FnDI"
+
+cordova plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="YOUR_ANDROID_API_KEY_IS_HERE" --variable API_KEY_FOR_IOS="YOUR_IOS_API_KEY_IS_HERE"
+
+keytool -list -v -keystore ~/.android/debug.keystore -alias androiddebugkey -storepass android -keypass android
+
+
+ass android
+Alias name: androiddebugkey
+Creation date: 1/set/2016
+Entry type: PrivateKeyEntry
+Certificate chain length: 1
+Certificate[1]:
+Owner: C=US, O=Android, CN=Android Debug
+Issuer: C=US, O=Android, CN=Android Debug
+Serial number: 1
+Valid from: Thu Sep 01 14:12:59 BRT 2016 until: Sat Aug 25 14:12:59 BRT 2046
+Certificate fingerprints:
+	 MD5:  C7:A8:F2:1C:6D:65:E9:E7:8B:E6:4A:15:14:D9:0E:9B
+	 SHA1: 5C:37:38:51:45:DC:0C:5E:8D:68:22:FC:05:4E:6E:4D:4F:06:29:A0
+	 SHA256: C3:CB:B1:33:4F:4A:6E:46:0E:4C:7D:C3:48:60:56:B1:6A:AA:82:A2:A4:F6:FB:73:C2:6A:64:D3:B8:5D:4D:97
+	 Signature algorithm name: SHA1withRSA
+	 Version: 1

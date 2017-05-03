@@ -25,13 +25,24 @@
     <feature name="Geolocation">
         <param name="android-package" value="org.apache.cordova.geolocation.Geolocation" />
     </feature>
+    <feature name="GoogleMaps">
+        <param name="android-package" value="plugin.google.maps.GoogleMaps" />
+        <param name="onload" value="true" />
+        <param name="onreset" value="true" />
+    </feature>
+    <feature name="External">
+        <param name="android-package" value="plugin.google.maps.External" />
+    </feature>
+    <feature name="Geocoder">
+        <param name="android-package" value="plugin.google.maps.MyGeocoder" />
+    </feature>
     <feature name="Diagnostic">
         <param name="android-package" value="cordova.plugins.Diagnostic" />
         <param name="onload" value="true" />
     </feature>
     <name>Tonto's Square</name>
     <description>
-        Aplicativo para Controle de Formulários de Pacientes
+        Tonto's Square
     </description>
     <author email="contato@grupobem.com.br" href="http://elderxavier.esy.es/">
         Tontos Team

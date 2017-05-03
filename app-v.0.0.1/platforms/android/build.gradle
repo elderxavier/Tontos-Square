@@ -255,6 +255,8 @@ dependencies {
     compile "me.leolin:ShortcutBadger:1.1.4@aar"
     compile "com.android.support:support-v4:+"
     compile "com.android.support:appcompat-v7:+"
+    compile "com.google.android.gms:play-services-maps:9.8.0"
+    compile "com.google.android.gms:play-services-location:9.8.0"
     // SUB-PROJECT DEPENDENCIES END
 }
 

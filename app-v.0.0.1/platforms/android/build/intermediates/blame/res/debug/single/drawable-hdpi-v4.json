@@ -32,12 +32,12 @@
         "source": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png"
     },
     {
-        "merged": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_longpressed_holo.9.png",
-        "source": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/drawable-hdpi-v4/abc_list_longpressed_holo.9.png"
-    },
-    {
         "merged": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/res/merged/debug/drawable-hdpi-v4/notification_bg_low_normal.9.png",
         "source": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/drawable-hdpi-v4/notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_list_longpressed_holo.9.png",
+        "source": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/drawable-hdpi-v4/abc_list_longpressed_holo.9.png"
     },
     {
         "merged": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_star_black_36dp.png",

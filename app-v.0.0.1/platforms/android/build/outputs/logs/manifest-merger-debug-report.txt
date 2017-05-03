@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:2:1-52:12
+ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:2:1-57:12
 	package
 		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:2:98-139
 		INJECTED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml
@@ -33,10 +33,11 @@ uses-permission#android.permission.INTERNET
 ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:4:5-67
 MERGED from [com.google.android.gms:play-services-gcm:9.8.0] /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/9.8.0/AndroidManifest.xml:21:5-66
 MERGED from [com.google.android.gms:play-services-iid:9.8.0] /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/9.8.0/AndroidManifest.xml:21:5-66
+MERGED from [com.google.android.gms:play-services-maps:9.8.0] /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.8.0/AndroidManifest.xml:20:5-66
 	android:name
 		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:4:22-64
 application
-ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:5:5-41:19
+ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:5:5-43:19
 MERGED from [com.android.support:support-v13:23.4.0] /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v13/23.4.0/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:26.0.0-alpha1] /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v4/26.0.0-alpha1/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-compat:26.0.0-alpha1] /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/support-compat/26.0.0-alpha1/AndroidManifest.xml:29:5-20
@@ -52,6 +53,8 @@ MERGED from [com.google.android.gms:play-services-iid:9.8.0] /media/elder/f6eba3
 MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/26.0.0-alpha1/AndroidManifest.xml:26:5-20
 MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/26.0.0-alpha1/AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-maps:9.8.0] /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.8.0/AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-location:9.8.0] /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/9.8.0/AndroidManifest.xml:4:5-19
 	android:label
 		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:5:81-113
 	android:supportsRtl
@@ -161,8 +164,21 @@ action#android.nfc.action.ADAPTER_STATE_CHANGED
 ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:38:17-83
 	android:name
 		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:38:25-80
+meta-data#com.google.android.geo.API_KEY
+ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:41:9-124
+	android:value
+		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:41:66-121
+	android:name
+		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:41:20-65
+meta-data#com.google.android.gms.version
+ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:42:9-122
+MERGED from [com.google.android.gms:play-services-basement:9.8.0] /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.8.0/AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:42:66-119
+	android:name
+		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:42:20-65
 uses-sdk
-ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:42:5-74
+ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:44:5-74
 MERGED from [com.android.support:support-v13:23.4.0] /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v13/23.4.0/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-v4:26.0.0-alpha1] /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v4/26.0.0-alpha1/AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:support-compat:26.0.0-alpha1] /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/support-compat/26.0.0-alpha1/AndroidManifest.xml:21:5-23:58
@@ -179,55 +195,73 @@ MERGED from [me.leolin:ShortcutBadger:1.1.4] /media/elder/f6eba379-3e87-40ff-b19
 MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/26.0.0-alpha1/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/26.0.0-alpha1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:9.8.0] /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.8.0/AndroidManifest.xml:23:5-42
+MERGED from [com.google.android.gms:play-services-location:9.8.0] /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/9.8.0/AndroidManifest.xml:3:5-42
 MERGED from [android:CordovaLib:unspecified:debug] /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/android/CordovaLib/unspecified/debug/AndroidManifest.xml:25:5-44
 	tools:overrideLibrary
 		ADDED from [com.android.support:support-v4:26.0.0-alpha1] /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v4/26.0.0-alpha1/AndroidManifest.xml:23:9-51
 	android:targetSdkVersion
-		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:42:42-71
+		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:44:42-71
 	android:minSdkVersion
-		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:42:15-41
+		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:44:15-41
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:43:5-79
+ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:45:5-79
+MERGED from [com.google.android.gms:play-services-maps:9.8.0] /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.8.0/AndroidManifest.xml:19:5-78
 	android:name
-		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:43:22-76
+		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:45:22-76
 uses-permission#android.permission.WAKE_LOCK
-ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:44:5-68
+ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:46:5-68
 	android:name
-		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:44:22-65
+		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:46:22-65
 uses-permission#android.permission.VIBRATE
-ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:45:5-66
+ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:47:5-66
 	android:name
-		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:45:22-63
+		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:47:22-63
 uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:46:5-82
+ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:48:5-82
 MERGED from [com.google.android.gms:play-services-gcm:9.8.0] /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/9.8.0/AndroidManifest.xml:20:5-81
 MERGED from [com.google.android.gms:play-services-iid:9.8.0] /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/9.8.0/AndroidManifest.xml:20:5-81
 	android:name
-		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:46:22-79
+		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:48:22-79
 uses-permission#${applicationId}.permission.C2D_MESSAGE
-ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:47:5-79
+ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:49:5-79
 	android:name
-		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:47:22-76
+		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:49:22-76
 		INJECTED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml
 permission#${applicationId}.permission.C2D_MESSAGE
-ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:48:5-110
+ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:50:5-110
 	android:protectionLevel
-		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:48:72-107
+		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:50:72-107
 	android:name
-		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:48:17-71
+		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:50:17-71
 		INJECTED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:49:5-81
+ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:51:5-81
 	android:name
-		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:49:22-78
+		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:51:22-78
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:50:5-79
+ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:52:5-79
 	android:name
-		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:50:22-76
+		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:52:22-76
 uses-feature#android.hardware.location.gps
-ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:51:5-66
+ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:53:5-66
 	android:name
-		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:51:19-63
+		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:53:19-63
+uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
+ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:54:5-98
+	android:name
+		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:54:22-95
+uses-feature#0x00020000
+ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:55:5-78
+MERGED from [com.google.android.gms:play-services-maps:9.8.0] /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.8.0/AndroidManifest.xml:21:5-77
+	android:glEsVersion
+		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:55:19-51
+	android:required
+		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:55:52-75
+uses-feature#android.hardware.location
+ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:56:5-62
+	android:name
+		ADDED from /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/AndroidManifest.xml:56:19-59
 meta-data#android.support.VERSION
 ADDED from [com.android.support:support-v4:26.0.0-alpha1] /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v4/26.0.0-alpha1/AndroidManifest.xml:25:5-27:41
 MERGED from [com.android.support:support-compat:26.0.0-alpha1] /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/support-compat/26.0.0-alpha1/AndroidManifest.xml:25:5-27:41
@@ -250,12 +284,6 @@ ADDED from [com.google.android.gms:play-services-base:9.8.0] /media/elder/f6eba3
 		ADDED from [com.google.android.gms:play-services-base:9.8.0] /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.8.0/AndroidManifest.xml:19:86-145
 	android:name
 		ADDED from [com.google.android.gms:play-services-base:9.8.0] /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.8.0/AndroidManifest.xml:19:19-85
-meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:9.8.0] /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.8.0/AndroidManifest.xml:20:9-121
-	android:value
-		ADDED from [com.google.android.gms:play-services-basement:9.8.0] /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.8.0/AndroidManifest.xml:20:66-119
-	android:name
-		ADDED from [com.google.android.gms:play-services-basement:9.8.0] /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.8.0/AndroidManifest.xml:20:20-65
 uses-permission#com.sec.android.provider.badge.permission.READ
 ADDED from [me.leolin:ShortcutBadger:1.1.4] /media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.4/AndroidManifest.xml:19:5-86
 	android:name

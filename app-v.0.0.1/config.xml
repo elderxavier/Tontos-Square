@@ -2,7 +2,7 @@
 <widget id="es.esy.elderxavier.tontossquare" version="0.0.1" android-versionCode="0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Tonto's Square</name>
     <description>
-        Aplicativo para Controle de Formulários de Pacientes
+        Tonto's Square
     </description>
     <author email="contato@grupobem.com.br" href="http://elderxavier.esy.es/">
         Tontos Team

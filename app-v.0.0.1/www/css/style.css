@@ -45,6 +45,16 @@ ion-content h1,ion-content h2,ion-content h3,ion-content h4,ion-content h5,ion-c
 .has-tabs{ bottom: 0 !important}
 .views-content .scroll {background: #fff;padding: 5px; border-radius: 5px}
 .views-content .img-content{margin-bottom: 1.3em; width: 100%; height: auto; border-radius: 5px}
+/*Modal*/
+.custom_modal {width: 80%; height: auto; top:10%; left: 10%;min-height: 80% !important}
+.custom_modal ion-header-bar {background:#fff !important; font-weight: bold; border-bottom: 1px solid #ddd }
+.custom_modal ion-header-bar h1{color: #004969 !important}
+.custom_modal ion-scroll {width: 100%; height: 115%; margin-top: 5%; margin-bottom: 5%; padding-bottom: 50px}
+.custom_modal ion-content {margin: 0 auto 35px; background: #fff; padding-bottom: 50px}
+.custom_modal ion-content input, .custom_modal ion-content select {border:1px solid #ddd; border-radius: 5px; padding: 10px}
+.custom_modal .input-label{margin-top: 20px}
+
+
 
 /*Home*/
 .scroll { height: 100%}
@@ -221,7 +231,7 @@ ion-content h1,ion-content h2,ion-content h3,ion-content h4,ion-content h5,ion-c
 } 
 
 @media (max-width: 480px) {
-    .custom_modal{width: 100%; height: auto;top: 0; left: 0}
+    
 }
 
 

@@ -93,6 +93,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="122ec9237acd8a57d974b9d529987f1ee6ca5aea">
+        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-maps-9.8.0_39d294fd72af3b8881ddea2f934cc7875dba29f4.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/support-media-compat/26.0.0-alpha1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -144,6 +153,15 @@
         revision="25.0.0"
         sha1="bf2e1838e4428616c1aa26edf43de72b5b99bf84">
         <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-9.8.0_c0395536e2ef655d9f4455fb1f59fd27f3825dbc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="04bbbddf868aa02dd33f9e90d8f5d908c360f638">
+        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-location-9.8.0_c1ae6200895e5930949edf1d71416d40a101d967.jar" />
     </item>
     <item
         is-multidex="false"

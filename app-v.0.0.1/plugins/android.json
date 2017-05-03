@@ -34,6 +34,10 @@
         },
         "cordova.plugins.diagnostic": {
             "PACKAGE_NAME": "es.esy.elderxavier.tontossquare"
+        },
+        "cordova-plugin-googlemaps": {
+            "API_KEY_FOR_ANDROID": "AIzaSyCstV6gf1aB4OzhNkkgk3iURX1M8G6FnDI",
+            "PACKAGE_NAME": "es.esy.elderxavier.tontossquare"
         }
     },
     "dependent_plugins": {

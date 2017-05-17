@@ -8,7 +8,30 @@ angular.module('starter').controller('homeCtrl', function ($scope, $rootScope, $
 
     $scope.position = {};
     var options = {timeout: 10000, enableHighAccuracy: true};
+    var lastUpdateTime,
+minFrequency = 10*1000,
+watchOptions = {
+    timeout : 60*1000,
+    maxAge: 0,
+    enableHighAccuracy: true
+};
 
+function on_success(position){
+    var now = new Date();
+    if(lastUpdateTime && now.getTime() - lastUpdateTime.getTime() < minFrequency){
+        console.log("Ignoring position update");
+        return;
+    }
+    lastUpdateTime = now;
+    $scope.setMakerMap(position);
+    console.log("on_success");
+
+    // do something with position
+}
+
+function on_error(position){
+    console.log('Error: ', position );
+}
     
     $scope.setMakerMap = function(position,mapOptions,map){
         var latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
@@ -19,7 +42,7 @@ angular.module('starter').controller('homeCtrl', function ($scope, $rootScope, $
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
             $scope.map = new google.maps.Map(document.querySelector("#map"), mapOptions);
-        google.maps.event.addListenerOnce($scope.map, 'idle', function () {
+            google.maps.event.addListenerOnce($scope.map, 'idle', function () {
                 var marker = new google.maps.Marker({
                     map: $scope.map,
                     //animation: google.maps.Animation.DROP,
@@ -41,17 +64,12 @@ angular.module('starter').controller('homeCtrl', function ($scope, $rootScope, $
     var getMap = function () {
         $cordovaGeolocation.getCurrentPosition(options).then(function (position) {
         //window.navigator.geolocation.getCurrentPosition(function (position) {
-            $scope.position = position;
-            
-            
-            setInterval( function(){
+            $scope.position = position;            
+            //setInterval( function(){
                 $scope.setMakerMap(position);
-            },10000);
-            
-
-
-
-
+                //window.navigator.geolocation.watchPosition(on_success,on_error,watchOptions);
+                $cordovaGeolocation.watchPosition(on_success,on_error,watchOptions);
+            //},10000);
         }, function (error) {
             $ionicLoading.hide();
             alert(error.message);
@@ -62,6 +80,8 @@ angular.module('starter').controller('homeCtrl', function ($scope, $rootScope, $
     };
     
     
+
+//$cordovaGeolocation.geolocation.watchPosition(on_success,on_error,watchOptions);
     
     /*setInterval( function(){
             getMap();

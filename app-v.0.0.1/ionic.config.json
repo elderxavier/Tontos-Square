@@ -1,4 +1,5 @@
 {
   "name": "tontos_square",
-  "app_id": ""
+  "app_id": "",
+  "type": "ionic-angular"
 }

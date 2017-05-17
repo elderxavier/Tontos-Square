@@ -3,75 +3,30 @@
 
     <item
         is-multidex="false"
-        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/jars/classes.jar"
+        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/26.0.0-alpha1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
-        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-26.0.0-alpha1_e89eb247a00cd2f5ce62b25abba3ecaa614625b2.jar" />
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-26.0.0-alpha1_531c439db7258139f55f7c70a2f33525eb37d30b.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.4/jars/classes.jar"
+        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.4/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="b346a5d3fc5d6d1d36c6262c8cc865b76df9f40c">
-        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/me.leolin-ShortcutBadger-1.1.4_938bcff4069a4d43bb7e6312d22798537f0e384f.jar" />
+        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/me.leolin-ShortcutBadger-1.1.4_0e74a88da2c467636a944024e299b611246432eb.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/9.8.0/jars/classes.jar"
+        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.8.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="9dae58326f6f6a515022468cce56dd04ec3b9fdb">
-        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-gcm-9.8.0_4c941f4b90eacadef9776fd76f07ecd9138fbba8.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v13/23.4.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="2bf893856577f5038c0b8007a43fda3b3c5beb23">
-        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-v13-23.4.0_e9af7505e5f08eafcc9d624283a0ed7565aaae34.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/support-fragment/26.0.0-alpha1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
-        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-26.0.0-alpha1_8a515aaaf5a1eeeb74900d431e9c32d2a87da236.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-ui/26.0.0-alpha1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
-        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-26.0.0-alpha1_cef4367015cc445a79518aaa34cd51ba102349a6.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/support-compat/26.0.0-alpha1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
-        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-compat-26.0.0-alpha1_0e2263a49516dc07d9f19db7376db4a6853b689d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v4/26.0.0-alpha1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-v4-26.0.0-alpha1_8fe7cfe7469039fd78c8766b9ff176757de699da.jar" />
+        sha1="bf2e1838e4428616c1aa26edf43de72b5b99bf84">
+        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-9.8.0_0d6d4d5f674ad8a5082997d56e3652d3c2c23804.jar" />
     </item>
     <item
         is-multidex="false"
@@ -80,115 +35,160 @@
         optimize="true"
         revision="25.0.0"
         sha1="023ee503b631f69511e335a061ea008f8da60f40">
-        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/support-annotations-26.0.0-alpha1_df06f9c45899a479f10af5b95921ae7ad84de215.jar" />
+        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/support-annotations-26.0.0-alpha1_df06f9c45899a479f10af5b95921ae7ad84de215.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-utils/26.0.0-alpha1/jars/classes.jar"
+        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/9.8.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
-        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-26.0.0-alpha1_bd1b27de619a89b477099bbd69ae3bd23eff3d81.jar" />
+        sha1="9dae58326f6f6a515022468cce56dd04ec3b9fdb">
+        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-gcm-9.8.0_0f1591d241496699b9df99e2c2d011d6dc755d41.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.8.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="122ec9237acd8a57d974b9d529987f1ee6ca5aea">
-        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-maps-9.8.0_39d294fd72af3b8881ddea2f934cc7875dba29f4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/support-media-compat/26.0.0-alpha1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="9935891f23923f39d002087085d9696568a9f657">
-        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-26.0.0-alpha1_98f17c5d60a6c0cb99a21183d38d6045955f3370.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/9.8.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="85299bf1924dde0200109a58033c5ef84ecb6991">
-        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-iid-9.8.0_c2948e79beb5a5bed28f34f32f4477fa4de828af.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v13/23.4.0/jars/libs/internal_impl-23.4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="be09545b7e6ff322c7286d2e80bed3b75b76c529">
-        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_d78d10a90545be70c1a2669c7f1b88d899fa793e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/26.0.0-alpha1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
-        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-26.0.0-alpha1_190407475fd1dd876f861c3e08e23a7ffd2c523a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/26.0.0-alpha1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="952944218ecedea1554a513dec0c14d570642843">
-        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-26.0.0-alpha1_b5921edf72c1b4ea54d68c0e145eea9302988cbe.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.8.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="bf2e1838e4428616c1aa26edf43de72b5b99bf84">
-        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-9.8.0_c0395536e2ef655d9f4455fb1f59fd27f3825dbc.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/9.8.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="04bbbddf868aa02dd33f9e90d8f5d908c360f638">
-        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-location-9.8.0_c1ae6200895e5930949edf1d71416d40a101d967.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/android/CordovaLib/unspecified/debug/jars/classes.jar"
+        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/android/CordovaLib/unspecified/debug/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="57e71bc8c93930436f20b19e461ea41eab617e09">
-        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/CordovaLib-unspecified-debug_66b1b0601338bdbd2a5978f8f9c9dc14e3189a99.jar" />
+        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/CordovaLib-unspecified-debug_dcf52a6c01cb5d7d26ec8e550528557b755833d1.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.8.0/jars/classes.jar"
+        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/9.8.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="7e92aadd0697922316d1395c1887a23aebec640a">
-        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-9.8.0_ef46f9aab0af819fb192ae7cacf5c09e9372f38b.jar" />
+        sha1="04bbbddf868aa02dd33f9e90d8f5d908c360f638">
+        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-location-9.8.0_44c8927e47754241bde1a6e9e434e3a6233b1a15.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.8.0/jars/classes.jar"
+        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/support-fragment/26.0.0-alpha1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-26.0.0-alpha1_55335fb5f7cadb751cc76317074cfe87689112fa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/support-compat/26.0.0-alpha1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-compat-26.0.0-alpha1_b609f8a500e84b0f9a5fbcb022fd73a06ed31801.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v4/26.0.0-alpha1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-v4-26.0.0-alpha1_6211180b82ea9bbc3b2b6fc1be16d340eca22d77.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="85299bf1924dde0200109a58033c5ef84ecb6991">
+        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-iid-9.8.0_2a6accbe4f459a35b79465a57ceeda417756cfe5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/26.0.0-alpha1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-26.0.0-alpha1_84988a9f41cca9ca56579db6df3d902e41763618.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-utils/26.0.0-alpha1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-26.0.0-alpha1_9f160ddfd2399ebf6515d40a61f36ed791182f3d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/support-core-ui/26.0.0-alpha1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-26.0.0-alpha1_09ebca52b51dad88063d69a2659a821f77faa07c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v13/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2bf893856577f5038c0b8007a43fda3b3c5beb23">
+        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-v13-23.4.0_976c78a0949707813bd7c56bf77b29b41498ea0f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.8.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="9f6d236bac26d02b410e4ee186ba517ace5ee661">
-        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-9.8.0_196ca1d7fcfc5c0ba742ffa326b399431d457870.jar" />
+        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-9.8.0_4af71cf4d09950a8e88cc1981f2f7e3372c52341.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7e92aadd0697922316d1395c1887a23aebec640a">
+        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-9.8.0_e755aed27414e9a55b7a887d8544f215618356d2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/support-media-compat/26.0.0-alpha1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-26.0.0-alpha1_8f7aaa6707dfc8d5f258e554f525e2b5300205a8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.8.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="122ec9237acd8a57d974b9d529987f1ee6ca5aea">
+        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-maps-9.8.0_899e25087ee326c7d3b010e7ca262b983321ba93.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/support-v13/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="be09545b7e6ff322c7286d2e80bed3b75b76c529">
+        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_7f269a19967b6b799613a0727bde0fdfdf239605.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-26.0.0-alpha1_12fada3d8934f4a28c6567bc25d43dc639cf3d61.jar" />
     </item>
 
 </items>

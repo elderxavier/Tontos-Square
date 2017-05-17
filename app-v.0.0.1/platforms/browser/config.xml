@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget android-versionCode="0" id="es.esy.elderxavier.tontossquare" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="Device">
+        <param name="browser-package" value="Device" />
+    </feature>
+    <name>Tonto's Square</name>
+    <description>
+        Tonto's Square
+    </description>
+    <author email="contato@grupobem.com.br" href="http://elderxavier.esy.es/">
+        Tontos Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-navigation href="main.html" />
+    <allow-intent href="*" />
+    <preference name="SplashScreenDelay" value="2000" />
+    <preference name="FadeSplashScreenDuration" value="2000" />
+    <preference name="android-minSdkVersion" value="16" />
+    <preference name="SplashScreen" value="screen" />
+</widget>

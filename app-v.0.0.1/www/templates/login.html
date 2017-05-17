@@ -1,0 +1,28 @@
+<ion-view view-title="Login"  ng-controller="loginCtrl" hide-nav-bar="true">     
+    <ion-nav-buttons side="left">               
+        <button class="button button-clear button-icon light ion-navicon-round" menu-toggle="left" id="menu-button"></button>
+    </ion-nav-buttons>
+    <ion-content class="content-login">
+        <div class=form-content>
+            <div class="row">
+                <div class="col col-100">
+                    <span class="input-label">Email</span>
+                    <input type="text"class="col col-100" name="email"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-100">
+                    <span class="input-label">Senha</span>
+                    <input type="password" class="col col-100" name="senha"/>
+                </div>
+            </div>
+            <div class="buttons-content">
+                <button class="button button-assertive" >Cancelar</button>
+                <button class="button button-balanced" ng-click="login()">Confirmar</button>
+            </div>
+        </div>
+
+    </ion-content>
+
+
+</ion-view>

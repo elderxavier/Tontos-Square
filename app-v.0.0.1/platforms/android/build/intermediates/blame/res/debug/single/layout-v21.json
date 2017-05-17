@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
         "merged": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
         "source": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/layout-v21/notification_template_custom_big.xml"
     },
@@ -8,11 +12,23 @@
         "source": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/layout-v21/notification_action.xml"
     },
     {
+        "merged": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/layout-v21/notification_action.xml"
+    },
+    {
         "merged": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
         "source": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/layout-v21/notification_action_tombstone.xml"
     },
     {
         "merged": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
         "source": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/layout-v21/notification_action_tombstone.xml"
     }
 ]

@@ -9,67 +9,95 @@ angular.module('starter').controller('homeCtrl', function ($scope, $rootScope, $
     $scope.position = {};
     var options = {timeout: 10000, enableHighAccuracy: true};
     var lastUpdateTime,
-minFrequency = 10*1000,
-watchOptions = {
-    timeout : 60*1000,
-    maxAge: 0,
-    enableHighAccuracy: true
-};
-
-function on_success(position){
-    var now = new Date();
-    if(lastUpdateTime && now.getTime() - lastUpdateTime.getTime() < minFrequency){
-        console.log("Ignoring position update");
-        return;
-    }
-    lastUpdateTime = now;
-    $scope.setMakerMap(position);
-    console.log("on_success");
-
-    // do something with position
-}
-
-function on_error(position){
-    console.log('Error: ', position );
-}
-    
-    $scope.setMakerMap = function(position,mapOptions,map){
-        var latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-        var latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-            var mapOptions = {
-                center: latLng,
-                zoom: 17,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
+            minFrequency = 10 * 1000,
+            watchOptions = {
+                timeout: 60 * 1000,
+                maxAge: 0,
+                enableHighAccuracy: true
             };
-            $scope.map = new google.maps.Map(document.querySelector("#map"), mapOptions);
-            google.maps.event.addListenerOnce($scope.map, 'idle', function () {
-                var marker = new google.maps.Marker({
+
+    function on_success(position) {
+        var now = new Date();
+        if (lastUpdateTime && now.getTime() - lastUpdateTime.getTime() < minFrequency) {
+            console.log("Ignoring position update");
+            return;
+        }
+        lastUpdateTime = now;
+        $scope.setMakerMap(position);
+        console.log("on_success");
+    }
+
+    function on_error(position) {
+        console.log('Error: ', position);
+    }
+
+    $scope.setMakerMap = function (position, mapOptions, map) {
+        var latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+        var mapOptions = {
+            center: latLng,
+            zoom: 17,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        $scope.map = new google.maps.Map(document.querySelector("#map"), mapOptions);
+        google.maps.event.addListenerOnce($scope.map, 'idle', function () {
+            marker = [];
+            max = 10;
+            min = 2;
+            var markersData = [
+                {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude,
+                    nome: "Estou Aqui"
+                },
+                {
+                    lat: position.coords.latitude + ((1 / 3600) * (Math.random() * (max - min) + min)),
+                    lng: position.coords.longitude + ((1 / 3600) * (Math.random() * (max - min) + min)),
+                    nome: "Bar Lada"
+                },
+                {
+                    lat: position.coords.latitude + ((1 / 3600) * (Math.random() * (max - min) + min)),
+                    lng: position.coords.longitude + ((1 / 3600) * (Math.random() * (max - min) + min)),
+                    nome: "Mercado Chupin"
+                },
+                {
+                    lat: position.coords.latitude + ((1 / 3600) * (Math.random() * (max - min) + min)),
+                    lng: position.coords.longitude + ((1 / 3600) * (Math.random() * (max - min) + min)),
+                    nome: "Boteco Pinga Nimim"
+                },
+                {
+                    lat: position.coords.latitude + ((1 / 3600) * (Math.random() * (max - min) + min)),
+                    lng: position.coords.longitude + ((1 / 3600) * (Math.random() * (max - min) + min)),
+                    nome: "Centro de estudos Vai que cola"
+                }
+
+            ];
+
+            for (i = 0; i < markersData.length; i++) {
+                latLng2 = new google.maps.LatLng(markersData[i].lat, markersData[i].lng);
+                marker[i] = new google.maps.Marker({
                     map: $scope.map,
-                    //animation: google.maps.Animation.DROP,
-                    position: latLng,
-                    draggable: true
+                    position: latLng2,
+                    //draggable: true
                 });
                 var infoWindow = new google.maps.InfoWindow({
-                    content: "Estou Aqui!"
+                    content: markersData[i].nome
                 });
-                google.maps.event.addListener(marker, 'click', (function(marker) {
+                google.maps.event.addListener(marker[i], 'click', (function (marker) {
                     infoWindow.open($scope.map, marker);
-                })(marker));
+                })(marker[i]));
+            }
 
-            });
-            console.log("OK!!!");
+        });
+
     };
 
 
     var getMap = function () {
         $cordovaGeolocation.getCurrentPosition(options).then(function (position) {
-        //window.navigator.geolocation.getCurrentPosition(function (position) {
-            $scope.position = position;            
-            //setInterval( function(){
-                $scope.setMakerMap(position);
-                //window.navigator.geolocation.watchPosition(on_success,on_error,watchOptions);
-                $cordovaGeolocation.watchPosition(on_success,on_error,watchOptions);
-            //},10000);
+            $scope.position = position;
+            $scope.setMakerMap(position);
+            $cordovaGeolocation.watchPosition(on_success, on_error, watchOptions);
         }, function (error) {
             $ionicLoading.hide();
             alert(error.message);
@@ -78,17 +106,6 @@ function on_error(position){
             $ionicLoading.hide();
         });
     };
-    
-    
-
-//$cordovaGeolocation.geolocation.watchPosition(on_success,on_error,watchOptions);
-    
-    /*setInterval( function(){
-            getMap();
-        },10000);*/
-
-    
-
 
     $ionicModal.fromTemplateUrl('templates/home/addlocation.html', {
         scope: $scope,
@@ -101,6 +118,9 @@ function on_error(position){
         $scope.modalAddLocation.show();
     };
     $scope.closeModalAddLocation = function () {
+        $scope.modalAddLocation.hide();
+    };
+    $scope.confirmarAddLocation = function () {
         $scope.modalAddLocation.hide();
     };
 

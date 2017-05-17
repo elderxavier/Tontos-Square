@@ -1,0 +1,47 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "es.esy.elderxavier.tontossquare"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "es.esy.elderxavier.tontossquare"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "es.esy.elderxavier.tontossquare"
+        },
+        "cordova-plugin-googlemaps": {
+            "PACKAGE_NAME": "es.esy.elderxavier.tontossquare"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "es.esy.elderxavier.tontossquare"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "es.esy.elderxavier.tontossquare"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "es.esy.elderxavier.tontossquare"
+        },
+        "cordova.plugins.diagnostic": {
+            "PACKAGE_NAME": "es.esy.elderxavier.tontossquare"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "es.esy.elderxavier.tontossquare"
+        },
+        "phonegap-plugin-push": {
+            "SENDER_ID": "996612104844",
+            "PACKAGE_NAME": "es.esy.elderxavier.tontossquare"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "es.esy.elderxavier.tontossquare"
+        }
+    }
+}

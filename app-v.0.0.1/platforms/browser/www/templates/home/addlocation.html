@@ -1,0 +1,27 @@
+<ion-modal-view class="custom_modal" id="view-addlocation">
+    <ion-header-bar class="bar bar-header bar-light">
+        <h1 class="title title-left">Adicionar Localização</h1>        
+    </ion-header-bar>
+    <ion-content class="padding bgapp">
+        <ion-scroll delegate-handle="scroller-filtro" on-scroll="checkScroll()" id="scroller-filtro" direction="y" style="width: 100%; height: 100%">
+            <form name="formFiltroAgenda"><br>            
+                <div class="row">
+                    <div class="col col-100">
+                        <span class="input-label">Data Inicial</span>
+                        <input type="datetime-local" placeholder="Data Saída" class="col col-100" name="datainicial" ng-model="datainicial">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-100">
+                        <span class="input-label">Data Final</span>
+                        <input type="datetime-local" placeholder="Data Saída" class="col col-100" name="datafinal" ng-model="datafinal">
+                    </div>
+                </div>
+            </form>    
+        </ion-scroll>
+    </ion-content>
+    <div class="bar bar-footer row">
+        <button class="button button-clear button-stable col col-50" ng-click="closeModalAddLocation()">Cancelar</button>
+        <button class="button icon-right ion-checkmark button-clear button-balanced col col-50 confirm" ng-click="confirmarAddLocation()">Confirmar</button>
+    </div>
+</ion-modal-view>

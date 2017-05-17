@@ -45,20 +45,9 @@ public class UsuariosController {
     }
 
     @RequestMapping(value = "/teste", method = RequestMethod.GET)
-    public String listaLivros() {
-        
-        //return "listaLivros";
+    public String listaLivros() {        
         return "teste";
-    }
-
-    @RequestMapping(value = "/api/{nome}/{email}", method = RequestMethod.GET)
-    public ResponseEntity<String> testando(@PathVariable("nome") String nome, @PathVariable("email") String email) {
-        String response = "{\"StatusReponse\": {\"success\":\"elder\"}}";
-        //response += "{\"return\": {\"nome\":\""+nome+"\"}}";
-        response += "{\"return\": {\"nome\":\"" + nome + "\"}, {\"email\":\"" + email + "\"}}";
-        //String response = "{ \"name\":\"John\", \"age\":30, \"cars\":[ \"Ford\", \"BMW\", \"Fiat\" ] }";
-        return ResponseEntity.ok().body(response);
-    }
+    }    
 
     @RequestMapping(value = "/listar", method = RequestMethod.GET)
     public ResponseEntity<String> listar() {
@@ -69,7 +58,7 @@ public class UsuariosController {
             response+= "Nome: " + usuarios.getNome();
         }
         
-        //String response = "{ \"name\":\"John\", \"age\":30, \"cars\":[ \"Ford\", \"BMW\", \"Fiat\" ] }";
+        
         return ResponseEntity.ok().body(response);
     }
 }

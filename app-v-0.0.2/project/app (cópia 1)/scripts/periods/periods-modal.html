@@ -1,0 +1,26 @@
+<div ng-controller="PeriodsModalController">
+    <div id="header">
+        <i class="ion-close" ng-click="hide()"></i>
+        <div class="title">
+            Selecione o período desejado
+        </div>
+        <hr>
+    </div>
+    <div id="body">
+        <div class="row">
+            <div ng-repeat="period in periods" ng-class="selectedPeriod.alias === period.alias ? 'col col-33 active' : 'col col-33 inactive'" ng-click="setPeriod(period.turn)">
+                {{period.alias}}
+            </div>
+        </div>
+        <div>
+            <div class="row" ng-repeat="hour in availablePeriod.hours()">
+                <div class="col col-20"></div>
+                <button class="col col-60 button-periods" ng-click="proceed(hour);" ng-if="canDeliveryInTime(hour, availablePeriod)">{{hour}}</button>
+                <div class="col col-20"></div>
+            </div>
+            <div class='invalid_period' ng-show="!availablePeriod">
+                <a>O Chefe selecionado nao possui horario para o periodo selecionado, por favor verifique outros peridos</a>
+            </div>
+        </div>
+    </div>
+</div>

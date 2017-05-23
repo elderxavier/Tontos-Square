@@ -1,0 +1,33 @@
+@import '../modules/global-variables';
+
+// Variables
+$font-family:                $default-font-family;
+$font-size:                  $default-font-size;
+$link-color:                 $default-brand-color; 
+//end
+
+.light-header {
+    background-color: #fff;
+    padding: 10px 15px 3px 15px;
+    font-family: $font-family;
+    
+    h1.light-header__title {
+        text-align: left;
+        display: inline-block;
+        width: 49%; 
+        font-size: $font-size;
+        font-family: inherit;
+        font-weight: 800;
+        color: #000;
+        margin: 0;
+    }
+    
+    a.light-header__link {
+        display: inline-block;
+        width: 49%;
+        color: $link-color;
+        font-family: inherit;
+        text-decoration: underline;
+        text-align: right;      
+    }
+}

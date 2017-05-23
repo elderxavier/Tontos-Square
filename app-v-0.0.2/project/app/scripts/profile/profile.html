@@ -1,0 +1,73 @@
+<ion-view view-title="Dados Pessoais" cache-view="false">
+	<ion-nav-title>
+		<div class="nav-title">Dados Pessoais</div>
+	</ion-nav-title>
+	<ion-content class="has-header">
+		<div class="default-form validation">
+			<form novalidate name="vm.registerForm" style="text-align:center;" ng-submit="validateForm(vm.registerForm, 'profile') && vm.callModalUpdateConfirm()">
+				<input type="hidden" name="selectedAddresses" ng-model="vm.user.digestedAddresses" style="display:none;" />
+				<div class="img-parent">
+					<!--<h3><b>Dados Pessoais</b></h3>-->
+					<img ng-src="{{vm.user.fullPath}}" class="img-user" ng-show="vm.user.fullPath" ng-click="vm.openModal()" />
+					<img ng-src="images/nopic.png" class="img-user" ng-show="!vm.user.fullPath" ng-click="vm.openModal()" />
+				</div>
+				<ion-list>
+					<div class="card">
+					<ion-item ng-class="{invalid: vm.registerForm.displayName.$error.required}" class="item-icon-right">
+						<label class='item-floating-label'>
+							<label class="input-label inline floating-label">Nome Completo</label>
+							<input type="text" name="displayName" ng-model="vm.user.displayName" placeholder="Nome Completo" required class="text-center"/>
+							<i class="icon ion-edit icon-profile"></i>
+						</label>
+					</ion-item>
+					</div>
+					<div class="card">
+					<ion-item>
+						<label class='item-floating-label'>
+							<label class="input-label inline floating-label">Email</label>
+							<input type="email" name="email" ng-model="vm.user.email" required class="text-center" ng-disabled="true" />
+						</label>
+					</ion-item>
+					</div>
+					<div class="card">
+					<ion-item ng-class="{invalid: vm.registerForm.phone.$error.required}" class="item-icon-right">
+						<label class='item-floating-label'>
+							<label class="input-label inline floating-label">Telefone</label>
+							<input type="tel" name="phone" ng-model="vm.user.phone" placeholder="(xx) xxxxx-xxxx" ui-br-phone-number required class="text-center"/>
+							<i class="icon ion-edit icon-profile"></i>
+						</label>
+					</ion-item>
+					</div>
+					<div class="card">
+					<ion-item>
+						<label class='item-floating-label'>
+							<label class="input-label inline floating-label">Data de Nascimento</label>
+							<input type="tel" name="birthday" placeholder="Data de Nascimento" ng-model="vm.user.birthday" required class="text-center" ng-show="!vm.birthdayDisabled" mask="39/19/9999" />
+							<input type="tel" name="birthday" placeholder="Data de Nascimento" ng-model="vm.user.birthday" required class="text-center" ng-show="vm.birthdayDisabled" ng-disabled="true" />
+						</label>
+					</ion-item>
+					</div>
+					<div class="card">
+					<ion-item>
+						<div>
+							<div ng-click="vm.goAdressConf()">
+								<!-- <span class="input-label" style="display:inline;white-space: nowrap;">Endereços</span> -->
+								<label>Endereços</label>
+								<i class="icon ion-navigate icon-profile"></i>
+							</div>
+							<ion-list ng-if='vm.user.digestedAddresses'>
+								<ion-item ng-repeat="address in vm.user.digestedAddresses track by $index" class="item-text-wrap" style="font-size: 13px">
+									{{address.street}}, {{address.number}}
+								</ion-item>
+							</ion-list>
+						</div>
+					</ion-item>
+					</div>
+				</ion-list>
+				<button type="submit" class="button center-button button-round-large button-round-red" style="width: 100%; border-radius: 5px">
+					Salvar alterações
+				</button>
+			</form>
+		</div>
+	</ion-content>
+</ion-view>

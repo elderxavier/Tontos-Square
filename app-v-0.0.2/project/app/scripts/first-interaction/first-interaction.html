@@ -1,0 +1,57 @@
+<ion-view hide-nav-bar="true" hide-back-button="true" cache-view="false">
+    <ion-content class="first-interaction-bg">
+        
+        
+        <div class="user-info" ng-show="currentUser.email">
+            <div class="row">
+                <div class="col text-center">
+                    <a class="button button-clear eater-button skip" href="#/app/home">
+                            {{currentUser.displayName}}
+                     </a>
+                </div>
+            </div>
+            <img ng-src="{{currentUser.photoURL}}" alt="Description" class="profile-image" ng-if="currentUser.photoURL" />
+        </div>
+        <div class="container_form_menu">
+            <form name="login_form" ng-submit="validateForm(login_form, 'first-interaction') && vm.emailLogin(user.email,user.password)" novalidate>
+                <div class="form-style" ng-show="!currentUser.email">
+                    <input class='light' type="email" name="login" placeholder="Email" ng-model="user.email" ng-init="user.email = vm.email()" required/>
+                    <label class="item item-input item-icon-right first-int-label">
+                        <i class="icon ion-eye" on-touch="showPassword = !showPassword"></i>
+                        <input class='light' type="password" name="password" placeholder="Senha" ng-model="user.password" ng-init="user.password = vm.password()" ng-hide="showPassword" required/>
+                        <input class='light' type="text" name="password" placeholder="Senha" ng-model="user.password" ng-init="user.password = vm.password()" ng-show="showPassword" required/>
+                    </label>
+                    <div class="text-center">
+                        <a class="button button-clear button-block button-clear-white" href="#/app/forgot-password">
+                            Esqueceu a senha?
+                        </a>
+                    </div>
+                </div>
+                <div class="first-interaction-menu center">
+                    <button type="submit" class="button button-block button-round-light" ng-if="!currentUser.email">
+                        LOGIN
+                        <i class="ion-icon ion-arrow-right-c"></i>
+                    </button>
+                    <a class="button button-block button-round-azure extra-spacing icon ion-social-facebook icon-margin-r-5" ng-click="vm.facebookLogin()" ng-if="!currentUser.email">
+                        Facebook
+                    </a>
+                    <a class="button button-block button-round-light" ng-click="vm.logout()" ng-if="currentUser.email">
+                        LOGOUT
+                        <i class="ion-icon ion-android-exit"></i>
+                    </a>
+                </div>
+            </form>
+            <div class="first-interaction__footer" ng-if="!currentUser.email">
+                <div class="text-center">
+                    <a class="button button-clear button-block button-clear-white" href="#/app/register" ng-if="!currentUser.email">
+                            Quero me cadastrar
+                        </a>
+                    <hr class="half">
+                    <a class="button button-clear button-block button-clear-gray" href="#/app/location">
+                            Entrar sem cadastro
+                        </a>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

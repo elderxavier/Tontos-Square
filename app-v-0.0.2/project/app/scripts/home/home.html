@@ -1,0 +1,69 @@
+<!-- Categorias originais
+    Aperetivos -> Petiscos
+    Saladas -> Saudáveis
+    Acompanhamentos
+    Sobremesas -> Doces
+    Pratos Principais -> Principais
+    -> #BBB
+    -> Todas
+-->
+<ion-view view-title="Eater" hide-back-button="true" cache-view="false">
+    <ion-nav-buttons side="right">
+            <button class="home-filter-click-area" ng-click="openFilter()"><i class="fa fa-filter light home-filter"></i></button>
+            <button class="home-cart-click-area" ng-click="showCart()"><i class="ion-ios-cart light home-cart"></i></button>
+    </ion-nav-buttons>
+
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left" ng-click="menuToggle()"></button>
+    </ion-nav-buttons>
+    <ion-nav-title>
+        <h1 class="home-period" ng-click="setFilterMode() || laborModal.toggle()">
+            {{laborName(labor)}}
+            <i class="ion-chevron-down"></i>
+        </h1>
+    </ion-nav-title>
+    <simple-tabs delegate-handle="home-categories">
+        <st-tab style="margin-right: -4px;" ng-click="set('0-all')" ng-class="{selected: currentCategory.guid === '0-all'}">Destaques</st-tab>
+        <st-tab ng-repeat="category in categories | orderBy:'displayOrder' track by $index" ng-click="set(category.guid)" ng-class="{selected: category.guid === currentCategory.guid}">{{category.title}}</st-tab>
+    </simple-tabs>
+    <ion-content class="has-tab-header" delegate-handle="mainScroll" style="background-color: #F8F8F8;"
+                 ng-switch="currentCategory.guid">
+        <!-- <ion-refresher style="top: -95px;" pulling-text="Puxe para atualizar..." on-refresh="loadNewerPlates()">
+        </ion-refresher> -->
+        <home-search></home-search>
+
+        <div ng-show="currentCategory.guid === '0-all'">
+            <div class="margin-bottom-30"
+                 ng-repeat="category in categories"
+                 ng-if="platecatmap[category.guid].length > 0">
+
+                <h4 class="padding">
+                    <a href class="button button-clear button-small pull-right"
+                       style="margin-right: -10px;"
+                       ng-click="set(category.guid)">Mostrar todos</a>
+                    {{category.title}}
+                </h4>
+                <ion-scroll direction="x" zooming="false"
+                            add-vertical-scroll
+                            delegate-handle="featured-{{category.guid}}"
+                            horizontal-scroll-fix="mainScroll">
+                    <div class="plate-row">
+                        <div ng-repeat="plate in platecatmap[category.guid]"
+                             class="plate-col-wrapper">
+                            <plate-card
+                                plate-object="plate"
+                                show-plate-details-function="showPlateDetails(plate)"
+                                quick-add-to-cart-function="quickAddToCart(plate)"
+                                go-labor-function="goLabor()"
+                                set-checkout-mode-function="setCheckoutMode(plate)"
+                                is-at-hand-function="isAtHand(plate)">
+                            </plate-card>
+                        </div>
+                    </div>
+                </ion-scroll>
+            </div>
+        </div>
+
+        <div ng-include src="'scripts/home/plates/plates.html'" ng-show="currentCategory.guid !== '0-all'"></div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,57 @@
+// Variables
+$font-family:                $default-font-family;
+$font-size:                  $default-font-size;
+
+
+
+.menu-logo {
+    margin-top: 10px;
+    img {
+        width: 80%;
+        height: auto;
+    }
+}
+
+.tonstos-menu {
+    img {
+        width: 22px;
+        height: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 15px;
+        margin: auto
+    }
+    .item {
+        button {
+            font-size: 22px;
+            color: #438eb9 !important;
+        }
+        span {
+            font-size: 16px;
+            padding-left: 10px;
+            position: relative;
+            display: inline;
+            top: -2px;
+            color: #555;            
+        }
+    }
+}
+
+.bar.bar-stable {
+    border-color: #e66c21 !important;
+    background-color: #e66c21 !important;
+    background-image: linear-gradient(0deg, #e66c21, #e66c21 50%, transparent 50%);
+    color: #ffffff; 
+}
+
+.menu.menu-left .bar-header, .menu.menu-left ion-header-bar {
+    height: 10em !important;
+    background: url(../images/background-menu.jpg) 0 0 no-repeat !important;
+    background-size: cover !important;   
+    text-align: center
+}
+.menu .scroll-content{
+    top:10em !important
+}
+

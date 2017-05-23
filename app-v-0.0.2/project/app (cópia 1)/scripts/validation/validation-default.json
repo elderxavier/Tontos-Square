@@ -1,0 +1,15 @@
+{
+    "email": "Campo email inválido.",
+    "birthday": "Data de nascimento inválida.",
+    "postcode": "CEP inválido.",
+    "displayName": "Nome inválido.",
+    "name": "Nome inválido.",
+    "password": "Senha inválida.",
+    "passwordConfirmation": "Confirmação de senha inválida.",
+    "terms": "Para prosseguir aceite os termos de uso.",
+    "phone": "Telefone inválido.",
+    "login": "Login inválido.",
+    "cpf": "CPF é inválido.",
+    "description": "Campo Descrição inváido.",
+    "paymentMethod": "Método de pagamento inválido"
+}

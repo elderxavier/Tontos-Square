@@ -1,0 +1,49 @@
+<div class="header">
+    <div class="title">
+        Escolha o período
+    </div>
+</div>
+<div class="body">
+    <ion-content style="background-color: #F8F8F8;" ng-controller="LaborModalController">
+
+        <button class="button button-clear button-stable button-icon close-button" ng-click="close()">
+            <span class="ion-android-close"></span>
+        </button>
+        <div class="step" ng-show="step1" ng-class='{"fadeOutUp": !step1}'>
+            <div class="light-header" style="margin-bottom: 10px;" ng-if="!isCheckoutMode()">
+                <h1 class="light-header__title">Disponibilidade</h1>
+            </div>
+
+            <div style="margin: 15px 0 15px 0;" ng-if="!isCheckoutMode()">
+                <div class="tgl centralize-block" style="width: 330px">
+                    <span class="tgl__button tgl__button--left"
+                          ng-click="setAvailabilityMode('at-hand');change();toStep(1)"
+                          ng-class="{ selected : (availabilityMode === 'at-hand') }">Para agora</span>
+                    <span class="tgl__button tgl__button--center"
+                          ng-click="setAvailabilityMode('schedule');toStep(2)"
+                          ng-class="{ selected : (availabilityMode === 'schedule') }">Para agendar</span>
+                    <span class="tgl__button tgl__button--right"
+                          ng-click="setAvailabilityMode('show-all');change();toStep(1)"
+                          ng-class="{ selected : (availabilityMode === 'show-all') }">Indiferente</span>
+                </div>
+            </div>
+        </div>
+        <div class="step" ng-show="step2" ng-class='{"fadeOutUp": !step2, "fadeInUp": step2 === true}' >
+            <div class="light-header" style="margin-bottom: 10px;">
+                <h1 class="light-header__title">Dia da entrega</h1>
+            </div>
+            <div style="padding-bottom: 5px;"><calendar></calendar></div>
+
+            <selector-case class="padding centralize-block">
+                <selector-case-button ng-show='morning' ng-click='setPeriod("MORNING");' ng-class="{selected: labor.periods[0].turn === 'MORNING'}">Manhã</selector-case-button>
+                <selector-case-button ng-show='afternoon' ng-click='setPeriod("AFTERNOON");' ng-class="{selected: labor.periods[0].turn === 'AFTERNOON'}">Tarde</selector-case-button>
+                <selector-case-button ng-show='evening' ng-click='setPeriod("EVENING");' ng-class="{selected: labor.periods[0].turn === 'EVENING'}">Noite</selector-case-button>
+            </selector-case>
+
+            <div class="light-header" style="text-align: center; background-color: transparent">
+                <a class="button-labor" style="width: 100px" ng-click="change(); toStep(1)" ng-if="!isCheckoutMode()">Filtrar</a>
+                <a class="button-labor" style="width: 200px" ng-click="addToCart(); toStep(1)" ng-if="isCheckoutMode()">Ir para carrinho</a>
+            </div>
+        </div>
+    </ion-content>
+</div>

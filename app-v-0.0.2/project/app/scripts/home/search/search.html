@@ -1,0 +1,8 @@
+<div ng-controller="HomeSearchController"> 
+    <div class="search-bar" ng-class='{"on-focus": searchBarFocus}'>
+        <i class="ion-ios-search" ng-hide="(search.questString && !searchBarFocus)"></i>
+       <!--  <input type="search" ng-model="search.questString" ng-change="quest(search.questString)" ng-model-options="{debounce: 750}" class="search-bar__text-field"     placeholder="Buscar" ng-focus="searchBarFocus=true" ng-blur='searchBarFocus=false'> -->
+
+        <input type="search" class="search-bar__text-field"  placeholder="Buscar" ng-click="goToSearch()">
+    </div>
+</div>

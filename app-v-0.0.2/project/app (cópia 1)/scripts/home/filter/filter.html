@@ -1,0 +1,40 @@
+<ion-modal-view class='FilterPopUp' ng-controller="FilterController as vm">
+  <ion-header-bar class="bar-stable">
+      <h1 class="title">Filtro</h1>
+      <button class="button icon ion-close" ng-click="vm.close()"></button>
+  </ion-header-bar>
+<ion-content class="body" >
+<div >
+    <div class="home-filter-container" style="top:30px">
+        <ion-item>
+            <filter-price></filter-price>
+        </ion-item>
+        <ion-item>
+            <filter-tag></filter-tag>
+        </ion-item>
+        <button class="button-orange" style='width: 95%;margin: 0 0 10px 10px' ng-click="vm.applyFilter()">
+            FILTRAR
+        </button>
+    </div>
+</div>
+</ion-modal-view>
+<!--
+<ion-modal-view ng-controller="FilterController as vm">
+    <form novalidate>
+        <ion-content class="home-filter-container">
+            <ion-item>
+                <filter-price></filter-price>
+            </ion-item>
+            <ion-item>
+                <filter-tag></filter-tag>
+            </ion-item>
+            <ion-item>
+                <filter-rating></filter-rating>
+            </ion-item>
+            <button class="button center-button button-round-large button-round-red" ng-click="vm.applyFilter()">
+                FILTRAR
+            </button>
+        </ion-content>
+    </form>
+</ion-modal-view>
+-->

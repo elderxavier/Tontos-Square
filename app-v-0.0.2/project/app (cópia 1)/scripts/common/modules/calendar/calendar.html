@@ -1,0 +1,26 @@
+<div class="calendar centralize-block" ng-controller="CalendarController">
+    <div class="calendar__top">
+        <div class="calendar__control-left" ng-click="previous()"><i class="ion-arrow-left-b"></i></div><!--
+        --><div class="calendar__month">{{month}} {{year}}</div><!--
+        --><div class="calendar__control-right" ng-click="next()"><i class="ion-arrow-right-b"></i></div>
+    </div>
+
+    <div class="calendar__body">
+        <div class="calendar__week-days">
+            <div class="calendar__week-day">DOM</div>
+            <div class="calendar__week-day">SEG</div>
+            <div class="calendar__week-day">TER</div>
+            <div class="calendar__week-day">QUA</div>
+            <div class="calendar__week-day">QUI</div>
+            <div class="calendar__week-day">SEX</div>
+            <div class="calendar__week-day">SAB</div>
+        </div>
+
+
+        <div class="calendar__week-day-row" ng-repeat="row in rows track by $index">
+            <div class="calendar__day-cell" ng-click='element.available && onClick(element)'
+				 ng-class='{"calendar__day-cell--out": !element.available, "selected": isSelected(element)}'
+				 ng-repeat="element in row track by $index">{{element.day}}</div>
+        </div>
+    </div>
+</div>

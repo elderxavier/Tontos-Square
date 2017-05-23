@@ -1,0 +1,296 @@
+$eater-red: rgb(219, 58, 76);
+@mixin button-popup($bg-color, $color) {
+	background-color: $bg-color;
+	font-size: 20px;
+	color: $color;
+	border-radius: 50px;
+	border: 1px solid $eater-red;
+}
+
+.ngdialog.ngdialog-theme-default {
+	padding-top: 40%;
+	//padding-bottom: 0;
+	.button {
+		@include button-popup($bg-color: white, $color: $eater-red);
+		line-height: 45px;
+	}
+	.button.activated {
+		@include button-popup($bg-color: $eater-red, $color: white);
+	}
+	.ngdialog-content {
+		max-height: 1000px;
+		height: 85%;
+		max-width: 90% !important;
+		padding: 0;
+	}
+	.ngdialog-close {
+		position: absolute;
+		right: 0;
+		top: 0;
+		left: calc(10% - 10px);
+	}
+	.ngdialog-close:before {
+		color: black;
+		right: calc(90% + 10px);
+		font-size: 40px;
+		top: 12px;
+		font-weight: 100;
+	}
+	.header {
+		text-align: center;
+		padding: 10px;
+		.title {
+			margin-top: 3px;
+			color: black;
+			font-size: 20px;
+		}
+		hr {
+			margin-top: 10px;
+			margin-bottom: 0;
+			margin-left: -10px;
+			margin-right: -10px;
+		}
+	}
+	.body {
+		text-align: center;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.footer {
+		position: absolute;
+		bottom: 10px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+.ngdialog.ngdialog-theme-default.register {
+	.button.picker {
+		width: 96px;
+	}
+}
+
+.ngdialog.ngdialog-theme-default.validation {
+	padding-top: 45px;
+	padding-bottom: 0;
+	.ngdialog-content {
+		height: inherit;
+	}
+	.footer {
+		position: relative;
+	}
+}
+
+.ngdialog.ngdialog-theme-default.periods {
+	padding-top: 45px;
+	padding-bottom: 0;
+	.ngdialog-content {
+		height: inherit;
+	}
+	.title {
+		margin-top: 5px;
+		margin-left: 15px;
+		font-size: 17px;
+	}
+	.active {
+		color: $eater-red;
+		font-weight: 600;
+	}
+	.inactive {
+		color: rgb(180, 180, 180);
+		font-weight: 600;
+	}
+	.button-periods {
+		line-height: 30px;
+		font-size: 17px;
+		font-weight: 500;
+		color: $eater-red;
+		border-radius: 50px;
+		background-color: white;
+		border: $eater-red solid 2px;
+		margin: 5px;
+	}
+	.button-periods.activated {
+		color: white;
+		background-color: $eater-red;
+	}
+	.row.col.col-60 {
+		width: 60%;
+	}
+}
+.FilterPopUp{
+	padding-top: 0%;
+	padding-bottom: 0%;
+	.body {
+		text-align: justify;
+		overflow: scroll;
+	}
+	.button-filter {
+		line-height: 30px;
+		font-size: 17px;
+		font-weight: 500;
+		color: white;
+		border-radius: 50px;
+		background-color: $eater-red;
+		border: $eater-red solid 2px;
+		margin: 5px;
+		margin-left: 5%;
+	}
+	.selector-case__button {
+		margin-bottom: 5px;
+	}
+	.light-header {
+		padding: 3px 15px 3px 15px;
+	}
+	.col-45 {
+		max-width: 45%;
+	}
+
+}
+.ngdialog.ngdialog-theme-default.register-popup {
+	margin-top: -6px;
+	margin-bottom: -3px;
+	padding-top: 0%;
+	padding-bottom: 0%;
+	.ngdialog-content {
+		height: 100%;
+		max-width: 100% !important;
+		padding: 0;
+	}
+	.body {
+		height: 87%;
+		text-align: justify;
+		overflow: scroll;
+	}
+	.button-filter {
+		line-height: 30px;
+		font-size: 17px;
+		font-weight: 500;
+		color: white;
+		border-radius: 50px;
+		background-color: $eater-red;
+		border: $eater-red solid 2px;
+		margin: 5px;
+		margin-left: 5%;
+	}
+	.selector-case__button {
+		margin-bottom: 5px;
+	}
+	.light-header {
+		padding: 3px 15px 3px 15px;
+	}
+	.col-45 {
+		max-width: 45%;
+	}
+}
+
+.button-labor {
+	line-height: 30px;
+	font-size: 17px;
+	font-weight: 500;
+	color: $eater-red;
+	border-radius: 50px;
+	background-color: white;
+	border: $eater-red solid 2px;
+}
+
+//--------------------------------------------------------------------------------------------------------------------//
+@mixin button-popup($bg-color, $color) {
+	background-color: $bg-color;
+	font-size: 20px;
+	color: $color;
+	border-radius: 50px;
+	border-color: $eater-red;
+}
+
+@mixin button-all {
+	.popup-buttons .button {
+		@include button-popup($bg-color: white, $color: $eater-red);
+	}
+	.popup-buttons .button.activated {
+		@include button-popup($bg-color: $eater-red, $color: white);
+	}
+}
+
+@mixin popup {
+	.popup {
+		border-radius: 5px;
+		background-color: rgb(245, 245, 245);
+	}
+	.popup-head {
+		display: none;
+	}
+	.popup-title {
+		color: black;
+	}
+	@include button-all();
+	.popup-body {
+		#header {
+			text-align: center;
+			.title {
+				margin-top: 10px;
+				margin-right: 7%;
+				padding-bottom: 10px;
+				color: black;
+				font-size: 18px;
+				font-weight: 500;
+			}
+			i {
+				float: left;
+				color: black;
+				font-size: 25px;
+				font-weight: 500;
+				margin-top: -3px
+			}
+			hr {
+				margin-top: 10px;
+				margin-bottom: 0;
+				margin-left: -10px;
+				margin-right: -10px;
+			}
+		}
+		#body {
+			text-align: center;
+			padding-top: 10px;
+		}
+	}
+}
+
+.popup-validation {
+	@include popup();
+}
+
+.popup-generic {
+	@include popup();
+}
+
+.popup-periods {
+	@include popup();
+	.popup {
+		height: 476px;
+	}
+	#body {
+		.active {
+			color: $eater-red;
+			font-weight: 600;
+		}
+		.inactive {
+			color: rgb(180, 180, 180);
+			font-weight: 600;
+		}
+	}
+	.button-periods {
+		line-height: 30px;
+		font-size: 17px;
+		font-weight: 500;
+		color: $eater-red;
+		border-radius: 50px;
+		background-color: white;
+		border: $eater-red solid 2px;
+		margin: 5px;
+	}
+	.button-periods.activated {
+		color: white;
+		background-color: $eater-red;
+	}
+}

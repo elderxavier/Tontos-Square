@@ -1,0 +1,51 @@
+<ion-view view-title="Dados pessoais para a compra" cache-view="false">
+    <ion-nav-bar class="bar-stable no-box-shadow">
+        <ion-nav-back-button class="button-icon">
+            <img class="custom-back-icon" ng-src="images/icons/common/back-white.png" />
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content style="margin-top: 30px;">
+        <div class="default-form">
+            <form name="vm.personalInfoForm" ng-submit="validateForm(vm.personalInfoForm, 'personal-info') && proceed()" novalidate>
+                <!--<h1 class="default-form__title">Dados Pessoais</h1>-->
+                <!-- Nome completo -->
+                <div class="card">
+                    <ion-item>
+                        <label class='item-floating-label'>
+                            <label class="input-label inline floating-label">Nome Completo</label>
+                        <input name="name" type="text" placeholder="Nome Completo" ng-model="personalInfo.name" required>
+                        </label>
+                    </ion-item>
+                </div>
+                <!-- E-mail -->
+                <div class="card">
+                    <ion-item>
+                        <label class='item-floating-label'>
+                            <label class="input-label inline floating-label">E-mail</label>
+                        <input name="email" type="email" placeholder="E-mail" ng-model="personalInfo.email" required>
+                        </label>
+                    </ion-item>
+                </div>
+                <!-- CPF -->
+                <div class="card">
+                    <ion-item>
+                        <label class='item-floating-label'>
+                            <label class="input-label inline floating-label">CPF</label>
+                        <input name="cpf" type="text" placeholder="xxx.xxx.xxx-xx" ng-model="personalInfo.cpf" required ui-br-cpf-mask>
+                        </label>
+                    </ion-item>
+                </div>
+                <!-- Telefone com DDD -->
+                <div class="card">
+                    <ion-item>
+                        <label class='item-floating-label'>
+                            <label class="input-label inline floating-label">Telefone com DDD</label>
+                        <input name="phone" type="text" placeholder="(xx) xxxxx-xxxx" ng-model="personalInfo.phone" required ui-br-phone-number>
+                        </label>
+                    </ion-item>
+                </div>
+                <button type="submit" class="button button-round-full button-round-red" style="border-radius: 5px; width: 100%">Continuar</button>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

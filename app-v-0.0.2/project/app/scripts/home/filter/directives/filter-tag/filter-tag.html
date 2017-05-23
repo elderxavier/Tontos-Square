@@ -1,0 +1,9 @@
+<ion-item class="home-filter-tags-container">
+    <div class="filter-title">
+        <span class="input-label"><strong>Tags</strong></span>
+    </div>
+    <div ng-repeat='tag in vm.tags' class="home-filter-tags-checkbox">
+        <ion-checkbox ng-checked="vm.isChecked(tag)" ng-click="vm.updateTag(tag)">{{tag.name}}</ion-checkbox>
+    </div> 
+    <div class="home-filter-tags-bottom"></div> 
+</ion-item>

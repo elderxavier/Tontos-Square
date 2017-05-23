@@ -1,0 +1,39 @@
+#map-view .scroll {
+	height: 100%;
+}
+
+#map-view{
+	margin-top: 40px;
+}
+
+.gmaps {
+	height: 100%;
+}
+
+.ng-map  {
+	height: 100%;
+}
+
+.ng-map-with-button {
+	height: 100%;
+}
+
+.map-input {
+		margin: 5px 0px;
+    border: 2px solid #D43446;
+    border-radius: 30px;
+    width: 100%;
+	[disabled]{
+		background-color: white
+	}
+	input{
+		border:0px;
+	}
+}
+
+
+.map-input-container{
+	width: 100%;
+	padding:10px 20px 0px 20px;
+	position: absolute;
+}

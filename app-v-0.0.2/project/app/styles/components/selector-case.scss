@@ -1,0 +1,35 @@
+// Variables
+$font-family: $default-font-family;
+$font-size: $default-font-size;
+$selected-button-color: $default-brand-color;
+//end
+
+.selector-case {
+    font-family: $font-family;
+    font-size: $font-size;
+    width: 160px;
+    display: block;
+}
+
+.selector-case__button {
+    display: block;
+    background-color: transparent;
+    width: 100%;
+    text-align: center;
+    border-radius: 15px;
+    color: #ccc;
+    font-weight: 800;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    font-family: inherit;
+    padding: 5px 0;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.selector-case__button.selected {
+    background-color: $selected-button-color;
+    color: #fff;
+    border: 1px solid $selected-button-color;
+}

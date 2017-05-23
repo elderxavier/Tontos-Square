@@ -1,0 +1,16 @@
+.et-toogle {
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+.et-toogle.on {
+    background: transparent url('../images/toggle-on.png') top left no-repeat;
+    background-size: contain;
+}
+
+.et-toogle.off {
+    background: transparent url('../images/toggle-off.png') top left no-repeat;
+    background-size: contain;
+}

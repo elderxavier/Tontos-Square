@@ -1,0 +1,37 @@
+<ion-view view-title="Confirmação de endereço" cache-view="false" hide>
+
+    <!-- Sobrescrita da nav-bar para a retirada do ícone de menu -->
+     <ion-nav-bar class="bar-stable no-box-shadow">
+          
+    </ion-nav-buttons>
+    <ion-nav-back-button class="button-icon">
+		<img class="custom-back-icon" ng-src="images/icons/common/back-white.png" />{{}}
+	</ion-nav-back-button>
+     </ion-nav-bar>
+    <!-- /Sobrescrita da nav-bar para a retirada do ícone de menu -->
+
+    <ion-content class="has-header">
+        <ion-toggle ng-model="shouldShowDelete">
+            Remover Endereço
+        </ion-toggle>
+        <ion-list can-swipe="false" show-delete="shouldShowDelete">
+            <ion-item ng-repeat="address in vm.addresses track by $index" class="item-text-wrap address-item">
+
+                <ion-radio ng-model="currentUser.currentAddress" ng-value="address.$id">{{address.street}}, {{address.number}} </ion-radio>
+
+                <ion-delete-button class="icon ion-trash-b orange" ng-click="vm.deleteAddress(address.$id)">
+                </ion-delete-button>
+            </ion-item>
+        </ion-list>
+        <ion-item>
+            <div class="row">
+                <div class="col text-right">
+                    <button class="button button-round-light text-right" ng-click="vm.showNewAddressModal()">Adicionar <i class="ion-plus-round"></i></button>
+                </div>
+            </div>
+            <div>
+                <button class="button button-block button-round-light " ng-click="vm.confirmCurrentAddress()">Continuar</button>
+            </div>
+        </ion-item>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,33 @@
+<ion-view view-title="Chat" cache-view="false">
+    <ion-nav-bar align-title="center" class="bar-stable no-box-shadow">
+        <ion-nav-back-button class="button-icon">
+			<img class="custom-back-icon" ng-src="images/icons/common/back-white.png" />{{}}
+		</ion-nav-back-button>
+    </ion-nav-bar>
+    
+    <ion-nav-title>
+            <h1 class="chat-title">{{ 'Chef ' + vm.chefName() }}</h1>
+    </ion-nav-title>
+    
+    <ion-nav-buttons side="right">
+        <div class="chat-thumb"><img ng-src="{{ vm.chefThumb() }}" alt="Thumb"></div>
+    </ion-nav-buttons>
+
+    <ion-content class="has-header has-footer padding">
+        
+        <div ng-repeat="message in vm.messages" class="cb__message-wrapper">
+            <div class="cb__message" ng-class="{'cb__message--receiver' : message.from === 'CHEF'}">
+                {{message.message}}
+            </div>
+            <div class="cb__break"></div>
+        </div>
+        
+    </ion-content>
+    
+    <div class="bar bar-footer cb-footer">
+        <form ng-submit="vm.sendMessage()">
+            <textarea elastic rows="2" placeholder="Escreva uma mensagem" name="chat" ng-model="vm.currentMessage.text" id="message-field"></textarea>
+            <button type="submit" class="cb-footer__send-btn">Enviar</div>
+        </form>   
+    </div>
+</ion-view>

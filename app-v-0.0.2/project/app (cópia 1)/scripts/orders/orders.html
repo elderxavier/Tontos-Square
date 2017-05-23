@@ -1,0 +1,161 @@
+<ion-view view-title="{{vm.viewName}}" cache-view="false">
+    <ion-content>
+        <div class="item item-divider orderHeader">
+            Ativos
+        </div>
+        <div class="item item-divider" style="text-align: center" ng-show="vm.inProgressOrdersArray.length == 0">
+            NÃO HÁ PEDIDOS ATIVOS
+        </div>
+        <!-- Itera entre todos os pedidos -->
+        <div class="list" style="padding-bottom: 20px" ng-repeat="(index, order) in vm.inProgressOrdersArray | filter: vm.isOnTheWay">
+            <!-- Cabeçalho -->
+            <div class="item item-divider orderHeader">
+                <!--<div style="float: left" ng-click="vm.goToTracking(vm.vector[index])">
+                    {{order.date}}
+                </div>-->
+                <!--<div style="float: right">
+                    {{order.status}}
+                </div>-->
+                <i ng-click="vm.chatWithChef(order.$id)" class="ion-chatboxes icon pull-right"></i>
+            </div>
+            <!-- Agrupa tudo -->
+            <ion-item ng-class="vm.isExpanded(order) ? 'row expanded' : 'row collapsed'">
+                <!-- Imagem e nome do chef -->
+                <div class="col col-25" ng-click="vm.showChefDetails(order.chef.$id)" >
+                    <img class="rounded" style="max-width: 85%" ng-src="{{order.chef.thumb}}" >
+                    <div class="order-chef-name">
+                        {{order.chef.name}}
+                    </div>
+                </div>
+                <!-- Produtos do pedido -->
+                <div class="col col-75">
+                    <div class="row no-padding-right" ng-repeat="plate in order.plates">
+                        <!-- Nome do prato -->
+                        <div class="col col-67">
+                            <div class="plate-name" ng-click="vm.goToPlate(plate.id)">{{plate.name}}</div>
+                        </div>
+                        <!-- Preço e quantidade do prato -->
+                        <div class="col col-33 no-padding-right">
+                            <div class="plate-price-quant">{{plate.price | currency : "R$" : 2 }} x{{plate.quantity}}</div>
+                        </div>
+                    </div>
+                    <div ng-class="vm.isExpanded(order) ? 'item-text-wrap freteIn' : 'item-text-wrap freteOut'">
+                        Endereço de entrega: {{order.address.street}}, {{order.address.number}}, {{order.address.locality}} - {{order.address.town}}/{{order.address.state}}
+                    </div>
+                </div>
+                <!-- /Produtos do pedido -->
+            </ion-item>
+            <!-- /Agrupa tudo -->
+            <div class="row">
+                <div class="col col-25">
+                </div>
+                <div class="col col-75">
+                    <hr class="hr-left">
+                    <div ng-class="vm.isExpanded(order) ? 'freteIn' : 'freteOut'">
+                        Frete: {{order.total - vm.getItemsTotal(order.plates) | currency : "R$" : 2}}
+                    </div>
+                    <div class="total-order">
+                        Total: {{order.total | currency : "R$" : 2 }}
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col col-50" ng-click="vm.gotoTracking(order.guid)">
+                    Acompanhe o seu pedido!
+                </div>
+            <div class="col col-50 more" style="text-align: right" ng-click="vm.toggleExpanded(order)">
+                <div class="toggle">
+                    {{vm.isExpanded(order) ? "Menos detalhes" : "Mais detalhes"}}
+                </div>
+                <i ng-class="vm.isExpanded(order) ? 'ion-chevron-down less-details': 'ion-chevron-down more-details'"></i>
+            </div>
+            </div>
+        </div>
+        <!-- /Itera entre todos os pedidos -->
+        <!-- ----------------------------------------------------------------------------------------------------------------------- -->
+        <div class="item item-divider orderHeader">
+            Concluídos
+        </div>
+        <div class="item item-divider" style="text-align: center" ng-show="vm.completedOrdersArray.length == 0">
+            NÃO HÁ PEDIDOS CONCLUÍDOS
+        </div>
+        <!-- Itera entre todos os pedidos -->
+        <div class="list" style="padding-bottom: 20px" ng-repeat="(index, order) in vm.completedOrdersArray">
+            <!-- Cabeçalho -->
+            <div class="item item-divider orderHeader">
+                <!--<div style="float: left" ng-click="vm.goToTracking(vm.vector[index])">
+                    {{order.date}}
+                </div>-->
+                <!--<div style="float: right">
+                    {{order.status}}
+                </div>-->
+                <!--<i ng-click="vm.chatWithChef(order.$id)" class="ion-chatboxes icon pull-right"></i>-->
+            </div>
+            <!-- Agrupa tudo -->
+            <ion-item ng-class="vm.isExpanded(order) ? 'row expanded' : 'row collapsed'">
+                <!-- Imagem e nome do chef -->
+                <div class="col col-25" ng-click="vm.showChefDetails(order.chef.$id)">
+                    <img class="rounded" style="max-width: 85%" ng-src="{{order.chef.thumb}}" >
+                    <div class="order-chef-name">
+                        <p>{{order.chef.name}}</p>
+                    </div>
+                </div>
+                <!-- Produtos do pedido -->
+                <div class="col col-75">
+                    <div class="row no-padding-right" ng-repeat="plate in order.plates">
+                        <!-- Nome do prato -->
+                        <div class="col col-67">
+                            <div class="plate-name" ng-click="vm.goToPlate(plate.id)">{{plate.name}}</div>
+                        </div>
+                        <!-- Preço e quantidade do prato -->
+                        <div class="col col-33 no-padding-right">
+                            <div class="plate-price-quant">{{plate.price | currency : "R$" : 2 }} x{{plate.quantity}}</div>
+                        </div>
+                    </div>
+                    <div ng-class="vm.isExpanded(order) ? 'item-text-wrap freteIn' : 'item-text-wrap freteOut'">
+                        Endereço de entrega: {{order.address.street}}, {{order.address.number}}, {{order.address.locality}} - {{order.address.town}}/{{order.address.state}}
+                    </div>
+                </div>
+                <!-- /Produtos do pedido -->
+            </ion-item>
+            <!-- /Agrupa tudo -->
+            <div class="row">
+                <div class="col col-25">
+                </div>
+                <div class="col col-75">
+                    <hr class="hr-left">
+                    <div ng-class="vm.isExpanded(order) ? 'freteIn' : 'freteOut'">
+                        Frete: {{vm.getItemsTotal(order.plates) - order.total | currency : "R$" : 2}}
+                    </div>
+                    <div class="total-order">
+                        Total: {{order.total | currency : "R$" : 2 }}
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="more" ng-click="vm.toggleExpanded(order)">
+                <div class="toggle">
+                    {{vm.isExpanded(order) ? "Menos detalhes" : "Mais detalhes"}}
+                </div>
+                <i ng-class="vm.isExpanded(order) ? 'ion-chevron-down less-details': 'ion-chevron-down more-details'"></i>
+            </div>
+            <div ng-if="order.review && order.review.rating" style="width: 100px;">
+                <div>
+                    <div class="plate-card__rating-title">
+                        Avaliação:
+                    </div>
+                    <rating-stars class="plate-card__stars" rating-value="{{order.review.rating}}"></rating-stars>
+                </div>
+            </div>
+            <div ng-if="!order.review || !order.review.rating" style="width: 100px;">
+                <div>
+                    <div ng-class="order.review ? 'order-add-review-button' : 'order-add-review-button-disabled'">
+                        <button ng-click="vm.createReview(order)" ng-disabled="!order.review">Avaliar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Itera entre todos os pedidos -->
+    </ion-content>
+</ion-view>

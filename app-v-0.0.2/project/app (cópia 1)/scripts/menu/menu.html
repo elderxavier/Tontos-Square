@@ -1,0 +1,31 @@
+<ion-side-menus enable-menu-with-back-views="true">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-stable no-box-shadow">
+            <ion-nav-back-button class="button-icon">
+                <img class="custom-back-icon" ng-src="images/icons/common/back-white.png" />{{}}
+            </ion-nav-back-button>            
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left">
+        <!-- <ion-header-bar href="#/app/register" class="bar-stable"> -->
+        <ion-header-bar href="#/app/register" class="bar-stable">            
+           <div class="menu-logo">            
+                 <img src="images/logo.png"/>
+            </div>
+        </ion-header-bar>
+        <ion-content>
+            <ion-list class="tonstos-menu">
+                <ion-item nav-clear menu-close class="item-icon-left item-text-wrap" href="#/app/location">
+                    <button class="button button-icon fa fa-map-marker"><span>Localizações</span></button>
+                </ion-item>
+                <ion-item nav-clear menu-close class="item-icon-left item-text-wrap" href="#/app/location">
+                    <button class="button button-icon fa fa-cogs"><span>Preferências</span></button>
+                </ion-item>
+                <ion-item nav-clear menu-close class="item-icon-left item-text-wrap" href="#/app/location">
+                    <button class="button button-icon fa fa-user"  id="gopacientes"><span>Minha Conta</span></button>
+                </ion-item>                
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

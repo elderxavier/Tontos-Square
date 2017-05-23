@@ -1,0 +1,48 @@
+<ion-view view-title="{{query}}" cache-view="false" class="search-result">
+    <ion-nav-bar class="bar-stable no-box-shadow">
+        <ion-nav-buttons side="right">
+            <button class="home-filter-click-area" ng-click="openFilter()"><i class="fa fa-filter light home-filter"></i></button>
+            <button class="home-cart-click-area" ng-click="showCart()"><i class="ion-ios-cart light home-cart"></i></button>
+        </ion-nav-buttons>
+        <ion-nav-back-button class="button-icon">
+            <img class="custom-back-icon" ng-src="images/icons/common/back-white.png" />{{}}
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content>
+        <p class="msg" ng-if="!itens.length"> Não encontramos resultado para busca</p>
+        <div class="row">
+            <div class="col col-50" ng-repeat="plate in itens track by $index">
+                <div class="plate-card">
+                    <div class="plate-card__img">
+                        <img ng-src="{{plate.image}}" lazy-img="https://firebasestorage.googleapis.com/v0/b/eater-c5904.appspot.com/o/images%2Fchef%2FhrsXfEiwLGhWnR5i7OGwtuJXPcw2%2Fplates%2F-KZYQBuKWFCW0A0CMdBn%2FIMG_20161221_200435.jpg%3F1482357875157?alt=media&amp;token=f7eb1f70-e522-4a73-99d3-c7baef2f62df">
+                    </div>
+                    <div class="plate-card__body">
+                        <h1 class="plate-card__title ng-binding">{{plate.name}}</h1>
+                        <div>
+                            <p class="plate-card__price ng-binding">{{plate.price| formatPrice}}</p>
+                        </div>
+                        <div class="row" style="margin-top: -15px">
+                            <div class="col col-67 plate-card__rating">
+                                <div class="plate-card__rating-title">
+                                    Avaliação:
+                                </div>
+                                <rating-stars class="plate-card__stars" rating-value="{{plate.rating}}">
+                                    <div ng-controller="RatingStarsController">
+                                        <i ng-repeat="i in [1, 2, 3, 4, 5] track by $index" class="ion-android-star" ng-style="i <= ratingValue ? {'color': '#F89F32'} : {'color': '#bdbdbd'}" style="color: rgb(248, 159, 50);"></i>
+                                        <i ng-repeat="i in [1, 2, 3, 4, 5] track by $index" class="ion-android-star" ng-style="i <= ratingValue ? {'color': '#F89F32'} : {'color': '#bdbdbd'}" style="color: rgb(248, 159, 50);"></i>
+                                        <i ng-repeat="i in [1, 2, 3, 4, 5] track by $index" class="ion-android-star" ng-style="i <= ratingValue ? {'color': '#F89F32'} : {'color': '#bdbdbd'}" style="color: rgb(248, 159, 50);"></i>
+                                        <i ng-repeat="i in [1, 2, 3, 4, 5] track by $index" class="ion-android-star" ng-style="i <= ratingValue ? {'color': '#F89F32'} : {'color': '#bdbdbd'}" style="color: rgb(248, 159, 50);"></i>
+                                        <i ng-repeat="i in [1, 2, 3, 4, 5] track by $index" class="ion-android-star" ng-style="i <= ratingValue ? {'color': '#F89F32'} : {'color': '#bdbdbd'}" style="color: rgb(248, 159, 50);"></i>
+                                    </div>
+                                </rating-stars>
+                            </div>
+                            <div class="col col-33" style="text-align: right; margin-left: 3px; margin-top: 4px">
+                                <img src="images/icons/_0000_icn_calendar.png" style="height: 30px; width: 30px; padding: 6px;" class="but but--icon but--mustard">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,32 @@
+{
+  "name": "Conversion.js",
+  "private": false,
+  "dependencies": {
+    "chai": "~1.8.0",
+    "mocha": "~1.14.0"
+  },
+  "devDependencies": {},
+  "ignore": [
+    "test",
+    "spec",
+    ".bowerrc",
+    ".gitignore",
+    ".jshintignore",
+    ".jshintrc",
+    "bower.json",
+    "Gruntfile.js",
+    "package.json",
+    "README.md"
+  ],
+  "homepage": "https://github.com/Dokko1230/conversion.js",
+  "version": "0.0.2",
+  "_release": "0.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.2",
+    "commit": "1ec490e171204d81e3718da648e64dc4f4287592"
+  },
+  "_source": "https://github.com/Dokko1230/conversion.js.git",
+  "_target": "~0.0.2",
+  "_originalSource": "conversion.js"
+}

@@ -1,0 +1,27 @@
+<ion-view view-title="Students">
+	<ion-content>
+		<div ng-repeat="s in vm.students" ng-if="$index%2 == 0" class="row colums-two">
+			<div class="card col" ng-click="vm.showStudentDetails(vm.students[$index].guid)">
+				<div class="item item-image">
+					<img ng-src="{{vm.students[$index].image}}">
+				</div>
+				<a class="item">
+					<h3>{{vm.students[$index].name}}</h3>
+				</a>
+			</div>
+
+			<div ng-style="{'visibility': !!vm.students[$index + 1] ? 'visible' : 'hidden'}" class="card col"
+				ng-click="vm.showStudentDetails(vm.students[$index + 1].guid)">
+				<div class="item item-image">
+					<img ng-src="{{vm.students[$index + 1].image}}">
+				</div>
+
+				<a class="item">
+					<h3>{{vm.students[$index + 1].name}}</h3>
+				</a>
+			</div>
+
+		</div>
+
+	</ion-content>
+</ion-view>

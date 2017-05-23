@@ -1,0 +1,33 @@
+@import '../modules/global-variables';
+
+//Variables
+$font-family:                 $default-font-family;
+
+.divider {
+    background-color: #EEE;
+    padding: 15px 0px 25px 0px;
+
+    .divider__title {
+        font-family: $font-family;
+        text-align: center;
+        font-size: 18px;
+        height: 15px;
+        padding: 0px 15px 0px 15px;
+        margin: 10px 10px 0px 10px;
+        font-weight: 800;
+        border-top: 1px solid #c1c1c1;
+        span {
+            position: relative;
+            bottom: 10px;
+            background-color: #EEE;
+            padding: 0 10px;
+        }
+    }
+}
+
+.divider:nth-child(even) {
+    background-color: #F8F8F8;
+    .divider__title span {
+        background-color: #F8F8F8;
+    }
+}

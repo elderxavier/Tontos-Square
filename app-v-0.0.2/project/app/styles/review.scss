@@ -1,0 +1,56 @@
+.ion-review-modal{
+	width: 90%;
+	min-height: 0 !important;
+	top: 5%;
+	left: 5%;
+	right: 5%;
+	bottom: 5%;
+	background-color: transparent;
+	-webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.ion-review-modal .ion-modal-content-custom {
+	width: 100%;
+	height: 100%;
+	color: #000;
+	margin: 0;
+	background-color: #fff;
+}
+
+@media (max-width: 679px) {
+	.active .modal-backdrop-bg {
+		opacity: .5; 
+	}
+	.modal-backdrop-bg {
+		-webkit-transition: opacity 300ms ease-in-out;
+		transition: opacity 300ms ease-in-out;
+		background-color: #000;
+		opacity: 0; 
+	} 
+}
+
+.button.button-clear.button-small-icon.icon.ion-close-round{
+	&:before{
+		font-size: 20px;
+	}
+}
+
+.ion-android-star-outline.icon-small{
+	font-size: 24px;
+}
+
+ul.rating.color-custom{
+	li {
+		padding: 5px;
+		i{
+			color: #ffa400;
+		}
+	}
+}
+
+.bar.no-bg{
+	background-image: none;
+	background-size: 0;
+	border: 0;
+}

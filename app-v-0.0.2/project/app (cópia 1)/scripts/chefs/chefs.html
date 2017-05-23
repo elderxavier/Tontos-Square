@@ -1,0 +1,69 @@
+<ion-view view-title="Chefs" ng-controller="ChefsController as vm" cache-view="false">
+    <ion-nav-buttons side="right">
+        <button class="button button-clear icon ion-ios-cart" ng-click="vm.showCart()"></button>
+    </ion-nav-buttons>
+
+    <ion-content>
+
+        <div class="divider">
+            <ion-scroll class="carousel-scroll" direction="x" zooming="false" delegate-handle="chef-carousel"
+                        horizontal-scroll-fix="mainScroll">
+                <!-- chef -->
+                <div class="featured-card" ng-repeat="chef in featuredChefs track by $index" style="width: 100%;">
+                    <div class="row" style="background-color:#d5d5d5;">
+                        <div class="col col-33" ng-repeat="plate in chef.plates track by $index" ng-if="$index < 3"
+                             ng-click="showPlateDetails(plate)">
+                            <div style="background-image:url({{plate.image}}); height:80px; background-size:cover;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="featured-card__body" ng-click="showChefDetails(chef)">
+                        <div class="featured-card__content">
+                            <div class="featured-card__content__chef-img featured-card__content__chef-img--rounded">
+                                <img ng-if="chef.thumb" src="./images/spinner.gif" lazy-img="{{chef.thumb}}"
+                                     alt="Image Chef">
+                                <img ng-if="!chef.thumb" src="./images/spinner.gif"
+                                     lazy-img="http://clipartix.com/wp-content/uploads/2016/05/Free-chef-clipart-clipart-image.jpeg"
+                                     alt="Image Chef">
+                            </div>
+                            <div class="featured-card__content__details">
+                                <h2 class="featured-card__chef-name">{{chef.name}}</h2>
+                                <p class="featured-card__category">{{chef.speciallity}}</p>
+                                <p class="featured-card__chef-plate-number">{{chef.numOfPlates}} Pratos</p>
+                            </div>
+                            <div class="featured-card__content__rating">
+                                <h2 class="featured-card__rating-title">Avaliação:</h2>
+                                <rating-stars class="featured-card__stars"
+                                              rating-value="{{chef.rating}}"></rating-stars>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ion-scroll>
+        </div>
+
+        <div class="divider" style="padding: 15px 5px;">
+            <div class="row row-wrap">
+                <div class="col col-50" ng-repeat="chef in chefs track by $index">
+                    <div class="plate-card">
+                        <div class="plate-card__img">
+                            <img ng-src="{{chef.thumb}}" ng-click="showChefDetails(chef)">
+                        </div>
+                        <div class="plate-card__body">
+                            <h1 class="plate-card__title">{{chef.name}}</h1>
+                            <p class="plate-card__price">{{chef.speciallity}}</p>
+                            <div class="plate-card__footer" style="margin: 0 auto; text-align: center;">
+                                <div>
+                                    <h2 class="featured-card__rating-title">Avaliação:</h2>
+                                    <rating-stars class="plate-card__stars"
+                                                  rating-value="{{chef.rating}}"></rating-stars>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

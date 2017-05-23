@@ -1,0 +1,260 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// Mixins //
+
+// Botões de quantidade(somar e subtrair quantidade) e o texto da quantidade //
+@mixin quantity-buttons($size, $width){
+    display: table-cell;
+    font-size: $size;
+    vertical-align: middle;
+    width: $width;
+}
+
+// Texto de nome e preço do item //
+@mixin item-text($weight, $font-size){
+    font-weight: $weight;
+    font-size: $font-size;
+    padding-right: 5px;
+    color: black;
+}
+
+// Sobrescrita de atributos da classe 'row' //
+@mixin row-cart{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+// Sobrescrita de atributos da classe 'col' //
+@mixin col-cart{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// Classes //
+
+.item-name{
+    @include item-text($weight: 500, $font-size: 20px);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.item-price{
+    @include item-text($weight: 600, $font-size: 19px);
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    right: 15px;
+}
+
+.item-info{
+    color: #666666;
+    font-size: 15px;
+    font-weight: 500;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.item-quant{
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.trash-click-area{
+    background-color: transparent;
+    height: 36px;
+    width: 36px;
+    margin-top: 2px;
+    margin-right: 5px;
+    border-color: transparent;
+}
+
+.trash-selected{
+    color: gray;
+    font-size: 26px;
+    height: 24px;
+    width: 24px;
+}
+
+.trash-notSelected{
+    color: white;
+    font-size: 26px;
+    height: 24px;
+    width: 24px;
+}
+
+.item.cart{
+    background-color: transparent;
+}
+
+.ion-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.chef-name{
+    font-weight: bold;
+    font-size:20px;
+    color: #AC3440;
+    padding-left: 10px;
+    padding-top: 30px;
+    margin-bottom: 0px;
+}
+
+.checkbox-cart{
+    position: relative;
+    left: -10px;
+    border: none;
+    padding-right: 100%;
+    padding-top: 3%;
+}
+
+.row.cart{
+    @include row-cart;
+}
+
+.row.cart2{
+    @include row-cart;
+    display: table;
+}
+.radius-bar-icon {
+    height: 25px;
+    width: 25px;
+}
+
+
+
+.no-padding{
+    padding: 0;
+}
+
+.col.col-67.cart{
+    @include col-cart;
+    width: 67%;
+}
+
+.col.col-33.cart{
+    @include col-cart;
+    width: 33%;
+}
+
+.col.col-50.cart{
+    @include col-cart;
+    width: 50%;
+}
+
+.quantity-title{
+    @include quantity-buttons($size: 12px, $width: 100%);
+    height: 25px;
+    color: #bdbdbd;
+}
+
+.minus{
+    @include quantity-buttons($size: 30px, $width: 25%);
+}
+
+.quantity-number{
+    @include quantity-buttons($size: 16px, $width: 50%);
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #bdbdbd;
+    font-weight: bold;
+}
+
+.plus{
+    @include quantity-buttons($size: 30px, $width: 25%);
+}
+
+.total-chef{
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 20px;
+}
+
+.total-cart{
+    font-size: 17px;
+    margin-top: 10px;
+    padding-right: 10px;
+}
+
+.bar.bar-footer.cart{
+    background: transparent;
+    bottom: 15px;
+}
+
+.bar.bar-subfooter.cart{
+    background: transparent;
+    bottom: 55px;
+    border-bottom: 0px;
+}
+
+.has-subfooter.cart{
+    bottom: 100px;
+}
+
+.button-center{
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+    width: 90%;
+    strong{
+        font-size: 16px;
+    }
+}
+
+.right-align{
+    text-align: right;
+}
+
+.left-align{
+    text-align: left;
+    font-size: 13px;
+}
+
+.hr-cart{
+    background: #999999;
+    color: #999999;
+    height: 2px;
+    border: none;
+    margin-left: -5px;
+    margin-right: -5px;
+    margin-top: -5px;
+    margin-bottom: 0px;
+}
+
+.p-cart{
+    margin: 0;
+}
+
+//Nicholas
+
+.cart__footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    font-size: $default-font-size;
+    border-top: 1px solid #ddd;
+}
+
+.cart__total {
+    font-family: $default-font-family;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    text-align: right;
+    font-size: 1.3em;
+}
+
+.item-complex.cart-item .item-content {
+    padding: 16px 16px 16px 16px;
+}
+
+#floating-button{
+
+  bottom: 110px !important;
+
+}
+
+//end Nicholas

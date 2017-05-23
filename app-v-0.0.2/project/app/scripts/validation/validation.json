@@ -1,0 +1,105 @@
+{
+    "register-client": {
+        "required": {
+            "email": "O campo Email é obrigatório.",
+            "birthday": "O campo Data de Nascimento é obrigatório.",
+            "displayName": "O campo Nome Completo é obrigatório.",
+            "cpf": "O campo CPF é obrigatório.",
+            "phone": "O campo Telefone é obrigatório.",
+            "password": "O campo Senha é obrigatório.",
+            "passwordConfirmation": "O campo Confirmar Senha é obrigatório.",
+            "terms": "Para prosseguir aceite os termos de uso."
+        },
+        "minlength": {
+            "email": "Email precisa ter mais de 5 caracteres.",
+            "password": "Senha precisa ter mais de 5 caracteres."
+        },
+        "email": {
+            "email": "O campo email é inválido."
+        },
+        "cpf": {
+            "cpf": "CPF inválido."
+        },
+        "match": {
+            "passwordConfirmation": "A confirmação de senha não confere."
+        }
+    },
+    "first-interaction": {
+        "required": {
+            "login": "Login é obrigatório.",
+            "password": "Senha é obrigatória"
+        },
+        "email": {
+            "login": "O campo email esta incorreto."
+        }
+    },
+    "personal-info": {
+        "required": {
+            "name": "Nome é obrigatório.",
+            "email": "Email é obrigatório",
+            "cpf": "CPF é obrigatório",
+            "phone": "Telefone é obrigatório"
+        },
+        "email": {
+            "email": "O campo email esta incorreto."
+        },
+        "cpf": {
+            "cpf": "CPF inválido."
+        }
+    },
+    "payment-modal": {
+        "required": {
+            "number": "Número do cartão é obrigatório.",
+            "exp_month": "Mês da data de expiração é obrigatório.",
+            "exp_year": "Ano da data de expiração é obrigatório.",
+            "cvc": "Código de segurança é obrigatório.",
+            "street_number": "Número do endereço é obrigatório"
+        },
+        "ccNumber": {
+            "number": "Número de cartão de crédito inválido."
+        },
+        "ccExp": {
+            "exp": "Cartão Vencido."
+        },
+        "ccExpMonth": {
+            "exp_month": "Mês Inválido."
+        }
+    },
+    "location": {
+        "required": {
+            "postcode": "CEP é obrigatório."
+        },
+        "minlength": {
+            "postcode": "CEP precisa ter 9 caracteres."
+        }
+    },
+    "profile": {
+        "required": {
+            "displayName": "O campo Nome Completo é obrigatório.",
+            "phone": "O campo Telefone é obrigatório."
+        },
+        "addressCount": {
+            "selectedAddresses": "É necessário adicionar pelo menos um endereço."
+        }
+    },
+    "add-address": {
+        "required": {
+            "postcode": "O campo CEP é obrigatório.",
+            "state": "O campo Estado é obrigatório.",
+            "town": "O campo Cidade é obrigatório.",
+            "street": "O campo Logradouro é obrigatório.",
+            "locality": "O campo Bairro é obrigatório.",
+            "number": "O campo Número é obrigatório. (0 para sem número)"
+        }
+    },
+    "payment": {
+        "required": {
+            "paymentMethod": "Selecione um método de pagamento."
+        }
+    },
+    "forgot-password": {
+        "required": {
+            "email": "O campo Email é obrigatório."
+        }
+    }
+}

@@ -1,0 +1,73 @@
+@import '../modules/global-variables';
+
+// Variables
+$font-family:                $default-font-family;
+$font-size:                  $default-font-size;
+//end
+
+.but {
+    display: inline-block;
+    font-family: $font-family;
+    font-size: $font-size;
+    border-radius: 3px;
+    border: none;
+    white-space: nowrap;
+    padding: 0 6px;
+    vertical-align: top;
+    text-align: center;
+    line-height: 22px;
+    font-weight: 800;
+    
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.but--icon {
+    &:before {
+        display: inline-block;
+        font-size: $font-size;
+        vertical-align: inherit;
+        line-height: 21px;
+        padding: 0 0 1px 0;
+    }
+}
+
+.but--mustard {
+    background-color: #F89F32;
+    color: #fff;
+}
+
+.but-red{
+    min-width: 60px; 
+    height: 40px; 
+    border: 0; 
+    border-radius: 40px; 
+    font-weight: 800; 
+    background-color: #d93c4f; 
+    color: white;
+    display: inline-block;
+}
+
+.but-red.outline{
+    border: 2px solid #d93c4f; 
+    background-color: white; 
+    color: #d93c4f;
+}
+
+.button-orange{
+    background-color: $default-orange;
+    border: none;
+    border-radius: 5px;
+    margin: 0 0 10px 0;
+    height: 50px !important;
+    font-size: 16px;
+    font-family: $default-font-family;
+    font-weight: 800;
+    color: white;
+}
+
+.button-loggi {
+    background: url('/images/loggi_logo.png');
+    background-size: cover;
+}

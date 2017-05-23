@@ -1,0 +1,106 @@
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places,geometry&sensor=false"></script>
+<ion-modal-view ng-controller="AddAddressController as vm" cache-view="false">
+    <ion-header-bar class="bar-stable">
+        <h1 class="title">Endereço</h1>
+        <button class="button icon ion-close" ng-click="vm.cleanAddress();modal.hide()"></button>
+    </ion-header-bar>
+    <ion-view cache-view="false">
+        <ion-content class="has-header default-form">
+            <form novalidate name="vm.registerForm" ng-submit="validateForm(vm.registerForm, 'add-address') && vm.confirmAddress()" style="text-align:center"
+                class="text-center">
+                <ion-list>
+                     <div class="card">
+                
+                    <ion-item>
+                         
+                         <input places-auto-complete size=80
+                                placeholder="Digite um endereço ou CEP"
+                                ng-model="vm.place"
+                                style="border:0px"
+                                component-restrictions="{country:'br'}"
+                                types="vm.type"
+                                on-place-changed="vm.placeChanged()"
+                                ng-focus="vm.disableTap($event)"/>
+                   
+                        </ion-item>
+                    </div>
+                    <!-- CEP -->
+                    <div class="card">
+
+                        <ion-item ng-class="{invalid: vm.registerForm.postcode.$touched && (vm.registerForm.postcode.$error.required || vm.registerForm.postcode.$error.cep)}">
+                            <label class='item-floating-label'>
+                              <label class="input-label inline">CEP</label>
+                              <input type="tel" name="postcode" ng-model="vm.address.postcode" placeholder="CEP" required ui-br-cep-mask class="text-center"
+                              ng-keyup="vm.autoProgress(vm.address.postcode)" onfocus="this.placeholder='xxxxx-xxx'" />
+                            </label>
+                        </ion-item>
+                    </div>
+
+                    <!-- Logradouro -->
+                    <div class="card">
+                        <ion-item ng-class="{invalid: vm.registerForm.street.$error.required && vm.registerForm.street.$touched}">
+                            <label class='item-floating-label'>
+                              <label class="input-label inline">Logradouro</label>
+                              <input type="text" name="street" ng-model="vm.address.street" placeholder="Logradouro" required class="text-center" ng-disabled="true"/>
+                            </label>
+                        </ion-item>
+                    </div>
+
+                    <!-- Número -->
+                    <div class="card" style="width: 20%; display: inline-block">
+                        <ion-item ng-class="{invalid: vm.registerForm.number.$error.required && vm.registerForm.number.$touched}">
+                            <label class='item-floating-label'>
+                              <label class="input-label inline">Nº</label>
+                              <input onfocus="this.placeholder='Nº'" type="tel" name="number" ng-model="vm.address.number" placeholder="Nº" required class="text-center" id="houseNumber"/>
+                            </label>
+                        </ion-item>
+                    </div>
+
+                    <!-- Complemento -->
+                    <div class="card" style="width: 79%; display: inline-block">
+                        <ion-item>
+                            <label class='item-floating-label'>
+                              <label class="input-label inline">Complemento</label>
+                              <input onfocus="this.placeholder='Complemento'" type="text" name="complement" ng-model="vm.address.complement" placeholder="Complemento" class="text-center" />
+                            </label>
+                        </ion-item>
+                    </div>
+
+                    <!-- Bairro -->
+                    <div class="card">
+                        <ion-item ng-class="{invalid: vm.registerForm.locality.$error.required && vm.registerForm.locality.$touched}">
+                            <label class='item-floating-label'>
+                              <label class="input-label inline">Bairro</label>
+                              <input type="text" name="locality" ng-model="vm.address.locality" placeholder="Bairro" required class="text-center" ng-disabled="true"/>
+                            </label>
+                        </ion-item>
+                    </div>
+
+                    <!-- Cidade -->
+                    <div class="card" style="width: 79%; display: inline-block">
+                        <ion-item ng-class="{invalid: vm.registerForm.town.$error.required && vm.registerForm.town.$touched}">
+                            <label class='item-floating-label'>
+                              <label class="input-label inline">Cidade</label>
+                              <input type="text" name="town" ng-model="vm.address.town" placeholder="Cidade" required class="text-center" ng-disabled="true"/>
+                            </label>
+                        </ion-item>
+                    </div>
+
+                    <!-- UF -->
+                    <div class="card" style="width: 20%; display: inline-block">
+                        <ion-item ng-class="{invalid: vm.registerForm.state.$error.required && vm.registerForm.state.$touched}">
+                            <label class='item-floating-label'>
+                              <label class="input-label inline">UF</label>
+                              <input type="text" name="state" ng-model="vm.address.state" placeholder="UF" required class="text-center" ng-disabled="true"/>
+                            </label>
+                        </ion-item>
+                    </div>
+
+                </ion-list>
+                <button type="submit" class="button center-button button-round-large button-round-red" style="margin-top: 20px; border-radius: 5px; width: 100%">
+                Continuar
+              </button>
+            </form>
+        </ion-content>
+    </ion-view>
+</ion-modal-view>

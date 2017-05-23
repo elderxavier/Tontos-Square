@@ -1,0 +1,154 @@
+<!-- Título -->
+<ion-modal-view ng-controller="PaymentModalController as vm" cache-view="false">
+     <ion-header-bar class="bar-stable">
+        <h1 class="title">Adicionar cartão</h1>
+        <button class="button icon ion-close" ng-click="modal.hide()"></button>
+    </ion-header-bar>
+ <ion-view cache-view="false">
+        <ion-content class="has-header default-form">
+<ion-scroll style="width: 100%; position: absolute; top: 10px; max-height: calc(100% - 49px); min-height: calc(100% - 49px);">
+     <div class="header">
+                    <h1>Dados do Cartão</h1>
+                </div>
+        <form name="vm.addPaymentForm" ng-submit="validateForm(vm.addPaymentForm, 'payment-modal') && vm.save(vm.paymentMethod)"
+            novalidate>
+            
+            <!-- Número do cartão -->
+            <div class="card">
+                <ion-item>
+                    <label class='item-floating-label'>
+                        <label class="input-label inline floating-label">Número do cartão</label>
+                    <input name="number" type="tel" placeholder='Número do cartão's ng-model="vm.paymentMethod.creditCardNumber" required cc-number cc-type="cardType" cc-format
+                        maxlength="19" ng-keyup="onChange($event)" onfocus="this.placeholder='xxxx.xxxx.xxxx.xxxx'" onblur="this.placeholder='Número do cartão'">
+                    </label>
+                </ion-item>
+            </div>
+            
+            <!-- Agrupa informações do cartão -->
+            <!-- Mês -->
+            <div class="card" style="display: inline-block; width: 20%">
+                <ion-item>
+                    <label class='item-floating-label'>
+                        <label class="input-label inline floating-label">Mês</label>
+                    <input ng-keyup="onChange($event);vm.nextInputYear(vm.paymentMethod.month)" placeholder="Mês" name="exp_month" type="tel" ng-model="vm.paymentMethod.month" required
+                        cc-exp-month onfocus="this.placeholder='xx'" onblur="this.placeholder='Mês'">
+                    </label>
+                </ion-item>
+            </div>
+            
+            <!-- Ano -->
+            <div class="card" style="display: inline-block; width: 20%">
+                <ion-item>
+                    <label class='item-floating-label'>
+                        <label class="input-label inline floating-label">Ano</label>
+                    <input ng-keyup="onChange($event);vm.nextInputCvc(vm.paymentMethod.year)" id='year' placeholder="Ano" name="exp_year" type="tel" ng-model="vm.paymentMethod.year" required
+                        cc-exp-year onfocus="this.placeholder='xx'" onblur="this.placeholder='Ano'">
+                    </label>
+                </ion-item>
+            </div>
+            <!-- Código de Segurança -->
+            <div class="card" style="display: inline-block; width: 57%">
+                <ion-item>
+                    <label class='item-floating-label'>
+                        <label class="input-label inline floating-label">Cód. de segurança</label>
+                    <input id='cvc' ng-keyup="onChange($event)" placeholder="Cód. de segurança" name="cvc" type="tel" ng-model="vm.paymentMethod.verificationValue"
+                        cc-cvc required onfocus="this.placeholder='xxx'" onblur="this.placeholder='Cód. de segurança'">
+                    </label>
+                </ion-item>
+            </div>
+            <!-- /Agrupa informações do cartão -->
+            
+            <!-- Divider -->
+            <div class="payment-address__section" ng-if="vm.addressForShipping && !vm.withdraw">
+                <h3>Mesmo endereço de entrega</h3>
+                <div style="float: right; display: inline-block; margin: 0.8em 0;">
+                    <et-toggle target="sameAddressForPayment"></et-toggle>
+                </div>
+                <div class="payment-address" ng-if="sameAddressForPayment.on">
+                    <div class="payment-address__content">
+                        {{vm.addressForShipping.street}},Nº {{vm.addressForShipping.number}},Complemento {{vm.addressForShipping.complement}}
+                        <br> {{vm.addressForShipping.locality}}- {{vm.addressForShipping.postcode}}
+                    </div>
+                </div>
+                <!-- /Divider -->
+            </div>
+            
+            <!-- Título -->
+            <div ng-if="!sameAddressForPayment.on || vm.withdraw">
+                <div class="header">
+                    <h1>Endereço de cobrança</h1>
+                </div>
+                
+                <!-- CEP -->
+                <div class="card">
+                    <ion-item>
+                        <label class='item-floating-label'>
+                            <label class="input-label inline floating-label">CEP</label>
+                        <input ng-keyup="onChange($event);vm.autoProgress(vm.paymentAddress.postcode)" name="postcode" type="tel" placeholder="CEP"
+                            ng-model="vm.paymentAddress.postcode" required ui-br-cep-mask onfocus="this.placeholder='xxxxx-xx'"
+                            onblur="this.placeholder='CEP'">
+                        </label>
+                    </ion-item>
+                </div>
+                
+                <!-- Logradouro -->
+                <div class="card">
+                    <ion-item>
+                        <label class='item-floating-label'>
+                            <label class="input-label inline floating-label">Logradouro</label>
+                        <input name="street" disabled type="text" placeholder="Logradouro" ng-model="vm.paymentAddress.street" required>
+                        </label>
+                    </ion-item>
+                </div>
+                
+                <!-- Número -->
+                <div class="card" style="display: inline-block; width: 24%">
+                    <ion-item>
+                        <label class='item-floating-label'>
+                            <label class="input-label inline floating-label">Nº</label>
+                        <input name="street_number" id="streetNumber" type="tel" placeholder="Nº" ng-model="vm.paymentAddress.number" required onfocus="this.placeholder='Nº'">
+                        </label>
+                    </ion-item>
+                </div>
+                
+                <!-- Complemento -->
+                <div class="card" style="display: inline-block; width: 74%">
+                    <ion-item>
+                        <label class='item-floating-label'>
+                            <label class="input-label inline floating-label">Complemento</label>
+                            <input name="complement" type="text" placeholder="Complemento" ng-model="vm.paymentAddress.complement"
+                            onfocus="this.placeholder='Complemento'">
+                        </label>
+                    </ion-item>
+                </div>
+                
+                <!-- Bairro -->
+                <div class="card">
+                    <ion-item>
+                        <label class='item-floating-label'>
+                            <label class="input-label inline floating-label">Bairro</label>
+                            <input disabled name="locality" type="text" placeholder="Bairro" ng-model="vm.paymentAddress.locality"
+                            required>
+                        </label>
+                    </ion-item>
+                </div>
+                
+                <!-- Cidade -->
+                <div class="card">
+                    <ion-item>
+                        <label class='item-floating-label'>
+                            <label class="input-label inline floating-label">Cidade</label>
+                            <input disabled name="town" type="text" placeholder="Cidade" ng-model="vm.paymentAddress.town"
+                            required>
+                        </label>
+                    </ion-item>
+                </div>
+                
+            </div>
+
+            <button type="submit" class="button button-round-full button-round-red center-button" style="margin-top: 30px; border-radius: 5px;">Cadastrar</button>
+        </form>
+        </ion-content>
+    </ion-view>
+</ion-scroll>
+</ion-modal-view>

@@ -1,0 +1,79 @@
+<ion-view view-title="Meu Carrinho" cache-view="false">
+    <!-- Sobrescrita da nav-bar para a retirada do ícone de menu -->
+    <ion-nav-bar align-title="center" class="bar-stable no-box-shadow">
+        <ion-nav-buttons side="right">
+            <!-- Botão para excluir itens do carrinho -->
+            <button class="button button-clear" ng-click="vm.deleteItens()" ng-show="vm.deleteVar">
+                Retirar
+            </button>
+            <!-- Ícone de lixeira -->
+            <button class="trash-click-area" ng-click="vm.showDelete(true)">
+                <i ng-class="{'ion-trash-b trash-notSelected' : vm.deleteVar == false, 'ion-trash-b trash-selected' : vm.deleteVar == true}"></i>
+            </button>
+        </ion-nav-buttons>
+        <!-- Sobrescrita do botão de voltar -->
+        <ion-nav-back-button class="button-icon">
+            <img class="custom-back-icon" ng-src="images/icons/common/back-white.png" />
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <!-- /Sobrescrita da nav-bar para a retirada do ícone de menu -->
+
+	<ion-floating-button click="vm.showChefDetails()" button-color="#AC3440" icon="ion-plus" icon-color="#fff"></ion-floating-button>
+
+
+    <ion-content class="has-subfooter cart">
+        <!-- Lista de produtos -->
+        <ion-list style="margin-top: 20px" show-delete="vm.deleteVar">
+            <ion-item ng-repeat="item in vm.items" class="cart-item">
+                <!-- Linha superior -->
+                <div class="row cart">
+                    <!-- Nome do item -->
+                    <div class="col col-67 cart item-name">
+                        {{item.name}}
+                    </div>
+                    <!-- Preço do item -->
+                    <div class="col col-33 cart right-align item-price" >
+                        {{vm.getItemTotal(item) | currency : item.currency : 2}}
+                    </div>
+                </div>
+                <!-- Linha inferior -->
+                <div class="row cart2">
+                    <!-- Ingredientes -->
+                    <div class="col col-67 cart item-info item-text-wrap">
+                        {{item.ingredients}}.
+                    </div>
+                    <!-- Quantidade -->
+                    <div class="col col-33 cart item-quant">
+                        <div class="row">
+                            <img ng-src="images/icons/common/icon_minus_round_bold_gray.png" class="radius-bar-icon" ng-click="vm.changeQuantity(item, 'sub')"></img>
+                            <div class="quantity-number"> {{vm.leadingZero(item.quantity)}} </div>
+                            <img ng-src="images/icons/common/icon_plus_round_bold_gray.png" class="radius-bar-icon" ng-click="vm.changeQuantity(item, 'sum')"></img>
+                        </div>
+                    </div>
+                    <!-- /Quantidade -->
+                    <!-- Delete button -->
+                    <ion-delete-button>
+                        <ion-checkbox class="checkbox-cart" ng-click="vm.addToDeleteArray(item)"></ion-checkbox>
+                    </ion-delete-button>
+                    <!-- /Delete button -->
+                    <!-- /Linha inferior -->
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+    <!-- Rodapé -->
+    <div class="bar bar-subfooter cart">
+        <hr class="hr-cart"></hr>
+        <!-- Valor total do carinho -->
+        <div class="right-align total-cart">
+            Valor total: <strong>{{vm.total| currency : 'R$' : 2 }}</strong>
+        </div>        
+    </div>
+    <!-- Botão 'Finalizar compra' -->
+    <div class="bar bar-footer cart">
+        <button style="border-radius: 5px !important" class="button button-round-large button-round-red button-center" ng-click="vm.getPeriodModal()"
+                ng-disabled="vm.items.length == 0">
+            <strong>FINALIZAR COMPRA</strong>
+        </button>
+    </div>
+</ion-view>

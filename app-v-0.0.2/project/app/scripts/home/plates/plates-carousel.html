@@ -1,0 +1,29 @@
+<ion-scroll class="carousel-scroll" direction="x" zooming="false" delegate-handle="plate-carousel" add-vertical-scroll="mainScroll">
+    <div class="featured-card" ng-repeat="plate in featured track by $index">
+        <div class="featured-card__img">
+            <img ng-src="{{plate.image}}" alt="Image Plate" ng-click="showPlateDetails(plate)">
+        </div>
+        <div class="featured-card__body">
+            <div class="featured-card__header">
+                <h1 class="featured-card__header__title">{{plate.name}}</h1>
+			        <span class="featured-card__header__price">{{plate.price | formatPrice}}</span>
+                <!--<span class="featured-card__header__price">R$ {{plate.price}}</span>-->
+            </div>
+            <div class="featured-card__content">
+                <div class="featured-card__content__chef-img featured-card__content__chef-img--rounded">
+                    <img ng-if="plate.chef.thumb" ng-src="{{plate.chef.thumb}}" alt="Image Chef">
+                    <img ng-if="!plate.chef.thumb" ng-src="http://clipartix.com/wp-content/uploads/2016/05/Free-chef-clipart-clipart-image.jpeg" alt="Image Chef">
+                </div>
+                <div class="featured-card__content__details">
+                    <h2 class="featured-card__chef-name">{{plate.chef.name}}</h2>
+                    <p class="featured-card__category">Hamburguers</p>
+                    <p class="featured-card__chef-plate-number">11 Pratos</p>
+                </div>
+                <div class="featured-card__content__rating">
+                    <h2 class="featured-card__rating-title">Avaliação:</h2>
+                    <rating-stars class="featured-card__stars" rating-value="{{plate.rating}}"></rating-stars>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-scroll>

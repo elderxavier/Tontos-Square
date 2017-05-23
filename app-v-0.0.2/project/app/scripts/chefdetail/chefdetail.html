@@ -1,0 +1,100 @@
+<ion-view view-title="{{chefName}}" cache-view="false">
+    <!-- Sobrescrita da nav-bar para a retirada do ícone de menu -->
+    <ion-nav-bar align-title="center" class="bar-stable no-box-shadow">
+        <!-- Sobrescrita do botão de ir ao carrinho -->
+        <ion-nav-buttons side="right">
+            <button class="button button-clear" ng-click="vm.showCart()"><i class="ion-ios-cart light large-icon" ng-click="vm.showCart()"></i></button>
+        </ion-nav-buttons>
+        <!-- Sobrescrita do botão de voltar -->
+        <ion-nav-back-button class="button-icon">
+            <img class="custom-back-icon" ng-src="images/icons/common/back-white.png" />
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <!-- /Sobrescrita da nav-bar para a retirada do ícone de menu -->
+    <ion-content>
+        <div class="star" style="text-align:right;">
+            <div class="star" style="margin-top: 10px;margin-right: 10px;">
+                <rating-stars rating-value="{{chefRating}}"></rating-stars>
+            </div>
+        </div>
+        <div class="chefdetail-img center">
+            <img ng-src="{{chefThumb}}" style="border-radius: 50%;" />
+        </div>
+        <div class="row">
+            <div class="col padding chefdetail-description">
+                <h1>{{chefName}}</h1>
+                <ion-item class="item-help"
+          			style="white-space: inherit;"
+                    ng-click="vm.toggleItem()"
+                    ng-class="{active: vm.isItemShown()}">
+              <i class="icon" ng-class="vm.isItemShown() ? 'ion-chevron-down' : 'ion-chevron-right'"></i>
+           <h3 class="chefdetail-description">MAIS DETALHES SOBRE O CHEF</h2>
+          </ion-item>
+          <ion-item class="item-accordion"
+                    
+                    ng-show="vm.isItemShown()" style="white-space: inherit;">
+            <h2 class="chefdetail-description">{{chefSpec}}</h2>
+                <br>
+                <hr style="border: solid 1px #c3c3c3; width: 80px;">
+                <br>
+                <i class="icon ion-person"></i>
+                <h3 class="chefdetail-description">SOBRE O CHEF</h2>
+                <p>{{chefAbout}}</p>
+                <br>
+                <hr style="border: solid 1px #c3c3c3; width: 80px;">
+                <br>
+                <i class="icon ion-calendar"></i>
+                <h3 class="chefdetail-description">PERÍODO DE DISPONIBILIDADE</h2>
+                <p ng-repeat="workingPeriod in workingPeriods">{{workingPeriod}}</p>
+          </ion-item>
+                
+            </div>
+        </div>
+        <div class="row chefdetail-plates" style="background-color: #e8e8e8;">
+            <div>
+                <div class="row" style="margin: auto; width: 85%;">
+                        <hr style="width: 70px; margin: 10px 0px; border: solid 1px #c3c3c3;">
+                        <h3>Pratos do Chef</h3>
+                    <hr style="width: 70px; margin: 10px 0px; border: solid 1px #c3c3c3;">
+                </div>
+                <div>
+                    <div class="row row-wrap">
+                        <div class="col col-50" ng-repeat="plate in plates track by $index">
+                            <plate-card plate-object="plate" show-plate-details-function="vm.showPlateDetails(plate)" quick-add-to-cart-function="vm.quickAddToCart(plate)" go-labor-function="vm.goLabor()" set-checkout-mode-function="vm.setCheckoutMode(plate)" is-at-hand-function="vm.isAtHand(plate)">
+                            </plate-card>
+                        </div>
+                    </div>
+                    <!--<div class="row row-wrap">
+                            <div class="col col-50" ng-repeat="plate in plates track by plate.$id">
+                                <div class="plate-card">
+                                    <div class="plate-card__img">
+                                        <img ng-src="{{plate.image}}" ng-click="vm.showPlateDetails(plate)">
+                                    </div>
+                                    <div class="plate-card__body">
+                                        <h1 class="plate-card__title">{{plate.name}}</h1>
+                                        <p class="plate-card__price">R$ {{plate.price }}</p>
+                                        <div class="plate-card__footer">
+
+
+                                            <div class="plate-card__rating">
+
+                                                <div class="plate-card__stars">
+                                                    <i class="ion-android-star" ng-repeat="i in plateRatingInteger(plate.rating) track by $index"></i>
+                                                    <i
+                                                        class="ion-android-star-outline" ng-repeat="j in leftToMaxplateRatingInteger(plate.rating) track by $index"></i>
+                                                </div>
+                                            </div>
+
+                                            <div class="plate-card__button-area">
+                                                <button ng-click="vm.quickAddToCart(plate)" class="but but--icon but--mustard ion-plus-round"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

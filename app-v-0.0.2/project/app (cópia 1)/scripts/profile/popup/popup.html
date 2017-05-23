@@ -1,0 +1,27 @@
+<!-- Header-->
+<div class="header">
+    <div class="title">
+        Alterar os dados
+    </div>
+
+    <hr>
+</div>
+
+<!-- Mensagem de corpo -->
+<div class="body">
+    <p>Tem certeza que deseja alterar os dados?</p>
+</div>
+
+<!-- Rodapé/Botões -->
+<div class="row footer">
+    <!-- Botão de câmera -->
+    <button class="col col-45 button camera" ng-click="vm.updateUserFB(vm.user)">
+        Sim
+    </button>
+    <!-- Espaço vazio para preencher o grid -->
+    <div class="col col-10"></div>
+    <!-- Botão de galeria -->
+    <button class="col col-45 button picker" ng-click="vm.closePopup()">
+        Não
+    </button>
+</div>

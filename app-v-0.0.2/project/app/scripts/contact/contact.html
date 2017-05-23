@@ -1,0 +1,32 @@
+<ion-view  view-title="Contato" cache-view="false">
+    
+    <ion-content>
+        <form ng-submit="vm.sendMessage()" novalidate name="vm.messageForm" style="text-align:center">
+            <div class="register-view validation">
+                <div class="center">
+                    <h2>Olá, {{vm.viewName}}</h2>
+                </div>
+                
+                <ion-list>
+                    <div>
+                        <ion-item ng-class="{invalid: vm.messageForm.notice.$error.required && vm.messageForm.notice.$touched}">
+                            <label class='item-floating-label'>
+                                <label class="input-label inline">Assunto</label>
+                            <input type="text" name="notice" ng-model="vm.dataForm.notice" placeholder="Assunto" required class="text-center" />
+                            </label>
+                        </ion-item>
+                        <ion-item ng-class="{invalid: vm.messageForm.message.$error.required && vm.messageForm.message.$touched}">
+                            <label class='item-floating-label'>
+                                <label class="input-label inline">Mensagem</label>
+                                <textarea placeholder="Mensagem" ng-model="vm.dataForm.message" style="text-align: center" required></textarea>
+                            </label>
+                        </ion-item>
+                    </div>
+                </ion-list>
+            </div>
+            <button type="submit" class="button center-button button-round-large button-round-red">
+                Enviar
+            </button>
+        </form>
+    </ion-content>
+</ion-view>

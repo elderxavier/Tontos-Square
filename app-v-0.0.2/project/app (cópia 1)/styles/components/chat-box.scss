@@ -1,0 +1,105 @@
+// Variables
+$font-family:                $default-font-family;
+$font-size:                  $default-font-size;
+$chat-color:                 #D93C4F;
+//end
+
+h1.chat-title {
+    font-size: 1em;
+    font-family: $font-family;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    line-height: 44px;
+    display: inline-block;
+    margin: 0;
+    width: 70%;
+    vertical-align: middle;
+}
+
+div.chat-thumb {
+    height: 36px;
+    width: 36px;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    right: 0;
+    margin-right: 5px;
+    
+    img {
+        height: 36px;
+        width: 36px;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+}
+
+.cb__message-wrapper {
+    display: block;
+    margin-bottom: 10px;
+  
+    .cb__break {
+        clear: both;
+    }  
+    
+    .cb__message {
+        padding: 8px 10px;
+        border-radius: 20px;
+        color: #fff;
+        background-color: $chat-color;
+        max-width: 60%;
+        display: inline-block;
+        border: 1px solid $chat-color;
+        float: right;
+        font-family: $font-family;
+    }
+
+    .cb__message--receiver {
+        color: $chat-color;
+        border: 1px solid $chat-color;
+        background-color: transparent;
+        float: left;
+        
+    }
+}
+
+.cb-footer textarea::-webkit-input-placeholder {
+    color: #adadad;
+}
+
+.cb-footer {
+
+    form {
+        width: 100%;
+    }
+    
+    textarea {
+        display: inline-block;
+        resize: none;
+        vertical-align: middle;
+        height: 1em;
+        margin: 10px 0 0 10px;
+        padding: 0;
+        width: 75%;
+        font-family: $font-family;
+    }
+    
+    .cb-footer__send-btn {
+        position: absolute;
+        right: 10px;
+        color: $chat-color;
+        font-weight: bold;
+        margin-top: 2px;
+        font-family: $font-family;
+        border: none;
+        background: transparent;
+    }
+}
+
+.bar-footer.cb-footer {
+    border-top: 1px solid #ddd;
+    min-height: 44px;
+    height: auto;
+}
+

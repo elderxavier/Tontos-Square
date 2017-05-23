@@ -1,0 +1,7 @@
+{
+  "name": "eater",
+  "app_id": "78ceb3fc",
+  "gulpStartupTasks": [
+    "default"
+  ]
+}

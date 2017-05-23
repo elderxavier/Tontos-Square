@@ -1,0 +1,32 @@
+.search-bar {
+    background-color: $grey-lighter;
+    padding: 5px;
+    margin-top: 4px;
+    width: 100%;
+
+    .search-bar__text-field {
+        box-sizing: border-box;
+        border-radius: 5px;
+        text-align: center;
+        width: 100%;
+    }
+
+    i{
+        position: absolute;
+        left: 35%;
+        line-height: 34px;
+        font-size: 1.2em;
+        padding-top: 1px;
+    }
+}
+
+.search-bar.on-focus {
+    .search-bar__text-field {
+        text-align: left;
+        padding-left: 30px;
+    }
+
+    i{
+        left: 5%;
+    }
+}

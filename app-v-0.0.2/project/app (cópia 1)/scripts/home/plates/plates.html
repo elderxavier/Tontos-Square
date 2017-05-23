@@ -1,0 +1,26 @@
+<div ng-controller="HomePlatesController">
+    <div class="divider">
+        <h1 class="divider__title"><span>Em destaque</span></h1>
+        <plates-carousel></plates-carousel>
+    </div>
+
+    <div class="divider">
+        <h1 class="divider__title"><span>{{currentCategory === '0-all' ? "Todos os produtos" : currentCategory.title}}</span></h1>
+        <div class="row row-wrap">
+            <div class="col col-50"
+                 ng-repeat="plate in normal track by $index">
+                <plate-card
+                    plate-object="plate"
+                    show-plate-details-function="showPlateDetails(plate)"
+                    quick-add-to-cart-function="quickAddToCart(plate)"
+                    go-labor-function="goLabor()"
+                    set-checkout-mode-function="setCheckoutMode(plate)"
+                    is-at-hand-function="isAtHand(plate)">
+                </plate-card>
+            </div>
+        </div>
+    </div>
+
+    <ion-infinite-scroll ng-if="thereIsMore()" on-infinite="fetch()" ng-hide="noMore">
+    </ion-infinite-scroll>
+</div>

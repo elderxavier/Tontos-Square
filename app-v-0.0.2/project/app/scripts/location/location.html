@@ -1,0 +1,34 @@
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+<ion-view view-title="Localização" cache-view="false" hide-back-button="true">   
+    <ion-nav-buttons side="left">               
+        <button class="button button-clear button-icon light ion-navicon-round" menu-toggle="left" id="menu-button"></button>
+    </ion-nav-buttons>
+    <div ng-if="vm.isGpsOn()" data-tap-disabled="true">
+        <ion-content >
+            <ng-map center="[{{vm.getCenterPositionLatitude()}}, {{vm.getCenterPositionLongitude()}}]" ng-class="{ 'ng-map': vm.isConfirmed(), 'ng-map-with-button': !vm.isConfirmed() }"
+                    class="ng-map-with-button" disable-default-u-i="true">
+                <marker position="[{{vm.getMarkerPositionLatitude()}}, {{vm.getMarkerPositionLongitude()}}]" centered="true" draggable="true"
+                        on-dragend="vm.updateLocation()"></marker>
+            </ng-map>           
+        </ion-content>
+        <ion-footer-bar ng-if="vm.isGpsOn()"  align-title="center" style="display: inline-block;height: inherit;background: transparent;">
+            <div style='background: white;opacity: 0.9;'>
+                <input style="padding-left: 10px" id="focus-item" class='input-location' type="text" ng-model="vm.address" placeholder="Digite sua localização">
+                <button class="icon ion-edit button-map-edit" ng-click="vm.manualInput()">
+            </div>
+            <button ng-click="vm.confirmLocation()"  class="button button-round-light button-map-confirm">Confirmar Local</button>
+        </ion-footer-bar>
+    </div>
+    <div ng-if="!vm.isGpsOn()" data-tap-disabled="true">
+        <ion-content class="padding margin-top-70">
+            <div class="location-content">
+                <h1>Endereço de Entrega</h1>
+                <i class="icon ion-navigate large-font blue encircled"></i>
+                <h3>Não temos acesso a sua localização.</h3>
+                <p class="margin-bottom-30">Você pode autorizar o Eater a obter sua localização automaticamente nos ajustes do aparelho.</p>
+                <a class="button button-block button-round-light" ng-click="vm.goToSettings()">IR PARA AJUSTES</a>
+            </div>
+        </ion-content>
+    </div>
+</div>
+</ion-view>

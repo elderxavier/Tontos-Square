@@ -1,0 +1,25 @@
+<ion-view view-title="Entrega" cache-view="false">
+
+    <!-- Sobrescrita da nav-bar para a retirada do ícone de menu -->
+	<ion-nav-bar class="bar-stable no-box-shadow">
+
+		<!-- Sobrescrita do botão de voltar -->
+		<ion-nav-back-button class="button-icon">
+			<img class="custom-back-icon" ng-src="images/icons/common/back-white.png" />
+		</ion-nav-back-button>
+
+	</ion-nav-bar>
+	<!-- /Sobrescrita da nav-bar para a retirada do ícone de menu -->
+
+    <ion-content>
+        <ion-list>
+            <ion-item class="item-icon-left item-icon-left-extended item-text-wrap" ng-click="proceed(false)">
+                <i class="icon ion-ios-home"></i>
+                Entregar em meu domicílio
+            </ion-item>
+            <ion-item class="item-icon-left item-icon-left-extended item-text-wrap" ng-click="proceed(true)">
+                <i class="icon ion-bag"></i>
+                Vou retirar pessoalmente
+            </ion-item>
+        </ion-list>
+</ion-view>

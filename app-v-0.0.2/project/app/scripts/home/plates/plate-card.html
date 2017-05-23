@@ -1,0 +1,45 @@
+<div class="plate-card">
+	<!-- Imagem -->
+	<div class="plate-card__img">
+		<img src="./images/spinner.gif" lazy-img="{{plateObject.image}}" ng-click="showPlateDetailsFunction({plate: plateObject})">
+	</div>
+	<!-- /Imagem -->
+	<!-- Informações -->
+	<div class="plate-card__body">
+		<!-- Título -->
+		<h1 class="plate-card__title">{{plateObject.name}}</h1>
+		<!-- Preço -->
+		<div>
+			<p class="plate-card__price">{{plateObject.price | formatPrice}}</p>
+		</div>
+		<!-- Nota e botão de compra -->
+		<div class="row" style="margin-top: -15px">
+			<!-- Nota -->
+			<div class="col col-67 plate-card__rating">
+				<div class="plate-card__rating-title">
+					Avaliação:
+				</div>
+				<rating-stars class="plate-card__stars" rating-value="{{plateObject.rating}}"></rating-stars>
+			</div>
+			<!-- Botão de compra -->
+			<div class="col col-33" style="text-align: right; margin-left: 3px; margin-top: 4px">
+				<button style="height: 30px; width: 30px" ng-if="isAtHandFunction({plate: plateObject});" ng-click="quickAddToCartFunction({plate: plateObject});" class="but but--icon but--mustard ion-plus"></button>
+				<img src="images/icons/_0000_icn_calendar.png" style="height: 30px; width: 30px; padding: 6px;" ng-if="!isAtHandFunction({plate: plateObject});" ng-click="setCheckoutModeFunction({plate: plateObject}) || goLaborFunction();" class="but but--icon but--mustard"></button>
+			</div>
+		</div>
+		<!-- /Nota e botão de compra -->
+		<!--<div class="plate-card__footer">
+            <div class="plate-card__rating">
+                <div class="plate-card__rating-title">
+                    Nota
+                </div>
+                <rating-stars class="plate-card__stars" rating-value="{{plateObject.rating}}"></rating-stars>
+            </div>
+            <div class="plate-card__button-area">
+                <button ng-if="isAtHandFunction({plate: plateObject});" ng-click="quickAddToCartFunction({plate: plateObject});" class="but but--icon but--mustard ion-ios-cart"></button>
+                <button ng-if="!isAtHandFunction({plate: plateObject});" ng-click="goLaborFunction() || setCheckoutModeFunction({plate: plateObject})" class="but but--icon but--mustard ion-ios-calendar-outline"></button>
+            </div>
+        </div>-->
+	</div>
+	<!-- /Informações-->
+</div>

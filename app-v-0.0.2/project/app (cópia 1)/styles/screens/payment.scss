@@ -1,0 +1,179 @@
+.ngdialog.payment-modal {
+    padding: 5%;
+    z-index: 3;
+}
+
+.ngdialog.payment-modal .ngdialog-content {
+    position: relative;
+    border-radius: 5px 5px;
+    width: 100%;
+    height: 100%;
+}
+
+
+.ngdialog.payment-modal .ngdialog-content {
+    background-color: #F9F9F9;
+    padding-bottom: 25px;
+
+    .header {
+        padding: 15px 20px;
+
+        .close {
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            height: 15px;
+            width: 15px;
+            background: transparent url('../images/x.png') top left no-repeat;
+            background-size: contain;
+        }
+
+        h1 {
+            margin: 0;
+            font-family: inherit;
+            font-size: 1.3em;
+            text-align: center;
+            color: #000;
+            font-weight: bold;
+        }
+    }
+
+    h3 {
+        margin: 0;
+        background-color: #fff;
+        font-weight: normal;
+        font-size: 1em;
+        padding: 15px 0;
+        color: #000;
+        display: inline-block;
+    }
+
+    .button.proceed {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* ----------- FORM ------------ */
+
+.payment-form__field {
+    width: 100%;
+    margin-bottom: 15px;
+    label {
+        width: 100%;
+        color: #000;
+        text-align: center;
+        position: relative;
+        top: 6px;
+    }
+}
+
+.payment-form__inline {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.payment-form__inline.w75 {
+    width: 74%;
+}
+
+.payment-form__inline.w20 {
+    width: 20%;
+}
+
+.payment-form__inline.w50 {
+    width: 50%;
+}
+
+input.payment-form__input {
+    background-color: transparent;
+    border-bottom: 1px solid #000;
+    width: 100%;
+    text-align: center;
+    font-weight: normal;
+    border-radius: 0 !important;
+}
+
+/*----------------- end Form -------------*/
+
+.payment-address__section {
+    background-color: #fff;
+    padding: 0 15px;
+    margin-left: -25px;
+    margin-right: -25px;
+}
+
+.payment-address {
+    border-top: 1px solid #c1c1c1;
+    padding: 15px 0;
+    text-align: center;
+    .payment-address__content {
+        font-size: 1em;
+        color: #000;
+    }
+}
+
+.payment-screen {
+
+    h1 {
+        font-size: 1.5em;
+        color: #000;
+        margin: 30px 15px 20px 15px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .card-selection {
+        background-color: #fff;
+        padding: 0 15px;
+    }
+
+    .card-item {
+        position: relative;
+        border-bottom: 2px solid #c9c9c9;
+        padding: 15px 0;
+        &:last-child {
+            border: 0;
+        }
+        span {
+            display: inline-block;
+            color: #a1a1a1 !important;
+        }
+        span.card-item__number {
+            width: 95%;
+            z-index: 1;
+            color: #000 !important;
+            text-align: center;
+        }
+        span.card-item__delete {
+            position: absolute;
+            right: 0;
+            z-index: 2;
+            font-size: 1.3em;
+            margin-top: 0.1em;
+        }
+        span.card-item__select {
+            position: absolute;
+            left: 0;
+            z-index: 2;
+            font-size: 1.3em;
+            margin-top: 0.1em;
+        }
+    }
+
+    .card-item__new {
+        text-align: right;
+        margin-top: 20px;
+        padding: 0 15px;
+        button {
+            background-color: transparent;
+            padding: 5px 20px;
+            color: #D93C4F;
+            border: 1px solid #D93C4F;
+            border-radius: 25px;
+        }
+    }
+
+}

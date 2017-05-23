@@ -1,0 +1,164 @@
+@import '../modules/global-variables';
+// Variables
+$font-family : $default-font-family;
+$font-size : $default-font-size;
+//end
+.carousel-scroll {
+	width: 100%;
+	display: block;
+	white-space: nowrap;
+}
+
+.carousel-scroll::-webkit-scrollbar {
+	display: none;
+}
+
+.carousel-scroll .scroll-bar-indicator {
+	display: none;
+}
+
+//featured-card
+.featured-card {
+	font-family: $font-family;
+	font-size: $font-size;
+	margin-bottom: 1px;
+	margin-top: 10px;
+	display: inline-block;
+    margin: 15px 5px 0 5px;
+}
+
+.featured-card__header {
+	display: block;
+}
+
+.featured-card:first-child {
+	margin-left: 5px;
+}
+
+.featured-card__body {
+	box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+	white-space: normal;
+	background-color: #fff;
+	padding: 4px 10px 20px 10px;
+	width: 285px;
+    height: 100px;
+}
+
+.featured-card__img {
+    height: 191px;
+    width: 285px;
+    background-color: white;
+    border-radius: 4px 4px 0 0;
+	img {
+		margin-top: calc(33% + 1px);
+		margin-left: 50%;
+		transform: translate(-50%, -50%);
+		border-radius: 4px 4px 0 0;
+		height: 190px;
+		width: auto;
+		padding-right: 5px;
+		padding-left: 5px;
+	}
+}
+
+h1.featured-card__header__title {
+	font-family: inherit;
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #000;
+	width: 70%;
+	margin-bottom: 10px;
+	display: inline-block;
+	white-space: nowrap;
+}
+
+.featured-card__header__price {
+	color: #000;
+	font-family: inherit;
+	font-size: 1.2em;
+	font-weight: bold;
+	width: 28%;
+	text-align: right;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.featured-card__content {
+	display: block;
+	height: 64px;
+}
+
+.featured-card__content__chef-img {
+	display: inline-block;
+	margin-right: 10px;
+	width: 64px;
+	height: 64px;
+	vertical-align: middle;
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.featured-card__content__chef-img--rounded {
+	img {
+		border-radius: 30px;
+	}
+}
+
+.featured-card__content__details {
+	width: 38%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.featured-card__content__rating {
+	display: inline-block;
+	border-left: 2px solid #e1e1e1;
+	width: 30%;
+	text-align: center;
+	vertical-align: middle;
+	padding: 0 0 0 5px;
+}
+
+h2.featured-card__rating-title {
+	font-size: 0.9em;
+	font-family: inherit;
+	font-weight: 800;
+	color: #c1c1c1;
+	margin: 5px 0 5px 0;
+}
+
+h2.featured-card__chef-name {
+	font-size: .9em;
+	font-family: inherit;
+	font-weight: normal;
+	color: #000;
+	margin: 0;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.featured-card__category,
+.featured-card__chef-plate-number {
+	font-size: .8em;
+	font-family: inherit;
+	font-weight: normal;
+	color: #c1c1c1;
+	margin: 0;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.featured-card__stars {
+	white-space: nowrap;
+	i {
+		font-size: 1.1em;
+		color: #F89F32;
+		margin-left: 3px;
+	}
+	i:first-child {
+		margin-left: 0;
+	}
+}

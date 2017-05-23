@@ -1,0 +1,17 @@
+<ion-item class="filter-price-view home-filter-container">
+    <!--<div class="filter-title">
+        <span class="input-label">
+            <i class="pull-left icon ion-close" ng-click="close()"></i>
+            <strong>Filtro</strong>
+        </span>
+    </div>-->
+    <div class="filter-title">
+        <span class="input-label"><strong>Preço máximo</strong></span>
+    </div>
+    <div class="item range range-stable">
+        <rzslider rz-slider-model="vm.filter.price.current" rz-slider-options="vm.rzGetOptions()"></rzslider>
+    </div>
+    <div style="text-align: center;padding-bottom: 20px;">
+        <p>R$ {{vm.filter.price.current}}</p>
+    </div>    
+</ion-item>

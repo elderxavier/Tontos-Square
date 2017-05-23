@@ -1,0 +1,38 @@
+@import '../modules/global-variables';
+
+
+// Variables 
+$toggle-color:                  $default-brand-color;
+$toggle-color-inverse:           #fff;
+
+//end
+    
+
+.tgl {
+    border-radius: 30px;
+    border: 1px solid $toggle-color;
+    width: 150px;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.tgl__button {
+    flex: 1;
+    padding: 6px 12px;
+    text-align: center;
+    color: $toggle-color;
+    font-weight: 800;
+}
+
+.tgl__button--left {
+    border-radius: 15px 0 0 15px;
+}
+
+.tgl__button--right {
+    border-radius: 0 15px 15px 0;
+}
+
+.tgl__button.selected {
+    background-color: $toggle-color;
+    color: $toggle-color-inverse;
+}

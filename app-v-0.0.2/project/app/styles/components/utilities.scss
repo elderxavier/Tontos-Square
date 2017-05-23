@@ -1,0 +1,33 @@
+.centralize-block {
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+
+.margin-right-10 {
+    margin-right: 10px;
+}
+
+.row-wrap {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.element-right {
+    float: right;
+    width: 100%;
+}
+
+.margin-vertical {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}

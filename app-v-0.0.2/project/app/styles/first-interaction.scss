@@ -1,0 +1,213 @@
+@media screen and (min-height: 400px) {
+    .first-interaction-content {
+        margin: 0 auto;
+    }
+
+    .first-interaction-logo {
+        margin-bottom: 5px;
+    }
+
+    .first-interaction__footer {
+        margin: 0;
+        a.button {
+            margin: 0;
+            min-height: 24px;
+            line-height: 24px;
+        }
+    }
+
+    .first-interaction-menu {
+        margin-top: 0;
+    }
+}
+
+@media screen and (min-height: 481px) {
+    .first-interaction-content {
+        margin: 5px auto 0 auto;
+    }
+    .container_form_menu {
+        margin-top: 5px;
+    }
+    .first-interaction__footer {
+        margin-top: 25px;
+    }
+    .first-interaction-logo {
+        margin-bottom: 20px;
+    }
+    .first-interaction-menu {
+        margin-top: 15px;
+    }
+}
+
+@media screen and (min-height: 640px) {
+    .first-interaction-content {
+        margin: 35px auto 0 auto;
+    }
+
+    .first-interaction__footer {
+        margin-top: 35px;
+    }
+
+    .container_form_menu {
+        margin-top: 20px;
+    }
+
+    .first-interaction-menu {
+        margin-top: 15px;
+    }
+
+    .first-interaction-logo {
+        margin-bottom: 20px;
+    }
+}
+.first-int-label{
+  background-color: transparent;
+  border: 0;
+  padding: 0px;
+  i{
+    color: white;
+  }
+}
+
+.first-interaction-btn2 {
+    background-color: #F07248;
+    color: #FFFFFF;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.center {
+    text-align: center;
+}
+
+.eater-logo {
+    padding-top: 0px;
+}
+
+.user-info {
+    height: 230px;
+}
+
+.first-interaction-content {
+    width: 80%;
+    font-family: "MyriadPro";
+    font-size: 14px;
+    color: #FFFFFF;
+    h2 {
+        font-family: "MyriadPro";
+        font-size: 24px;
+        white-space: nowrap;
+        font-weight: normal;
+        color: inherit;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    a {
+        padding-bottom: 1px;
+        margin-bottom: 1px;
+    }
+}
+
+.btn-block {
+    display: block;
+}
+
+hr.half {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.first-interaction-logo {
+    margin-top: 30px;
+    img {
+        width: 50%;
+        height: auto;
+    }
+}
+
+.first-interaction-bg {
+    background-image: url("../images/first_interaction_bg.png");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container_form_menu {
+    padding: 0 25px;
+}
+
+.form-style input {
+    box-sizing: border-box;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    display: block;
+    width: 100%;
+    margin: 5px auto;
+    &:first-child {
+        margin-top: 0;
+    }
+    padding: 30px;
+    padding-bottom: 10px;
+    border: none;
+    bottom: 0;
+    top: 80%;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+    margin-bottom: 1px;
+    font-family: "MyriadPro";
+    font-size: 14px;
+    color: #FFFFFF;
+    height: 5px;
+    border-radius: 0;
+}
+
+//------------------MODAL---------------
+.login-logo {
+    margin-top: 10px;
+    img {
+        width: 50%;
+        height: auto;
+    }
+}
+
+.login-bg {
+    background-image: url("../images/first_interaction_bg.png");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.login-menu {
+    position: relative;
+    padding: 60px;
+    top: 20%;
+    width: 100%;
+}
+
+.login-content {
+    width: 80%;
+    margin: 5px auto;
+    font-family: "MyriadPro";
+    font-size: 14px;
+    color: #FFFFFF;
+    h3 {
+        font-size: 1em;
+        color: inherit;
+        text-align: center;
+    }
+}
+
+.float-text {
+    color: #FFFFFF;
+    font-family: "MyriadPro";
+    font-size: 14px;
+    float: right;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+.platform-ios #bgvid {
+
+display: none;
+
+}

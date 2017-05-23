@@ -1,0 +1,79 @@
+// Variables
+$st-border:                     #c1c1c1;
+$st-border-selected:            #F89F32;
+// End
+
+.st-tabs {
+    width: 100%;
+
+    .st-tabs__body {
+        display: block;
+        white-space: nowrap;
+    }
+
+    .st-tabs__item {
+        display: inline-block;
+        border-top: 1px solid white;
+        line-height: 36px;
+        padding: 0 15px;
+        margin-right: 0;
+        text-align: center;
+        font-size: 12px;
+        // margin-left: -4px;   if you are not using ng-repeat, uncomment that !
+        // For understanding google CSSTrick Inline spaces
+        text-transform: uppercase;
+        vertical-align: top;
+        padding-top: 1px;
+    }
+
+    .st-tabs__item.selected {
+        border-bottom: 3px solid $st-border-selected;
+        line-height: 33px;
+        padding-top: 3px;
+        font-weight: 800;
+    }
+}
+
+.st-tabs--light {
+	background-color: $grey-lighter;
+	height: 38px;
+	.st-tabs__item {
+		color: #bdbdbd;
+		border-top: 0;
+		border-bottom: 2px solid $grey-lighter;
+		&.selected {
+			border-bottom-color: $st-border-selected;
+			color: $st-border-selected;
+		}
+	}
+}
+
+.st-tabs.st-tabs--red {
+    background-color: #AC3440;
+    height: 40px;
+    .st-tabs__item {
+        color: #fff;
+    }
+}
+
+
+//---- For This App Purposes
+.st-tabs {
+    z-index: 9;
+    position: fixed;
+}
+
+.st-scroll {
+    width: 100%;
+    .st-tabs__item {
+        margin-top: 1px;
+    }
+}
+
+.st-scroll .scroll-bar-indicator {
+    display: none;
+}
+
+.st-scroll::-webkit-scrollbar {
+    display: none;
+}

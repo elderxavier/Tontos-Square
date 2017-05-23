@@ -1,0 +1,177 @@
+@import './modules/global-variables';
+
+.bg-transparent {
+    background-color: transparent;
+}
+
+.validation .invalid input {
+  border-color: #d93446 !important;
+}
+
+.validation .invalid label {
+  color: #d93446 !important;
+}
+
+.center-button {
+  margin: 10px auto 10px auto;
+  display: block;
+}
+
+$review-font: $default-font-family;
+
+$red-eater: rgb(217, 52, 70);
+
+@mixin button($bg-color, $color, $border) {
+    width: 85px;
+    border-radius: 50px;
+    font-size: 15px;
+    color: $color;
+    border: $border;
+    background-color: $bg-color;
+    margin-top: 0px;
+}
+
+@mixin buttonbar($br, $color, $bg-color, $border) {
+    border-radius: $br;
+    font-size: 20px;
+    color: $color;
+    border: $border;
+    background-color: $bg-color;
+    margin-top: 0px;
+    font-size: 10px;
+}
+
+@mixin terms($float){
+    color: rgb(172, 52, 64);
+    float: $float;
+    text-decoration: underline;
+    font-family: $default-font-family;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.bg-transparent {
+    background-color: transparent;
+}
+
+.registerPhotoCard {
+    margin: auto;
+    display: block;
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+    border: solid 3px #bdbdbd;
+}
+
+.register-add-label {
+    text-decoration: underline;
+    color: #d93c4f !important;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.has-input{
+    top: 10px !important;
+    font-weight: lighter;
+    display: inline;
+    font-size: 12px !important;
+    padding:0px !important;
+}
+.input-label{
+  font-size:12px!important;
+  padding:0px !important;
+}
+
+.ng-not-empty{
+font-weight: bold;
+font-size: 16px !important;
+
+}
+.ng-empty{
+font-weight: normal;
+
+}
+
+.divider-register {
+    border-color: transparent;
+    text-align: center;
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-left: -25px;
+    margin-right: -25px;
+}
+
+.row-register {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.button-period-active {
+    @include button($color: white, $bg-color: $red-eater, $border: 1px solid $red-eater);
+}
+
+.button-period-inactive {
+    @include button($color: rgb(189, 189, 189), $bg-color: transparent, $border: 1px solid rgb(189, 189, 189));
+}
+
+.button-first-active {
+    @include buttonbar($br: 50px 0px 0px 50px, $color: white, $bg-color: $red-eater, $border: 1px solid $red-eater);
+    margin-left: 0px;
+}
+
+.button-first-inactive {
+    @include buttonbar($br: 50px 0px 0px 50px, $color: rgb(189, 189, 189), $bg-color: transparent, $border: 1px solid rgb(189, 189, 189));
+}
+
+.button-second-active {
+    @include buttonbar($br: 0, $color: white, $bg-color: $red-eater, $border: 1px solid $red-eater);
+}
+
+.button-second-inactive {
+    @include buttonbar($br: 0, $color: rgb(189, 189, 189), $bg-color: transparent, $border: 1px solid rgb(189, 189, 189));
+}
+
+.button-third-active {
+    @include buttonbar($br: 0px 50px 50px 0px, $color: white, $bg-color: $red-eater, $border: 1px solid $red-eater);
+}
+
+.button-third-inactive {
+    @include buttonbar($br: 0px 50px 50px 0px, $color: rgb(189, 189, 189), $bg-color: transparent, $border: 1px solid rgb(189, 189, 189));
+}
+
+.checkbox-padding .checkbox-icon {
+    //margin-left: 20px !important;
+    // margin-right: -20px !important;
+}
+
+.register-checkbox{
+    margin-top: 10px;
+    margin-bottom: 10px !important;
+    margin-left: 10px;
+    background-color: transparent;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    text-align: left;
+    color: black;
+    font-family: $default-font-family
+}
+
+.terms{
+    @include terms($float: left);
+}
+
+.privacy{
+    @include terms($float: right);
+}
+
+.card-secondary{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: -25px;
+    margin-right: -25px;
+    background-color: white;
+}

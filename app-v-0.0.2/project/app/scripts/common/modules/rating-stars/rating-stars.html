@@ -1,0 +1,3 @@
+<div ng-controller="RatingStarsController">
+    <i ng-repeat="i in [1,2,3,4,5] track by $index" class="ion-android-star" ng-style="i <= ratingValue ? {'color':'#F89F32'} : {'color':'#bdbdbd'}"></i>
+</div>

@@ -1,0 +1,34 @@
+<ion-view view-title="{{vm.category}}" cache-view="false">
+	<ion-nav-buttons side="right">
+		<button class="button button-clear icon ion-ios-cart" ng-click="vm.showCart()"></button>
+	</ion-nav-buttons>
+
+	<ion-content>
+		<div ng-repeat="p in vm.plates" ng-if="$index%2 == 0" class="row colums-two">
+			<div class="card col" ng-click="vm.showPlateDetails(vm.plates[$index].guid)">
+				<div class="item item-image">
+					<img ng-src="{{vm.plates[$index].image}}">
+				</div>
+
+				<a class="item">
+					<h3>{{vm.plates[$index].name}}</h3>
+					<h4>{{vm.plates[$index].price | currency : 'R$' : 2}}</h4>
+				</a>
+			</div>
+
+			<div ng-style="{'visibility': !!vm.plates[$index + 1] ? 'visible' : 'hidden'}" class="card col"
+				ng-click="vm.showPlateDetails(vm.plates[$index + 1].guid)">
+				<div class="item item-image">
+					<img ng-src="{{vm.plates[$index + 1].image}}">
+				</div>
+
+				<a class="item">
+					<h3>{{vm.plates[$index + 1].name}}</h3>
+					<h4>{{vm.plates[$index + 1].price | currency : 'R$' : 2}}</h4>
+				</a>
+			</div>
+
+		</div>
+
+	</ion-content>
+</ion-view>

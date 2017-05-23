@@ -1,0 +1,107 @@
+<ion-view cache-view="false" cache-view="false">
+    <ion-nav-bar class="bar-stable no-box-shadow">
+        <ion-nav-back-button class="button-icon">
+            <img class="custom-back-icon" ng-src="images/icons/common/back-white.png" />{{}}
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-title style="left: 0 !important;">
+        <!--<img class="title-image register" src="images/logoEater.png">-->
+        <div class="nav-title">Dados Pessoais</div>
+    </ion-nav-title>
+    <ion-content class="has-header">
+        <div class="default-form validation">
+            <!-- Foto do chef -->
+            <div class="center">
+                <!--<h2>Dados Pessoais</h2>-->
+                <!--<p> Sua Foto</p>-->
+                <div style="text-align: center; padding: 0px; background-color: white">
+                    <img class="img-user" ng-src="{{vm.user.fullPath}}" ng-click="vm.openModal()">
+                </div>
+            </div>
+            <form novalidate name="vm.registerForm" style="text-align:center" ng-submit="validateForm(vm.registerForm, 'register-client') && vm.submitForm(vm.registerForm)">
+                <ion-list>
+                    <!--Dados Pessoais -->
+                    <div>
+                        <!-- E-mail -->
+                        <div class="card">
+                            <ion-item ng-class="{invalid: (vm.registerForm.email.$error.required && vm.registerForm.email.$touched) || (!vm.registerForm.email.$error.required && vm.registerForm.email.$invalid && vm.registerForm.email.$touched)}">
+                                <label class='item-floating-label'>
+                                    <label class="input-label inline floating-label">Email</label>
+                                    <input type="email" name="email" ng-model="vm.user.email" placeholder="Email" onfocus="this.placeholder='usuario@email.com'"
+                                    ng-blur="vm.emailCheck()" required class="text-center" ng-minlength="6" />
+                                </label>
+                            </ion-item>
+                        </div>
+                        <!-- Nome -->
+                        <div class="card">
+                            <ion-item ng-class="{invalid: vm.registerForm.displayName.$error.required && vm.registerForm.displayName.$touched}">
+                                <label class='item-floating-label'>
+                                <label class="input-label inline">Nome Completo</label>
+                                <input type="text" name="displayName" ng-model="vm.user.displayName" placeholder="Nome Completo" required class="text-center"/>
+                                </label>
+                            </ion-item>
+                        </div>
+                        <!-- Telefone -->
+                        <div class="card">
+                            <ion-item ng-class="{invalid: vm.registerForm.phone.$error.required && vm.registerForm.phone.$touched}">
+                                <label class='item-floating-label'>
+                            <label class="input-label inline floating-label">Telefone</label>
+                                <input type="tel" name="phone" ng-model="vm.user.phone" placeholder="Telefone" onfocus="this.placeholder='(xx) xxxxx-xxxx'"
+                                    onblur="this.placeholder='Telefone'" ui-br-phone-number required class="text-center" />
+                                </label>
+                            </ion-item>
+                        </div>
+                        <!-- CPF -->
+                        <div class="card">
+                            <ion-item ng-class="{invalid: (vm.registerForm.cpf.$error.required && vm.registerForm.cpf.$touched) || (!vm.registerForm.cpf.$error.required && vm.registerForm.cpf.$invalid && vm.registerForm.cpf.$touched)}">
+                                <label class='item-floating-label'>
+                            <label class="input-label inline floating-label">CPF</label>
+                                <input type="tel" name="cpf" ng-model="vm.user.cpf" placeholder="CPF" onfocus="this.placeholder='xxx.xxx.xxx-xx'" onblur="this.placeholder='CPF'"
+                                    required class="text-center" ui-br-cpf-mask />
+                                </label>
+                            </ion-item>
+                        </div>
+                        <!-- Senha -->
+                        <div class="card">
+                            <ion-item ng-class="{invalid: (vm.registerForm.password.$error.required && vm.registerForm.password.$touched) || ( vm.registerForm.password.$error.minlength && vm.registerForm.password.$touched)}">
+                                <label class='item-floating-label'>
+                            <label class="input-label inline floating-label">Senha</label>
+                                <input type="password" name="password" ng-minlength="6" placeholder="Senha" ng-model="vm.user.password" required class="text-center"/>
+                                </label>
+                            </ion-item>
+                        </div>
+                        <!-- Confurmação de senha -->
+                        <div class="card">
+                            <ion-item ng-class="{invalid: (vm.registerForm.passwordConfirmation.$error.required && vm.registerForm.passwordConfirmation.$touched) || (vm.registerForm.passwordConfirmation.$error.match && !vm.registerForm.passwordConfirmation.$untouched)}">
+                                <label class='item-floating-label'>
+                            <label class="input-label inline floating-label">Confirmar Senha</label>
+                                <input type="password" name="passwordConfirmation" placeholder="Confirmar Senha" ng-model="vm.user.passwordConfirmation"
+                                    required match="vm.user.password" class="text-center" />
+                                </label>
+                            </ion-item>
+                        </div>
+                        <!-- Data de nascimento -->
+                        <div class="card">
+                            <ion-item ng-class="{invalid: vm.registerForm.birthday.$error.required && vm.registerForm.birthday.$touched}">
+                                <label class='item-floating-label'>
+                            <label class="input-label inline floating-label">Data de Nascimento</label>
+                                <input type="tel" name="birthday" ng-model="vm.user.birthday" placeholder="Data de Nascimento" onfocus="this.placeholder='xx/xx/xxxx'"
+                                    onblur="this.placeholder='Data de Nascimento'" required class="text-center" mask="39/19/9999"/>
+                                </label>
+                            </ion-item>
+                        </div>
+                    </div>
+                </ion-list>
+                <div class="card-secondary">
+                    <ion-checkbox ng-model="vm.terms" name="terms" ng-required="true" required class="text-center checkbox-padding item-text-wrap register-checkbox">
+                            <span>Aceito os Termos de Uso e a Política de Privacidade</span>
+                    </ion-checkbox>
+                </div>
+                <span class="terms" ng-click="vm.openPopup(0)">Termos de Uso</span>
+                <!--<span> | </span>-->
+                <span class="privacy" ng-click="vm.openPopup(1)"> Política de Privacidade</span>
+                <input type="submit" value="CADASTRAR" class="button-orange" />
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

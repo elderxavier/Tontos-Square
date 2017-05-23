@@ -1,0 +1,58 @@
+<ion-view view-title="Acompanhamento" hide-back-button="true">
+    <!-- <ion-nav-buttons side="right">
+        <button class="button button-clear margin-right-10" ng-click="vm.showFilter()"><i class="fa fa-filter light"></i></button>
+        <button class="button button-clear margin-right-10" ng-click="vm.showCart()"><i class="ion-ios-cart light"></i></button>
+    </ion-nav-buttons> -->
+    <ion-content class="has-header">
+        <h1 style="margin: 30px 0;">Acompanhe seu pedido</h1>
+        <div class='animate-show' ng-show="vm.showHeader" style='background:white;padding: 12px;'>
+            <div class='home-border-message'>
+                <i class="ion-close-round" ng-click="vm.hideHeader()" style="float: left;margin: 10px;color: black;font-size: x-large;"></i>
+                <span ng-click="vm.hideHeader()">
+                    <a style='font-weight:16px;'>{{vm.headerTitle}}</a>
+                    <a style='font-weight:14px;'>{{vm.headerText}}</a>
+              </span>
+            </div>
+        </div>
+        
+        <div class="centralize-block circles-wrapper" style="width: 275px; margin-top: 10px; margin-bottom: 20px;">
+            <div class="circles" ng-class="{selected: vm.status >= 2}">
+                <img class="cicle_icon" ng-src="images/icons/order_status/payment_approved_{{vm.status >= 2 ? 'pink' : 'gray'}}.png" />
+            </div>
+            <div class="line" ng-class="{selected: vm.status >= 3}"></div>
+            <div class="circles" ng-class="{selected: vm.status >= 3}">
+                <img class="cicle_icon" ng-src="images/icons/order_status/pending_order_{{vm.status >= 3 ? 'pink' : 'gray'}}.png" />
+            </div>
+            <div class="line" ng-class="{selected: vm.status >= 4}"></div>
+            <div class="circles" ng-class="{selected: vm.status >= 4}">
+                <img class="cicle_icon" ng-src="images/icons/order_status/being_prepared_{{vm.status >= 4 ? 'pink' : 'gray'}}.png" />
+            </div>
+            <div class="line" ng-class="{selected: vm.status >= 5}"></div>
+            <div class="circles" ng-class="{selected: vm.status >= 5}">
+                <img class="cicle_icon" ng-src="images/icons/order_status/being_delivered_{{vm.status >= 5 ? 'pink' : 'gray'}}.png" />
+            </div>
+            <div class="line" ng-class="{selected: vm.status >= 6}"></div>
+            <div class="circles" ng-class="{selected: vm.status >= 6}">
+                <img class="cicle_icon" ng-src="images/icons/order_status/order_completed_{{vm.status >= 6 ? 'pink' : 'gray'}}.png" />
+            </div>
+        </div>
+        <div class="row" style="padding: 0; margin-top: 25px;">
+            <div class="text-center" style="width: 100%; min-height: 60px; background-color: white; padding: 0px 10px;">
+                <p style="font-weight: 600; color: #c0c0c0; margin: 10px 0px;">Status:</p>
+                <p style="font-size: 16px; color: black; font-weight: 600; margin: 10px 0px;">{{orderText}}</p>
+            </div>
+        </div>
+    </ion-content>
+    <ion-footer-bar style="height: 100px; background-color: transparent; background-image: none;background-size: 0;border: 0;">
+        <div style="margin-bottom: 20px; width: 80%; margin: 0 auto;">
+            <button ng-click="vm.chatWithChef(vm.orderId)" style="width: 100%; height: 40px; border: 2px solid #d93c4f; border-radius: 40px; font-weight: 800; background-color: white; color: #d93c4f; margin-bottom: 10px;">FALAR COM CHEF
+                <div class="chat-badge" ng-if="vm.userUnreadMessagesCount.$value > 0">
+                    <p>{{vm.userUnreadMessagesCount.$value}}</p>
+                </div>
+            </button>
+
+            <button ng-click="vm.voltaHome()" ng-if="vm.status >= 6" style="width: 100%; height: 40px; border: 2px solid #d93c4f; border-radius: 40px; font-weight: 800; background-color: white; color:#d93c4f; margin-bottom: 10px;">VOLTAR PARA A HOME</button>
+            <button ng-click="vm.cancelPurchase()" ng-if="vm.status < 6" ng-disabled="vm.status >= 3" style="width: 100%; height: 40px; border: 2px solid {{ vm.status >= 3 ? '#6e6e6e' : '#d93c4f' }}; border-radius: 40px; font-weight: 800; background-color: white; color: {{ vm.status >= 3 ? '#6e6e6e' : '#d93c4f' }}; margin-bottom: 10px;">CANCELAR PEDIDO</button>
+        </div>
+    </ion-footer-bar>
+</ion-view>

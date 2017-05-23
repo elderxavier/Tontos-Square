@@ -1,0 +1,15 @@
+<ion-view view-title="{{vm.student.name}}" class="student-view">
+    <ion-nav-buttons side="right">
+        <button class="button button-clear" ng-click="vm.showCart()"><i class="ion-ios-cart light large-icon" ng-click="vm.showCart()"></i></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="student-img center">
+            <img ng-src="{{vm.student.image}}" />
+        </div>
+        <div class="row">
+            <div class="col col-25 padding student-chef text-center">
+                <strong>{{vm.student.name}}</strong>
+                <strong>{{vm.student.age}}</strong>
+            </div>
+    </ion-content>
+</ion-view>

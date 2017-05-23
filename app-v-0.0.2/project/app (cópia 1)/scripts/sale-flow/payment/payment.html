@@ -1,0 +1,29 @@
+<ion-view view-title="Pagamento" cache-view="false" class="payment-screen">
+    <ion-nav-bar class="bar-stable no-box-shadow">
+        <ion-nav-back-button class="button-icon">
+            <img class="custom-back-icon" ng-src="images/icons/common/back-white.png" />{{}}
+        </ion-nav-back-button>
+    </ion-nav-bar>
+
+    <form name="vm.paymentMethodForm" ng-submit="validateForm(vm.paymentMethodForm, 'payment') && vm.proceed()" novalidate>
+        <ion-content>
+            <h1>Cartões cadastrados</h1>
+            <div class="card-selection">
+                <div ng-if="!vm.paymentMethods.length" style="text-align: center; padding: 10px 0; color: #000;">
+                    Não existem cartões cadastrados
+                </div>
+                <input type="hidden" name="paymentMethod" ng-model="vm.selectedPaymentMethod" required />
+                <div class="card-item" ng-repeat="paymentMethod in vm.paymentMethods" >
+                    <span class="fa card-item__select" ng-class="{'fa-dot-circle-o': vm.isSelected(paymentMethod), 'fa-circle-o': !vm.isSelected(paymentMethod)}" ng-click="vm.select(paymentMethod)">
+                    </span>
+                    <span class="card-item__number" ng-click="vm.select(paymentMethod)">{{paymentMethod.data.display_number}}</span>
+                    <span class="fa fa-trash-o card-item__delete" ng-click="vm.destroy(paymentMethod)"></span>
+                </div>
+            </div>
+            <div class="card-item__new">
+                <button type="button" ng-click="vm.showModal()">Adicionar cartão</button>
+            </div>
+        </ion-content>
+        <button type="submit" style="border-radius: 5px" class="button button-fixed-bottom button-round-full button-round-red">Continuar</button>
+    </form>
+</ion-view>

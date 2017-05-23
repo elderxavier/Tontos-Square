@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">   
+
+    <title></title>
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/ionic/release/css/ionic.css" />
+    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="bower_components/ng-dialog/css/ngDialog.css" />
+    <link rel="stylesheet" href="bower_components/ng-dialog/css/ngDialog-theme-default.css" />
+    <link rel="stylesheet" href="bower_components/angularjs-slider/dist/rzslider.css" />
+    <link rel="stylesheet" href="bower_components/ion-floating-menu/dist/ion-floating-menu.css" />
+    <link rel="stylesheet" href="bower_components/ion-floating-menu/dist/ion-floating-menu.min.css" />
+    <link rel="stylesheet" href="bower_components/ionic-filter-bar/dist/ionic.filter.bar.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css styles/main.css -->
+    <link href="styles/main.css" rel="stylesheet">
+    <!-- endbuild -->
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+		<link href="styles/ionic.app.css" rel="stylesheet">
+		-->
+    <!-- ionic/angularjs js -->
+
+    <!-- build:js scripts/vendor.js -->
+    <script src="bower_components/conversion.js/conversion.js"></script>
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/ionic/release/js/ionic.js"></script>
+    <script src="bower_components/ionic/release/js/ionic-angular.js"></script>
+    <script src="bower_components/angular-websocket/angular-websocket.min.js"></script>
+    <script src="bower_components/ngCordova/dist/ng-cordova.js"></script>
+    <script src="bower_components/lodash/lodash.js"></script>
+    <script src="bower_components/angular-base64/angular-base64.js"></script>
+    <script src="bower_components/ionic-service-core/ionic-core.js"></script>
+    <script src="bower_components/ionic-service-push/ionic-push.js"></script>
+    <script src="bower_components/date.format/date.format.js"></script>
+    <script src="bower_components/geolib/dist/geolib.js"></script>
+    <script src="bower_components/ng-cordova-oauth/dist/ng-cordova-oauth.js"></script>
+    <script src="bower_components/ionic-toast/dist/ionic-toast.bundle.min.js"></script>
+    <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/angularfire/dist/angularfire.js"></script>
+    <script src="bower_components/angular-input-masks/angular-input-masks-standalone.js"></script>
+    <script src="bower_components/ngMask/dist/ngMask.js"></script>
+    <script src="bower_components/ngmap/build/scripts/ng-map.js"></script>
+    <script src="bower_components/angular-strap/dist/angular-strap.js"></script>
+    <script src="bower_components/angular-strap/dist/angular-strap.tpl.js"></script>
+    <script src="bower_components/angular-viacep/dist/angular-viacep.js"></script>
+    <script src="bower_components/angular-validation-match/dist/angular-validation-match.min.js"></script>
+    <script src="bower_components/angular-repeat-n/dist/angular-repeat-n.js"></script>
+    <script src="bower_components/ionic-rating/ionic-rating.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/angular-moment/angular-moment.js"></script>
+    <script src="bower_components/angular-credit-cards/release/angular-credit-cards.js"></script>
+    <script src="bower_components/ng-dialog/js/ngDialog.js"></script>
+    <script src="bower_components/angularjs-slider/dist/rzslider.js"></script>
+    <script src="bower_components/ng-walkthrough/ng-walkthrough.js"></script>
+    <script src="bower_components/ion-floating-menu/dist/ion-floating-menu.js"></script>
+    <script src="bower_components/ion-floating-menu/dist/ion-floating-menu.min.js"></script>
+    <script src="bower_components/angular-lazy-img/release/angular-lazy-img.js"></script>
+    <script src="bower_components/angular-filter/dist/angular-filter.js"></script>
+    <script src="bower_components/ionic-filter-bar/dist/ionic.filter.bar.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <script src="bower_components/ngmap/build/scripts/ng-map.min.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+    <!-- your app's js -->
+    <!-- build:js scripts/scripts.js -->
+    <!-- include: "type": "js", "files": ["scripts/**/*.module.js", "scripts/**/*.js"] -->
+    <script src="scripts/address-confirmation/address-confirmation.module.js"></script>
+    <script src="scripts/auth/auth.module.js"></script>
+    <script src="scripts/cart/restaurant-cart.module.js"></script>
+    <script src="scripts/categories/categories.module.js"></script>
+    <script src="scripts/chat/chat.module.js"></script>
+    <script src="scripts/chefdetail/chefdetail.module.js"></script>
+    <script src="scripts/chefs/chefs.module.js"></script>
+    <script src="scripts/common/common.module.js"></script>
+    <script src="scripts/common/modules/calendar/calendar.module.js"></script>
+    <script src="scripts/common/modules/rating-stars/rating-stars.module.js"></script>
+    <script src="scripts/common/modules/selector-case/selector-case.module.js"></script>
+    <script src="scripts/common/modules/simple-tabs/simple-tabs.module.js"></script>
+    <script src="scripts/contact/contact.module.js"></script>
+    <script src="scripts/first-interaction/first-interaction.module.js"></script>
+    <script src="scripts/forgot-password/forgot-password.module.js"></script>
+    <script src="scripts/help/help.module.js"></script>
+    <script src="scripts/home/filter/filter.module.js"></script>
+    <script src="scripts/home/home.module.js"></script>
+    <script src="scripts/home/search/search.module.js"></script>
+    <script src="scripts/image/image.module.js"></script>
+    <script src="scripts/iugu/iugu.module.js"></script>
+    <script src="scripts/labor/labor.module.js"></script>
+    <script src="scripts/location/location.module.js"></script>
+    <script src="scripts/loggi/loggi.module.js"></script>
+    <script src="scripts/login-test/login-test.module.js"></script>
+    <script src="scripts/menu/menu.module.js"></script>
+    <script src="scripts/orders/orders.module.js"></script>
+    <script src="scripts/periods/periods.module.js"></script>
+    <script src="scripts/plate/plate.module.js"></script>
+    <script src="scripts/popup/popup.module.js"></script>
+    <script src="scripts/profile/profile-edit/profile-edit.module.js"></script>
+    <script src="scripts/profile/profile.module.js"></script>
+    <script src="scripts/register/register.module.js"></script>
+    <script src="scripts/reviews/review.module.js"></script>
+    <script src="scripts/sale-flow/sale-flow.module.js"></script>
+    <script src="scripts/search/search.module.js"></script>
+    <script src="scripts/tags/tags.module.js"></script>
+    <script src="scripts/time/time.module.js"></script>
+    <script src="scripts/user/user.module.js"></script>
+    <script src="scripts/validation/validation.module.js"></script>
+    <script src="scripts/address-confirmation/add-address/add-address.controller.js"></script>
+    <script src="scripts/address-confirmation/address-confirmation.controller.js"></script>
+    <script src="scripts/address-confirmation/address-confirmation.service.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/auth/auth.service.js"></script>
+    <script src="scripts/auth/openfb.js"></script>
+    <script src="scripts/cart/restaurant-cart.controller.js"></script>
+    <script src="scripts/cart/restaurant-cart.service.js"></script>
+    <script src="scripts/categories/categories.controller.js"></script>
+    <script src="scripts/categories/categories.service.js"></script>
+    <script src="scripts/chat/chat.controller.js"></script>
+    <script src="scripts/chat/chat.service.js"></script>
+    <script src="scripts/chefdetail/chefdetail.controller.js"></script>
+    <script src="scripts/chefs/chefs.controller.js"></script>
+    <script src="scripts/chefs/chefs.service.js"></script>
+    <script src="scripts/common/directives/elastic/elastic.directive.js"></script>
+    <script src="scripts/common/directives/et-toggle/et-toggle.directive.js"></script>
+    <script src="scripts/common/directives/gmaps/gmaps.directive.js"></script>
+    <script src="scripts/common/directives/vertical-scroll/vertical-scroll.directive.js"></script>
+    <script src="scripts/common/filters/formatPrice.js"></script>
+    <script src="scripts/common/modules/calendar/calendar-class.service.js"></script>
+    <script src="scripts/common/modules/calendar/calendar.controller.js"></script>
+    <script src="scripts/common/modules/calendar/calendar.service.js"></script>
+    <script src="scripts/common/modules/rating-stars/rating-stars.controller.js"></script>
+    <script src="scripts/common/services/async.service.js"></script>
+    <script src="scripts/common/services/data/data.service.js"></script>
+    <script src="scripts/common/services/data/firebase-data.service.js"></script>
+    <script src="scripts/common/services/data/local-data.service.js"></script>
+    <script src="scripts/common/services/data/remote-data.service.js"></script>
+    <script src="scripts/common/services/date-class.service.js"></script>
+    <script src="scripts/common/services/event-emitter.service.js"></script>
+    <script src="scripts/common/services/extenal-apps.service.js"></script>
+    <script src="scripts/common/services/html-to-plain-text.service.js"></script>
+    <script src="scripts/common/services/modal-scaffold.service.js"></script>
+    <script src="scripts/common/services/open-hours.service.js"></script>
+    <script src="scripts/common/services/push.service.js"></script>
+    <script src="scripts/common/services/sim.service.js"></script>
+    <script src="scripts/common/services/vertical-scroll.service.js"></script>
+    <script src="scripts/configuration.js"></script>
+    <script src="scripts/contact/contact.controller.js"></script>
+    <script src="scripts/contact/contact.service.js"></script>
+    <script src="scripts/first-interaction/first-interaction.controller.js"></script>
+    <script src="scripts/first-interaction/first-interaction.service.js"></script>
+    <script src="scripts/help/help.controller.js"></script>
+    <script src="scripts/help/help.service.js"></script>
+    <script src="scripts/home/category/category.service.js"></script>
+    <script src="scripts/home/filter/directives/filter-price/filter-price.js"></script>
+    <script src="scripts/home/filter/directives/filter-rating/filter-rating.js"></script>
+    <script src="scripts/home/filter/directives/filter-tag/filter-tag.js"></script>
+    <script src="scripts/home/filter/filter.controller.js"></script>
+    <script src="scripts/home/filter/filter.service.js"></script>
+    <script src="scripts/home/home.controller.js"></script>
+    <script src="scripts/home/home.service.js"></script>
+    <script src="scripts/home/plates/plates.controller.js"></script>
+    <script src="scripts/home/plates/plates.service.js"></script>
+    <script src="scripts/home/search/search.controller.js"></script>
+    <script src="scripts/home/search/search.service.js"></script>
+    <script src="scripts/image/image.service.js"></script>
+    <script src="scripts/internet-connectivity.js"></script>
+    <script src="scripts/iugu/iugu.service.js"></script>
+    <script src="scripts/labor/labor-class.service.js"></script>
+    <script src="scripts/labor/labor-modal.controller.js"></script>
+    <script src="scripts/labor/labor-modal.service.js"></script>
+    <script src="scripts/labor/labor.service.js"></script>
+    <script src="scripts/location/location.controller.js"></script>
+    <script src="scripts/location/location.service.js"></script>
+    <script src="scripts/loggi/loggi.service.js"></script>
+    <script src="scripts/login-test/login-test.controller.js"></script>
+    <script src="scripts/login-test/login-test.service.js"></script>
+    <script src="scripts/menu/menu.controller.js"></script>
+    <script src="scripts/menu/menu.service.js"></script>
+    <script src="scripts/orders/order-status.service.js"></script>
+    <script src="scripts/orders/orders.controller.js"></script>
+    <script src="scripts/orders/orders.service.js"></script>
+    <script src="scripts/periods/periods-modal.controller.js"></script>
+    <script src="scripts/periods/periods-modal.service.js"></script>
+    <script src="scripts/periods/periods.service.js"></script>
+    <script src="scripts/plate/plate.controller.js"></script>
+    <script src="scripts/plate/plate.service.js"></script>
+    <script src="scripts/plate/plates.controller.js"></script>
+    <script src="scripts/popup/popup.service.js"></script>
+    <script src="scripts/profile/profile-edit/profile-edit.controller.js"></script>
+    <script src="scripts/profile/profile-edit/profile-edit.service.js"></script>
+    <script src="scripts/profile/profile.controller.js"></script>
+    <script src="scripts/profile/profile.service.js"></script>
+    <script src="scripts/register/register.controller.js"></script>
+    <script src="scripts/register/register.service.js"></script>
+    <script src="scripts/reviews/review.controller.js"></script>
+    <script src="scripts/reviews/review.service.js"></script>
+    <script src="scripts/sale-flow/address-selection/address-selection.controller.js"></script>
+    <script src="scripts/sale-flow/delivery/delivery.controller.js"></script>
+    <script src="scripts/sale-flow/payment/payment-modal.controller.js"></script>
+    <script src="scripts/sale-flow/payment/payment-modal.service.js"></script>
+    <script src="scripts/sale-flow/payment/payment.controller.js"></script>
+    <script src="scripts/sale-flow/personal-info/personal-info.controller.js"></script>
+    <script src="scripts/sale-flow/tracking/tracking.controller.js"></script>
+    <script src="scripts/search/search-results.controller.js"></script>
+    <script src="scripts/search/search.controller.js"></script>
+    <script src="scripts/search/search.service.js"></script>
+    <script src="scripts/spinner.js"></script>
+    <script src="scripts/tags/tags.service.js"></script>
+    <script src="scripts/time/time.service.js"></script>
+    <script src="scripts/user/user.service.js"></script>
+    <script src="scripts/validation/validation.service.js"></script>
+    <!-- /include -->
+    <!-- endbuild -->
+    <script src="scripts/auth/openfb.js"></script>
+    <script src="https://assets.pagar.me/checkout/checkout.js"></script>
+    <script src="lib/pg-ng-checkout.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+    <script src="bower_components/moment/locale/pt-br.js"></script>
+
+
+</head>
+
+
+<body ng-csp ng-app="starter">
+    <ion-nav-view>
+        <div ng-controller="ReviewController"></div>
+    </ion-nav-view>
+</body>
+
+</html>

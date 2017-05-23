@@ -1,0 +1,12 @@
+<!--Header -->
+<div id="header">
+    <i class="ion-close" ng-click="closePopup()"></i>
+    <div class="title">
+		Altere os dados
+    </div>
+    <hr>
+</div>
+<!-- Mensagem de corpo -->
+<div id="body">
+    <p ng-repeat="error in errors track by $index">{{error}}</p>
+</div>

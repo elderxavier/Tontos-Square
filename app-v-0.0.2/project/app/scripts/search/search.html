@@ -1,0 +1,16 @@
+<ion-view cache-view="false" hide-back-button="true">
+    <ion-nav-buttons>
+    </ion-nav-buttons>
+    <ion-content direction="y" scrollbar-y="false">
+        <ion-refresher pulling-icon="ion-arrow-down-b" on-refresh="vm.refreshItems()">
+        </ion-refresher>
+        <ion-list>
+            <ion-item collection-repeat="item in vm.items" ng-click="vm.goToSeachResults(item.text)">
+                <p>{{item.text}}</p>
+            </ion-item>
+        </ion-list>
+        <div ng-if="items !== undefined && !items.length" class="no-results">
+            <p>Nenhum resultado</p>
+        </div>
+    </ion-content>
+</ion-view>

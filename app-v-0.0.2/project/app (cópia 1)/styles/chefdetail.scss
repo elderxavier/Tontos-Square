@@ -1,0 +1,91 @@
+$font-family:                $default-font-family;
+$font-size:                  $default-font-size;
+
+.chefdetail-img {
+    padding-top: 10px;
+}
+
+.plate-card__rating.star {
+    width:100%;
+    font-size: 26px;
+    margin-top:40px;
+    padding-right:10px;
+}
+
+.plate-card__stars.star {
+    text-align:right;
+}
+
+.chefdetail-img img {
+    width: 30%;
+    //border-radius: 50%;
+}
+
+.chefdetail-chef {
+    padding-top: 15px;
+}
+
+.chefdetail-description {
+    text-align: center;
+    font-family: $font-family;
+    font-size: $font-size;
+    
+}
+
+.chefdetail-description h1 {
+    font-size: 20px;
+    font-weight: 700;
+    margin:0;
+}
+
+.chefdetail-description h2 {
+    font-size: 16px;
+    color: #1b1b1b;
+    margin:0;
+    font-family: $font-family;
+}
+
+.chefdetail-description h3 {
+    font-size: 14px;
+    color: #1b1b1b;
+    margin:0;
+    font-family: $font-family;
+    display: inline;
+}
+
+
+.chefdetail-description p {
+    text-align: center;
+    font-size: 14px;
+    border:0;
+    padding:5px;
+    white-space: inherit; 
+}
+
+.chefdetail-plates h3 {
+    text-align:center;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 20px;
+    width: 50%;
+}
+
+.chefdetail-footer, .chefdetail-category, .chefdetail-tags, .chefdetail-rating, .chefdetail-size {
+    border-top: 1px solid #c3c3c3;
+}
+
+.chefdetail-footer {
+    span.price {
+        float: right;
+        font-weight: 800;
+        margin: 10px 0;
+        padding: 0 20px;
+    }
+    button {
+        clear: right;
+    }
+}
+
+span.chefdetail-tag::before {
+    content: "#";
+} 

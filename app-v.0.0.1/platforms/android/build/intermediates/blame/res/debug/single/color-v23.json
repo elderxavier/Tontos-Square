@@ -16,18 +16,6 @@
         "source": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/color-v23/abc_tint_btn_checkable.xml"
     },
     {
-        "merged": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
-        "source": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/color-v23/abc_tint_spinner.xml"
-    },
-    {
-        "merged": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/res/merged/debug/color-v23/abc_tint_default.xml",
-        "source": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/color-v23/abc_tint_default.xml"
-    },
-    {
-        "merged": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
-        "source": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/color-v23/abc_color_highlight_material.xml"
-    },
-    {
         "merged": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
         "source": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/color-v23/abc_color_highlight_material.xml"
     },
@@ -36,44 +24,16 @@
         "source": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/color-v23/abc_tint_default.xml"
     },
     {
-        "merged": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",
-        "source": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/color-v23/abc_btn_colored_text_material.xml"
-    },
-    {
-        "merged": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml",
-        "source": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/color-v23/abc_tint_edittext.xml"
-    },
-    {
-        "merged": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
-        "source": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/color-v23/abc_tint_btn_checkable.xml"
+        "merged": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
+        "source": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/color-v23/abc_tint_spinner.xml"
     },
     {
         "merged": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",
         "source": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/color-v23/abc_tint_seek_thumb.xml"
     },
     {
-        "merged": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
-        "source": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/color-v23/abc_tint_spinner.xml"
-    },
-    {
-        "merged": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
-        "source": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/color-v23/abc_btn_colored_borderless_text_material.xml"
-    },
-    {
-        "merged": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_thumb.xml",
-        "source": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/color-v23/abc_tint_switch_thumb.xml"
-    },
-    {
         "merged": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml",
         "source": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/color-v23/abc_tint_switch_track.xml"
-    },
-    {
-        "merged": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml",
-        "source": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/color-v23/abc_tint_switch_track.xml"
-    },
-    {
-        "merged": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",
-        "source": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/color-v23/abc_tint_seek_thumb.xml"
     },
     {
         "merged": "/media/elder/f6eba379-3e87-40ff-b195-3e498a0f805e/shared/projetos/Apps/extecnologia/tontos-square/app-v.0.0.1/platforms/android/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",

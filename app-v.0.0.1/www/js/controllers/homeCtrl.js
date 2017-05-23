@@ -1,4 +1,5 @@
 angular.module('starter').controller('homeCtrl', function ($scope, $rootScope, $cordovaGeolocation, $ionicModal, $ionicLoading, $interval) {
+
     $scope.$on("$ionicView.enter", function (event, data) {
         $ionicLoading.show();
         getMap();
@@ -6,24 +7,16 @@ angular.module('starter').controller('homeCtrl', function ($scope, $rootScope, $
     });
 
 
-    $scope.position = {};
     var options = {timeout: 10000, enableHighAccuracy: true};
-    var lastUpdateTime,
-            minFrequency = 10 * 1000,
-            watchOptions = {
-                timeout: 60 * 1000,
-                maxAge: 0,
-                enableHighAccuracy: true
-            };
-
+    var lastUpdateTime;
+    minFrequency = 10 * 1000;
+    watchOptions = {
+        timeout: 60 * 1000,
+        maxAge: 0,
+        enableHighAccuracy: true
+    };
     function on_success(position) {
-        var now = new Date();
-        if (lastUpdateTime && now.getTime() - lastUpdateTime.getTime() < minFrequency) {
-            console.log("Ignoring position update");
-            return;
-        }
-        lastUpdateTime = now;
-        $scope.setMakerMap(position);
+        setMakerMap(position);
         console.log("on_success");
     }
 
@@ -31,15 +24,17 @@ angular.module('starter').controller('homeCtrl', function ($scope, $rootScope, $
         console.log('Error: ', position);
     }
 
-    $scope.setMakerMap = function (position, mapOptions, map) {
+    function setMakerMap(position, mapOptions, map) {
         var latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-
         var mapOptions = {
             center: latLng,
             zoom: 17,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
-        $scope.map = new google.maps.Map(document.querySelector("#map"), mapOptions);
+
+        //var target = angular.element("#map");
+        //var map = new google.maps.Map(document.querySelector("#map"), mapOptions);
+        $scope.map = new google.maps.Map(document.getElementById("map"), mapOptions);
         google.maps.event.addListenerOnce($scope.map, 'idle', function () {
             marker = [];
             max = 10;
@@ -72,7 +67,6 @@ angular.module('starter').controller('homeCtrl', function ($scope, $rootScope, $
                 }
 
             ];
-
             for (i = 0; i < markersData.length; i++) {
                 latLng2 = new google.maps.LatLng(markersData[i].lat, markersData[i].lng);
                 marker[i] = new google.maps.Marker({
@@ -84,19 +78,17 @@ angular.module('starter').controller('homeCtrl', function ($scope, $rootScope, $
                     content: markersData[i].nome
                 });
                 google.maps.event.addListener(marker[i], 'click', (function (marker) {
-                    infoWindow.open($scope.map, marker);
+                    infoWindow.open(map, marker);
                 })(marker[i]));
             }
 
         });
 
-    };
-
-
-    var getMap = function () {
+    }
+    function getMap() {
         $cordovaGeolocation.getCurrentPosition(options).then(function (position) {
-            $scope.position = position;
-            $scope.setMakerMap(position);
+            var position = position;
+            setMakerMap(position);
             $cordovaGeolocation.watchPosition(on_success, on_error, watchOptions);
         }, function (error) {
             $ionicLoading.hide();
@@ -105,7 +97,8 @@ angular.module('starter').controller('homeCtrl', function ($scope, $rootScope, $
         }).finally(function () {
             $ionicLoading.hide();
         });
-    };
+    }
+
 
     $ionicModal.fromTemplateUrl('templates/home/addlocation.html', {
         scope: $scope,
@@ -123,64 +116,5 @@ angular.module('starter').controller('homeCtrl', function ($scope, $rootScope, $
     $scope.confirmarAddLocation = function () {
         $scope.modalAddLocation.hide();
     };
-
-    window.navigator.geolocation.getCurrentPosition(function (position) {
-        $scope.$apply(function () {
-            $scope.lat = position.coords.latitude;
-            $scope.lng = position.coords.longitude;
-
-            var geocoder = new google.maps.Geocoder();
-            var latlng = new google.maps.LatLng($scope.lat, $scope.lng);
-            var request = {
-                latLng: latlng
-            };
-            geocoder.geocode(request, function (data, status) {
-                if (status == google.maps.GeocoderStatus.OK) {
-                    if (data[0] != null) {
-                        console.log(data);
-                        console.log(data[6].formatted_address.split(',')[1].replace('-', ''));
-                    } else {
-                        alert("No address available");
-                    }
-                }
-            })
-            console.log(position);
-        })
-    })
-
-
-    /*var geocoder = new google.maps.Geocoder();
-     endereco = "R. Safira, 99 - Jardim Itapark Velho, Mauá - SP, 09351-525, Brasil";
-     geocoder.geocode({'address': endereco + ', Brasil', 'region': 'BR'}, function (results, status) {
-     if (status == google.maps.GeocoderStatus.OK) {
-     if (results[0]) {
-     var latitude = results[0].geometry.location.lat();
-     var longitude = results[0].geometry.location.lng();
-     
-     $('#txtEndereco').val(results[0].formatted_address);
-     $('#txtLatitude').val(latitude);
-     $('#txtLongitude').val(longitude);
-     var latLng = new google.maps.LatLng(latitude, longitude);
-     var mapOptions = {
-     center: latLng,
-     zoom: 17,
-     mapTypeId: google.maps.MapTypeId.ROADMAP
-     };
-     map = new google.maps.Map(document.querySelector("#map"), mapOptions);
-     marker = new google.maps.Marker({
-     map: map,
-     draggable: true,
-     });
-     var location = new google.maps.LatLng(latitude, longitude);
-     marker.setPosition(location);
-     map.setCenter(location);
-     map.setZoom(16);
-     }
-     }
-     
-     
-     });*/
-
-
 });
 

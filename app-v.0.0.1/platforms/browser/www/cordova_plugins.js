@@ -15,14 +15,6 @@ module.exports = [
         "runs": true
     },
     {
-        "file": "plugins/cordova-plugin-googlemaps/www/googlemaps-cdv-plugin.js",
-        "id": "cordova-plugin-googlemaps.cordova-plugin-googlemaps",
-        "pluginId": "cordova-plugin-googlemaps",
-        "clobbers": [
-            "cordova-plugin-googlemaps"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
         "id": "cordova-plugin-splashscreen.SplashScreen",
         "pluginId": "cordova-plugin-splashscreen",
@@ -76,6 +68,14 @@ module.exports = [
         "clobbers": [
             "PushNotification"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-googlemaps/www/googlemaps-cdv-plugin.js",
+        "id": "cordova-plugin-googlemaps.cordova-plugin-googlemaps",
+        "pluginId": "cordova-plugin-googlemaps",
+        "clobbers": [
+            "cordova-plugin-googlemaps"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -85,13 +85,13 @@ module.exports.metadata =
     "cordova-plugin-console": "1.0.5",
     "cordova-plugin-device": "1.1.4",
     "cordova-plugin-geolocation": "2.4.2",
-    "cordova-plugin-googlemaps": "1.4.0",
     "cordova-plugin-splashscreen": "3.2.2",
     "cordova-plugin-statusbar": "2.1.3",
     "cordova-plugin-whitelist": "1.2.2",
     "cordova.plugins.diagnostic": "3.5.0",
     "ionic-plugin-keyboard": "2.2.1",
-    "phonegap-plugin-push": "1.8.4"
+    "phonegap-plugin-push": "1.8.4",
+    "cordova-plugin-googlemaps": "1.4.0"
 }
 // BOTTOM OF METADATA
 });

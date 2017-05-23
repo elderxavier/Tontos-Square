@@ -63,39 +63,6 @@ ion-content h1,ion-content h2,ion-content h3,ion-content h4,ion-content h5,ion-c
 #more-location button {padding: 7px}
 #more-location button:before{font-size: 45px !important}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-.page-content.revistas h4, #view-revistas h3 {margin: 10px}
-#view-revistas .views-content .scroll{height: 95%}
-
-#content-preferencias .page-content.preferencias{background: #fff;border-radius: 5px;margin: 10px 5px}
-#content-preferencias .help-preferencias{padding: 15px 15px 0; font-weight: bold}
-#content-preferencias .help-preferencias button {margin-left: 15px}
-#content-preferencias .check-preferencias-container { padding: 20px; margin-bottom: 50px}
-#content-preferencias .check-preferencias-container p { font-size: 15px}
-#content-preferencias .check-preferencias-container input[type="checkbox"] { width: 23px !important; height: 23px !important; margin: 6px 15px}
-/*Modal img*/
-.modal-img {height: 1%;width: 1%}
-.modal-img.active { position: fixed; top: 0; left: 0; z-index: 5; width: 100%; height: 100%; display: block; visibility:visible}
-.modal-img .mask-modal{top: 0; left: 0; z-index: 5; width: 100%;height: 100%; background: #333;z-index: 1;opacity: 0.5}
-.modal-img .content-modal{position: fixed;top: 20%;left: 2%;right: 2%;z-index: 2;width: 97%;height: auto;border-radius: 5px}
-.modal-img .modal-img-close{display: none}
-.modal-img.active .modal-img-close{display:block;position: relative;float: right;margin: -32px 0; background: #fff;border-radius: 50%;padding: 5px 10px;font-weight: bold}
-.modal-img .content-modal img{ width: 100%; border-radius: 5px; height: auto}
-/*Agenda*/
-#agenda-page ion-item{ border-radius: 5px; margin: 10px 0}
-
 .custom_modal {width: 80%; height: 80%; top:10%; left: 10%}
 .custom_modal ion-header-bar {background:#fff !important; font-weight: bold; border-bottom: 1px solid #ddd }
 .custom_modal ion-header-bar h1{color: #004969 !important}
@@ -103,44 +70,15 @@ ion-content h1,ion-content h2,ion-content h3,ion-content h4,ion-content h5,ion-c
 .custom_modal ion-content {margin: 0 auto 35px; background: #fff; padding-bottom: 50px}
 .custom_modal ion-content input, .custom_modal ion-content select {border:1px solid #ddd; border-radius: 5px; padding: 10px}
 .custom_modal .input-label{margin-top: 20px}
-#view-filtro-agenda .bar-footer {bottom: 2%; border-top: 1px solid #ddd}
-#view-filtro-agenda .bar-footer button {font-weight: bold}
-/*Agenda Detalhes*/
-/*#view-agenda-datelhes .submenu button {width: 100%; background: #438eb9; border:1px solid #023059; border-bottom: 1px solid #E8E8F8; border-top-right-radius: 5px;border-top-left-radius: 5px;}*/
-#view-agenda-datelhes .submenu button {width: 100%; background: #438eb9}
-.tabs-views .submenu {text-align: center; background: #555}
-.tabs-views .submenu button i:before {font-size: 2em}
-.tabs-views ion-scroll {background: #fff; border-radius: 5px; padding: 10px}
-.tabs-views table {width: 100%; padding: 5px; color: #023059}
-.tabs-views table tr{padding: 5px}
-.tabs-views th {background-image: linear-gradient(to bottom,#f8f8f8 0,#ececec 100%); color: #707070; border: 1px solid #ddd; font-weight: 800}
-.tabs-views table td {border: 1px solid #ddd; background: #FFF}
-#tab-riscos .title-col .item {color: #707070;background: linear-gradient(to bottom,#f8f8f8 0,#ececec 100%); text-align: center}
-#tab-riscos .bottom-button{ margin: 25px 0}
-#tab-riscos .item p {word-break:normal; padding: 10px; font-size: 13px}
-
-/*forms-views*/
-.forms-views, .forms-views ion-content {background: #fff}
-.forms-views legend {border: none}
-#formulario-enfermagem ion-content {overflow: hidden; padding-bottom: 100px}
-#formulario-enfermagem .rigth {float: right; top:25%; position: relative}
-.chip {border-radius: 50px; padding: 7px 10px; background: #004969; color: #fff; white-space:normal; line-height: 45px}
-.chip i{font-weight: bold; position: relative; margin-left: 5px; color: #000}
-.ion-android-arrow-forward.rigth:before {font-size: 35px; color:#004969 !important }
-#modal-dados-acompanhamento ion-content { margin: 15% auto}
-#modal-dados-visita .input-label {width: 100%}
-#modal-antecedentes-pessoais .item {border: none; margin-left: 5% }
-#modal-antecedentes-pessoais .checkbox-icon:before {border-radius: 5px}
-#modal-antecedentes-pessoais input[type=text]{width: 100%} 
-#modal-demais-informacoes textArea {border: 1px solid #ddd; width: 100%; height: 80%; border-radius: 5px; padding: 5px}
-#modal-habitos-vida ion-item {border: 1px solid #ddd;}
-#modal-habitos-vida .content {border-bottom: 1px solid #ddd; padding: 10px}
-#modal-habitos-vida .scroll-view {padding: 5px}
-#modal-habitos-vida #hab_outros_lz {width: 100%}
-#modal-queixas textarea { width: 100%; height: 80%; min-height: 200px; border:1px solid #ddd; padding: 10px; margin-top: 15px; border-radius: 5px}
-#modal-nivel-consiencia #pcs_consciencia_obs {width: 100%}
 
 
+
+/*Login*/
+.content-login{background: url("../img/splash.png") 0 0 no-repeat; background-size: cover;margin-top: -19px;}
+.content-login .form-content {position: relative; top:50%}
+.content-login .form-content .input-label {color: #fff; font-weight: bold; font-size: 18px}
+.content-login .buttons-content {text-align: center}
+.content-login .buttons-content button{margin: 0 15px}
 .fadeInDown {
     -webkit-animation-name: fadeInDown;
     animation-name: fadeInDown;

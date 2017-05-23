@@ -16,9 +16,6 @@
         "cordova-plugin-geolocation": {
             "PACKAGE_NAME": "es.esy.elderxavier.tontossquare"
         },
-        "cordova-plugin-googlemaps": {
-            "PACKAGE_NAME": "es.esy.elderxavier.tontossquare"
-        },
         "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "es.esy.elderxavier.tontossquare"
         },
@@ -36,6 +33,9 @@
         },
         "phonegap-plugin-push": {
             "SENDER_ID": "996612104844",
+            "PACKAGE_NAME": "es.esy.elderxavier.tontossquare"
+        },
+        "cordova-plugin-googlemaps": {
             "PACKAGE_NAME": "es.esy.elderxavier.tontossquare"
         }
     },

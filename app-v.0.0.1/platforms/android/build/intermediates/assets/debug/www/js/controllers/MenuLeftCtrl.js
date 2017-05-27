@@ -7,6 +7,13 @@ angular.module('starter').controller('MenuLeftCtrl', function ($scope, $state, $
         $('.menu-left .item').removeClass('active');
         $('#' + id).closest('.item').addClass('active');
     };
+    
+    $rootScope.goScreen = function (endereco, id) {
+        $rootScope.togleActive(id)
+        $ionicSideMenuDelegate.toggleLeft();
+        $state.go(endereco);
+        
+    };
     $rootScope.goHome = function () {
         $ionicSideMenuDelegate.toggleLeft();
         $state.go('menu.home');

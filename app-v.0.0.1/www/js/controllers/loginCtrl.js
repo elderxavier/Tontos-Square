@@ -5,14 +5,9 @@ angular.module('starter').controller('loginCtrl', function ($scope, $rootScope, 
 
     $scope.login = function () {
         $ionicLoading.show();
-        setInterval(function () {
-            $state.go('menu.home');
-            $rootScope.togleActive('gohome');
-            $ionicLoading.hide();
-        }, 1000);
-
+        $state.go('menu.home');        
     }
 
-    console.log("OK");
+    
 });
 

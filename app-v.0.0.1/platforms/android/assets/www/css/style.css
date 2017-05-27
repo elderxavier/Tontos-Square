@@ -57,12 +57,21 @@ ion-content h1,ion-content h2,ion-content h3,ion-content h4,ion-content h5,ion-c
 
 
 /*Home*/
+#content-home {}
 .scroll { height: 100%}
-#map {width: 100%; height: 95%; margin-top: 25px}
+#map {width: 100%; height: 95%; margin-top: 60px}
 #more-location {border: 1px;border-radius: 50%;width: 60px; height: 60px; position: fixed; z-index: 99999999; padding: 2px 0 0 1px;text-align: center;background-color: #e66c21;top: 80%; left: 5%; box-shadow: 2px 3px 2px 0.5px rgba(0,0,0,0.3)}
 #more-location button {padding: 7px}
 #more-location button:before{font-size: 45px !important}
-
+.endereco{position: absolute;top: 41px;left: 0; width: 100%; padding: 0; margin: 0; background: #fff}
+.endereco #endereco {width: 91%; padding: 10px; border: 1px solid #e66c21; border-radius: 5px}
+.endereco #endereco:focus{border: 2px solid #e66c21}
+.endereco .clear-endereco {position: absolute; right: 1%; background: #e66c21; border-radius: 50%; padding: 5px 10px; top: 5px; color: #fff}
+#pac-input { background-color: #fff; font-family: Roboto; font-size: 15px; font-weight: 300; margin-left: 12px; padding: 0 11px 0 13px; text-overflow: ellipsis; width: 100% }
+#pac-input:focus { border-color: #4d90fe}
+.pac-container { font-family: Roboto }
+#type-selector { color: #fff; background-color: #4d90fe; padding: 5px 11px 0px 11px}
+#type-selector label { font-family: Roboto; font-size: 13px; font-weight: 300; } #target { width: 345px }
 .custom_modal {width: 80%; height: 80%; top:10%; left: 10%}
 .custom_modal ion-header-bar {background:#fff !important; font-weight: bold; border-bottom: 1px solid #ddd }
 .custom_modal ion-header-bar h1{color: #004969 !important}
@@ -70,15 +79,14 @@ ion-content h1,ion-content h2,ion-content h3,ion-content h4,ion-content h5,ion-c
 .custom_modal ion-content {margin: 0 auto 35px; background: #fff; padding-bottom: 50px}
 .custom_modal ion-content input, .custom_modal ion-content select {border:1px solid #ddd; border-radius: 5px; padding: 10px}
 .custom_modal .input-label{margin-top: 20px}
-
-
-
 /*Login*/
 .content-login{background: url("../img/splash.png") 0 0 no-repeat; background-size: cover;margin-top: -19px;}
 .content-login .form-content {position: relative; top:50%}
 .content-login .form-content .input-label {color: #fff; font-weight: bold; font-size: 18px}
 .content-login .buttons-content {text-align: center}
 .content-login .buttons-content button{margin: 0 15px}
+
+ /*Animações*/
 .fadeInDown {
     -webkit-animation-name: fadeInDown;
     animation-name: fadeInDown;

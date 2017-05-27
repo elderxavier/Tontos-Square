@@ -1,12 +1,19 @@
-<ion-view view-title="Localização"  ng-controller="homeCtrl" class="slideInUp">     
-        <ion-nav-buttons side="left">               
-            <button class="button button-clear button-icon light ion-navicon-round" menu-toggle="left" id="menu-button"></button>
-        </ion-nav-buttons>
-    <ion-content>
+<ion-view view-title="Localização TONTO"  ng-controller="homeCtrl" class="slideInUp">     
+    <ion-nav-buttons side="left">               
+        <button class="button button-clear button-icon light ion-navicon-round" menu-toggle="left" id="menu-button"></button>
+    </ion-nav-buttons>
+    <ion-content id="content-home">
         <div id="map" data-tap-disabled="true"></div>
     </ion-content>
-    <div id="more-location" ng-click="">
-        <button class="button button-icon button-clear icon fa fa-plus button-light" ng-click="openModalAddLocation()"> </button>
+    <div class="row endereco">
+        <div class="col col-100">            
+            <input id="endereco" class="controls" type="text" placeholder="" ng-model="md_endereco">
+            <span class="clear-endereco" ng-click="md_endereco = ''">X</span>
+        </div>
     </div>
+    <div id="more-location" ng-click="">
+        <button class="button button-icon button-clear icon fa fa-plus button-light" ng-click="openModalAddLocation(); checkEmpityEndereco()"> </button>
+    </div>
+
 
 </ion-view>

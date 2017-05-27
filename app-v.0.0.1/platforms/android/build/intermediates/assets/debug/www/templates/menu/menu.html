@@ -12,21 +12,20 @@
             <ion-header-bar>
                 <div class="row">
                 <div class="col col-50 left">
-                    <img ng-src="img/logo.png"/>
-                    <!--<div class="foto"></div> -->
+                    <img ng-src="img/logo.png"/>                    
                 </div>                
             </div>
         </ion-header-bar>
     <ion-content>
         <ion-list>
             <ion-item class="active">
-                <button class="button button-icon fa fa-map-marker" ng-click="goHome()" id="gohome"><span>Localizações</span></button>
+                <button class="button button-icon fa fa-map-marker" ng-click="goScreen('menu.home','gohome'); togleActive('gohome')" id="gohome"><span>Localizações</span></button>
             </ion-item>
             <ion-item>
-                <button class="button button-icon fa fa-cogs" ng-click="goAgenda()" id="goagenda"><span>Preferências</span></button>
+                <button class="button button-icon fa fa-cogs"><span>Preferências</span></button>
             </ion-item>    
             <ion-item>
-                <button class="button button-icon fa fa-user" ng-click="goPacientes()" id="gopacientes"><span>Minha Conta</span></button>
+                <button class="button button-icon fa fa-user"><span>Minha Conta</span></button>
             </ion-item>            
         </ion-list>
     </ion-content>

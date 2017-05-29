@@ -29,15 +29,17 @@ public class Post {
     
     @Column(name="id_usuarios", nullable=false)
     private int idusuarios;
+     @Column(name="titulo", nullable=false)
+    private String titulo;
     
     @Column(name="id_categoria", nullable=false)
     private int idcategoria;
     
     @Column(name="longitude", nullable=false)
-    private float longitude; 
+    private double longitude; 
     
     @Column(name="latitude", nullable=false)
-    private float latitude;
+    private double latitude;
     
     @Column(name="comentario", nullable=false)
     private String comentario;
@@ -74,20 +76,20 @@ public class Post {
         
     }
 
-    public float getLongitude() {
+    public double getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(float longitude) {       
+    public void setLongitude(double longitude) {       
         this.longitude = longitude;
         
     }
 
-    public float getLatitude() {
+    public double getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(float latitude) {        
+    public void setLatitude(double latitude) {        
         this.latitude = latitude;
         
     }
@@ -114,6 +116,14 @@ public class Post {
 
     public void setCreated(Timestamp created) {
         this.created = created;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
 }

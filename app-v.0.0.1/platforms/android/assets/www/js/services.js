@@ -10,12 +10,12 @@
  * @contact      contato@elderxavier.com.br
  */
 angular.module('starter.services', [])
-        .factory('userService', function ($http, $q) {
+        .factory('tontosService', function ($http, $q) {
             /*private scope*/
             var getDatabase = function () {
                     try {
                         if (window.openDatabase) {
-                            var shortName = 'db_fichasweb';
+                            var shortName = 'db_tontossquare';
                             var version = '1.0';
                             var displayName = 'Data base app Fichas Web';
                             var maxSize = 20971520; // 20 MB
@@ -27,7 +27,9 @@ angular.module('starter.services', [])
                         return false;
                     }
                 };
-            getApiUrl = "http://s2.desenvolvimento.grupobem.com.br/~tielder/s2/htdocs/webservice/v1/api.php";                     
+            //getApiUrl = "http://localhost:5000";
+            getApiUrl = "http://31.220.59.87:5000";            
+            getToken = "AE3998A5B3F84DD16E872ED37BCFE";
             
             Propag =false;
             
@@ -44,21 +46,12 @@ angular.module('starter.services', [])
                         })
                     }
                 },
-                getUpdate: function (url, pagina, qtde) {
+                getResults: function (url, method) {
                     return {
                         run: $http({
-                            method: 'GET',
-                            url: url,
-                            params: {pagina: pagina, qtde: qtde}
-                        }).then(function successCallback(response) {
-                            var stg = response.data.substring(response.data.indexOf('<string') + 36, response.data.indexOf("</string>"));
-                            json = JSON.parse(stg);                            
-                            return json;
-
-                        }, function errorCallback(response) {
-                            console.log("ERROR");
-                            return false;
-                        }, 'html')
+                            method: method,
+                            url: getApiUrl + url  + getToken + "/"
+                        })  
                     }
 
                 },

@@ -16,6 +16,7 @@ ion-header-bar .row button i:before {font-size: 30px !important}
 .list:last-child { margin-bottom: 50px}
 .title{font-weight: bold !important; text-transform: uppercase}
 .label-strong { font-weight: bold}
+.not-valid {border: 1px solid red !important; font-weight: 700 !important}
 
 /*Menu*/
 .menu-left {box-shadow: 3px 0px 5px 0px rgba(0,0,0,0.75) !important}
@@ -53,6 +54,7 @@ ion-content h1,ion-content h2,ion-content h3,ion-content h4,ion-content h5,ion-c
 .custom_modal ion-content {margin: 0 auto 35px; background: #fff; padding-bottom: 50px}
 .custom_modal ion-content input, .custom_modal ion-content select {border:1px solid #ddd; border-radius: 5px; padding: 10px}
 .custom_modal .input-label{margin-top: 20px}
+.modal-backdrop-bg {background: #000;opacity: 0.8}
 
 
 

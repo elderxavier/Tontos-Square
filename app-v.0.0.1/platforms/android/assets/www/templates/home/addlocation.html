@@ -4,7 +4,7 @@
     </ion-header-bar>
     <ion-content class="padding bgapp">
         <ion-scroll delegate-handle="scroller-filtro" on-scroll="checkScroll()" id="scroller-filtro" direction="y" style="width: 100%; height: 100%">
-            <form name="formCheckin"><br>    
+            <form name="formCheckin" id="formCheckin"><br>    
                 <div class="row">
                     <div class="col col-100">                        
                         <input type="text" placeholder="Localização" class="col col-100" name="localizacao" id="localizacao"  ng-model="md_endereco" readonly="readonly">
@@ -12,20 +12,16 @@
                 </div>
                 <div class="row">
                     <div class="col col-100">
-                        <span class="input-label">Categoria</span>
-                        <select name="categoria" class="col col-100">
-                            <option value="">Escolha</option>
-                            <option value="0">Lazer e entretenimento</option>
-                            <option value="1">Academico</option>
-                            <option value="2">Amigos</option>
-                            <option value="3">Serviços</option>
+                        <span class="input-label">Categoria *</span>                        
+                        <select name="categoria" id="categoria" class="col col-100 required">
+                            <option ng-repeat="item in categorias" ng-if="item.id_categoria" value="{{item.id_categoria}}">{{item.nome}}</option>                             
                         </select>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col col-100">
-                        <span class="input-label">Titulo</span>
-                        <input type="text" placeholder="titulo" class="col col-100" name="titulo">
+                        <span class="input-label">Titulo *</span>
+                        <input type="text" placeholder="titulo" class="col col-100 required" name="titulo" id="titulo">
                     </div>
                 </div>
             </form>    
@@ -33,6 +29,6 @@
     </ion-content>
     <div class="bar bar-footer row">
         <button class="button button-clear button-stable col col-50" ng-click="closeModalAddLocation()">Cancelar</button>
-        <button class="button icon-right ion-checkmark button-clear button-balanced col col-50 confirm" ng-click="confirmarAddLocation()">Confirmar</button>
+        <button class="button icon-right ion-checkmark button-clear button-balanced col col-50 confirm" ng-click="setPost()">Confirmar</button>
     </div>
 </ion-modal-view>

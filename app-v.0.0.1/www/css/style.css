@@ -16,6 +16,7 @@ ion-header-bar .row button i:before {font-size: 30px !important}
 .list:last-child { margin-bottom: 50px}
 .title{font-weight: bold !important; text-transform: uppercase}
 .label-strong { font-weight: bold}
+.not-valid {border: 1px solid red !important; font-weight: 700 !important}
 
 /*Menu*/
 .menu-left {box-shadow: 3px 0px 5px 0px rgba(0,0,0,0.75) !important}

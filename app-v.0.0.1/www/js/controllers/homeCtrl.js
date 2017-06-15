@@ -7,7 +7,6 @@ angular.module('starter').controller('homeCtrl', function ($scope, $rootScope, $
         getCategoria();
     });
     /*init vars*/
-
     $scope.position = {
         "latitude": 0,
         "longitude": 0
@@ -125,10 +124,7 @@ angular.module('starter').controller('homeCtrl', function ($scope, $rootScope, $
         $scope.position.longitude = place.geometry.location.lng();
         setMap($scope.position.latitude, $scope.position.longitude);
         addMarker($scope.position.latitude, $scope.position.longitude, "Estou Aqui");
-        EndByLatLng($scope.position.latitude, $scope.position.longitude);
-
-        //var latlng = new google.maps.LatLng(latitude, longitude);
-        //$scope.map.setCenter(latlng);
+        EndByLatLng($scope.position.latitude, $scope.position.longitude);        
     }
 
     $scope.searchBox = new google.maps.places.Autocomplete((document.getElementById('endereco')), {types: ['geocode']});
